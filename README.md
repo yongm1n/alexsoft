@@ -26,7 +26,7 @@ python3 -m http.server 8080
 
 ## 출시 전 확인
 
-- 문의 메일 `hello@alexsoft.co.kr`의 실제 수신 설정
+- 문의 메일 `alexsoft.kr@gmail.com` 연결 완료
 - GitHub Pages 도메인/DNS 연결
 - 프로젝트별 공개 링크 추가 여부
 
