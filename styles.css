@@ -142,6 +142,68 @@ img, svg { display: block; }
 .scroll-cue em { font-size: 8px; font-style: normal; letter-spacing: .2em; }
 @keyframes cue { from { transform: translateX(-110%); } to { transform: translateX(190%); } }
 
+/* Service clarity */
+.service-intro {
+  position: relative;
+  z-index: 2;
+  padding: clamp(90px, 10vw, 150px) 0;
+  color: #131210;
+  background: #f3efe6;
+  border-top: 1px solid rgba(19, 18, 16, 0.12);
+  border-bottom: 1px solid rgba(19, 18, 16, 0.12);
+}
+
+.service-intro-grid {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.45fr);
+  gap: clamp(60px, 8vw, 140px);
+  align-items: start;
+}
+
+.service-intro-head h2 {
+  margin: 28px 0 0;
+  font-size: clamp(2.35rem, 3.6vw, 4.25rem);
+  line-height: 1.06;
+  letter-spacing: -0.045em;
+}
+
+.service-intro-head > p:last-child {
+  max-width: 520px;
+  margin: 28px 0 0;
+  color: rgba(19, 18, 16, 0.58);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.service-intro-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid rgba(19, 18, 16, 0.22);
+}
+
+.service-intro-list li {
+  min-height: 92px;
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid rgba(19, 18, 16, 0.18);
+}
+
+.service-intro-list span {
+  color: #2e63f5;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.14em;
+}
+
+.service-intro-list strong {
+  font-size: clamp(1.15rem, 1.8vw, 1.85rem);
+  line-height: 1.25;
+  letter-spacing: -0.035em;
+}
+
 /* Manifesto */
 .manifesto-scroll { position: relative; height: 250vh; min-height: 1580px; background: var(--ink); }
 .manifesto-stage { position: sticky; top: 0; height: 100svh; min-height: 620px; overflow: hidden; color: #f5f4ef; background: #080809; isolation: isolate; }
@@ -404,6 +466,14 @@ img, svg { display: block; }
   .hero-index { bottom: 4vh; grid-template-columns: repeat(4, auto); justify-content: space-between; }
   .hero-index div { display: block; }
   .hero-index span { display: none; }
+
+  .service-intro { padding: 82px 0 88px; }
+  .service-intro-grid { display: block; }
+  .service-intro-head h2 { margin-top: 22px; font-size: clamp(2.15rem, 9.5vw, 3rem); }
+  .service-intro-head > p:last-child { margin-top: 22px; font-size: 14px; }
+  .service-intro-list { margin-top: 52px; }
+  .service-intro-list li { min-height: 82px; grid-template-columns: 34px 1fr; gap: 12px; }
+  .service-intro-list strong { font-size: 1.15rem; line-height: 1.35; }
 
   .manifesto-scroll { height: 220svh; min-height: 1380px; }
   .manifesto-giant { align-items: flex-start; padding-left: 8vw; font-size: clamp(4rem, 18vw, 6.5rem); line-height: .9; }

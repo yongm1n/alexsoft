@@ -1,11 +1,11 @@
 {
     "schema_version": 2,
-    "commit": "0335712444ec1f7528de65f84337177481be781b",
-    "indexed_at": "2026-07-21T04:22:37Z",
-    "project": "alexsoft-co-kr",
-    "nodes": 101,
-    "edges": 150,
-    "original_size": 1769472,
-    "compressed_size": 24467,
-    "compression_level": 3
+    "commit": "1be1d9e98e027b03cb3d8dd4164cd9cbcac1da62",
+    "indexed_at": "2026-07-21T05:24:15Z",
+    "project": "alexsoft.co.kr",
+    "nodes": 103,
+    "edges": 159,
+    "original_size": 1179648,
+    "compressed_size": 16677,
+    "compression_level": 9
 }
