@@ -47,7 +47,9 @@
     document.querySelectorAll('[data-scrub]').forEach((section) => {
       const rect = section.getBoundingClientRect();
       const start = rect.top + window.scrollY;
-      const distance = Math.max(1, section.offsetHeight - window.innerHeight);
+      const stage = section.querySelector('.hero-stage, .manifesto-stage, .craft-stage, .work-stage');
+      const stageHeight = stage?.offsetHeight || window.innerHeight;
+      const distance = Math.max(1, section.offsetHeight - stageHeight);
       measurements.set(section, { start, distance });
     });
     if (workTrack) {
@@ -108,20 +110,58 @@
   }
 
   function renderCraft(progress) {
-    if (!craftSection || mobileLayout.matches || reduceMotion.matches) return;
-    const stepIndex = Math.min(3, Math.floor(progress * 4));
-    craftSteps.forEach((step, index) => step.classList.toggle('is-active', index === stepIndex));
+    if (!craftSection) return;
+    if (reduceMotion.matches) {
+      craftSteps.forEach((step) => {
+        step.style.removeProperty('opacity');
+        step.style.removeProperty('transform');
+        step.style.removeProperty('pointer-events');
+      });
+      return;
+    }
+    const lastStep = Math.max(0, craftSteps.length - 1);
+    const segmentPosition = Math.min(craftSteps.length - .001, progress * craftSteps.length);
+    const currentStep = Math.min(lastStep, Math.floor(segmentPosition));
+    const segmentProgress = segmentPosition - currentStep;
+    const transitionProgress = currentStep < lastStep ? map(segmentProgress, .78, 1) : 0;
+    const desktopStep = Math.min(lastStep, Math.floor(progress * craftSteps.length));
+    const mobileStep = Math.min(lastStep, currentStep + (transitionProgress >= .5 ? 1 : 0));
+    const stepIndex = mobileLayout.matches ? mobileStep : desktopStep;
+    craftSteps.forEach((step, index) => {
+      step.classList.toggle('is-active', index === stepIndex);
+      if (mobileLayout.matches) {
+        let opacity = 0;
+        let offset = index < currentStep ? -28 : 28;
+        if (index === currentStep) {
+          opacity = 1 - transitionProgress;
+          offset = transitionProgress * -28;
+        } else if (index === currentStep + 1) {
+          opacity = transitionProgress;
+          offset = (1 - transitionProgress) * 28;
+        }
+        step.style.opacity = opacity.toFixed(3);
+        step.style.transform = `translate3d(0, calc(-50% + ${offset}px), 0)`;
+        step.style.pointerEvents = opacity > .6 ? 'auto' : 'none';
+      } else {
+        step.style.removeProperty('opacity');
+        step.style.removeProperty('transform');
+        step.style.removeProperty('pointer-events');
+      }
+    });
     const count = String(stepIndex + 1).padStart(2, '0');
     if (craftNumber) craftNumber.textContent = count;
     if (craftCurrent) craftCurrent.textContent = count;
     if (craftAxisPoint) craftAxisPoint.style.top = `${8 + progress * 84}%`;
     if (craftSphere) {
       const pulse = Math.sin(progress * Math.PI * 8) * .018;
-      craftSphere.style.transform = `rotate(${progress * 190}deg) rotateX(${progress * 38}deg) scale(${1 + pulse})`;
+      const rotation = mobileLayout.matches ? 300 : 190;
+      const tilt = mobileLayout.matches ? 52 : 38;
+      craftSphere.style.transform = `rotate(${progress * rotation}deg) rotateX(${progress * tilt}deg) scale(${1 + pulse})`;
       const rings = craftSphere.querySelectorAll('.sphere-ring');
-      rings[0].style.transform = `rotateX(67deg) rotateZ(${progress * 280}deg)`;
-      rings[1].style.transform = `rotateY(67deg) rotateZ(${progress * -220}deg)`;
-      rings[2].style.transform = `rotateX(63deg) rotateZ(${38 + progress * 310}deg)`;
+      const ringBoost = mobileLayout.matches ? 1.45 : 1;
+      rings[0].style.transform = `rotateX(67deg) rotateZ(${progress * 280 * ringBoost}deg)`;
+      rings[1].style.transform = `rotateY(67deg) rotateZ(${progress * -220 * ringBoost}deg)`;
+      rings[2].style.transform = `rotateX(63deg) rotateZ(${38 + progress * 310 * ringBoost}deg)`;
     }
   }
 
