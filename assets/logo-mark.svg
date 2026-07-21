@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">ALEXSOFT logo</title>
+  <desc id="desc">A letterform with a precise blue software node</desc>
+  <path fill="#050505" fill-rule="evenodd" d="M32 4 61 57H3L32 4Zm0 21L21.8 42l7.1 5.2V57h6.2v-9.8l7.1-5.2L32 25Z"/>
+  <circle cx="32" cy="40" r="3.8" fill="#4b78ff"/>
+</svg>
