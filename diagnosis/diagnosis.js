@@ -8,6 +8,7 @@
   const menu = document.querySelector('[data-nav]');
   const form = document.querySelector('[data-inquiry-form]');
   const formStatus = document.querySelector('[data-form-status]');
+  const serviceSelect = document.querySelector('[data-service-select]');
 
   function closeMenu() {
     body.classList.remove('menu-open');
@@ -32,6 +33,11 @@
   });
 
   menu?.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+  document.querySelectorAll('[data-inquiry-type]').forEach((link) => {
+    link.addEventListener('click', () => {
+      if (serviceSelect) serviceSelect.value = link.dataset.inquiryType;
+    });
+  });
   window.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') closeMenu();
   });
@@ -43,10 +49,11 @@
 
     const values = Object.fromEntries(new FormData(form).entries());
     const subjectCompany = values.company ? ` — ${values.company}` : '';
-    const subject = `ALEXSOFT 업무 시스템 진단 문의${subjectCompany}`;
+    const subject = `ALEXSOFT ${values.service || '업무 상담'} 문의${subjectCompany}`;
     const message = [
-      'ALEXSOFT 업무 시스템 진단을 문의합니다.',
+      'ALEXSOFT에 업무 상담을 문의합니다.',
       '',
+      `[관심 서비스] ${values.service || '미입력'}`,
       `[회사·조직명] ${values.company || '미입력'}`,
       `[담당자명] ${values.name}`,
       `[회신 이메일] ${values.email}`,
