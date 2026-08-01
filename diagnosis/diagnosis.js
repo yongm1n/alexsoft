@@ -9,6 +9,13 @@
   const form = document.querySelector('[data-inquiry-form]');
   const formStatus = document.querySelector('[data-form-status]');
   const serviceSelect = document.querySelector('[data-service-select]');
+  const submitButton = form?.querySelector('[type="submit"]');
+  const submitLabel = submitButton?.querySelector('span');
+  const honeypot = form?.querySelector('[data-form-honeypot]');
+  const responseFrame = document.querySelector('[data-google-form-target]');
+  const defaultSubmitLabel = submitLabel?.textContent || '문의 신청';
+  let submissionPending = false;
+  let submissionTimer;
 
   function closeMenu() {
     body.classList.remove('menu-open');
@@ -43,29 +50,56 @@
   });
   window.addEventListener('scroll', renderScrollState, { passive: true });
 
+  function setSubmissionState(state, message) {
+    if (formStatus) {
+      formStatus.dataset.state = state;
+      formStatus.textContent = message;
+    }
+  }
+
+  function finishSubmission() {
+    if (!submissionPending) return;
+    submissionPending = false;
+    window.clearTimeout(submissionTimer);
+    form?.removeAttribute('aria-busy');
+    form?.reset();
+    if (submitButton) submitButton.disabled = false;
+    if (submitLabel) submitLabel.textContent = '신청이 접수되었습니다';
+    setSubmissionState('success', '접수가 완료되었습니다. 내용을 확인한 뒤 alexsoft.kr@gmail.com에서 회신드리겠습니다.');
+    window.setTimeout(() => {
+      if (submitLabel) submitLabel.textContent = defaultSubmitLabel;
+    }, 2600);
+  }
+
+  responseFrame?.addEventListener('load', finishSubmission);
+
   form?.addEventListener('submit', (event) => {
-    event.preventDefault();
-    if (!form.reportValidity()) return;
+    if (!form.reportValidity()) {
+      event.preventDefault();
+      return;
+    }
 
-    const values = Object.fromEntries(new FormData(form).entries());
-    const subjectCompany = values.company ? ` — ${values.company}` : '';
-    const subject = `ALEXSOFT ${values.service || '업무 상담'} 문의${subjectCompany}`;
-    const message = [
-      'ALEXSOFT에 업무 상담을 문의합니다.',
-      '',
-      `[관심 서비스] ${values.service || '미입력'}`,
-      `[회사·조직명] ${values.company || '미입력'}`,
-      `[담당자명] ${values.name}`,
-      `[회신 이메일] ${values.email}`,
-      `[희망 시기] ${values.timing || '미정'}`,
-      `[현재 사용하는 도구] ${values.tools || '미입력'}`,
-      '',
-      '[현재 가장 해결하고 싶은 문제]',
-      values.problem
-    ].join('\n');
+    if (honeypot?.value) {
+      event.preventDefault();
+      form.reset();
+      return;
+    }
 
-    if (formStatus) formStatus.textContent = '메일 앱을 여는 중입니다. 열리지 않으면 alexsoft.kr@gmail.com으로 보내주세요.';
-    window.location.href = `mailto:alexsoft.kr@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+    submissionPending = true;
+    form.setAttribute('aria-busy', 'true');
+    if (submitButton) submitButton.disabled = true;
+    if (submitLabel) submitLabel.textContent = '안전하게 전송 중입니다';
+    setSubmissionState('sending', '문의 내용을 전송하고 있습니다. 잠시만 기다려주세요.');
+
+    window.clearTimeout(submissionTimer);
+    submissionTimer = window.setTimeout(() => {
+      if (!submissionPending) return;
+      submissionPending = false;
+      form.removeAttribute('aria-busy');
+      if (submitButton) submitButton.disabled = false;
+      if (submitLabel) submitLabel.textContent = defaultSubmitLabel;
+      setSubmissionState('error', '전송 확인이 지연되고 있습니다. 네트워크 상태를 확인한 뒤 다시 시도해주세요.');
+    }, 15000);
   });
 
   const year = document.querySelector('[data-year]');

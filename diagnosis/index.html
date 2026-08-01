@@ -239,20 +239,32 @@
           <p>현재 불편한 점과 바꾸고 싶은 상태만 알려주세요. 내용을 검토한 뒤 20분 무료 적합성 확인 일정을 먼저 안내해 드립니다.</p>
           <a href="mailto:alexsoft.kr@gmail.com">alexsoft.kr@gmail.com</a>
         </div>
-        <form class="inquiry-form" data-inquiry-form>
+        <form
+          class="inquiry-form"
+          action="https://docs.google.com/forms/d/e/1FAIpQLSe3Y0R4OwMIEWCu8aX6Z8y9aF-iMvkKao9TI9S7A7cdhCYvow/formResponse"
+          method="post"
+          target="google-form-response"
+          accept-charset="UTF-8"
+          data-inquiry-form
+        >
+          <div class="form-honeypot" aria-hidden="true">
+            <label>웹사이트
+              <input type="text" name="website" tabindex="-1" autocomplete="off" data-form-honeypot>
+            </label>
+          </div>
           <div class="form-row">
             <label>회사·조직명
-              <input type="text" name="company" autocomplete="organization" placeholder="예: ALEXSOFT">
+              <input type="text" name="entry.1998693368" autocomplete="organization" placeholder="예: ALEXSOFT">
             </label>
             <label>담당자명 <em>필수</em>
-              <input type="text" name="name" autocomplete="name" required placeholder="성함을 입력해주세요">
+              <input type="text" name="entry.2061346803" autocomplete="name" required placeholder="성함을 입력해주세요">
             </label>
           </div>
           <label>이메일 <em>필수</em>
-            <input type="email" name="email" autocomplete="email" required placeholder="reply@example.com">
+            <input type="email" name="entry.2008957627" autocomplete="email" required placeholder="reply@example.com">
           </label>
           <label>관심 있는 시작 방법
-            <select name="service" data-service-select>
+            <select name="entry.354814586" data-service-select>
               <option value="무료 적합성 확인">무료 적합성 확인 · 20분</option>
               <option value="업무 흐름 퀵스캔">업무 흐름 퀵스캔 · 150만 원부터</option>
               <option value="업무 시스템 진단">업무 시스템 진단 · 450만 원부터</option>
@@ -261,14 +273,14 @@
             </select>
           </label>
           <label>현재 가장 해결하고 싶은 문제 <em>필수</em>
-            <textarea name="problem" required rows="6" placeholder="예: 세 부서가 같은 내용을 서로 다른 엑셀에 입력하고 있어 누락과 확인 업무가 반복됩니다."></textarea>
+            <textarea name="entry.1400718553" required rows="6" placeholder="예: 세 부서가 같은 내용을 서로 다른 엑셀에 입력하고 있어 누락과 확인 업무가 반복됩니다."></textarea>
           </label>
           <div class="form-row">
             <label>현재 사용하는 도구
-              <input type="text" name="tools" placeholder="예: 엑셀, ERP, 슬랙">
+              <input type="text" name="entry.536924147" placeholder="예: 엑셀, ERP, 슬랙">
             </label>
             <label>희망 시기
-              <select name="timing">
+              <select name="entry.1009207624">
                 <option value="미정">아직 미정</option>
                 <option value="1개월 이내">1개월 이내</option>
                 <option value="1~3개월">1~3개월</option>
@@ -277,8 +289,9 @@
             </label>
           </div>
           <button class="inquiry-submit" type="submit"><span>20분 무료 적합성 확인 신청</span><i aria-hidden="true">↗</i></button>
-          <p class="form-note" data-form-status>입력 내용은 이 사이트에 저장되지 않으며, 사용 중인 메일 앱을 통해 전달됩니다.</p>
+          <p class="form-note" data-form-status aria-live="polite">입력 내용은 상담 확인을 위해 ALEXSOFT의 Google Forms로 전송됩니다.</p>
         </form>
+        <iframe class="google-form-target" name="google-form-response" title="문의 전송 결과" data-google-form-target></iframe>
       </div>
     </section>
   </main>

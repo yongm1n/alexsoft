@@ -159,7 +159,13 @@
 .inquiry-submit:hover { background: #2458e6; }
 .inquiry-submit:hover i { transform: translate(2px, -2px) rotate(45deg); }
 .inquiry-submit:active { transform: scale(.985); }
+.inquiry-submit:disabled { opacity: .68; cursor: wait; transform: none; }
+.inquiry-submit:disabled i { transform: none; }
 .form-note { margin: 14px 0 0; color: rgba(5,5,5,.43); font-size: 9px; line-height: 1.6; }
+.form-note[data-state="sending"] { color: #2458e6; }
+.form-note[data-state="success"] { color: #167348; }
+.form-note[data-state="error"] { color: #a33a35; }
+.form-honeypot, .google-form-target { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
 
 .diagnosis-page :focus-visible { outline: 2px solid #2d62f4; outline-offset: 4px; }
 
