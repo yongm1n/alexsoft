@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://alexsoft.co.kr/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-08-03</lastmod>
+    <image:image><image:loc>https://alexsoft.co.kr/assets/brand/alexsoft-signature-hero.webp</image:loc></image:image>
+    <image:image><image:loc>https://alexsoft.co.kr/assets/brand/capability-ai-workflow.webp</image:loc></image:image>
+    <image:image><image:loc>https://alexsoft.co.kr/assets/brand/capability-product-engineering.webp</image:loc></image:image>
+    <image:image><image:loc>https://alexsoft.co.kr/assets/brand/capability-system-integration.webp</image:loc></image:image>
+    <image:image><image:loc>https://alexsoft.co.kr/assets/brand/capability-digital-experience.webp</image:loc></image:image>
+    <image:image><image:loc>https://alexsoft.co.kr/assets/grace-site.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://alexsoft.co.kr/diagnosis/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-08-03</lastmod>
+    <image:image><image:loc>https://alexsoft.co.kr/assets/brand/alexsoft-quickscan-og.png</image:loc></image:image>
   </url>
 </urlset>
