@@ -15,7 +15,6 @@
   const header = document.querySelector('[data-header]');
   const progressBar = document.querySelector('.scroll-progress span');
   const editorialHero = document.querySelector('[data-hero]');
-  const editorialHeroVideo = editorialHero?.querySelector('[data-hero-video]');
   const heroSection = document.querySelector('[data-scrub="hero"]');
   const heroStage = heroSection?.querySelector('.hero-stage');
   const heroImage = heroSection?.querySelector('.hero-media img');
@@ -43,29 +42,6 @@
   let scrollY = window.scrollY;
   let ticking = false;
   let workDistance = 0;
-
-  function syncEditorialHeroVideo() {
-    if (!editorialHeroVideo) return;
-    if (reduceMotion.matches) {
-      editorialHeroVideo.pause();
-      editorialHeroVideo.classList.remove('is-ready');
-      return;
-    }
-    const source = editorialHeroVideo.querySelector('source[data-src]');
-    if (source && !source.src) {
-      source.src = source.dataset.src;
-      editorialHeroVideo.load();
-    }
-    editorialHeroVideo.muted = true;
-    editorialHeroVideo.play().catch(() => {
-      editorialHeroVideo.classList.remove('is-ready');
-    });
-  }
-
-  editorialHeroVideo?.addEventListener('playing', () => {
-    editorialHeroVideo.classList.add('is-ready');
-  });
-  syncEditorialHeroVideo();
 
   function measureSections() {
     document.querySelectorAll('[data-scrub]').forEach((section) => {
@@ -366,10 +342,7 @@
   })();
 
   document.querySelector('[data-year]').textContent = new Date().getFullYear();
-  reduceMotion.addEventListener?.('change', () => {
-    syncEditorialHeroVideo();
-    measureSections();
-  });
+  reduceMotion.addEventListener?.('change', measureSections);
   mobileLayout.addEventListener?.('change', measureSections);
   window.addEventListener('load', measureSections, { once: true });
   measureSections();

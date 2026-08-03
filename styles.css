@@ -723,30 +723,19 @@ img, svg { display: block; }
   transform-origin: 62% 50%;
   will-change: transform;
 }
-.hero-editorial .hero-media img,
-.hero-editorial .hero-media video {
-  position: absolute;
-  inset: 0;
+.hero-editorial .hero-media img {
+  position: static;
+  inset: auto;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
-}
-.hero-editorial .hero-media img {
-  z-index: 0;
   opacity: 1;
   filter: none;
   transform: none;
 }
-.hero-editorial .hero-media video {
-  z-index: 1;
-  opacity: 0;
-  transition: opacity .5s var(--ease-out);
-}
-.hero-editorial .hero-media video.is-ready { opacity: 1; }
 .hero-editorial .hero-wash {
   position: absolute;
-  z-index: 2;
   inset: 0;
   background: linear-gradient(90deg, rgba(243,239,230,.98) 0%, rgba(243,239,230,.88) 33%, rgba(243,239,230,.18) 62%, rgba(243,239,230,.04) 100%), linear-gradient(0deg, rgba(243,239,230,.66), transparent 40%);
 }
@@ -889,7 +878,7 @@ img, svg { display: block; }
   .hybrid-concept.menu-open .site-header .site-nav > a:not(.nav-contact) { color: #fff; }
   .hero-editorial { min-height: 920px; }
   .hero-editorial .hero-media { inset: 0; transform: scale(calc(1.03 + var(--hero-p) * .04)) translate3d(0, calc(var(--hero-p) * -14px), 0); transform-origin: 72% 42%; }
-  .hero-editorial .hero-media img, .hero-editorial .hero-media video { object-position: 67% center; }
+  .hero-editorial .hero-media img { object-position: 67% center; }
   .hero-editorial .hero-wash { background: linear-gradient(0deg,rgba(243,239,230,.98) 0%,rgba(243,239,230,.9) 44%,rgba(243,239,230,.22) 72%,rgba(243,239,230,.03) 100%); }
   .hero-editorial .hero-grid { background-size: 25vw 25vw; opacity: calc(.18 - var(--hero-p) * .08); mask-image: linear-gradient(0deg,#000,transparent 70%); -webkit-mask-image: linear-gradient(0deg,#000,transparent 70%); transform: translate3d(calc(var(--hero-p) * -2%), 0, 0); }
   .hero-editorial .hero-inner { min-height: 920px; align-items: flex-end; padding: 110px 0 170px; }
@@ -911,5 +900,4 @@ img, svg { display: block; }
 @media (prefers-reduced-motion: reduce) {
   .hero-editorial { --hero-p: 0 !important; --mx: 0 !important; --my: 0 !important; }
   .hero-editorial .hero-media, .hero-editorial .hero-copy, .hero-editorial .hero-caption, .hero-editorial .hero-grid { transform: none !important; opacity: 1 !important; }
-  .hero-editorial .hero-media video { display: none; }
 }
