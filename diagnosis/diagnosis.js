@@ -13,6 +13,9 @@
   const submitLabel = submitButton?.querySelector('span');
   const honeypot = form?.querySelector('[data-form-honeypot]');
   const responseFrame = document.querySelector('[data-google-form-target]');
+  const diagnosisHero = document.querySelector('[data-diagnosis-hero]');
+  const diagnosisSystem = document.querySelector('[data-diagnosis-system]');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const defaultSubmitLabel = submitLabel?.textContent || '문의 신청';
   let submissionPending = false;
   let submissionTimer;
@@ -49,6 +52,42 @@
     if (event.key === 'Escape') closeMenu();
   });
   window.addEventListener('scroll', renderScrollState, { passive: true });
+
+  if (diagnosisHero && diagnosisSystem && !reduceMotion.matches) {
+    let pointerFrame = 0;
+    diagnosisHero.addEventListener('pointermove', (event) => {
+      if (event.pointerType === 'touch') return;
+      window.cancelAnimationFrame(pointerFrame);
+      pointerFrame = window.requestAnimationFrame(() => {
+        const bounds = diagnosisHero.getBoundingClientRect();
+        const x = ((event.clientX - bounds.left) / bounds.width - .5) * 12;
+        const y = ((event.clientY - bounds.top) / bounds.height - .5) * 12;
+        diagnosisSystem.style.setProperty('--system-x', x.toFixed(2));
+        diagnosisSystem.style.setProperty('--system-y', y.toFixed(2));
+      });
+    }, { passive: true });
+    diagnosisHero.addEventListener('pointerleave', () => {
+      diagnosisSystem.style.setProperty('--system-x', '0');
+      diagnosisSystem.style.setProperty('--system-y', '0');
+    });
+  }
+
+  const revealItems = document.querySelectorAll('[data-reveal]');
+  if (reduceMotion.matches || !('IntersectionObserver' in window)) {
+    revealItems.forEach((item) => item.classList.add('is-visible'));
+  } else {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: .12 });
+    revealItems.forEach((item, index) => {
+      item.style.transitionDelay = `${(index % 3) * 70}ms`;
+      revealObserver.observe(item);
+    });
+  }
 
   function setSubmissionState(state, message) {
     if (formStatus) {
