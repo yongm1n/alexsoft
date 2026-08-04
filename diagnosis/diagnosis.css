@@ -13,6 +13,9 @@
 .diagnosis-page .site-header:not(.is-scrolled) .site-nav > a:not(.nav-contact) {
   color: rgba(17,24,51,.66);
 }
+.diagnosis-page .site-header:not(.is-scrolled) .site-nav > a[aria-current="page"]:not(.nav-contact) {
+  color: #111833;
+}
 .diagnosis-page .site-header:not(.is-scrolled) .nav-contact {
   border-color: rgba(17,24,51,.27);
 }
