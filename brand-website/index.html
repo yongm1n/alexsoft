@@ -86,7 +86,7 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="../styles.css?v=20260804-nav-1">
+  <link rel="stylesheet" href="../styles.css?v=20260804-nav-2">
   <link rel="stylesheet" href="brand-website.css?v=20260804-2">
 </head>
 <body class="hybrid-concept brand-page">
@@ -105,10 +105,24 @@
       <span></span><span></span>
     </button>
     <nav class="site-nav" aria-label="주요 메뉴" data-nav>
+      <details class="nav-services" data-nav-services>
+        <summary>서비스 <span class="nav-chevron" aria-hidden="true"></span></summary>
+        <div class="nav-services-popover">
+          <a href="/diagnosis/" data-nav-path="/diagnosis/">
+            <span>01</span>
+            <strong>업무·시스템 진단</strong>
+            <small>흐름·비용·투자 방향을 결정합니다.</small>
+          </a>
+          <a href="/brand-website/" data-nav-path="/brand-website/">
+            <span>02</span>
+            <strong>브랜드 웹사이트 제작</strong>
+            <small>브랜드의 태도를 화면과 경험으로 설계합니다.</small>
+          </a>
+        </div>
+      </details>
       <a href="/#work">프로젝트</a>
-      <a href="/diagnosis/">업무 진단</a>
-      <a href="/brand-website/" aria-current="page">브랜드 웹사이트</a>
-      <a class="nav-contact" href="/#start">프로젝트 문의 <span>↘</span></a>
+      <a href="/#about">회사소개</a>
+      <a class="nav-contact" href="/#start">문의하기 <span>↘</span></a>
     </nav>
   </header>
 
@@ -311,6 +325,7 @@
     </div>
   </footer>
 
-  <script src="brand-website.js" defer></script>
+  <script src="../navigation.js?v=20260804-nav-2" defer></script>
+  <script src="brand-website.js?v=20260804-nav-2" defer></script>
 </body>
 </html>

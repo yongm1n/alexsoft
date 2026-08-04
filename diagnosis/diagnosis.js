@@ -1,11 +1,8 @@
 (() => {
   'use strict';
 
-  const body = document.body;
   const header = document.querySelector('[data-header]');
   const progress = document.querySelector('.scroll-progress span');
-  const menuToggle = document.querySelector('[data-menu-toggle]');
-  const menu = document.querySelector('[data-nav]');
   const form = document.querySelector('[data-inquiry-form]');
   const formStatus = document.querySelector('[data-form-status]');
   const serviceSelect = document.querySelector('[data-service-select]');
@@ -20,13 +17,6 @@
   let submissionPending = false;
   let submissionTimer;
 
-  function closeMenu() {
-    body.classList.remove('menu-open');
-    menu?.classList.remove('is-open');
-    menuToggle?.setAttribute('aria-expanded', 'false');
-    menuToggle?.setAttribute('aria-label', '메뉴 열기');
-  }
-
   function renderScrollState() {
     const distance = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
     const ratio = Math.min(1, Math.max(0, window.scrollY / distance));
@@ -34,22 +24,10 @@
     header?.classList.toggle('is-scrolled', window.scrollY > 20);
   }
 
-  menuToggle?.addEventListener('click', () => {
-    const opening = !menu?.classList.contains('is-open');
-    body.classList.toggle('menu-open', opening);
-    menu?.classList.toggle('is-open', opening);
-    menuToggle.setAttribute('aria-expanded', String(opening));
-    menuToggle.setAttribute('aria-label', opening ? '메뉴 닫기' : '메뉴 열기');
-  });
-
-  menu?.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
   document.querySelectorAll('[data-inquiry-type]').forEach((link) => {
     link.addEventListener('click', () => {
       if (serviceSelect) serviceSelect.value = link.dataset.inquiryType;
     });
-  });
-  window.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') closeMenu();
   });
   window.addEventListener('scroll', renderScrollState, { passive: true });
 

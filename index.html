@@ -124,7 +124,7 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="styles.css?v=20260804-nav-1">
+  <link rel="stylesheet" href="styles.css?v=20260804-nav-2">
 </head>
 <body class="hybrid-concept">
   <a class="skip-link" href="#main">본문으로 건너뛰기</a>
@@ -142,10 +142,24 @@
       <span></span><span></span>
     </button>
     <nav class="site-nav" aria-label="주요 메뉴" data-nav>
+      <details class="nav-services" data-nav-services>
+        <summary>서비스 <span class="nav-chevron" aria-hidden="true"></span></summary>
+        <div class="nav-services-popover">
+          <a href="/diagnosis/" data-nav-path="/diagnosis/">
+            <span>01</span>
+            <strong>업무·시스템 진단</strong>
+            <small>흐름·비용·투자 방향을 결정합니다.</small>
+          </a>
+          <a href="/brand-website/" data-nav-path="/brand-website/">
+            <span>02</span>
+            <strong>브랜드 웹사이트 제작</strong>
+            <small>브랜드의 태도를 화면과 경험으로 설계합니다.</small>
+          </a>
+        </div>
+      </details>
       <a href="/#work">프로젝트</a>
-      <a href="/diagnosis/">업무 진단</a>
-      <a href="/brand-website/">브랜드 웹사이트</a>
-      <a class="nav-contact" href="/#start">프로젝트 문의 <span>↘</span></a>
+      <a href="/#about">회사소개</a>
+      <a class="nav-contact" href="/#start">문의하기 <span>↘</span></a>
     </nav>
   </header>
 
@@ -460,7 +474,7 @@
       </div>
     </section>
 
-    <section class="experience-proof" aria-labelledby="experience-title">
+    <section class="experience-proof" id="about" aria-labelledby="experience-title">
       <div class="shell experience-proof-grid">
         <div class="experience-proof-head">
           <p class="eyebrow dark"><span></span>경험이 만드는 판단</p>
@@ -528,6 +542,7 @@
     </div>
   </footer>
 
-  <script src="app.js" defer></script>
+  <script src="navigation.js?v=20260804-nav-2" defer></script>
+  <script src="app.js?v=20260804-nav-2" defer></script>
 </body>
 </html>

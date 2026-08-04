@@ -2,7 +2,6 @@
   'use strict';
 
   const doc = document.documentElement;
-  const body = document.body;
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const mobileLayout = window.matchMedia('(max-width: 760px)');
   const clamp = (value, min = 0, max = 1) => Math.min(max, Math.max(min, value));
@@ -199,24 +198,6 @@
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(measureSections, 120);
   });
-
-  const menuToggle = document.querySelector('[data-menu-toggle]');
-  const menu = document.querySelector('[data-nav]');
-  function closeMenu() {
-    body.classList.remove('menu-open');
-    menu?.classList.remove('is-open');
-    menuToggle?.setAttribute('aria-expanded', 'false');
-    menuToggle?.setAttribute('aria-label', '메뉴 열기');
-  }
-  menuToggle?.addEventListener('click', () => {
-    const opening = !menu.classList.contains('is-open');
-    body.classList.toggle('menu-open', opening);
-    menu.classList.toggle('is-open', opening);
-    menuToggle.setAttribute('aria-expanded', String(opening));
-    menuToggle.setAttribute('aria-label', opening ? '메뉴 닫기' : '메뉴 열기');
-  });
-  menu?.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
-  window.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeMenu(); });
 
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
