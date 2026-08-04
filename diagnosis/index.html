@@ -103,7 +103,7 @@
   }
   </script>
   <link rel="stylesheet" href="../styles.css?v=20260804-nav-2">
-  <link rel="stylesheet" href="diagnosis.css?v=20260804-nav-2">
+  <link rel="stylesheet" href="diagnosis.css?v=20260804-evidence-2">
 </head>
 <body class="hybrid-concept diagnosis-page">
   <a class="skip-link" href="#main">본문으로 건너뛰기</a>
@@ -121,6 +121,7 @@
       <span></span><span></span>
     </button>
     <nav class="site-nav" aria-label="주요 메뉴" data-nav>
+      <a href="/#work">프로젝트</a>
       <details class="nav-services" data-nav-services>
         <summary>서비스 <span class="nav-chevron" aria-hidden="true"></span></summary>
         <div class="nav-services-popover">
@@ -136,7 +137,6 @@
           </a>
         </div>
       </details>
-      <a href="/#work">프로젝트</a>
       <a href="/#about">회사소개</a>
       <a class="nav-contact" href="/#start">문의하기 <span>↘</span></a>
     </nav>
@@ -274,39 +274,61 @@
     </section>
 
     <section class="diagnosis-evidence" aria-labelledby="evidence-title">
-      <div class="shell evidence-layout">
-        <div class="diagnosis-section-head">
-          <p class="eyebrow dark"><span></span>결과물 미리보기</p>
-          <h2 id="evidence-title">가격이 아니라,<br>결정할 근거를 삽니다.</h2>
-          <p>진단이 끝나면 말로 된 조언이 아니라 현재 상태, 손실 지점과 다음 선택이 한 흐름으로 연결된 결과물을 받습니다.</p>
-          <p class="evidence-disclaimer">아래 화면은 결과물의 구성과 밀도를 보여주기 위해 만든 예시이며 실제 고객 자료가 아닙니다.</p>
+      <div class="shell">
+        <div class="evidence-intro">
+          <div class="diagnosis-section-head inverse">
+            <p class="eyebrow"><span></span>결과물 미리보기</p>
+            <h2 id="evidence-title">무엇이 문제인지보다,<br>무엇을 먼저 할지가 남습니다.</h2>
+            <p>현행 흐름을 기록하는 데서 끝내지 않습니다. 병목의 비용, 자동화의 경계와 실행 우선순위를 하나의 의사결정 문서로 연결합니다.</p>
+          </div>
+          <ol class="evidence-index" aria-label="진단 보고서 주요 구성">
+            <li><span>01</span><div><strong>현재 흐름</strong><p>담당·도구·인계·예외를 한 장에 구조화</p></div></li>
+            <li><span>02</span><div><strong>손실 구조</strong><p>대기·재작업·오류가 만드는 시간과 비용</p></div></li>
+            <li><span>03</span><div><strong>선택 비교</strong><p>기존 도구·자동화·맞춤 개발의 현실적 경계</p></div></li>
+            <li><span>04</span><div><strong>90일 계획</strong><p>효과·난도·위험을 반영한 실행 우선순위</p></div></li>
+          </ol>
         </div>
-        <div class="evidence-sheets" aria-label="업무 진단 예시 결과물">
-          <article class="evidence-sheet sheet-flow" data-reveal>
-            <header><span>ALEXSOFT / QUICK SCAN</span><b>01 · CURRENT FLOW</b></header>
-            <div class="sheet-flow-map" aria-hidden="true">
-              <i>INPUT</i><em></em><i>CHECK</i><em></em><i>APPROVE</i><em></em><i>OUTPUT</i>
-            </div>
-            <div class="sheet-metrics"><span><small>HANDOFF</small><strong>07</strong></span><span><small>REWORK</small><strong>18%</strong></span><span><small>WAIT</small><strong>6.4h</strong></span></div>
-            <footer><span>TRACEABLE WORKFLOW</span><b>EXAMPLE / 01</b></footer>
+
+        <figure class="evidence-report" data-reveal>
+          <div class="evidence-report-media">
+            <img src="../assets/diagnosis-report-spread-v2.webp" width="1448" height="1086" loading="lazy" decoding="async" alt="현행 업무 흐름, 위험도, 비용 누수, 우선순위와 90일 실행계획으로 구성된 업무 진단 보고서 예시">
+            <div class="evidence-report-label"><span>ILLUSTRATIVE REPORT</span><b>01—06 / DECISION EDITION</b></div>
+          </div>
+          <figcaption>
+            <div><strong>흐름·위험·비용·우선순위를 한 번에 검토할 수 있는 보고서 구조</strong><p>실제 고객 자료가 아닌 가상 사례입니다. 보고서의 구성과 분석 밀도를 보여주기 위해 제작했습니다.</p></div>
+            <dl class="evidence-report-metrics" aria-label="가상 사례 핵심 지표">
+              <div><dt>HANDOFFS</dt><dd>38</dd></div>
+              <div><dt>AUTOMATION</dt><dd>23%</dd></div>
+              <div><dt>CYCLE TIME</dt><dd>9.4d</dd></div>
+            </dl>
+          </figcaption>
+        </figure>
+
+        <div class="evidence-proof-grid">
+          <article data-reveal>
+            <span>01 / TRACE &amp; MEASURE</span>
+            <h3>현재 업무가 실제로<br>어떻게 흘러가는지</h3>
+            <p>표준 절차만 옮기지 않습니다. 담당자 사이의 인계, 예외처리와 재입력까지 추적해 숨은 대기와 반복을 드러냅니다.</p>
+            <div><em>Process map</em><em>Handoff</em><em>Exception</em></div>
           </article>
-          <article class="evidence-sheet sheet-loss" data-reveal>
-            <header><span>TIME · COST · ERROR</span><b>02 · LEAKAGE</b></header>
-            <div class="sheet-bars" aria-hidden="true"><i style="--bar:86%"></i><i style="--bar:58%"></i><i style="--bar:72%"></i><i style="--bar:34%"></i></div>
-            <div class="sheet-callout"><small>PRIMARY BOTTLENECK</small><strong>중복 확인과<br>승인 대기</strong><span>전체 처리시간의 41%</span></div>
-            <footer><span>MEASURE BEFORE BUILD</span><b>EXAMPLE / 02</b></footer>
+          <article data-reveal>
+            <span>02 / COST &amp; RISK</span>
+            <h3>어디에서 시간과<br>오류 비용이 새는지</h3>
+            <p>처리시간과 대기시간을 분리하고, 오류 빈도와 영향도를 함께 비교해 개선 효과가 큰 병목부터 표시합니다.</p>
+            <div><em>Leakage</em><em>Risk heatmap</em><em>Impact</em></div>
           </article>
-          <article class="evidence-sheet sheet-decision" data-reveal>
-            <header><span>BUILD · BUY · AUTOMATE</span><b>03 · DECISION</b></header>
-            <div class="decision-matrix" aria-hidden="true">
-              <span></span><b>효과</b><b>속도</b><b>운영</b>
-              <strong>기존 도구</strong><i>●●</i><i>●●●</i><i>●●</i>
-              <strong>자동화</strong><i>●●●</i><i>●●●</i><i>●●●</i>
-              <strong>맞춤 개발</strong><i>●●●</i><i>●</i><i>●●</i>
-            </div>
-            <div class="decision-next"><small>NEXT 90 DAYS</small><strong>1. 입력 통합 → 2. 승인 자동화 → 3. 운영 측정</strong></div>
-            <footer><span>DECISION READY</span><b>EXAMPLE / 03</b></footer>
+          <article data-reveal>
+            <span>03 / DECIDE &amp; PLAN</span>
+            <h3>무엇을 만들고,<br>무엇은 만들지 않을지</h3>
+            <p>도구 활용·자동화·맞춤 개발을 효과와 부담으로 비교하고, 바로 실행할 일과 다음 투자를 90일 순서로 정리합니다.</p>
+            <div><em>Build / Buy</em><em>Priority</em><em>90 days</em></div>
           </article>
+        </div>
+
+        <div class="evidence-outcome" data-reveal>
+          <span>THE OUTCOME</span>
+          <p><strong>“개발할까요?”가 아니라</strong> 무엇을, 왜, 어느 순서로 바꿀지 결정할 수 있는 상태를 만듭니다.</p>
+          <a href="#inquiry" data-inquiry-type="업무 흐름 퀵스캔">우리 업무도 진단 가능한지 확인하기 <i aria-hidden="true">↗</i></a>
         </div>
       </div>
     </section>
