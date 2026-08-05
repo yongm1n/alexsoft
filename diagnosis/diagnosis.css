@@ -254,7 +254,7 @@
 .inquiry-copy > a { display: inline-block; margin-top: 30px; padding-bottom: 7px; border-bottom: 1px solid rgba(255,255,255,.35); color: #90adff; font-size: 12px; }
 .inquiry-form { padding: clamp(26px, 4vw, 55px); color: #050505; background: #f1f0ec; }
 .inquiry-form label { display: block; margin-top: 24px; color: rgba(5,5,5,.72); font-size: 11px; font-weight: 680; }
-.inquiry-form label:first-child, .inquiry-form .form-row:first-child label { margin-top: 0; }
+.inquiry-form .form-honeypot + .form-row > label { margin-top: 0; }
 .inquiry-form label em { margin-left: 5px; color: #2d62f4; font-size: 8px; font-style: normal; }
 .form-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
 .inquiry-form input, .inquiry-form textarea, .inquiry-form select { width: 100%; margin-top: 9px; padding: 14px 0; border: 0; border-bottom: 1px solid rgba(5,5,5,.28); border-radius: 0; color: #050505; background: transparent; font: inherit; font-size: 14px; outline: 0; transition: border-color .2s; }
@@ -346,7 +346,7 @@
   .inquiry-form { margin-top: 58px; padding: 28px 20px; }
   .form-row { grid-template-columns: 1fr; gap: 0; }
   .inquiry-form .form-row label { margin-top: 24px; }
-  .inquiry-form .form-row:first-child label:first-child { margin-top: 0; }
+  .inquiry-form .form-honeypot + .form-row > label:first-child { margin-top: 0; }
   .inquiry-submit { min-height: 64px; }
 
   .diagnosis-page .site-footer .shell { grid-template-columns: 1fr auto; }
