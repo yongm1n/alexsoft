@@ -12,7 +12,7 @@
   const submitLabel = submitButton?.querySelector('span');
   const honeypot = form?.querySelector('[data-form-honeypot]');
   const messageField = form?.querySelector('[data-message]');
-  const budgetField = form?.querySelector('[data-budget]');
+  const consultationStageField = form?.querySelector('[data-consultation-stage]');
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const defaultSubmitLabel = submitLabel?.textContent || '문의 신청';
   let submissionPending = false;
@@ -101,8 +101,8 @@
     }
 
     originalMessage = messageField?.value.trim() || '';
-    const budget = budgetField?.value || '아직 정하지 못함';
-    if (messageField) messageField.value = `${originalMessage}\n\n[문의 서비스] 브랜드 웹사이트\n[예상 예산] ${budget}`;
+    const consultationStage = consultationStageField?.value || '아이디어를 검토하는 중';
+    if (messageField) messageField.value = `${originalMessage}\n\n[문의 서비스] 브랜드 웹사이트\n[상담 단계] ${consultationStage}`;
 
     submissionPending = true;
     form.setAttribute('aria-busy', 'true');
