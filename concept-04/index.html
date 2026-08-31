@@ -9,7 +9,7 @@
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
   <link rel="preload" as="image" href="../assets/brand/alexsoft-signature-hero.webp">
   <style>
     :root{
@@ -26,14 +26,14 @@
     a{color:inherit;text-decoration:none}
     :focus-visible{outline:2px solid var(--cobalt);outline-offset:3px}
     .shell{max-width:var(--shell);margin:0 auto;padding:0 var(--gutter)}
-    h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:-.01em;text-wrap:balance;margin:0}
+    h1,h2,h3{font-family:var(--sans);font-weight:600;letter-spacing:-.022em;text-wrap:balance;margin:0}
     p{margin:0}
     .mono{font-family:var(--mono);font-size:13px;color:var(--graphite);letter-spacing:.01em;font-variant-numeric:tabular-nums}
 
     /* header — 조용하게 */
     .top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:saturate(1.2) blur(10px);border-bottom:1px solid var(--rule-soft)}
     .top .shell{display:flex;align-items:center;justify-content:space-between;height:64px}
-    .mark{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:13px;letter-spacing:.14em;font-weight:500}
+    .mark{display:flex;align-items:center;gap:10px;font-size:14px;letter-spacing:.1em;font-weight:600}
     .mark svg{width:26px;height:26px;display:block}
     .top nav{display:flex;gap:28px;font-size:14px;color:var(--graphite)}
     .top nav a:hover{color:var(--ink)}
@@ -44,23 +44,27 @@
     .hero{border-bottom:1px solid var(--rule-soft)}
     .hero .shell{display:grid;grid-template-columns:minmax(300px,5fr) minmax(0,7fr);gap:clamp(28px,4vw,64px);align-items:stretch;padding-top:clamp(28px,4vw,56px);padding-bottom:clamp(28px,4vw,56px)}
     .hero-copy{display:flex;flex-direction:column;justify-content:center;gap:22px;max-width:520px}
-    .hero h1{font-size:clamp(27px,2.9vw,40px);line-height:1.34;font-weight:600}
+    .hero h1{font-size:clamp(28px,3vw,42px);line-height:1.32;font-weight:600}
     .hero h1 em{font-style:normal;color:var(--cobalt)}
     .hero-lede{font-size:17px;line-height:1.85;color:var(--ink);max-width:44ch}
     .hero-links{display:flex;gap:22px;flex-wrap:wrap;font-size:15px}
     .hero-links a{display:inline-flex;align-items:center;gap:8px;padding:11px 0;border-bottom:1px solid var(--ink)}
+    .hero-links a.solid{background:var(--ink);color:var(--paper);padding:12px 22px;border-bottom:0;transition:background .25s ease}
+    .hero-links a.solid span{color:var(--cobalt-soft)}
+    .hero-links a.solid:hover{background:var(--cobalt)}
+    .hero-links a.solid:hover span{color:#fff;transform:translateX(3px)}
     .hero-links a span{color:var(--cobalt);transition:transform .3s ease}
     .hero-links a:hover span{transform:translateX(3px)}
     .hero-links a.quiet{border-bottom-color:var(--rule)}
     .hero-fact{display:flex;gap:14px;align-items:baseline;padding-top:8px;border-top:1px solid var(--rule-soft)}
     .hero-fact .mono{color:var(--cobalt);white-space:nowrap}
     .hero-fact p{font-size:14px;color:var(--graphite);line-height:1.6}
-    .hero-media{position:relative;min-height:420px;background:#e9e3d8}
+    .hero-media{position:relative;min-height:440px;background:#e9e3d8;border:1px solid var(--rule);border-right:0;margin-right:calc(-1 * max(var(--gutter), (100vw - var(--shell))/2 + var(--gutter)))}
     .hero-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:68% 52%;display:block}
     .hero-media figcaption{position:absolute;left:14px;bottom:12px;font-family:var(--mono);font-size:11px;color:rgba(23,25,29,.55);letter-spacing:.08em}
     @media (max-width:860px){
       .hero .shell{grid-template-columns:1fr;gap:22px;padding-top:0}
-      .hero-media{order:-1;min-height:0;aspect-ratio:16/10;margin:0 calc(-1*var(--gutter))}
+      .hero-media{order:-1;min-height:0;aspect-ratio:16/10;margin:0 calc(-1*var(--gutter));border:0;border-bottom:1px solid var(--rule)}
       .hero-media img{object-position:70% 50%}
       .hero-copy{max-width:none;padding-top:6px}
     }
@@ -68,7 +72,7 @@
     /* section frame */
     section.block{padding:clamp(56px,7vw,96px) 0;border-bottom:1px solid var(--rule-soft)}
     .head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:clamp(20px,3vw,48px);align-items:end;margin-bottom:clamp(28px,4vw,48px)}
-    .head h2{font-size:clamp(24px,2.3vw,30px);line-height:1.35}
+    .head h2{font-size:clamp(24px,2.4vw,32px);line-height:1.34}
     .head .nib{display:flex;align-items:center;gap:10px;margin-bottom:12px}
     .head .nib svg{width:16px;height:16px}
     .head .nib span{font-family:var(--mono);font-size:12px;color:var(--graphite);letter-spacing:.04em}
@@ -84,7 +88,7 @@
     .ink .nf{fill:var(--cobalt);stroke:none}
     .ink .bx{fill:var(--wash);stroke:var(--cobalt);stroke-width:1.5}
     .ink text{fill:var(--ink)}
-    .ink .t{font-family:var(--serif);font-size:17px;font-weight:600}
+    .ink .t{font-family:var(--sans);font-size:16px;font-weight:600;letter-spacing:-.01em}
     .ink .s{font-size:13px;fill:var(--graphite)}
     .ink .m{font-family:var(--mono);font-size:12px;fill:var(--cobalt);letter-spacing:.02em}
     .ink .draw{stroke-dasharray:1400;stroke-dashoffset:1400}
@@ -96,8 +100,9 @@
     @media (max-width:800px){.scroll-hint{display:block}}
 
     /* process columns */
-    .steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(18px,2.5vw,36px);margin-top:26px}
-    .steps h3{font-size:18px;line-height:1.4;margin-bottom:6px}
+    .steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(18px,2.5vw,36px);margin-top:30px}
+    .steps>div{border-top:2px solid var(--ink);padding-top:12px}
+    .steps h3{font-size:17px;line-height:1.4;margin-bottom:6px}
     .steps .mono{display:block;margin-bottom:8px}
     .steps p{font-size:15px;line-height:1.75;color:var(--ink)}
     .steps small{display:block;margin-top:8px;font-size:13px;color:var(--graphite)}
@@ -112,7 +117,7 @@
     .case{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(280px,1fr);gap:clamp(24px,4vw,64px);align-items:start}
     .case>div{min-width:0}
     @media (max-width:900px){.case{grid-template-columns:1fr}}
-    .facts{border-top:1px solid var(--ink)}
+    .facts{border-top:2px solid var(--ink);margin:0}
     .facts div{display:grid;grid-template-columns:64px 1fr;gap:14px;padding:12px 0;border-bottom:1px solid var(--rule-soft);font-size:15px;line-height:1.7}
     .facts dt{font-family:var(--mono);font-size:12px;color:var(--cobalt);padding-top:5px}
     .facts dd{margin:0}
@@ -155,7 +160,7 @@
           <h1 id="hero-title">실패가 허용되지 않는 시스템을 <em>설계</em>하고, 설계한 것은 직접 만듭니다.</h1>
           <p class="hero-lede">알렉스소프트(ALEXSOFT)는 법제와 인증, 기존 시스템의 제약 안에서 실제로 작동하는 구조를 설계하는 1인 아키텍처 스튜디오입니다. 국가 단위 e-invoice 시스템과 인증 클라우드 EMR을 설계하고 만들었습니다.</p>
           <div class="hero-links">
-            <a href="#process">진행 방식 <span>→</span></a>
+            <a class="solid" href="#process">진행 방식 <span>→</span></a>
             <a class="quiet" href="/work/">프로젝트 사례 <span>→</span></a>
           </div>
           <div class="hero-fact">
