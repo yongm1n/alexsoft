@@ -40,33 +40,38 @@
     .top nav a.cta{color:var(--ink);border-bottom:1px solid var(--cobalt);padding-bottom:1px}
     @media (max-width:720px){.top nav{gap:16px;font-size:13px}.top nav a:nth-child(2){display:none}}
 
-    /* hero — 만년필이 주인공 */
-    .hero{border-bottom:1px solid var(--rule-soft)}
-    .hero .shell{display:grid;grid-template-columns:minmax(300px,5fr) minmax(0,7fr);gap:clamp(28px,4vw,64px);align-items:stretch;padding-top:clamp(28px,4vw,56px);padding-bottom:clamp(28px,4vw,56px)}
-    .hero-copy{display:flex;flex-direction:column;justify-content:center;gap:22px;max-width:520px}
-    .hero h1{font-size:clamp(28px,3vw,42px);line-height:1.32;font-weight:600}
+    /* hero — 사진 전체 위에 글이 앉는다 */
+    .hero{position:relative;height:min(88svh,820px);min-height:560px;border-bottom:1px solid var(--rule-soft);overflow:hidden}
+    @supports not (height:1svh){.hero{height:min(88vh,820px)}}
+    .hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:72% 54%}
+    .hero-scrim{position:absolute;inset:0;background:linear-gradient(96deg,rgba(250,248,244,.9) 0%,rgba(250,248,244,.55) 34%,rgba(250,248,244,0) 58%)}
+    .hero .shell{position:relative;height:100%;display:flex;flex-direction:column;justify-content:center}
+    .hero-copy{display:flex;flex-direction:column;gap:22px;max-width:560px}
+    .hero h1{font-size:clamp(30px,3.4vw,48px);line-height:1.28;font-weight:600}
     .hero h1 em{font-style:normal;color:var(--cobalt)}
-    .hero-lede{font-size:17px;line-height:1.85;color:var(--ink);max-width:44ch}
-    .hero-links{display:flex;gap:22px;flex-wrap:wrap;font-size:15px}
+    .hero-lede{font-size:clamp(15px,1.25vw,17px);line-height:1.85;color:var(--ink);max-width:42ch}
+    .hero-links{display:flex;gap:22px;flex-wrap:wrap;font-size:15px;align-items:center}
     .hero-links a{display:inline-flex;align-items:center;gap:8px;padding:11px 0;border-bottom:1px solid var(--ink)}
-    .hero-links a.solid{background:var(--ink);color:var(--paper);padding:12px 22px;border-bottom:0;transition:background .25s ease}
+    .hero-links a.solid{background:var(--ink);color:var(--paper);padding:13px 24px;border-bottom:0;transition:background .25s ease}
     .hero-links a.solid span{color:var(--cobalt-soft)}
     .hero-links a.solid:hover{background:var(--cobalt)}
     .hero-links a.solid:hover span{color:#fff;transform:translateX(3px)}
     .hero-links a span{color:var(--cobalt);transition:transform .3s ease}
     .hero-links a:hover span{transform:translateX(3px)}
-    .hero-links a.quiet{border-bottom-color:var(--rule)}
-    .hero-fact{display:flex;gap:14px;align-items:baseline;padding-top:8px;border-top:1px solid var(--rule-soft)}
+    .hero-links a.quiet{border-bottom-color:rgba(23,25,29,.35)}
+    .hero-fact{position:absolute;left:0;right:0;bottom:0;border-top:1px solid rgba(23,25,29,.14);background:linear-gradient(180deg,rgba(250,248,244,0),rgba(250,248,244,.42))}
+    .hero-fact .shell{height:auto;display:flex;gap:14px;align-items:baseline;padding-top:14px;padding-bottom:16px;flex-direction:row;justify-content:flex-start}
     .hero-fact .mono{color:var(--cobalt);white-space:nowrap}
-    .hero-fact p{font-size:14px;color:var(--graphite);line-height:1.6}
-    .hero-media{position:relative;min-height:440px;background:#e9e3d8;border:1px solid var(--rule);border-right:0;margin-right:calc(-1 * max(var(--gutter), (100vw - var(--shell))/2 + var(--gutter)))}
-    .hero-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:68% 52%;display:block}
-    .hero-media figcaption{position:absolute;left:14px;bottom:12px;font-family:var(--mono);font-size:11px;color:rgba(23,25,29,.55);letter-spacing:.08em}
+    .hero-fact p{font-size:13.5px;color:rgba(23,25,29,.78);line-height:1.6;max-width:62ch}
+    .hero-caption{position:absolute;right:16px;bottom:58px;font-family:var(--mono);font-size:11px;color:rgba(23,25,29,.45);letter-spacing:.08em}
     @media (max-width:860px){
-      .hero .shell{grid-template-columns:1fr;gap:22px;padding-top:0}
-      .hero-media{order:-1;min-height:0;aspect-ratio:16/10;margin:0 calc(-1*var(--gutter));border:0;border-bottom:1px solid var(--rule)}
-      .hero-media img{object-position:70% 50%}
-      .hero-copy{max-width:none;padding-top:6px}
+      .hero{height:min(92svh,760px);min-height:520px}
+      .hero>img{object-position:66% 50%}
+      .hero-scrim{background:linear-gradient(180deg,rgba(250,248,244,.92) 0%,rgba(250,248,244,.6) 40%,rgba(250,248,244,.05) 72%)}
+      .hero .shell{justify-content:flex-start;padding-top:clamp(28px,7vh,64px)}
+      .hero-copy{max-width:none}
+      .hero-caption{display:none}
+      .hero-fact p{font-size:12.5px}
     }
 
     /* section frame */
@@ -155,23 +160,24 @@
 
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
+      <img src="../assets/brand/alexsoft-signature-hero.webp" width="1672" height="941" alt="종이 위에서 만년필이 파란 잉크로 시스템 구조를 그려 나가는 장면" fetchpriority="high">
+      <div class="hero-scrim" aria-hidden="true"></div>
       <div class="shell">
         <div class="hero-copy">
           <h1 id="hero-title">실패가 허용되지 않는 시스템을 <em>설계</em>하고, 설계한 것은 직접 만듭니다.</h1>
-          <p class="hero-lede">알렉스소프트(ALEXSOFT)는 법제와 인증, 기존 시스템의 제약 안에서 실제로 작동하는 구조를 설계하는 1인 아키텍처 스튜디오입니다. 국가 단위 e-invoice 시스템과 인증 클라우드 EMR을 설계하고 만들었습니다.</p>
+          <p class="hero-lede">알렉스소프트(ALEXSOFT)는 법제와 인증, 기존 시스템의 제약 안에서 실제로 작동하는 구조를 설계하는 1인 아키텍처 스튜디오입니다.</p>
           <div class="hero-links">
             <a class="solid" href="#process">진행 방식 <span>→</span></a>
             <a class="quiet" href="/work/">프로젝트 사례 <span>→</span></a>
           </div>
-          <div class="hero-fact">
-            <span class="mono">2022 →</span>
-            <p>필리핀 국세청 e-invoice 시스템 — 개발 PL로 문서 표준과 교환체계 보안 표준을 설계. 2022년 가동, 지금도 운영 중.</p>
-          </div>
         </div>
-        <figure class="hero-media">
-          <img src="../assets/brand/alexsoft-signature-hero.webp" width="1672" height="941" alt="종이 위에서 만년필이 파란 잉크로 시스템 구조를 그려 나가는 장면" fetchpriority="high">
-          <figcaption>SIGNATURE · ALEXSOFT</figcaption>
-        </figure>
+      </div>
+      <span class="hero-caption" aria-hidden="true">SIGNATURE · ALEXSOFT</span>
+      <div class="hero-fact">
+        <div class="shell">
+          <span class="mono">2022 →</span>
+          <p>필리핀 국세청 e-invoice 시스템 — 개발 PL로 문서 표준과 교환체계 보안 표준을 설계. 2022년 가동, 지금도 운영 중.</p>
+        </div>
       </div>
     </section>
 
