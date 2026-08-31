@@ -1,0 +1,128 @@
+/* ALEXSOFT — English profile. A specification sheet: label rail + record column. */
+.en-page {
+  --en-paper: #f3efe6;
+  --en-ink: #131210;
+  --en-ink-soft: rgba(19, 18, 16, .68);
+  --en-line: rgba(19, 18, 16, .15);
+  --en-hair: rgba(19, 18, 16, .09);
+  --en-mono: ui-monospace, SFMono-Regular, Menlo, "SF Mono", monospace;
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+  color: var(--en-ink);
+  background: var(--en-paper);
+}
+.en-page main { flex: 1; }
+.en-page :focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; border-radius: 2px; }
+.en-page ::selection { color: var(--en-paper); background: var(--en-ink); }
+.en-hide { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+.en-sheet {
+  width: min(90vw, 1020px);
+  margin-inline: auto;
+  padding: clamp(104px, 15vh, 168px) 0 clamp(72px, 10vh, 112px);
+}
+.en-page .site-footer .shell { width: min(90vw, 1020px); }
+
+/* Row = one record: label rail, hairline, content. */
+.en-row { display: grid; grid-template-columns: minmax(0, 14rem) minmax(0, 1fr); }
+.en-row + .en-row { border-top: 1px solid var(--en-line); }
+.en-rail { padding: clamp(30px, 4.4vw, 54px) clamp(16px, 2.4vw, 36px) clamp(30px, 4.4vw, 54px) 0; }
+.en-body { padding: clamp(30px, 4.4vw, 54px) 0 clamp(30px, 4.4vw, 54px) clamp(22px, 3.4vw, 50px); border-left: 1px solid var(--en-line); }
+.en-page .eyebrow.dark { align-items: flex-start; color: rgba(19, 18, 16, .66); font-size: 10.5px; letter-spacing: .13em; line-height: 1.65; }
+.en-page .eyebrow.dark > span { flex: none; margin-top: .78em; }
+
+/* Type */
+.en-body > * { max-width: 65ch; }
+.en-body > :first-child { margin-top: 0; }
+.en-body > :last-child { margin-bottom: 0; }
+.en-body h1 {
+  max-width: 19ch;
+  margin: -.12em 0 0;
+  font-size: clamp(2.05rem, 5.4vw, 3.35rem);
+  font-weight: 660;
+  letter-spacing: -.038em;
+  line-height: 1.03;
+  text-wrap: balance;
+}
+.en-body h2 { margin: -.1em 0 .5em; font-size: clamp(1.18rem, 2.2vw, 1.5rem); font-weight: 640; letter-spacing: -.024em; text-wrap: balance; }
+.en-body h3 { margin: 0; font-size: clamp(1rem, 1.7vw, 1.1rem); font-weight: 600; letter-spacing: -.018em; line-height: 1.4; text-wrap: balance; }
+.en-body p { margin: 0 0 1em; color: var(--en-ink-soft); font-size: 15.5px; line-height: 1.78; }
+.en-lede { margin-top: 1.15em !important; font-size: clamp(1rem, 1.9vw, 1.16rem) !important; line-height: 1.66 !important; }
+.en-note { color: rgba(19, 18, 16, .5); font-size: 13.5px !important; }
+.en-spec, .en-stamp, .en-steps span, .en-mono {
+  font-family: var(--en-mono);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: .06em;
+}
+
+/* Core expertise */
+.en-list { margin: 0; padding: 0; list-style: none; }
+.en-list li { padding: 14px 0; font-size: clamp(.98rem, 1.6vw, 1.06rem); font-weight: 540; letter-spacing: -.014em; line-height: 1.5; }
+.en-list li:first-child { padding-top: 0; }
+.en-list li:last-child { padding-bottom: 0; }
+.en-list li + li { border-top: 1px solid var(--en-hair); }
+
+/* Selected work records */
+.en-record + .en-record { margin-top: 30px; padding-top: 30px; border-top: 1px solid var(--en-hair); }
+.en-record-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 28px; max-width: 65ch; }
+.en-record-head h3 { max-width: 34ch; }
+.en-stamp {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin: 0;
+  color: var(--en-ink) !important;
+  font-size: 10px !important;
+  font-weight: 600;
+  line-height: 1.6 !important;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.en-stamp::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--blue); }
+.en-spec { margin: 13px 0 .9em; color: rgba(19, 18, 16, .46) !important; font-size: 10.5px !important; text-transform: uppercase; }
+.en-mono { font-size: .94em; color: var(--en-ink); }
+.en-record + .en-record + .en-note { margin-top: 26px; }
+
+/* How I work */
+.en-steps { margin: 0; padding: 0; list-style: none; counter-reset: none; }
+.en-steps li { display: grid; grid-template-columns: minmax(0, 8rem) minmax(0, 1fr); gap: 2px 24px; padding: 14px 0; }
+.en-steps li:first-child { padding-top: 0; }
+.en-steps li:last-child { padding-bottom: 0; }
+.en-steps li + li { border-top: 1px solid var(--en-hair); }
+.en-steps span { color: var(--en-ink); font-size: 10px; font-weight: 600; line-height: 2.1; letter-spacing: .11em; text-transform: uppercase; }
+.en-steps p { margin: 0; }
+
+/* Contact */
+.en-email {
+  display: inline-block;
+  margin-bottom: .9em;
+  padding-bottom: 5px;
+  border-bottom: 2px solid var(--blue);
+  font-size: clamp(1.3rem, 3.4vw, 1.95rem);
+  font-weight: 620;
+  letter-spacing: -.028em;
+  transition: border-color .2s;
+}
+.en-email:hover { border-bottom-color: var(--en-ink); }
+.en-link { padding-bottom: 2px; border-bottom: 1px solid var(--blue); color: var(--en-ink); transition: border-color .2s; }
+.en-link span { display: inline-block; transition: transform .25s var(--ease-out); }
+.en-link:hover { border-bottom-color: var(--en-ink); }
+.en-link:hover span { transform: translateX(3px); }
+
+@media (max-width: 760px) {
+  .en-sheet { padding-top: clamp(88px, 13vh, 120px); }
+  .en-row { grid-template-columns: 1fr; }
+  .en-rail { padding: clamp(26px, 6vw, 34px) 0 0; }
+  .en-body { padding: 13px 0 clamp(26px, 6vw, 34px); border-left: 0; }
+  .en-record-head { display: block; }
+  .en-stamp { margin-top: 7px; }
+  .en-steps li { grid-template-columns: 1fr; gap: 3px; }
+  .en-steps span { line-height: 1.6; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:has(.en-page) { scroll-behavior: auto; }
+  .en-page * { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}

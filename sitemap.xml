@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://alexsoft.co.kr/</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <image:image><image:loc>https://alexsoft.co.kr/assets/brand/alexsoft-signature-hero.webp</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/assets/brand/capability-ai-workflow.webp</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/assets/brand/capability-product-engineering.webp</image:loc></image:image>
@@ -13,14 +13,18 @@
   </url>
   <url>
     <loc>https://alexsoft.co.kr/diagnosis/</loc>
-    <lastmod>2026-08-21</lastmod>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/brand/alexsoft-performance-automation-og-v1.png</image:loc></image:image>
+    <lastmod>2026-08-31</lastmod>
+    <image:image><image:loc>https://alexsoft.co.kr/assets/brand/alexsoft-signature-hero.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://alexsoft.co.kr/brand-website/</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <image:image><image:loc>https://alexsoft.co.kr/assets/brand/alexsoft-brand-website-og-v2.png</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/assets/grace-site.webp</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/assets/grace-site-mobile.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://alexsoft.co.kr/en/</loc>
+    <lastmod>2026-08-31</lastmod>
   </url>
 </urlset>
