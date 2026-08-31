@@ -57,7 +57,7 @@
   window.addEventListener('keydown', (event) => {
     if (event.key !== 'Escape') return;
     if (services?.open) closeServices({ restoreFocus: true });
-    else closeMenu();
+    else if (nav.classList.contains('is-open')) { closeMenu(); toggle.focus(); }
   });
 
   mobileLayout.addEventListener('change', () => closeMenu());

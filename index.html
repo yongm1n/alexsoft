@@ -14,7 +14,7 @@
   <meta property="og:site_name" content="알렉스소프트(ALEXSOFT)">
   <meta property="og:url" content="https://alexsoft.co.kr/">
   <meta property="og:title" content="알렉스소프트 — 규제 산업 시스템 아키텍처 설계·구현">
-  <meta property="og:description" content="실패가 허용되지 않는 시스템을 설계하고 직접 만듭니다. 국가 단위 e-invoice 시스템 설계 경험, 4년째 가동 중.">
+  <meta property="og:description" content="실패가 허용되지 않는 시스템을 설계하고 직접 만듭니다. 국가 단위 e-invoice 시스템 설계 경험, 2022년 가동 후 지금도 운영 중.">
   <meta property="og:image" content="https://alexsoft.co.kr/assets/brand/alexsoft-signature-hero.webp">
   <meta property="og:image:type" content="image/webp">
   <meta property="og:image:width" content="1672">
@@ -134,10 +134,10 @@
       </svg>
       <span>ALEXSOFT</span>
     </a>
-    <button class="menu-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" data-menu-toggle>
+    <button class="menu-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
       <span></span><span></span>
     </button>
-    <nav class="site-nav" aria-label="주요 메뉴" data-nav>
+    <nav class="site-nav" id="site-nav" aria-label="주요 메뉴" data-nav>
       <a href="/#work">프로젝트</a>
       <details class="nav-services" data-nav-services>
         <summary>서비스 <span class="nav-chevron" aria-hidden="true"></span></summary>
@@ -275,10 +275,10 @@
       <div class="work-stage">
         <div class="work-head shell">
           <div>
-            <p class="eyebrow"><span></span>OWN PRODUCTS</p>
+            <p class="eyebrow"><span></span>SELECTED WORK</p>
             <h2 id="work-title">구조를 먼저 그리고,<br>제품으로 검증합니다.</h2>
           </div>
-          <p>모두 알렉스소프트가 직접 만들고 운영하는 자체 제품입니다. 우리가 제안하는 설계 방식이 실제로 작동하는지 우리 제품에서 먼저 검증합니다.</p>
+          <p>알렉스소프트가 직접 설계하고 만든 제품과 공개 프로젝트입니다. 우리가 제안하는 설계 방식이 실제로 작동하는지 먼저 검증한 결과물입니다.</p>
         </div>
 
         <div class="work-viewport">
@@ -344,7 +344,7 @@
                 <div class="goal-app">
                   <aside><b>G</b><i></i><i></i><i></i><i></i></aside>
                   <div class="goal-main">
-                    <header><div><small>2026 COMPANY GOALS</small><strong>목표 대시보드</strong></div><button>+ 새 목표</button></header>
+                    <header><div><small>2026 COMPANY GOALS</small><strong>목표 대시보드</strong></div><button tabindex="-1">+ 새 목표</button></header>
                     <div class="goal-summary"><div><small>전체 진행률</small><b>68%</b><span><i style="width:68%"></i></span></div><div class="goal-ring"><b>12</b><small>ACTIVE</small></div><div class="goal-ring accent"><b>04</b><small>AT RISK</small></div></div>
                     <div class="goal-table"><div><span>핵심 목표</span><span>Owner</span><span>Progress</span></div><div><b>AI 제품 전환</b><i>Product</i><em><u style="width:82%"></u></em></div><div><b>고객 경험 혁신</b><i>Design</i><em><u style="width:64%"></u></em></div><div><b>데이터 플랫폼</b><i>Data</i><em><u style="width:48%"></u></em></div></div>
                   </div>
@@ -483,7 +483,7 @@
         </div>
         <dl class="experience-proof-list">
           <div class="reveal"><dt>NATIONAL E-INVOICE</dt><dd>필리핀 국세청 시스템 설계, 지금도 운영 중</dd></div>
-          <div class="reveal"><dt>CERTIFIED CLOUD EMR</dt><dd>EMR 인증 의원급 최초 클라우드 제품 총괄</dd></div>
+          <div class="reveal"><dt>CERTIFIED CLOUD EMR</dt><dd>EMR 인증 의원급 최초 클라우드 제품 · 개발·기획설계 총괄 2년</dd></div>
           <div class="reveal"><dt>AWS SA PROFESSIONAL</dt><dd>검증된 클라우드 아키텍처 설계</dd></div>
           <div class="reveal"><dt>20+ YEARS</dt><dd>조세 인프라·의료·조선해양 기간계</dd></div>
         </dl>
@@ -545,7 +545,7 @@
     </div>
   </footer>
 
-  <script src="navigation.js?v=20260804-nav-2" defer></script>
+  <script src="navigation.js?v=20260831-a11y-1" defer></script>
   <script src="app.js?v=20260804-nav-2" defer></script>
 </body>
 </html>

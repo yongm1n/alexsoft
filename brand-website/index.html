@@ -116,10 +116,10 @@
       </svg>
       <span>ALEXSOFT</span>
     </a>
-    <button class="menu-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" data-menu-toggle>
+    <button class="menu-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
       <span></span><span></span>
     </button>
-    <nav class="site-nav" aria-label="주요 메뉴" data-nav>
+    <nav class="site-nav" id="site-nav" aria-label="주요 메뉴" data-nav>
       <a href="/#work">프로젝트</a>
       <details class="nav-services" data-nav-services>
         <summary>서비스 <span class="nav-chevron" aria-hidden="true"></span></summary>
@@ -155,7 +155,7 @@
           </div>
         </div>
 
-        <div class="brand-hero-art" aria-label="The Grace 브랜드 웹사이트 화면">
+        <div class="brand-hero-art">
           <div class="brand-browser brand-browser-main">
             <div class="brand-browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>gracedaycare.co.kr</span></div>
             <img src="../assets/grace-site.webp" width="1400" height="834" alt="더 그레이스 시니어 주간보호센터 브랜드 웹사이트 첫 화면">
@@ -292,11 +292,11 @@
           <h2 id="faq-title">시작 전에<br>궁금한 것들.</h2>
         </div>
         <div class="brand-faq-list">
-          <details open><summary>견적은 어떻게 결정되나요?<span>+</span></summary><p>페이지 수, 콘텐츠 준비 상태, 필요한 기능과 인터랙션을 함께 확인한 뒤 작업 범위와 견적을 제안합니다. 처음부터 모든 기능을 넣기보다 지금 가장 필요한 경험부터 시작할 수 있습니다.</p></details>
-          <details><summary>AI로 자동 생성하는 홈페이지인가요?<span>+</span></summary><p>아닙니다. AI와 생성형 이미지는 필요한 제작 단계에서 도구로 활용하지만, 정보구조·아트디렉션·디자인·개발과 검수는 프로젝트 목적에 맞춰 직접 판단합니다.</p></details>
-          <details><summary>원고와 이미지가 준비되지 않았습니다.<span>+</span></summary><p>기본 원고를 정리하는 범위는 협의할 수 있습니다. 전문 카피라이팅, 브랜드 촬영과 대규모 이미지 제작이 필요하면 별도 범위로 견적합니다.</p></details>
-          <details><summary>아임웹이나 워드프레스도 가능한가요?<span>+</span></summary><p>운영 방식과 필요한 기능에 따라 가장 적합한 방식을 선택합니다. 특정 도구 사용이 목적이 아니라 디자인 품질, 운영 편의와 장기 비용을 함께 판단합니다.</p></details>
-          <details><summary>완성 후 직접 수정할 수 있나요?<span>+</span></summary><p>자주 바뀌는 콘텐츠가 있다면 시작 전에 CMS 또는 운영 방식을 범위에 포함합니다. 정적 사이트는 코드와 배포 계정을 고객이 소유하며 변경이 필요할 때 별도 요청할 수 있습니다.</p></details>
+          <details open><summary>견적은 어떻게 결정되나요?<span aria-hidden="true">+</span></summary><p>페이지 수, 콘텐츠 준비 상태, 필요한 기능과 인터랙션을 함께 확인한 뒤 작업 범위와 견적을 제안합니다. 처음부터 모든 기능을 넣기보다 지금 가장 필요한 경험부터 시작할 수 있습니다.</p></details>
+          <details><summary>AI로 자동 생성하는 홈페이지인가요?<span aria-hidden="true">+</span></summary><p>아닙니다. AI와 생성형 이미지는 필요한 제작 단계에서 도구로 활용하지만, 정보구조·아트디렉션·디자인·개발과 검수는 프로젝트 목적에 맞춰 직접 판단합니다.</p></details>
+          <details><summary>원고와 이미지가 준비되지 않았습니다.<span aria-hidden="true">+</span></summary><p>기본 원고를 정리하는 범위는 협의할 수 있습니다. 전문 카피라이팅, 브랜드 촬영과 대규모 이미지 제작이 필요하면 별도 범위로 견적합니다.</p></details>
+          <details><summary>아임웹이나 워드프레스도 가능한가요?<span aria-hidden="true">+</span></summary><p>운영 방식과 필요한 기능에 따라 가장 적합한 방식을 선택합니다. 특정 도구 사용이 목적이 아니라 디자인 품질, 운영 편의와 장기 비용을 함께 판단합니다.</p></details>
+          <details><summary>완성 후 직접 수정할 수 있나요?<span aria-hidden="true">+</span></summary><p>자주 바뀌는 콘텐츠가 있다면 시작 전에 CMS 또는 운영 방식을 범위에 포함합니다. 정적 사이트는 코드와 배포 계정을 고객이 소유하며 변경이 필요할 때 별도 요청할 수 있습니다.</p></details>
         </div>
       </div>
     </section>
@@ -306,7 +306,7 @@
         <div class="brand-inquiry-copy">
           <p class="eyebrow"><span></span>프로젝트 문의</p>
           <h2 id="inquiry-title">좋은 첫 화면은,<br>좋은 질문에서 시작됩니다.</h2>
-          <p>완벽한 기획서를 준비하지 않아도 됩니다. 현재 사이트의 문제와 새 사이트가 만들어야 할 변화를 알려주세요. 내용을 검토한 뒤 20분 확인 일정을 안내합니다.</p>
+          <p>완벽한 기획서를 준비하지 않아도 됩니다. 현재 사이트의 문제와 새 사이트가 만들어야 할 변화를 알려주세요. 내용을 검토한 뒤 30분 적합성 확인 일정을 안내합니다.</p>
           <a href="mailto:alexsoft.kr@gmail.com">alexsoft.kr@gmail.com</a>
         </div>
         <form class="brand-inquiry-form" action="https://docs.google.com/forms/d/e/1FAIpQLSe3Y0R4OwMIEWCu8aX6Z8y9aF-iMvkKao9TI9S7A7cdhCYvow/formResponse" method="post" target="brand-google-form-response" accept-charset="UTF-8" data-inquiry-form>
@@ -347,7 +347,7 @@
     </div>
   </footer>
 
-  <script src="../navigation.js?v=20260804-nav-2" defer></script>
+  <script src="../navigation.js?v=20260831-a11y-1" defer></script>
   <script src="brand-website.js?v=20260821-pricing-1" defer></script>
 </body>
 </html>
