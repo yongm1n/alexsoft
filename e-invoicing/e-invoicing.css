@@ -65,24 +65,8 @@
 .e-invoicing-text-link { padding: 12px 0; border-bottom: 1px solid rgba(16,17,20,.32); color: rgba(16,17,20,.68); font-size: 11px; font-weight: 690; }
 .e-invoicing-text-link span { margin-left: 10px; color: var(--einvoice-blue); }
 
-.e-invoicing-schema { position: relative; min-height: 590px; perspective: 1200px; }
-.schema-paper,.schema-screen { position: absolute; box-shadow: 0 40px 90px rgba(31,39,66,.16); }
-.schema-paper { z-index: 2; width: 48%; aspect-ratio: .76; left: 0; top: 13%; padding: 29px; border: 1px solid rgba(16,17,20,.17); background: #f8f6f0; transform: rotate(-4deg); }
-.schema-paper span,.schema-screen > span { color: rgba(16,17,20,.38); font: 700 8px/1 ui-monospace,SFMono-Regular,Menlo,monospace; letter-spacing: .13em; }
-.schema-paper i { display: block; height: 1px; margin-top: 44px; background: rgba(16,17,20,.17); }
-.schema-paper i:nth-of-type(2) { width: 72%; }
-.schema-paper i:nth-of-type(3) { width: 88%; }
-.schema-paper i:nth-of-type(4) { width: 56%; }
-.schema-line { position: absolute; z-index: 3; width: 35%; height: 2px; left: 38%; top: 51%; background: var(--einvoice-blue); transform: rotate(-8deg); }
-.schema-line::before,.schema-line::after { content: ""; position: absolute; top: 50%; width: 8px; height: 8px; border: 2px solid var(--einvoice-blue); border-radius: 50%; background: var(--einvoice-paper); transform: translateY(-50%); }
-.schema-line::before { left: 0; }
-.schema-line::after { right: 0; }
-.schema-screen { z-index: 1; width: 60%; aspect-ratio: 1.2; right: -2%; top: 24%; padding: 34px; border: 11px solid #15171c; border-bottom-width: 20px; border-radius: 7px; background: #f7f8fb; transform: rotateY(-6deg) rotateZ(2deg); }
-.schema-screen > b { display: block; width: 83%; height: 12px; margin-top: 28px; background: rgba(45,97,239,.12); }
-.schema-screen > b:nth-of-type(2) { width: 64%; }
-.schema-screen > b:nth-of-type(3) { width: 72%; }
-.schema-screen > div { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; margin-top: 38px; }
-.schema-screen > div i { height: 68px; border: 1px solid rgba(45,97,239,.36); background: rgba(45,97,239,.07); }
+.e-invoicing-schema { position: relative; min-height: 590px; display: flex; align-items: center; margin: 0; }
+.e-invoicing-schema img { width: 100%; height: auto; aspect-ratio: 3 / 2; border: 1px solid rgba(16,17,20,.14); border-radius: 4px; box-shadow: 0 40px 90px rgba(31,39,66,.16); object-fit: cover; }
 .e-invoicing-hero-facts { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3,1fr); margin: 0; border-top: 1px solid rgba(16,17,20,.18); border-left: 1px solid rgba(16,17,20,.18); }
 .e-invoicing-hero-facts > div { display: grid; grid-template-columns: 96px 1fr; gap: 15px; padding: 20px 22px; border-right: 1px solid rgba(16,17,20,.18); border-bottom: 1px solid rgba(16,17,20,.18); }
 .e-invoicing-hero-facts dt { color: rgba(16,17,20,.4); font-size: 8px; font-weight: 740; letter-spacing: .08em; }
@@ -182,7 +166,7 @@
 @media (max-width: 1050px) {
   .e-invoicing-hero { min-height: auto; }
   .e-invoicing-hero-layout { min-height: auto; grid-template-columns: 1fr; padding-top: 150px; }
-  .e-invoicing-schema { min-height: 520px; }
+  .e-invoicing-schema { min-height: auto; }
   .e-invoicing-hero-facts { grid-column: auto; }
   .e-invoicing-timeline li > div { grid-template-columns: 90px 1fr; }
   .e-invoicing-timeline li > div p,.e-invoicing-timeline li > div a { grid-column: 2; }
@@ -195,10 +179,7 @@
   .e-invoicing-hero h1 { font-size: clamp(2.65rem,12vw,4rem); }
   .e-invoicing-hero-copy > p:not(.e-invoicing-kicker) { margin-top: 25px; }
   .e-invoicing-hero-actions { align-items: flex-start; flex-direction: column; gap: 14px; margin-top: 32px; }
-  .e-invoicing-schema { min-height: 390px; }
-  .schema-paper { width: 56%; padding: 20px; }
-  .schema-screen { width: 64%; padding: 20px; border-width: 8px; border-bottom-width: 15px; }
-  .schema-screen > div i { height: 44px; }
+  .e-invoicing-schema { min-height: auto; }
   .e-invoicing-hero-facts { grid-template-columns: 1fr; }
   .e-invoicing-hero-facts > div { grid-template-columns: 92px 1fr; }
   .e-invoicing-section-head,.e-invoicing-case-layout,.e-invoicing-checklist-layout,.e-invoicing-faq-grid,.e-invoicing-inquiry-layout { grid-template-columns: 1fr; gap: 48px; }
