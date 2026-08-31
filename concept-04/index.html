@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="theme-color" content="#FAF8F4">
+  <title>concept-04 · 선 하나에서 — 알렉스소프트(ALEXSOFT)</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <link rel="preload" as="image" href="../assets/brand/alexsoft-signature-hero.webp">
+  <style>
+    :root{
+      --paper:#FAF8F4; --ink:#17191D; --graphite:#5C6069; --cobalt:#2456E4; --cobalt-soft:#4B78FF; --wash:#E6ECFA; --rule:#D9D5CC; --rule-soft:#EAE7E0; --night:#0F1115;
+      --serif:"Noto Serif KR","Apple Myungjo","Nanum Myeongjo",serif;
+      --sans:"IBM Plex Sans KR",-apple-system,"Apple SD Gothic Neo","Pretendard",sans-serif;
+      --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;
+      --shell:1200px; --gutter:clamp(20px,4vw,48px);
+    }
+    html{color-scheme:light;scroll-behavior:smooth}
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.8;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+    a{color:inherit;text-decoration:none}
+    :focus-visible{outline:2px solid var(--cobalt);outline-offset:3px}
+    .shell{max-width:var(--shell);margin:0 auto;padding:0 var(--gutter)}
+    h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:-.01em;text-wrap:balance;margin:0}
+    p{margin:0}
+    .mono{font-family:var(--mono);font-size:13px;color:var(--graphite);letter-spacing:.01em;font-variant-numeric:tabular-nums}
+
+    /* header — 조용하게 */
+    .top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:saturate(1.2) blur(10px);border-bottom:1px solid var(--rule-soft)}
+    .top .shell{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .mark{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:13px;letter-spacing:.14em;font-weight:500}
+    .mark svg{width:26px;height:26px;display:block}
+    .top nav{display:flex;gap:28px;font-size:14px;color:var(--graphite)}
+    .top nav a:hover{color:var(--ink)}
+    .top nav a.cta{color:var(--ink);border-bottom:1px solid var(--cobalt);padding-bottom:1px}
+    @media (max-width:720px){.top nav{gap:16px;font-size:13px}.top nav a:nth-child(2){display:none}}
+
+    /* hero — 만년필이 주인공 */
+    .hero{border-bottom:1px solid var(--rule-soft)}
+    .hero .shell{display:grid;grid-template-columns:minmax(300px,5fr) minmax(0,7fr);gap:clamp(28px,4vw,64px);align-items:stretch;padding-top:clamp(28px,4vw,56px);padding-bottom:clamp(28px,4vw,56px)}
+    .hero-copy{display:flex;flex-direction:column;justify-content:center;gap:22px;max-width:520px}
+    .hero h1{font-size:clamp(27px,2.9vw,40px);line-height:1.34;font-weight:600}
+    .hero h1 em{font-style:normal;color:var(--cobalt)}
+    .hero-lede{font-size:17px;line-height:1.85;color:var(--ink);max-width:44ch}
+    .hero-links{display:flex;gap:22px;flex-wrap:wrap;font-size:15px}
+    .hero-links a{display:inline-flex;align-items:center;gap:8px;padding:11px 0;border-bottom:1px solid var(--ink)}
+    .hero-links a span{color:var(--cobalt);transition:transform .3s ease}
+    .hero-links a:hover span{transform:translateX(3px)}
+    .hero-links a.quiet{border-bottom-color:var(--rule)}
+    .hero-fact{display:flex;gap:14px;align-items:baseline;padding-top:8px;border-top:1px solid var(--rule-soft)}
+    .hero-fact .mono{color:var(--cobalt);white-space:nowrap}
+    .hero-fact p{font-size:14px;color:var(--graphite);line-height:1.6}
+    .hero-media{position:relative;min-height:420px;background:#e9e3d8}
+    .hero-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:68% 52%;display:block}
+    .hero-media figcaption{position:absolute;left:14px;bottom:12px;font-family:var(--mono);font-size:11px;color:rgba(23,25,29,.55);letter-spacing:.08em}
+    @media (max-width:860px){
+      .hero .shell{grid-template-columns:1fr;gap:22px;padding-top:0}
+      .hero-media{order:-1;min-height:0;aspect-ratio:16/10;margin:0 calc(-1*var(--gutter))}
+      .hero-media img{object-position:70% 50%}
+      .hero-copy{max-width:none;padding-top:6px}
+    }
+
+    /* section frame */
+    section.block{padding:clamp(56px,7vw,96px) 0;border-bottom:1px solid var(--rule-soft)}
+    .head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:clamp(20px,3vw,48px);align-items:end;margin-bottom:clamp(28px,4vw,48px)}
+    .head h2{font-size:clamp(24px,2.3vw,30px);line-height:1.35}
+    .head .nib{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+    .head .nib svg{width:16px;height:16px}
+    .head .nib span{font-family:var(--mono);font-size:12px;color:var(--graphite);letter-spacing:.04em}
+    .head p{color:var(--graphite);font-size:16px;line-height:1.8;max-width:52ch}
+    @media (max-width:860px){.head{grid-template-columns:1fr;align-items:start}}
+
+    /* ink diagrams */
+    .ink{overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;padding-bottom:6px}
+    .ink svg{display:block;width:100%;height:auto;min-width:760px;font-family:var(--sans)}
+    .ink .l{fill:none;stroke:var(--cobalt);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+    .ink .d{stroke-dasharray:3 7}
+    .ink .n{fill:var(--paper);stroke:var(--cobalt);stroke-width:2}
+    .ink .nf{fill:var(--cobalt);stroke:none}
+    .ink .bx{fill:var(--wash);stroke:var(--cobalt);stroke-width:1.5}
+    .ink text{fill:var(--ink)}
+    .ink .t{font-family:var(--serif);font-size:17px;font-weight:600}
+    .ink .s{font-size:13px;fill:var(--graphite)}
+    .ink .m{font-family:var(--mono);font-size:12px;fill:var(--cobalt);letter-spacing:.02em}
+    .ink .draw{stroke-dasharray:1400;stroke-dashoffset:1400}
+    .ink.is-in .draw{animation:draw 1.6s cubic-bezier(.4,0,.2,1) forwards}
+    .ink.is-in .draw.late{animation-delay:.9s}
+    @keyframes draw{to{stroke-dashoffset:0}}
+    @media (prefers-reduced-motion:reduce){.ink .draw{stroke-dasharray:none;stroke-dashoffset:0;animation:none}}
+    .scroll-hint{display:none;font-family:var(--mono);font-size:11px;color:var(--graphite);margin-top:6px}
+    @media (max-width:800px){.scroll-hint{display:block}}
+
+    /* process columns */
+    .steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(18px,2.5vw,36px);margin-top:26px}
+    .steps h3{font-size:18px;line-height:1.4;margin-bottom:6px}
+    .steps .mono{display:block;margin-bottom:8px}
+    .steps p{font-size:15px;line-height:1.75;color:var(--ink)}
+    .steps small{display:block;margin-top:8px;font-size:13px;color:var(--graphite)}
+    @media (max-width:860px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media (max-width:520px){.steps{grid-template-columns:1fr}}
+    .aside-note{margin-top:28px;padding-top:18px;border-top:1px solid var(--rule-soft);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:clamp(20px,3vw,48px)}
+    .aside-note p{font-size:15px;color:var(--graphite);line-height:1.75}
+    .aside-note p b{color:var(--ink);font-weight:500}
+    @media (max-width:860px){.aside-note{grid-template-columns:1fr}}
+
+    /* case */
+    .case{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(280px,1fr);gap:clamp(24px,4vw,64px);align-items:start}
+    .case>div{min-width:0}
+    @media (max-width:900px){.case{grid-template-columns:1fr}}
+    .facts{border-top:1px solid var(--ink)}
+    .facts div{display:grid;grid-template-columns:64px 1fr;gap:14px;padding:12px 0;border-bottom:1px solid var(--rule-soft);font-size:15px;line-height:1.7}
+    .facts dt{font-family:var(--mono);font-size:12px;color:var(--cobalt);padding-top:5px}
+    .facts dd{margin:0}
+    .facts dd small{display:block;color:var(--graphite);font-size:13px;margin-top:2px}
+    .facts a{border-bottom:1px solid var(--rule)}
+    .case-more{margin-top:16px;font-size:15px}
+    .case-more a{display:inline-flex;gap:8px;align-items:center;border-bottom:1px solid var(--ink);padding-bottom:2px}
+    .case-more a span{color:var(--cobalt)}
+
+    /* footer */
+    footer{background:var(--night);color:rgba(255,255,255,.72);padding:40px 0 34px;font-size:13px}
+    footer .shell{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+    footer .mark{color:#fff}
+    footer nav{display:flex;gap:18px;flex-wrap:wrap}
+    footer nav a:hover{color:#fff}
+    footer .mono{color:rgba(255,255,255,.4);width:100%;margin-top:8px}
+    .concept-note{position:fixed;right:12px;bottom:12px;z-index:20;font-family:var(--mono);font-size:11px;background:var(--ink);color:#fff;padding:6px 10px;letter-spacing:.06em;opacity:.85}
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="shell">
+      <a class="mark" href="/" aria-label="알렉스소프트 홈">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#17191D"/><path fill="#FAF8F4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/><circle cx="32" cy="40" r="3.7" fill="#4B78FF"/></svg>
+        ALEXSOFT
+      </a>
+      <nav aria-label="주요 메뉴">
+        <a href="/work/">프로젝트</a>
+        <a href="/diagnosis/">서비스</a>
+        <a href="#about">회사소개</a>
+        <a class="cta" href="/#start">문의하기</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="shell">
+        <div class="hero-copy">
+          <h1 id="hero-title">실패가 허용되지 않는 시스템을 <em>설계</em>하고, 설계한 것은 직접 만듭니다.</h1>
+          <p class="hero-lede">알렉스소프트(ALEXSOFT)는 법제와 인증, 기존 시스템의 제약 안에서 실제로 작동하는 구조를 설계하는 1인 아키텍처 스튜디오입니다. 국가 단위 e-invoice 시스템과 인증 클라우드 EMR을 설계하고 만들었습니다.</p>
+          <div class="hero-links">
+            <a href="#process">진행 방식 <span>→</span></a>
+            <a class="quiet" href="/work/">프로젝트 사례 <span>→</span></a>
+          </div>
+          <div class="hero-fact">
+            <span class="mono">2022 →</span>
+            <p>필리핀 국세청 e-invoice 시스템 — 개발 PL로 문서 표준과 교환체계 보안 표준을 설계. 2022년 가동, 지금도 운영 중.</p>
+          </div>
+        </div>
+        <figure class="hero-media">
+          <img src="../assets/brand/alexsoft-signature-hero.webp" width="1672" height="941" alt="종이 위에서 만년필이 파란 잉크로 시스템 구조를 그려 나가는 장면" fetchpriority="high">
+          <figcaption>SIGNATURE · ALEXSOFT</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="block" id="process" aria-labelledby="process-title">
+      <div class="shell">
+        <div class="head">
+          <div>
+            <div class="nib" aria-hidden="true"><svg viewBox="0 0 64 64"><path fill="#2456E4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/></svg><span>진행 방식</span></div>
+            <h2 id="process-title">판단부터 구현까지, 한 사람이 한 선으로 잇습니다.</h2>
+          </div>
+          <p>만들기 전에 구조를 먼저 판단하고, 판단한 사람이 설계하고, 설계한 사람이 끝까지 만듭니다. 단계마다 넘겨받는 사람이 없으니 설명이 유실되지 않습니다. 금액은 상담 후 서면으로 제시합니다.</p>
+        </div>
+
+        <div class="ink" data-ink>
+          <svg viewBox="0 0 1200 230" role="img" aria-label="30분 적합성 확인에서 진단 세션, 설계·기술 실사, 설계 기반 구현으로 이어지는 한 줄의 진행과, 구현 뒤에 갈라져 나오는 월 자문">
+            <!-- 본선 -->
+            <path class="l draw" d="M40 120 H1040"/>
+            <!-- 시작 잉크 방울 -->
+            <circle class="nf" cx="40" cy="120" r="4"/>
+            <!-- 노드 1: 원 -->
+            <circle class="n" cx="170" cy="120" r="10"/>
+            <!-- 노드 2: 사각 -->
+            <rect class="n" x="440" y="110" width="20" height="20"/>
+            <!-- 노드 3: 원 -->
+            <circle class="n" cx="720" cy="120" r="10"/>
+            <!-- 노드 4: 채운 원 -->
+            <circle class="nf" cx="1000" cy="120" r="9"/>
+            <!-- 점선 우회로: 진단에서 바로 구현으로 가지 않는다 -->
+            <path class="l d" d="M460 120 C 520 60, 660 60, 710 112"/>
+            <text class="s" x="585" y="62" text-anchor="middle">설계 없이 구현으로 건너뛰지 않습니다</text>
+            <!-- 분기: 월 자문 -->
+            <path class="l d draw late" d="M1000 120 C 1050 120, 1060 190, 1120 190 H1160"/>
+            <circle class="n" cx="1160" cy="190" r="7"/>
+            <text class="t" x="1090" y="222" text-anchor="middle">월 자문</text>
+            <!-- 라벨 -->
+            <text class="m" x="170" y="88" text-anchor="middle">30분 · 무료</text>
+            <text class="t" x="170" y="160" text-anchor="middle">적합성 확인</text>
+            <text class="m" x="450" y="88" text-anchor="middle">반나절–1일 · 선불</text>
+            <text class="t" x="450" y="160" text-anchor="middle">아키텍처 진단 세션</text>
+            <text class="m" x="720" y="88" text-anchor="middle">2–6주 · 착수 50%</text>
+            <text class="t" x="720" y="160" text-anchor="middle">설계 · 기술 실사</text>
+            <text class="m" x="1000" y="88" text-anchor="middle">마일스톤 · 동시 2건</text>
+            <text class="t" x="1000" y="160" text-anchor="middle">설계 기반 구현</text>
+          </svg>
+        </div>
+        <p class="scroll-hint">← 옆으로 밀어 전체 흐름을 볼 수 있습니다 →</p>
+
+        <div class="steps">
+          <div><span class="mono">30분</span><h3>적합성 확인</h3><p>지금 상황과 원하는 결과를 듣고, 맞는 일인지 서로 판단합니다. 말로 드리는 판단까지가 무료이고, 분석 문서는 남기지 않습니다.</p></div>
+          <div><span class="mono">반나절–1일</span><h3>아키텍처 진단 세션</h3><p>현 구조의 리스크 지도와 결정해야 할 포인트 3~5개를 문서로 드립니다.</p><small>다음 단계 계약 시 전액 차감</small></div>
+          <div><span class="mono">2–6주</span><h3>설계 · 기술 실사</h3><p>규제 대응 설계, 레거시 현대화 로드맵, 벤더·기술 선정, 투자·M&amp;A 기술 실사.</p><small>착수 50%, 납품 50%</small></div>
+          <div><span class="mono">마일스톤</span><h3>설계 기반 구현</h3><p>연동·백오피스·내부 시스템·MVP 규모는 직접 만들고, 그 이상은 설계·감리와 검증된 파트너로 진행합니다.</p><small>동시 진행 2건까지</small></div>
+        </div>
+
+        <div class="aside-note">
+          <p><b>이런 상황에 맞습니다</b></p>
+          <p>법제·인증 요건이 설계에 직접 걸릴 때 · 기존 기간계·EMR·ERP와 붙어야 할 때 · 만들지, 도입할지, 연동할지 판단이 서지 않을 때 · 개발팀은 있는데 구조를 책임질 사람이 없을 때</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="about" aria-labelledby="case-title">
+      <div class="shell">
+        <div class="head">
+          <div>
+            <div class="nib" aria-hidden="true"><svg viewBox="0 0 64 64"><path fill="#2456E4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/></svg><span>설계한 것</span></div>
+            <h2 id="case-title">한 나라의 사업자가 매일 쓰는 구조를 그렸습니다.</h2>
+          </div>
+          <p>필리핀 국세청 전자송장 시스템(EIS)에서 개발 PL로 문서 표준과 교환체계의 보안 표준을 설계했습니다. 아래는 그 교환 구조를 공개 가능한 수준으로 단순화한 그림입니다 — 사업자의 시스템에서 나온 문서가 국세청에 닿기까지의 선입니다.</p>
+        </div>
+
+        <div class="case">
+          <div>
+            <div class="ink" data-ink>
+              <svg viewBox="0 0 1200 300" role="img" aria-label="사업자 시스템에서 표준 문서로 변환되고 전자서명과 전송을 거쳐 국세청 EIS에서 검증·수신되고, 결과가 사업자에게 되돌아오는 교환 구조">
+                <!-- 연결선 -->
+                <path class="l draw" d="M40 130 H150 M330 130 H400 M580 130 H650 M830 130 H900 M1080 130 H1160"/>
+                <circle class="nf" cx="40" cy="130" r="4"/>
+                <!-- 박스 5 -->
+                <rect class="bx" x="150" y="92" width="180" height="76" rx="2"/>
+                <text class="t" x="240" y="124" text-anchor="middle">사업자 시스템</text>
+                <text class="s" x="240" y="148" text-anchor="middle">ERP · POS · 회계</text>
+                <rect class="bx" x="400" y="92" width="180" height="76" rx="2"/>
+                <text class="t" x="490" y="124" text-anchor="middle">표준 문서</text>
+                <text class="s" x="490" y="148" text-anchor="middle">e-invoice 스키마</text>
+                <rect class="bx" x="650" y="92" width="180" height="76" rx="2"/>
+                <text class="t" x="740" y="124" text-anchor="middle">서명 · 전송</text>
+                <text class="s" x="740" y="148" text-anchor="middle">전자서명 · 보안 채널</text>
+                <rect class="bx" x="900" y="92" width="180" height="76" rx="2"/>
+                <text class="t" x="990" y="124" text-anchor="middle">수신 · 검증</text>
+                <text class="s" x="990" y="148" text-anchor="middle">국세청 EIS</text>
+                <circle class="n" cx="1160" cy="130" r="9"/>
+                <text class="s" x="1160" y="180" text-anchor="middle">조회 · 감사</text>
+                <!-- 연결선 라벨 -->
+                <text class="m" x="365" y="118" text-anchor="middle">변환</text>
+                <text class="m" x="615" y="118" text-anchor="middle">규격 검증</text>
+                <text class="m" x="865" y="118" text-anchor="middle">TLS</text>
+                <!-- 되돌아오는 점선: 수신 결과 · 오류 재전송 -->
+                <path class="l d draw late" d="M990 168 V236 H240 V168"/>
+                <text class="s" x="615" y="262" text-anchor="middle">수신 결과와 오류 코드가 사업자 시스템으로 돌아와 재전송 · 감사 추적으로 이어집니다</text>
+                <!-- 설계 범위 표시 -->
+                <path class="l d" d="M400 60 H1080"/>
+                <text class="m" x="740" y="48" text-anchor="middle">설계 범위 — 문서 표준 · 교환체계 보안 표준 · 개발 아키텍처</text>
+              </svg>
+            </div>
+            <p class="scroll-hint">← 옆으로 밀어 전체 구조를 볼 수 있습니다 →</p>
+          </div>
+          <dl class="facts">
+            <div><dt>사업</dt><dd>필리핀 국세청(BIR) 전자송장 시스템 EIS<small>KOICA 무상원조 1차 구축 · 2018–2022</small></dd></div>
+            <div><dt>역할</dt><dd>개발 PL<small>개발 아키텍처 · e-invoice 문서 표준 · 문서와 교환체계의 보안 표준 설계, 개발 주도</small></dd></div>
+            <div><dt>지금</dt><dd>2022년 가동, 현재 운영 중<small>2025–2026년 2차 사후지원은 별도 수행사의 사업</small></dd></div>
+            <div><dt>이후</dt><dd>EMR 인증을 받은 의원급 EMR 중 최초의 클라우드 제품<small>2022–2026 · 개발 리더로 시작해 2023년부터 개발·기획설계 총괄 · AWS Solutions Architect Professional</small></dd></div>
+          </dl>
+        </div>
+        <p class="case-more"><a href="/work/#bir-eis">사례 자세히 보기 <span>→</span></a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell">
+      <a class="mark" href="/"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#FAF8F4"/><path fill="#17191D" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/><circle cx="32" cy="40" r="3.7" fill="#4B78FF"/></svg>ALEXSOFT</a>
+      <nav aria-label="바닥글 메뉴"><a href="/diagnosis/">아키텍처 설계·구현</a><a href="/e-invoicing/">e-invoicing 대응</a><a href="/healthcare/">의료정보 시스템</a><a href="/brand-website/">브랜드 웹사이트</a><a href="/work/">사례</a><a href="/en/" hreflang="en">English</a><a href="mailto:alexsoft.kr@gmail.com">이메일</a></nav>
+      <p class="mono">© <span data-year>2026</span> ALEXSOFT · 알렉스소프트 · 대표 이용민 · 사업자등록번호 212-64-01036 · 부산광역시 수영구 광안해변로15번길 10</p>
+    </div>
+  </footer>
+  <div class="concept-note" aria-hidden="true">CONCEPT 04 · DRAFT</div>
+
+  <script>
+    (function(){
+      var y=document.querySelector('[data-year]'); if(y){y.textContent=String(new Date().getFullYear());}
+      var inks=document.querySelectorAll('[data-ink]'); if(!inks.length) return;
+      if(!('IntersectionObserver' in window)){inks.forEach(function(e){e.classList.add('is-in');});return;}
+      var io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('is-in');io.unobserve(en.target);}});},{threshold:.35});
+      inks.forEach(function(e){io.observe(e);});
+    })();
+  </script>
+</body>
+</html>

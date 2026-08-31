@@ -2,5 +2,6 @@ User-agent: *
 Allow: /
 Disallow: /concept-02/
 Disallow: /concept-03/
+Disallow: /concept-04/
 
 Sitemap: https://alexsoft.co.kr/sitemap.xml
