@@ -128,3 +128,6 @@
   .work-emr-map > div { width:38%; padding:14px; }
   .work-emr-map > div:nth-of-type(3) { left:31%; }
 }
+
+/* native <ol> markers are replaced by the custom 01/02/03 spans */
+.work-index, .work-bir-dashboard ol { list-style: none; }
