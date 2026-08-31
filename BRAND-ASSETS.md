@@ -14,7 +14,7 @@ ALEXSOFT의 대표 이미지는 **만년필 촉에서 시작한 코발트 잉크
 
 ## 정식 파일
 
-- `.private/assets-master/alexsoft-signature-hero-master.png` (저장소 미추적, 로컬 보관)
+- 고해상도 원본 `대표비주얼-펜과회로-원본.png`: 저장소 외부 운영 문서 폴더 `40-브랜드-원본/`에 보관(저장소 미추적)
   - 고해상도 보존 원본
   - 재편집, 신규 크롭, 고품질 인쇄 작업에 사용
 - `assets/brand/alexsoft-signature-hero.webp`
