@@ -42,7 +42,7 @@
         "@id": "https://alexsoft.co.kr/#organization",
         "name": "알렉스소프트",
         "legalName": "알렉스소프트",
-        "alternateName": ["ALEXSOFT", "알렉스 소프트", "ALEXSOFT Software Artist Studio"],
+        "alternateName": ["ALEXSOFT", "알렉스 소프트"],
         "url": "https://alexsoft.co.kr/",
         "logo": {
           "@type": "ImageObject",
@@ -127,444 +127,230 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="styles.css?v=20260831-e-1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/assets/ink.css?v=20260901-i-1">
 </head>
-<body class="hybrid-concept">
-  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
-  <div class="scroll-progress" aria-hidden="true"><span></span></div>
-
-  <header class="site-header" data-header>
-    <a class="wordmark" href="/" aria-label="ALEXSOFT 홈으로">
-      <svg class="wordmark-mark" viewBox="0 0 64 64" aria-hidden="true">
-        <path fill-rule="evenodd" d="M32 4 61 57H3L32 4Zm0 21L21.8 42l7.1 5.2V57h6.2v-9.8l7.1-5.2L32 25Z"/>
-        <circle class="logo-node" cx="32" cy="40" r="3.8"/>
-      </svg>
-      <span>ALEXSOFT</span>
-    </a>
-    <button class="menu-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
-      <span></span><span></span>
-    </button>
-    <nav class="site-nav" id="site-nav" aria-label="주요 메뉴" data-nav>
-      <a href="/work/">프로젝트</a>
-      <details class="nav-services" data-nav-services>
-        <summary>서비스 <span class="nav-chevron" aria-hidden="true"></span></summary>
-        <div class="nav-services-popover">
-          <a href="/diagnosis/" data-nav-path="/diagnosis/">
-            <span>01</span>
-            <strong>아키텍처 설계·구현</strong>
-            <small>설계한 사람이 끝까지 만듭니다.</small>
-          </a>
-          <a href="/e-invoicing/" data-nav-path="/e-invoicing/">
-            <span>02</span>
-            <strong>e-invoicing 대응</strong>
-            <small>국가 e-invoice 규격을 설계한 경험으로 대응합니다.</small>
-          </a>
-          <a href="/healthcare/" data-nav-path="/healthcare/">
-            <span>03</span>
-            <strong>의료정보 시스템</strong>
-            <small>EMR·병원 시스템 연동과 인증 대응.</small>
-          </a>
-          <a href="/brand-website/" data-nav-path="/brand-website/">
-            <span>04</span>
-            <strong>브랜드 웹사이트 제작</strong>
-            <small>브랜드의 태도를 화면과 경험으로 설계합니다.</small>
-          </a>
-        </div>
-      </details>
-      <a href="/#about">회사소개</a>
-      <a class="nav-contact" href="/#start">문의하기 <span>↘</span></a>
-    </nav>
+<body>
+  <header class="top">
+    <div class="shell">
+      <a class="mark" href="/" aria-label="알렉스소프트 홈">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#17191D"/><path fill="#FAF8F4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/><circle cx="32" cy="40" r="3.7" fill="#4B78FF"/></svg>
+        ALEXSOFT
+      </a>
+      <nav aria-label="주요 메뉴">
+        <a href="/work/">프로젝트</a>
+        <a href="/#services">서비스</a>
+        <a href="/#about">회사소개</a>
+        <a class="cta" href="/#start">문의</a>
+      </nav>
+    </div>
   </header>
 
   <main id="main">
-    <section class="hero-editorial" id="top" aria-labelledby="hero-title" data-hero>
-      <div class="hero-media" aria-hidden="true">
-        <img src="assets/brand/alexsoft-signature-hero.webp" width="1672" height="941" alt="" fetchpriority="high">
-        <div class="hero-wash"></div>
-      </div>
-      <div class="hero-grid" aria-hidden="true"></div>
-
-      <div class="hero-inner shell">
+    <section class="hero-full" aria-labelledby="hero-title">
+      <img src="assets/brand/alexsoft-signature-hero.webp" width="1672" height="941" alt="종이 위에서 만년필이 파란 잉크로 시스템 구조를 그려 나가는 장면" fetchpriority="high">
+      <div class="hero-scrim" aria-hidden="true"></div>
+      <div class="shell">
         <div class="hero-copy">
-          <p class="kicker"><span>REGULATED SYSTEMS · ARCHITECTURE</span><i>Remote · 2026</i></p>
-          <h1 id="hero-title">
-            <span class="hero-title-line"><span class="hero-title-text">실패가 허용되지 않는</span></span>
-            <span class="hero-title-line"><span class="hero-title-text"><em>시스템</em>을</span></span>
-            <span class="hero-title-line"><span class="hero-title-text">설계합니다.</span></span>
-          </h1>
-          <p class="hero-lede">알렉스소프트(ALEXSOFT)는 법제와 인증, 기존 시스템의 제약 안에서 실제로 작동하는 구조를 설계하고, 설계한 시스템은 직접 만듭니다.</p>
-          <div class="hero-actions">
-            <a class="button button-dark" href="#start">진행 방식 보기 <span>↘</span></a>
-            <a class="text-link" href="/work/">프로젝트 사례 보기 <span>↗</span></a>
+          <h1 id="hero-title">실패가 허용되지 않는 시스템을 <em>설계</em>하고, 설계한 것은 직접 만듭니다.</h1>
+          <p class="hero-lede">알렉스소프트(ALEXSOFT)는 법제와 인증, 기존 시스템의 제약 안에서 실제로 작동하는 구조를 설계하는 1인 아키텍처 스튜디오입니다.</p>
+          <div class="links">
+            <a class="solid" href="#process">진행 방식 <span>→</span></a>
+            <a class="quiet" href="work/">프로젝트 사례 <span>→</span></a>
           </div>
         </div>
-
-        <div class="hero-caption" aria-hidden="true">
-          <span>BIR</span>
-          <p>필리핀 국세청(BIR) e-invoice 시스템 설계<br>2022년 가동, 지금도 운영 중.</p>
-        </div>
       </div>
-
-      <div class="hero-rail shell" aria-hidden="true">
-        <span>ALEXSOFT / 2026</span><span>REMOTE COLLABORATION</span><span>SCROLL TO DISCOVER</span><i></i>
+      <span class="hero-caption" aria-hidden="true">SIGNATURE · ALEXSOFT</span>
+      <div class="hero-fact">
+        <div class="shell">
+          <span class="mono">2022 →</span>
+          <p>필리핀 국세청 e-invoice 시스템 — 개발 PL로 문서 표준과 교환체계 보안 표준을 설계. 2022년 가동, 지금도 운영 중.</p>
+        </div>
       </div>
     </section>
 
-    <section class="service-intro" id="services" aria-labelledby="service-intro-title">
-      <div class="shell service-intro-grid">
-        <div class="service-intro-head reveal">
-          <p class="eyebrow dark"><span></span>ALEXSOFT가 필요한 순간</p>
-          <h2 id="service-intro-title">제도와 기존 시스템이 걸린 일은,<br>시작보다 통과가 어렵습니다.</h2>
-          <p>법제와 인증, 이미 돌아가는 시스템의 제약을 통과해야 실제로 쓰이는 시스템이 됩니다.</p>
-        </div>
-
-        <ol class="service-intro-list">
-          <li class="reveal"><span>01</span><strong>법제·인증 요건이 설계에 직접 걸릴 때</strong></li>
-          <li class="reveal"><span>02</span><strong>기존 기간계·EMR·ERP와 붙어야 할 때</strong></li>
-          <li class="reveal"><span>03</span><strong>만들지, 도입할지, 연동할지 판단이 서지 않을 때</strong></li>
-          <li class="reveal"><span>04</span><strong>개발팀은 있는데 구조를 책임질 사람이 없을 때</strong></li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="manifesto-scroll scrub-section" id="studio" data-scrub="manifesto" aria-labelledby="manifesto-title">
-      <div class="manifesto-stage">
-        <div class="manifesto-orbit orbit-a" aria-hidden="true"></div>
-        <div class="manifesto-orbit orbit-b" aria-hidden="true"></div>
-        <div class="manifesto-giant" aria-hidden="true">
-          <span>SOFTWARE</span>
-          <span>IS <i>A</i> WORK</span>
-          <span>OF ART.</span>
-        </div>
-        <div class="manifesto-copy shell">
-          <p class="eyebrow"><span></span>ALEXSOFT의 관점</p>
-          <h2 id="manifesto-title">우리는<br><em>Software Artist</em>입니다.</h2>
-          <p>좋은 소프트웨어는 기능의 합이 아닙니다. 사람의 맥락을 읽고, 복잡함을 정돈하며, 눈에 보이지 않는 구조까지 집요하게 다듬은 하나의 작품입니다. 빠르게 만드는 기술보다 무엇을 만들고 어떻게 오래 작동하게 할 것인지가 더 중요하다고 믿습니다.</p>
-        </div>
-        <p class="manifesto-note">01 — CRAFT OVER CONVENIENCE</p>
-      </div>
-    </section>
-
-    <section class="craft scrub-section" id="approach" data-scrub="craft" aria-labelledby="craft-title">
-      <div class="craft-stage shell">
-        <div class="craft-heading">
-          <p class="eyebrow dark"><span></span>작업 방식</p>
-          <h2 id="craft-title">좋은 소프트웨어는<br>과정에서 완성됩니다.</h2>
-          <p>무엇을 만들지 판단하는 첫 대화부터 배포 이후의 운영까지, 네 단계를 하나의 흐름으로 연결합니다.</p>
-        </div>
-        <div class="craft-visual" aria-hidden="true">
-          <div class="craft-sphere">
-            <span class="sphere-core"></span>
-            <span class="sphere-ring ring-one"></span>
-            <span class="sphere-ring ring-two"></span>
-            <span class="sphere-ring ring-three"></span>
-            <strong data-craft-number>01</strong>
-          </div>
-          <div class="craft-axis"><span></span></div>
-        </div>
-        <div class="craft-steps">
-          <article class="craft-step is-active" data-step="0">
-            <span>01 / 진단</span>
-            <h3>무엇을 만들지 결정합니다.</h3>
-            <p>표면의 요청보다 실제 업무와 사용자의 문제를 먼저 살펴봅니다. 개발하지 않는 편이 나은 경우도 함께 판단합니다.</p>
-          </article>
-          <article class="craft-step" data-step="1">
-            <span>02 / 구조화</span>
-            <h3>업무와 데이터를 연결합니다.</h3>
-            <p>사용자, 데이터, 권한과 기존 시스템의 관계를 정리해 설명 가능하고 확장 가능한 구조를 설계합니다.</p>
-          </article>
-          <article class="craft-step" data-step="2">
-            <span>03 / 제품화</span>
-            <h3>빠르게 만들고, 독립적으로 검증합니다.</h3>
-            <p>적절한 기술과 검증된 엔지니어링을 결합하고, 테스트와 실제 사용 흐름을 통해 결과를 확인합니다.</p>
-          </article>
-          <article class="craft-step" data-step="3">
-            <span>04 / 운영</span>
-            <h3>배포 이후에도 작동하게 합니다.</h3>
-            <p>사용감, 성능, 보안, 오류 대응과 변경까지 고려해 지속 가능한 시스템으로 완성합니다.</p>
-          </article>
-        </div>
-        <div class="craft-counter" aria-hidden="true"><span data-craft-current>01</span><i></i><span>04</span></div>
-      </div>
-    </section>
-
-    <section class="work scrub-section" id="work" data-scrub="work" aria-labelledby="work-title">
-      <div class="work-stage">
-        <div class="work-head shell">
+    <section class="block" id="services" aria-labelledby="services-title">
+      <div class="shell">
+        <div class="head">
           <div>
-            <p class="eyebrow"><span></span>SELECTED WORK</p>
-            <h2 id="work-title">구조를 먼저 그리고,<br>제품으로 검증합니다.</h2>
+            <div class="nib" aria-hidden="true"><svg viewBox="0 0 64 64"><path fill="#2456E4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/></svg><span>서비스</span></div>
+            <h2 id="services-title">구조가 걸린 일부터 화면까지, 네 갈래로 맡습니다.</h2>
           </div>
-          <p>알렉스소프트가 직접 설계하고 만든 제품과 공개 프로젝트입니다. 우리가 제안하는 설계 방식이 실제로 작동하는지 먼저 검증한 결과물입니다.</p>
+          <p>구조를 먼저 판단해야 하는 일과, 이미 분명한 브랜드를 화면으로 옮기는 일은 시작이 다릅니다. 필요한 일에 맞는 출발점을 선택하세요.</p>
         </div>
+        <div class="entries">
+          <article data-reveal>
+            <h3><a href="diagnosis/">아키텍처 설계·구현</a></h3>
+            <p>만들기 전에 구조를 먼저 판단하고, 설계한 시스템은 직접 만듭니다. 30분 적합성 확인부터 진단 세션, 설계·기술 실사, 구현, 월 자문까지 한 사람이 잇습니다.</p>
+            <a class="more" href="diagnosis/">진행 방식 살펴보기 <span>→</span></a>
+          </article>
+          <article data-reveal>
+            <h3><a href="e-invoicing/">e-invoicing 대응</a></h3>
+            <p>국가 단위 전자문서 교환체계와 보안 표준을 설계한 경험으로, 해외 전자세금계산서 의무화 대응을 문서 표준부터 ERP 연동과 오류·감사 추적까지 설계합니다.</p>
+            <a class="more" href="e-invoicing/">대응 범위 살펴보기 <span>→</span></a>
+          </article>
+          <article data-reveal>
+            <h3><a href="healthcare/">의료정보 시스템</a></h3>
+            <p>의원급 EMR을 제품으로 만들고 인증까지 통과시킨 경험으로, 의료 시스템의 설계와 데이터 구조, 연동 방식을 함께 판단합니다.</p>
+            <a class="more" href="healthcare/">의료 분야 살펴보기 <span>→</span></a>
+          </article>
+          <article data-reveal>
+            <h3><a href="brand-website/">브랜드 웹사이트</a></h3>
+            <p>브랜드의 태도를 화면과 움직임으로 번역합니다. 정보구조, 아트디렉션, 디자인과 개발, 검수까지 직접 판단하고 제작합니다.</p>
+            <a class="more" href="brand-website/">제작 방식 살펴보기 <span>→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
 
-        <div class="work-viewport">
-          <div class="work-track">
-            <article class="project-card project-cascade tilt-card">
-              <div class="project-meta"><span>01</span><span>SOFTWARE INTELLIGENCE</span><span>2026</span></div>
-              <div class="project-visual cascade-visual" aria-hidden="true">
-                <div class="cascade-ui">
-                  <div class="cascade-top"><b>CASCADE</b><span>COMMIT / 9F2A1C</span><i></i></div>
-                  <div class="cascade-map">
-                    <svg viewBox="0 0 760 390" role="presentation">
-                      <g class="map-lines">
-                        <path d="M72 178 C170 178 160 80 276 80 S396 142 478 142 570 62 688 82"/>
-                        <path d="M72 178 C160 178 184 280 292 272 S390 196 478 210 578 308 688 282"/>
-                        <path d="M276 80 C310 126 350 155 478 142"/>
-                        <path d="M292 272 C330 238 390 220 478 210"/>
-                        <path d="M478 142 L478 210"/>
-                      </g>
-                      <g class="map-nodes">
-                        <circle cx="72" cy="178" r="18"/><circle cx="276" cy="80" r="13"/>
-                        <circle cx="292" cy="272" r="14"/><circle cx="478" cy="142" r="17"/>
-                        <circle cx="478" cy="210" r="11"/><circle cx="688" cy="82" r="15"/>
-                        <circle cx="688" cy="282" r="18"/>
-                      </g>
-                      <g class="map-labels">
-                        <text x="44" y="218">SCREEN</text><text x="247" y="54">API</text>
-                        <text x="254" y="310">METHOD</text><text x="447" y="117">SERVICE</text>
-                        <text x="652" y="55">SQL</text><text x="650" y="322">TABLE</text>
-                      </g>
-                    </svg>
-                  </div>
-                  <div class="cascade-stats"><span><i>499</i> verified findings</span><span><i>7</i> repositories</span><span><i>0</i> LLM calls / scan</span></div>
-                </div>
-              </div>
-              <div class="project-copy">
-                <div><p>CASCADE</p><h3>코드를 읽어<br>제품의 지도를 그리다.</h3></div>
-                <div><p>Git commit에서 화면·API·메서드·SQL·테이블까지의 계보를 재현하는 정적분석 기반 Software PLM. 사실과 추론을 분리하고, AI는 필요한 곳에만 선택적으로 더합니다.</p><ul><li>Static Analysis</li><li>Knowledge Graph</li><li>Impact Trace</li></ul></div>
-              </div>
-            </article>
-
-            <article class="project-card project-care tilt-card">
-              <div class="project-meta"><span>02</span><span>DOMAIN SOFTWARE</span><span>2026</span></div>
-              <div class="project-visual care-visual" aria-hidden="true">
-                <div class="care-panel">
-                  <header><div><b>CAREFLOW</b><span>오늘의 센터</span></div><time>07.19</time></header>
-                  <div class="care-grid">
-                    <section class="care-status"><small>오늘 이용 어르신</small><strong>58<em>명</em></strong><div class="care-faces"><i></i><i></i><i></i><i></i><span>+54</span></div></section>
-                    <section class="care-route"><small>송영 진행</small><b>12 / 15</b><svg viewBox="0 0 260 80"><path d="M8 66C44 65 54 23 92 40s47 23 76-2 46-22 84-30"/><circle cx="8" cy="66" r="5"/><circle cx="92" cy="40" r="5"/><circle cx="168" cy="38" r="5"/><circle cx="252" cy="8" r="5"/></svg></section>
-                    <section class="care-list"><small>케어 기록</small><p><i></i><span>건강 체크 완료</span><b>09:20</b></p><p><i></i><span>투약 기록 확인</span><b>10:05</b></p><p><i></i><span>프로그램 출석</span><b>10:40</b></p></section>
-                    <section class="care-metric"><small>도메인 모델</small><strong>82</strong><span>connected tables</span></section>
-                  </div>
-                </div>
-              </div>
-              <div class="project-copy">
-                <div><p>CAREFLOW</p><h3>돌봄 현장을<br>하나의 흐름으로.</h3></div>
-                <div><p>수급자, 케어플랜, 송영, 간호, 청구, 급여까지 82개 운영 테이블을 연결한 장기요양 플랫폼. 183개 경쟁 화면 분석을 127개 통합 요구사항으로 재구성한 도메인 설계에서 출발했습니다.</p><ul><li>Domain Modeling</li><li>Operations</li><li>AI Consulting</li></ul></div>
-              </div>
-            </article>
-
-            <article class="project-card project-goal tilt-card">
-              <div class="project-meta"><span>03</span><span>WORK INTELLIGENCE</span><span>2026</span></div>
-              <div class="project-visual goal-visual" aria-hidden="true">
-                <div class="goal-app">
-                  <aside><b>G</b><i></i><i></i><i></i><i></i></aside>
-                  <div class="goal-main">
-                    <header><div><small>2026 COMPANY GOALS</small><strong>목표 대시보드</strong></div><button tabindex="-1">+ 새 목표</button></header>
-                    <div class="goal-summary"><div><small>전체 진행률</small><b>68%</b><span><i style="width:68%"></i></span></div><div class="goal-ring"><b>12</b><small>ACTIVE</small></div><div class="goal-ring accent"><b>04</b><small>AT RISK</small></div></div>
-                    <div class="goal-table"><div><span>핵심 목표</span><span>Owner</span><span>Progress</span></div><div><b>AI 제품 전환</b><i>Product</i><em><u style="width:82%"></u></em></div><div><b>고객 경험 혁신</b><i>Design</i><em><u style="width:64%"></u></em></div><div><b>데이터 플랫폼</b><i>Data</i><em><u style="width:48%"></u></em></div></div>
-                  </div>
-                </div>
-              </div>
-              <div class="project-copy">
-                <div><p>GOALBOARD</p><h3>목표를 정렬하고<br>실행을 움직이다.</h3></div>
-                <div><p>조직·프로젝트·목표를 하나의 맥락으로 연결하는 Goal OS. 테이블, 보드, 타임라인과 대시보드가 같은 데이터를 바라보고 자동화와 체크인으로 실행을 이어갑니다.</p><ul><li>Multi-view</li><li>Automation</li><li>Team OS</li></ul></div>
-              </div>
-            </article>
-
-            <article class="project-card project-grace tilt-card">
-              <div class="project-meta"><span>04</span><span>DIGITAL EXPERIENCE</span><span>2026</span></div>
-              <div class="project-visual grace-visual">
-                <img src="assets/grace-site.webp" alt="더 그레이스 시니어 주간보호센터 웹사이트 화면" width="1400" height="833" loading="lazy">
-                <div class="browser-chrome" aria-hidden="true"><i></i><i></i><i></i><span>gracedaycare.co.kr</span></div>
-                <span class="grace-caption">SCROLL-CINEMA EXPERIENCE</span>
-              </div>
-              <div class="project-copy">
-                <div><p>THE GRACE</p><h3>돌봄의 온도를<br>스크롤로 전하다.</h3></div>
-                <div><p>다섯 편의 시네마틱 장면이 스크롤에 맞춰 크로스페이드되는 주간보호센터 브랜드 사이트. 운영자가 에디션을 직접 전환할 수 있는 배포 흐름까지 설계했습니다.</p><ul><li>Scroll Cinema</li><li>Brand System</li><li>GitHub Pages</li></ul><a href="https://gracedaycare.co.kr" target="_blank" rel="noopener">Live site ↗</a></div>
-              </div>
-            </article>
+    <section class="block" id="process" aria-labelledby="process-title">
+      <div class="shell">
+        <div class="head">
+          <div>
+            <div class="nib" aria-hidden="true"><svg viewBox="0 0 64 64"><path fill="#2456E4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/></svg><span>진행 방식</span></div>
+            <h2 id="process-title">판단부터 구현까지, 한 사람이 한 선으로 잇습니다.</h2>
           </div>
+          <p>만들기 전에 구조를 먼저 판단하고, 판단한 사람이 설계하고, 설계한 사람이 끝까지 만듭니다. 단계마다 넘겨받는 사람이 없으니 설명이 유실되지 않습니다. 금액은 상담 후 서면으로 제시합니다.</p>
         </div>
-        <div class="work-footer shell" aria-hidden="true"><span>DRAG WITH YOUR SCROLL</span><div><i data-work-progress></i></div><em>EXPLORE THE WORK</em></div>
+
+        <div class="ink" data-ink>
+          <svg viewBox="0 0 1200 230" role="img" aria-label="30분 적합성 확인에서 진단 세션, 설계·기술 실사, 설계 기반 구현으로 이어지는 한 줄의 진행과, 구현 뒤에 갈라져 나오는 월 자문">
+            <path class="l draw" d="M40 120 H1040"/>
+            <circle class="nf" cx="40" cy="120" r="4"/>
+            <circle class="n" cx="170" cy="120" r="10"/>
+            <rect class="n" x="440" y="110" width="20" height="20"/>
+            <circle class="n" cx="720" cy="120" r="10"/>
+            <circle class="nf" cx="1000" cy="120" r="9"/>
+            <path class="l d" d="M460 120 C 520 60, 660 60, 710 112"/>
+            <text class="s" x="585" y="62" text-anchor="middle">설계 없이 구현으로 건너뛰지 않습니다</text>
+            <path class="l d draw late" d="M1000 120 C 1050 120, 1060 190, 1120 190 H1160"/>
+            <circle class="n" cx="1160" cy="190" r="7"/>
+            <text class="t" x="1090" y="222" text-anchor="middle">월 자문</text>
+            <text class="m" x="170" y="88" text-anchor="middle">30분 · 무료</text>
+            <text class="t" x="170" y="160" text-anchor="middle">적합성 확인</text>
+            <text class="m" x="450" y="88" text-anchor="middle">반나절–1일 · 선불</text>
+            <text class="t" x="450" y="160" text-anchor="middle">아키텍처 진단 세션</text>
+            <text class="m" x="720" y="88" text-anchor="middle">2–6주 · 착수 50%</text>
+            <text class="t" x="720" y="160" text-anchor="middle">설계 · 기술 실사</text>
+            <text class="m" x="1000" y="88" text-anchor="middle">마일스톤 · 동시 2건</text>
+            <text class="t" x="1000" y="160" text-anchor="middle">설계 기반 구현</text>
+          </svg>
+        </div>
+        <p class="scroll-hint">← 옆으로 밀어 전체 흐름을 볼 수 있습니다 →</p>
+
+        <div class="steps">
+          <div data-reveal><span class="mono">30분</span><h3>적합성 확인</h3><p>지금 상황과 원하는 결과를 듣고, 맞는 일인지 서로 판단합니다. 말로 드리는 판단까지가 무료이고, 분석 문서는 남기지 않습니다.</p></div>
+          <div data-reveal><span class="mono">반나절–1일</span><h3>아키텍처 진단 세션</h3><p>현 구조의 리스크 지도와 결정해야 할 포인트 3~5개를 문서로 드립니다.</p><small>다음 단계 계약 시 전액 차감</small></div>
+          <div data-reveal><span class="mono">2–6주</span><h3>설계 · 기술 실사</h3><p>규제 대응 설계, 레거시 현대화 로드맵, 벤더·기술 선정, 투자·M&amp;A 기술 실사.</p><small>착수 50%, 납품 50%</small></div>
+          <div data-reveal><span class="mono">마일스톤</span><h3>설계 기반 구현</h3><p>연동·백오피스·내부 시스템·MVP 규모는 직접 만들고, 그 이상은 설계·감리와 검증된 파트너로 진행합니다.</p><small>동시 진행 2건까지</small></div>
+        </div>
       </div>
     </section>
 
-    <section class="capabilities" id="capabilities" aria-labelledby="capabilities-title">
+    <section class="block" id="proof" aria-labelledby="case-title">
       <div class="shell">
-        <div class="capabilities-head">
-          <p class="eyebrow dark"><span></span>제공하는 일</p>
-          <h2 id="capabilities-title">실제 업무를 움직이는<br>소프트웨어를 만듭니다.</h2>
-          <p>특정 기술의 도입 자체를 목표로 삼지 않습니다. 업무와 사용자 경험 안에서 분명한 효용을 만드는 방법을 선택합니다.</p>
+        <div class="head">
+          <div>
+            <div class="nib" aria-hidden="true"><svg viewBox="0 0 64 64"><path fill="#2456E4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/></svg><span>설계한 것</span></div>
+            <h2 id="case-title">한 나라의 사업자가 매일 쓰는 구조를 그렸습니다.</h2>
+          </div>
+          <p>필리핀 국세청 전자송장 시스템(EIS)에서 개발 PL로 문서 표준과 교환체계의 보안 표준을 설계했습니다. 아래는 그 교환 구조를 공개 가능한 수준으로 단순화한 그림입니다 — 사업자의 시스템에서 나온 문서가 국세청에 닿기까지의 선입니다.</p>
         </div>
-        <div class="capability-grid">
-          <article class="capability-card capability-compact reveal">
-            <div class="capability-media capability-media-integration">
-              <img src="assets/brand/capability-ai-workflow.webp" alt="전자문서를 구조화된 데이터로 추출·검증하고 승인과 감사 추적까지 연결하는 화면" width="1200" height="1200" loading="lazy" decoding="async">
-              <span class="capability-readout"><i></i>HUMAN-IN-THE-LOOP / ACTIVE</span>
+
+        <div class="case-grid">
+          <div>
+            <div class="ink" data-ink>
+              <svg viewBox="0 0 1200 300" role="img" aria-label="사업자 시스템에서 표준 문서로 변환되고 전자서명과 전송을 거쳐 국세청 EIS에서 검증·수신되고, 결과가 사업자에게 되돌아오는 교환 구조">
+                <path class="l draw" d="M40 130 H150 M330 130 H400 M580 130 H650 M830 130 H900 M1080 130 H1160"/>
+                <circle class="nf" cx="40" cy="130" r="4"/>
+                <rect class="bx" x="150" y="92" width="180" height="76" rx="2"/>
+                <text class="t" x="240" y="124" text-anchor="middle">사업자 시스템</text>
+                <text class="s" x="240" y="148" text-anchor="middle">ERP · POS · 회계</text>
+                <rect class="bx" x="400" y="92" width="180" height="76" rx="2"/>
+                <text class="t" x="490" y="124" text-anchor="middle">표준 문서</text>
+                <text class="s" x="490" y="148" text-anchor="middle">e-invoice 스키마</text>
+                <rect class="bx" x="650" y="92" width="180" height="76" rx="2"/>
+                <text class="t" x="740" y="124" text-anchor="middle">서명 · 전송</text>
+                <text class="s" x="740" y="148" text-anchor="middle">전자서명 · 보안 채널</text>
+                <rect class="bx" x="900" y="92" width="180" height="76" rx="2"/>
+                <text class="t" x="990" y="124" text-anchor="middle">수신 · 검증</text>
+                <text class="s" x="990" y="148" text-anchor="middle">국세청 EIS</text>
+                <circle class="n" cx="1160" cy="130" r="9"/>
+                <text class="s" x="1160" y="180" text-anchor="middle">조회 · 감사</text>
+                <text class="m" x="365" y="118" text-anchor="middle">변환</text>
+                <text class="m" x="615" y="118" text-anchor="middle">규격 검증</text>
+                <text class="m" x="865" y="118" text-anchor="middle">TLS</text>
+                <path class="l d draw late" d="M990 168 V236 H240 V168"/>
+                <text class="s" x="615" y="262" text-anchor="middle">수신 결과와 오류 코드가 사업자 시스템으로 돌아와 재전송 · 감사 추적으로 이어집니다</text>
+                <path class="l d" d="M400 60 H1080"/>
+                <text class="m" x="740" y="48" text-anchor="middle">설계 범위 — 문서 표준 · 교환체계 보안 표준 · 개발 아키텍처</text>
+              </svg>
             </div>
-            <div class="capability-card-copy">
-              <div class="capability-meta"><span>01</span><small>SYSTEM · API · DATA</small></div>
-              <h3>시스템 연동과<br>데이터 구조화</h3>
-              <p>국가 단위 전자문서 교환체계와 보안 표준을 설계한 경험으로 ERP, API, 기간계와 흩어진 데이터를 연결하고 복잡한 업무 관계를 설명 가능한 구조로 바꿉니다.</p>
-              <a class="capability-detail-link" href="e-invoicing/">e-invoicing 대응 자세히 보기 <span>↗</span></a>
-            </div>
-          </article>
-          <article class="capability-card capability-primary reveal">
-            <div class="capability-media capability-media-medical">
-              <img src="assets/brand/capability-system-integration.webp" alt="ERP·HIS·데이터베이스의 환자 정보 필드를 매핑하고 검증해 연동하는 화면" width="1200" height="1200" loading="lazy" decoding="async">
-              <span class="capability-readout"><i></i>TRACEABLE DATA / CONNECTED</span>
-            </div>
-            <div class="capability-card-copy">
-              <div class="capability-meta"><span>02</span><small>EMR · HEALTHCARE · DATA</small></div>
-              <h3>의료정보<br>시스템</h3>
-              <p>의원급 EMR을 제품으로 만들고 인증까지 통과시킨 경험으로, 의료 시스템의 설계와 데이터 구조, 연동 방식을 함께 판단합니다.</p>
-              <a class="capability-detail-link" href="healthcare/">의료정보 시스템 자세히 보기 <span>↗</span></a>
-            </div>
-          </article>
-          <article class="capability-card capability-compact reveal">
-            <div class="capability-media capability-media-product">
-              <img src="assets/brand/capability-product-engineering.webp" alt="디자인 시스템, 제품 대시보드, 코드, 자동 테스트와 배포 파이프라인 화면" width="1200" height="1200" loading="lazy" decoding="async">
-              <span class="capability-readout"><i></i>PROTOTYPE → PRODUCT</span>
-            </div>
-            <div class="capability-card-copy">
-              <div class="capability-meta"><span>03</span><small>PRODUCT ENGINEERING</small></div>
-              <h3>프로토타입 제품화·<br>맞춤형 개발</h3>
-              <p>아이디어와 초기 도구를 권한, 테스트와 배포 체계를 갖춘 소프트웨어로 완성합니다.</p>
-            </div>
-          </article>
-          <article class="capability-card capability-wide reveal">
-            <div class="capability-card-copy">
-              <div class="capability-meta"><span>04</span><small>BRAND · INTERACTION · MOTION</small></div>
-              <h3>브랜드 웹사이트와<br>디지털 경험</h3>
-              <p>브랜드의 태도를 화면과 움직임으로 번역합니다. 첫 스크롤부터 마지막 클릭까지 모든 장면에 이유를 부여합니다.</p>
-              <a class="capability-detail-link" href="brand-website/">제작 방식 자세히 보기 <span>↗</span></a>
-            </div>
-            <div class="capability-media capability-media-experience">
-              <img src="assets/brand/capability-digital-experience.webp" alt="데스크톱·태블릿·모바일 반응형 웹사이트와 디자인 시스템 화면" width="1200" height="1200" loading="lazy" decoding="async">
-              <span class="capability-readout"><i></i>SCROLL · SPACE · RESPONSE</span>
-            </div>
-          </article>
+            <p class="scroll-hint">← 옆으로 밀어 전체 구조를 볼 수 있습니다 →</p>
+            <p class="case-more"><a class="link" href="work/#bir-eis">사례 자세히 보기 <span>→</span></a></p>
+          </div>
+          <dl class="facts">
+            <div><dt>사업</dt><dd>필리핀 국세청(BIR) 전자송장 시스템 EIS<small>KOICA 무상원조 1차 구축 · 2018–2022</small></dd></div>
+            <div><dt>역할</dt><dd>개발 PL<small>개발 아키텍처 · e-invoice 문서 표준 · 문서와 교환체계의 보안 표준 설계, 개발 주도</small></dd></div>
+            <div><dt>지금</dt><dd>2022년 가동, 현재 운영 중<small>2025–2026년 2차 사후지원은 별도 수행사의 사업</small></dd></div>
+            <div><dt>제품</dt><dd>CASCADE · CAREFLOW · GOALBOARD · THE GRACE<small>알렉스소프트가 직접 설계하고 만든 제품과 공개 프로젝트입니다.</small></dd></div>
+          </dl>
         </div>
       </div>
     </section>
 
-    <section class="start-paths" id="start" aria-labelledby="start-title">
+    <section class="block" id="about" aria-labelledby="about-title">
       <div class="shell">
-        <div class="start-paths-head">
-          <p class="eyebrow"><span></span>두 가지 시작점</p>
-          <h2 id="start-title">필요한 일에 맞는<br><em>출발점</em>을 선택하세요.</h2>
-          <p>구조를 먼저 판단해야 하는 일과, 이미 분명한 브랜드를 화면으로 구현하는 일은 다른 방식으로 시작합니다.</p>
-        </div>
-        <div class="start-path-grid">
-          <article class="start-path-card start-path-diagnosis reveal">
-            <div class="start-path-index"><span>01</span><small>ARCHITECTURE · BUILD</small></div>
-            <div class="start-path-copy">
-              <p>만들기 전에 구조를 판단해야 할 때</p>
-              <h3>아키텍처<br>설계·구현</h3>
-            </div>
-            <dl>
-              <div><dt>시작</dt><dd>30분 적합성 확인 (무료)</dd></div>
-              <div><dt>진단</dt><dd>반나절~1일 세션, 이후 계약 시 전액 차감</dd></div>
-              <div><dt>구현</dt><dd>설계한 시스템은 직접, 동시 2건까지</dd></div>
-            </dl>
-            <a href="diagnosis/">진행 방식 살펴보기 <span>↗</span></a>
-          </article>
-          <article class="start-path-card start-path-brand reveal">
-            <div class="start-path-index"><span>02</span><small>BRAND · EXPERIENCE</small></div>
-            <div class="start-path-copy">
-              <p>브랜드가 분명하고 화면으로 옮길 때</p>
-              <h3>브랜드<br>웹사이트</h3>
-            </div>
-            <dl>
-              <div><dt>맞춤형 브랜드 웹사이트</dt><dd>목표와 범위 확인 후 제안</dd></div>
-              <div><dt>CMS·다국어·고급 인터랙션</dt><dd>필요에 따라 확장</dd></div>
-              <div><dt>배포 후 제작 오류 보증</dt><dd>30일</dd></div>
-            </dl>
-            <a href="brand-website/">제작 범위 살펴보기 <span>↗</span></a>
-          </article>
-        </div>
-        <p class="start-path-note">30분 확인은 서로 맞는 일인지 판단하는 자리이며 분석 문서나 설계안은 제공하지 않습니다. 금액은 범위 확인 후 제시합니다.</p>
-      </div>
-    </section>
-
-    <section class="experience-proof" id="about" aria-labelledby="experience-title">
-      <div class="shell experience-proof-grid">
-        <div class="experience-proof-head">
-          <p class="eyebrow dark"><span></span>경험이 만드는 판단</p>
-          <h2 id="experience-title">제도가 요구사항인 시스템을<br>20년 이상 다뤄왔습니다.</h2>
+        <div class="head">
+          <div>
+            <div class="nib" aria-hidden="true"><svg viewBox="0 0 64 64"><path fill="#2456E4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/></svg><span>회사소개</span></div>
+            <h2 id="about-title">20년의 현장이 판단의 근거입니다.</h2>
+          </div>
           <p>알렉스소프트(ALEXSOFT)는 필리핀 국세청 e-invoice 시스템 구축 사업(KOICA, 2018–2022)의 개발 PL로 문서 표준과 교환체계 보안 표준을 설계하고 개발을 이끌었으며, 그 시스템은 2022년 가동 이후 지금도 운영 중입니다. 이어 EMR 인증을 받은 의원급 EMR 중 최초의 클라우드 제품(2022–2026)을 개발 리더로 시작해 2023년부터 개발·기획설계를 총괄했습니다. AWS Solutions Architect Professional을 보유하고, 조선해양·공공·의료 현장의 시스템을 20년 이상 다뤄왔습니다.</p>
-          <div class="experience-proof-actions">
-            <a class="experience-proof-link" href="diagnosis/#options">진행 방식 보기 <span>↗</span></a>
-            <a class="experience-proof-link" href="brand-website/">브랜드 웹사이트 보기 <span>↗</span></a>
-          </div>
         </div>
-        <dl class="experience-proof-list">
-          <div class="reveal"><dt>NATIONAL E-INVOICE</dt><dd>필리핀 국세청 시스템 설계, 지금도 운영 중</dd></div>
-          <div class="reveal"><dt>CERTIFIED CLOUD EMR</dt><dd>EMR 인증 의원급 최초 클라우드 제품 · 2023년부터 개발·기획설계 총괄</dd></div>
-          <div class="reveal"><dt>AWS SA PROFESSIONAL</dt><dd>검증된 클라우드 아키텍처 설계</dd></div>
-          <div class="reveal"><dt>20+ YEARS</dt><dd>조세 인프라·의료·조선해양 기간계</dd></div>
+        <dl class="facts wide">
+            <div><dt>NATIONAL E-INVOICE</dt><dd>필리핀 국세청 시스템 설계, 지금도 운영 중</dd></div>
+            <div><dt>CERTIFIED CLOUD EMR</dt><dd>EMR 인증 의원급 최초 클라우드 제품 · 2023년부터 개발·기획설계 총괄</dd></div>
+            <div><dt>AWS SA PROFESSIONAL</dt><dd>검증된 클라우드 아키텍처 설계</dd></div>
+            <div><dt>20+ YEARS</dt><dd>조세 인프라·의료·조선해양 기간계</dd></div>
         </dl>
+        <div class="steps cols-3" style="margin-top:clamp(28px,4vw,48px)">
+          <div data-reveal><h3>만들지 않을 판단</h3><p>개발부터 시작하지 않고 제품 도입과 자동화까지 가장 적절한 방법을 찾습니다.</p></div>
+          <div data-reveal><h3>설명 가능한 구조</h3><p>데이터와 시스템의 관계, 변경의 이유를 확인하고 추적할 수 있게 만듭니다.</p></div>
+          <div data-reveal><h3>운영에서 증명되는 품질</h3><p>시연이 아니라 실제 사용, 오류, 변경과 유지보수까지 견디게 합니다.</p></div>
+        </div>
       </div>
     </section>
 
-    <section class="principle" aria-labelledby="principle-title">
-      <div class="principle-sticky">
-        <div class="shell principle-grid">
-          <p class="eyebrow"><span></span>작업 기준</p>
-          <h2 id="principle-title">빠르게 만들 수 있는 시대일수록,<br><em>무엇을 남길지</em>가 중요합니다.</h2>
-          <div class="principle-list">
-            <article class="reveal"><span>01</span><h3>만들지 않을 판단</h3><p>개발부터 시작하지 않고 제품 도입과 자동화까지 가장 적절한 방법을 찾습니다.</p></article>
-            <article class="reveal"><span>02</span><h3>설명 가능한 구조</h3><p>데이터와 시스템의 관계, 변경의 이유를 확인하고 추적할 수 있게 만듭니다.</p></article>
-            <article class="reveal"><span>03</span><h3>운영에서 증명되는 품질</h3><p>시연이 아니라 실제 사용, 오류, 변경과 유지보수까지 견디게 합니다.</p></article>
+    <section class="block" id="start" aria-labelledby="start-title">
+      <div class="shell">
+        <div class="head">
+          <div>
+            <div class="nib" aria-hidden="true"><svg viewBox="0 0 64 64"><path fill="#2456E4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/></svg><span>문의</span></div>
+            <h2 id="start-title">30분 안에 맞는 일인지 판단해 드립니다.</h2>
           </div>
+          <p>구조를 먼저 판단해야 하는 일도, 브랜드의 첫인상을 새로 만드는 일도 좋습니다. 30분 동안 서로 맞는 일인지 확인하고 가장 적절한 시작점을 안내합니다.</p>
         </div>
-      </div>
-    </section>
-
-    <section class="contact" id="contact" aria-labelledby="contact-title">
-      <div class="contact-glow" aria-hidden="true"></div>
-      <div class="shell contact-inner">
-        <p class="eyebrow"><span></span>다음 프로젝트</p>
-        <h2 id="contact-title">다음 작품은,<br><em>당신의 문제</em>에서 시작됩니다.</h2>
-        <p>구조를 먼저 판단해야 하는 일도, 브랜드의 첫인상을 새로 만드는 일도 좋습니다.<br>30분 동안 서로 맞는 일인지 확인하고 가장 적절한 시작점을 안내합니다.</p>
-        <div class="contact-links">
-          <a class="contact-link pressable" href="diagnosis/#inquiry">
-            <small>ARCHITECTURE</small><span>설계·구현 상담</span><i aria-hidden="true">↗</i>
-          </a>
-          <a class="contact-link contact-link-light pressable" href="brand-website/#inquiry">
-            <small>BRAND · WEBSITE</small><span>웹사이트 상담</span><i aria-hidden="true">↗</i>
-          </a>
+        <div class="links">
+          <a class="solid" href="diagnosis/#inquiry">설계·구현 상담 <span>→</span></a>
+          <a href="brand-website/#inquiry">웹사이트 상담 <span>→</span></a>
+          <a class="quiet" href="mailto:alexsoft.kr@gmail.com">alexsoft.kr@gmail.com <span>→</span></a>
         </div>
-        <div class="contact-signature" aria-hidden="true"><span>SOFTWARE</span><span>CRAFTED</span><span>AS ART.</span></div>
+        <p class="mono" style="margin-top:22px">30분 확인은 서로 맞는 일인지 판단하는 자리이며 분석 문서나 설계안은 제공하지 않습니다. 금액은 범위 확인 후 제시합니다.</p>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site">
     <div class="shell">
-      <div class="footer-brand"><svg viewBox="0 0 64 64" aria-hidden="true"><path fill-rule="evenodd" d="M32 4 61 57H3L32 4Zm0 21L21.8 42l7.1 5.2V57h6.2v-9.8l7.1-5.2L32 25Z"/><circle class="logo-node" cx="32" cy="40" r="3.8"/></svg><span>ALEXSOFT</span></div>
-      <p>아키텍처 설계·구현 · 시스템 연동 · 기술 자문 · 디지털 경험</p>
-      <div><a href="diagnosis/">아키텍처 설계·구현</a><a href="e-invoicing/">e-invoicing 대응</a><a href="healthcare/">의료정보 시스템</a><a href="brand-website/">브랜드 웹사이트</a><a href="work/">사례</a><a href="en/" hreflang="en">English</a><a href="mailto:alexsoft.kr@gmail.com">이메일</a><a href="#top">맨 위로 ↑</a></div>
-      <address class="footer-business" aria-label="사업자 정보" data-nosnippet>
-        <span><b>상호</b> 알렉스소프트 <small>(알렉스 소프트·ALEXSOFT)</small></span>
-        <span><b>대표자</b> 이용민</span>
-        <span><b>사업자등록번호</b> 212-64-01036</span>
-        <span><b>사업장</b> 부산광역시 수영구 광안해변로15번길 10</span>
-      </address>
-      <div class="footer-bottom">
-        <small>© <span data-year></span> ALEXSOFT. Crafted with intent.</small>
-        <nav class="footer-socials" aria-label="ALEXSOFT 소셜 채널">
-          <span>CHANNELS</span>
-          <a href="https://blog.naver.com/alex-soft" target="_blank" rel="noopener" aria-label="ALEXSOFT 네이버 블로그 새 창에서 열기">Naver Blog <i aria-hidden="true">↗</i></a>
-          <a href="https://www.instagram.com/alexsoft.co.kr/" target="_blank" rel="noopener noreferrer" aria-label="ALEXSOFT Instagram 새 창에서 열기">Instagram <i aria-hidden="true">↗</i></a>
-        </nav>
-      </div>
+      <a class="mark" href="/"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#FAF8F4"/><path fill="#17191D" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/><circle cx="32" cy="40" r="3.7" fill="#4B78FF"/></svg>ALEXSOFT</a>
+      <nav aria-label="바닥글 메뉴"><a href="/diagnosis/">아키텍처 설계·구현</a><a href="/e-invoicing/">e-invoicing 대응</a><a href="/healthcare/">의료정보 시스템</a><a href="/brand-website/">브랜드 웹사이트</a><a href="/work/">사례</a><a href="/en/" hreflang="en">English</a><a href="mailto:alexsoft.kr@gmail.com">이메일</a></nav>
+      <div class="channels"><span class="mono">CHANNELS</span><a href="https://blog.naver.com/alex-soft" target="_blank" rel="noopener">Naver Blog ↗</a><a href="https://www.instagram.com/alexsoft.co.kr" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div>
+      <p class="biz" data-nosnippet>상호 알렉스소프트(ALEXSOFT) · 대표 이용민 · 사업자등록번호 212-64-01036 · 사업장 부산광역시 수영구 광안해변로15번길 10 · © <span data-year>2026</span> ALEXSOFT</p>
     </div>
   </footer>
-
-  <script src="navigation.js?v=20260831-d-1" defer></script>
-  <script src="app.js?v=20260804-nav-2" defer></script>
+  <script src="/assets/ink.js?v=20260901-i-1" defer></script>
 </body>
 </html>

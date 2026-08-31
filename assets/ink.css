@@ -1,0 +1,218 @@
+/* ==========================================================================
+   ALEXSOFT ink design system — 2026-09
+   원칙: 종이 한 톤, 잉크 한 색, 선이 곧 다이어그램. 장식 번호·아이브로우 없음.
+   서체: 제목/본문 IBM Plex Sans KR, 식별자 IBM Plex Mono (Google Fonts).
+   표준 헤더/푸터 마크업은 이 파일 맨 아래 주석 참조 — 7개 국문 페이지 byte-identical.
+   ========================================================================== */
+
+:root{
+  --paper:#FAF8F4; --ink:#17191D; --graphite:#5C6069; --cobalt:#2456E4; --cobalt-soft:#4B78FF;
+  --wash:#E6ECFA; --rule:#D9D5CC; --rule-soft:#EAE7E0; --night:#0F1115;
+  --sans:"IBM Plex Sans KR",-apple-system,"Apple SD Gothic Neo","Pretendard",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;
+  --shell:1200px; --gutter:clamp(20px,4vw,48px);
+}
+html{color-scheme:light;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.8;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;height:auto}
+:focus-visible{outline:2px solid var(--cobalt);outline-offset:3px}
+.shell{max-width:var(--shell);margin:0 auto;padding:0 var(--gutter)}
+h1,h2,h3{font-family:var(--sans);font-weight:600;letter-spacing:-.022em;text-wrap:balance;margin:0}
+p{margin:0}
+.mono{font-family:var(--mono);font-size:13px;color:var(--graphite);letter-spacing:.01em;font-variant-numeric:tabular-nums}
+.visually-hidden{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+/* --- 헤더 --------------------------------------------------------------- */
+.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:saturate(1.2) blur(10px);border-bottom:1px solid var(--rule-soft)}
+.top .shell{display:flex;align-items:center;justify-content:space-between;height:64px}
+.mark{display:flex;align-items:center;gap:10px;font-size:14px;letter-spacing:.1em;font-weight:600}
+.mark svg{width:26px;height:26px;display:block;flex:none}
+.top nav{display:flex;gap:28px;font-size:14px;color:var(--graphite)}
+.top nav a{white-space:nowrap}
+.top nav a:hover{color:var(--ink)}
+.top nav a.cta{color:var(--ink);border-bottom:1px solid var(--cobalt);padding-bottom:1px}
+.top nav a[aria-current="page"]{color:var(--ink);border-bottom:1px solid var(--rule)}
+@media (max-width:720px){.top nav{gap:14px;font-size:13px}.mark{font-size:13px;letter-spacing:.08em}}
+
+/* --- 전폭 히어로 (사진 위에 글) ---------------------------------------- */
+.hero-full{position:relative;height:min(88svh,820px);min-height:560px;border-bottom:1px solid var(--rule-soft);overflow:hidden}
+@supports not (height:1svh){.hero-full{height:min(88vh,820px)}}
+.hero-full>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:72% 54%}
+.hero-scrim{position:absolute;inset:0;background:linear-gradient(96deg,rgba(250,248,244,.9) 0%,rgba(250,248,244,.55) 34%,rgba(250,248,244,0) 58%)}
+.hero-full .shell{position:relative;height:100%;display:flex;flex-direction:column;justify-content:center}
+.hero-copy{display:flex;flex-direction:column;gap:22px;max-width:560px}
+.hero-copy h1{font-size:clamp(30px,3.4vw,48px);line-height:1.28}
+.hero-copy h1 em{font-style:normal;color:var(--cobalt)}
+.hero-lede{font-size:clamp(15px,1.25vw,17px);line-height:1.85;max-width:42ch}
+.hero-caption{position:absolute;right:16px;bottom:58px;font-family:var(--mono);font-size:11px;color:rgba(23,25,29,.45);letter-spacing:.08em}
+.hero-fact{position:absolute;left:0;right:0;bottom:0;border-top:1px solid rgba(23,25,29,.14);background:linear-gradient(180deg,rgba(250,248,244,0),rgba(250,248,244,.42))}
+.hero-fact .shell{height:auto;display:flex;gap:14px;align-items:baseline;padding-top:14px;padding-bottom:16px;flex-direction:row;justify-content:flex-start}
+.hero-fact .mono{color:var(--cobalt);white-space:nowrap}
+.hero-fact p{font-size:13.5px;color:rgba(23,25,29,.78);line-height:1.6;max-width:62ch}
+@media (max-width:860px){
+  .hero-full{height:min(92svh,760px);min-height:520px}
+  .hero-full>img{object-position:66% 50%}
+  .hero-scrim{background:linear-gradient(180deg,rgba(250,248,244,.92) 0%,rgba(250,248,244,.6) 40%,rgba(250,248,244,.05) 72%)}
+  .hero-full .shell{justify-content:flex-start;padding-top:clamp(28px,7vh,64px)}
+  .hero-copy{max-width:none}
+  .hero-caption{display:none}
+  .hero-fact p{font-size:12.5px}
+}
+/* 서브페이지용 낮은 히어로(이미지 없음): 제목 + 리드 */
+.hero-flat{padding:clamp(48px,7vw,88px) 0 clamp(36px,5vw,64px);border-bottom:1px solid var(--rule-soft)}
+.hero-flat h1{font-size:clamp(28px,3vw,42px);line-height:1.3;max-width:22ch}
+.hero-flat .hero-lede{margin-top:18px;color:var(--graphite);max-width:52ch}
+.hero-flat .links{margin-top:26px}
+
+/* --- 링크·버튼 ---------------------------------------------------------- */
+.links{display:flex;gap:22px;flex-wrap:wrap;font-size:15px;align-items:center}
+.links a,a.link{display:inline-flex;align-items:center;gap:8px;padding:11px 0;border-bottom:1px solid var(--ink)}
+.links a span,a.link span{color:var(--cobalt);transition:transform .3s ease}
+.links a:hover span,a.link:hover span{transform:translateX(3px)}
+.links a.quiet,a.link.quiet{border-bottom-color:rgba(23,25,29,.35)}
+.links a.solid,a.solid{background:var(--ink);color:var(--paper);padding:13px 24px;border-bottom:0;transition:background .25s ease;display:inline-flex;align-items:center;gap:8px}
+.links a.solid span,a.solid span{color:var(--cobalt-soft)}
+.links a.solid:hover,a.solid:hover{background:var(--cobalt)}
+.links a.solid:hover span,a.solid:hover span{color:#fff;transform:translateX(3px)}
+
+/* --- 섹션 프레임 --------------------------------------------------------- */
+section.block{padding:clamp(56px,7vw,96px) 0;border-bottom:1px solid var(--rule-soft)}
+section.block:last-of-type{border-bottom:0}
+.head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:clamp(20px,3vw,48px);align-items:end;margin-bottom:clamp(28px,4vw,48px)}
+.head h2{font-size:clamp(24px,2.4vw,32px);line-height:1.34}
+.head .nib{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.head .nib svg{width:16px;height:16px}
+.head .nib span{font-family:var(--mono);font-size:12px;color:var(--graphite);letter-spacing:.04em}
+.head>p,.head .head-note{color:var(--graphite);font-size:16px;line-height:1.8;max-width:52ch}
+@media (max-width:860px){.head{grid-template-columns:1fr;align-items:start}}
+
+/* --- 잉크 다이어그램 ------------------------------------------------------ */
+.ink{overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;padding-bottom:6px}
+.ink svg{display:block;width:100%;height:auto;min-width:760px;font-family:var(--sans)}
+.ink .l{fill:none;stroke:var(--cobalt);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ink .d{stroke-dasharray:3 7}
+.ink .n{fill:var(--paper);stroke:var(--cobalt);stroke-width:2}
+.ink .nf{fill:var(--cobalt);stroke:none}
+.ink .bx{fill:var(--wash);stroke:var(--cobalt);stroke-width:1.5}
+.ink text{fill:var(--ink)}
+.ink .t{font-family:var(--sans);font-size:16px;font-weight:600;letter-spacing:-.01em}
+.ink .s{font-size:13px;fill:var(--graphite)}
+.ink .m{font-family:var(--mono);font-size:12px;fill:var(--cobalt);letter-spacing:.02em}
+.ink .draw{stroke-dasharray:1400;stroke-dashoffset:1400}
+.ink.is-in .draw{animation:ink-draw 1.6s cubic-bezier(.4,0,.2,1) forwards}
+.ink.is-in .draw.late{animation-delay:.9s}
+@keyframes ink-draw{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.ink .draw{stroke-dasharray:none;stroke-dashoffset:0;animation:none}}
+.scroll-hint{display:none;font-family:var(--mono);font-size:11px;color:var(--graphite);margin-top:6px}
+@media (max-width:800px){.scroll-hint{display:block}}
+
+/* --- 장부식 컬럼(단계·항목) ---------------------------------------------- */
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(18px,2.5vw,36px);margin-top:30px}
+.steps.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.steps.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.steps>div{border-top:2px solid var(--ink);padding-top:12px}
+.steps h3{font-size:17px;line-height:1.4;margin-bottom:6px}
+.steps .mono{display:block;margin-bottom:8px}
+.steps p{font-size:15px;line-height:1.75}
+.steps small{display:block;margin-top:8px;font-size:13px;color:var(--graphite)}
+@media (max-width:860px){.steps,.steps.cols-3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.steps,.steps.cols-3,.steps.cols-2{grid-template-columns:1fr}}
+
+/* --- 사실 표 -------------------------------------------------------------- */
+.facts{border-top:2px solid var(--ink);margin:0}
+.facts>div{display:grid;grid-template-columns:64px 1fr;gap:14px;padding:12px 0;border-bottom:1px solid var(--rule-soft);font-size:15px;line-height:1.7}
+.facts dt{font-family:var(--mono);font-size:12px;color:var(--cobalt);padding-top:5px}
+.facts dd{margin:0}
+.facts dd small{display:block;color:var(--graphite);font-size:13px;margin-top:2px}
+.facts.wide>div{grid-template-columns:120px 1fr}
+
+/* --- 사례 2단(다이어그램 + 사실 표) -------------------------------------- */
+.case-grid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(280px,1fr);gap:clamp(24px,4vw,64px);align-items:start}
+.case-grid>div{min-width:0}
+.case-more{margin-top:16px;font-size:15px}
+@media (max-width:900px){.case-grid{grid-template-columns:1fr}}
+
+/* --- 서비스 엔트리(홈 #services, 목록형 카드) ----------------------------- */
+.entries{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(18px,2.5vw,36px)}
+.entries article{border-top:2px solid var(--ink);padding-top:14px;display:flex;flex-direction:column;gap:10px}
+.entries h3{font-size:19px}
+.entries h3 a:hover{color:var(--cobalt)}
+.entries p{font-size:15px;line-height:1.75;color:var(--ink)}
+.entries .mono{margin:0}
+.entries a.more{margin-top:auto;align-self:flex-start;display:inline-flex;gap:8px;align-items:center;font-size:14px;border-bottom:1px solid var(--rule);padding-bottom:2px}
+.entries a.more span{color:var(--cobalt)}
+@media (max-width:720px){.entries{grid-template-columns:1fr}}
+
+/* --- 인용(원칙) ----------------------------------------------------------- */
+.quote{border-left:3px solid var(--cobalt);padding:6px 0 6px 22px;max-width:60ch}
+.quote p{font-size:clamp(18px,1.7vw,22px);line-height:1.7;font-weight:500}
+.quote cite{display:block;margin-top:10px;font-style:normal;font-family:var(--mono);font-size:12px;color:var(--graphite)}
+
+/* --- FAQ ------------------------------------------------------------------ */
+.qa{border-top:2px solid var(--ink)}
+.qa details{border-bottom:1px solid var(--rule-soft)}
+.qa summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;align-items:baseline;padding:16px 0;font-weight:600;font-size:16px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary span[aria-hidden]{color:var(--cobalt);font-family:var(--mono);font-weight:400;transition:transform .25s ease;flex:none}
+.qa details[open] summary span[aria-hidden]{transform:rotate(45deg)}
+.qa details p{padding:0 0 18px;font-size:15px;line-height:1.8;color:var(--ink);max-width:66ch}
+
+/* --- 폼 ------------------------------------------------------------------- */
+.form{display:grid;gap:18px;max-width:640px}
+.form label{display:grid;gap:6px;font-size:14px;font-weight:500}
+.form label .mono{font-size:11px}
+.form input,.form select,.form textarea{font:inherit;font-size:15px;color:var(--ink);background:#fff;border:1px solid var(--rule);padding:11px 12px;width:100%}
+.form textarea{min-height:140px;resize:vertical}
+.form input:focus,.form select:focus,.form textarea:focus{outline:2px solid var(--cobalt);outline-offset:0;border-color:var(--cobalt)}
+.form button[type="submit"],.form .submit{font:inherit;font-size:15px;background:var(--ink);color:var(--paper);border:0;padding:14px 26px;cursor:pointer;justify-self:start;transition:background .25s ease}
+.form button[type="submit"]:hover,.form .submit:hover{background:var(--cobalt)}
+.form .form-note{font-size:13px;color:var(--graphite)}
+.form-status{font-size:14px;color:var(--cobalt)}
+
+/* --- 리빌 ----------------------------------------------------------------- */
+[data-reveal]{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+[data-reveal].is-in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){[data-reveal]{opacity:1;transform:none;transition:none}}
+
+/* --- 푸터 ----------------------------------------------------------------- */
+footer.site{background:var(--night);color:rgba(255,255,255,.72);padding:40px 0 34px;font-size:13px}
+footer.site .shell{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+footer.site .mark{color:#fff}
+footer.site nav{display:flex;gap:18px;flex-wrap:wrap}
+footer.site nav a:hover{color:#fff}
+footer.site .channels{width:100%;display:flex;gap:18px;align-items:baseline;margin-top:6px;padding-top:14px;border-top:1px solid rgba(255,255,255,.12)}
+footer.site .channels .mono{color:rgba(255,255,255,.35)}
+footer.site .channels a{color:rgba(255,255,255,.62)}
+footer.site .channels a:hover{color:#fff}
+footer.site .biz{width:100%;font-family:var(--mono);font-size:11px;line-height:1.9;color:rgba(255,255,255,.4)}
+
+/* ==========================================================================
+   표준 헤더(국문 7페이지 byte-identical — 루트 절대경로, 그대로 복사):
+   <header class="top">
+     <div class="shell">
+       <a class="mark" href="/" aria-label="알렉스소프트 홈">
+         <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#17191D"/><path fill="#FAF8F4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/><circle cx="32" cy="40" r="3.7" fill="#4B78FF"/></svg>
+         ALEXSOFT
+       </a>
+       <nav aria-label="주요 메뉴">
+         <a href="/work/">프로젝트</a>
+         <a href="/#services">서비스</a>
+         <a href="/#about">회사소개</a>
+         <a class="cta" href="/#start">문의</a>
+       </nav>
+     </div>
+   </header>
+
+   표준 푸터(국문 7페이지 byte-identical):
+   <footer class="site">
+     <div class="shell">
+       <a class="mark" href="/"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#FAF8F4"/><path fill="#17191D" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/><circle cx="32" cy="40" r="3.7" fill="#4B78FF"/></svg>ALEXSOFT</a>
+       <nav aria-label="바닥글 메뉴"><a href="/diagnosis/">아키텍처 설계·구현</a><a href="/e-invoicing/">e-invoicing 대응</a><a href="/healthcare/">의료정보 시스템</a><a href="/brand-website/">브랜드 웹사이트</a><a href="/work/">사례</a><a href="/en/" hreflang="en">English</a><a href="mailto:alexsoft.kr@gmail.com">이메일</a></nav>
+       <div class="channels"><span class="mono">CHANNELS</span><a href="https://blog.naver.com/alex-soft" target="_blank" rel="noopener">Naver Blog ↗</a><a href="https://www.instagram.com/alexsoft.co.kr" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div>
+       <p class="biz" data-nosnippet>상호 알렉스소프트(ALEXSOFT) · 대표 이용민 · 사업자등록번호 212-64-01036 · 사업장 부산광역시 수영구 광안해변로15번길 10 · © <span data-year>2026</span> ALEXSOFT</p>
+     </div>
+   </footer>
+   ========================================================================== */
