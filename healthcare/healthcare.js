@@ -1,94 +1,58 @@
-(() => {
+/* ALEXSOFT — 의료정보 시스템 문의 폼 전송만 담당. 연도·리빌·잉크선은 /assets/ink.js. */
+(function () {
   'use strict';
 
-  const header = document.querySelector('[data-header]');
-  const progress = document.querySelector('.scroll-progress span');
-  const form = document.querySelector('[data-inquiry-form]');
-  const formStatus = document.querySelector('[data-form-status]');
-  const responseFrame = document.querySelector('[data-google-form-target]');
-  const submitButton = form?.querySelector('[type="submit"]');
-  const submitLabel = submitButton?.querySelector('span');
-  const honeypot = form?.querySelector('[data-form-honeypot]');
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const defaultSubmitLabel = submitLabel?.textContent || '문의 신청';
-  let submissionPending = false;
-  let submissionTimer;
+  var form = document.querySelector('[data-inquiry-form]');
+  if (!form) return;
 
-  function renderScrollState() {
-    const distance = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
-    const ratio = Math.min(1, Math.max(0, window.scrollY / distance));
-    if (progress) progress.style.transform = `scaleX(${ratio})`;
-    header?.classList.toggle('is-scrolled', window.scrollY > 20);
+  var status = document.querySelector('[data-form-status]');
+  var frame = document.querySelector('[data-google-form-target]');
+  var button = form.querySelector('[type="submit"]');
+  var label = button ? button.querySelector('span') : null;
+  var honeypot = form.querySelector('[data-form-honeypot]');
+  var defaultLabel = (label && label.textContent) || '문의 신청';
+  var pending = false;
+  var timer;
+
+  function setState(state, message) {
+    if (!status) return;
+    status.dataset.state = state;
+    status.textContent = message;
   }
 
-  window.addEventListener('scroll', renderScrollState, { passive: true });
+  function release(labelText) {
+    pending = false;
+    window.clearTimeout(timer);
+    form.removeAttribute('aria-busy');
+    if (button) button.disabled = false;
+    if (label) label.textContent = labelText;
+  }
 
-  const revealItems = document.querySelectorAll('[data-reveal]');
-  if (reduceMotion.matches || !('IntersectionObserver' in window)) {
-    revealItems.forEach((item) => item.classList.add('is-visible'));
-  } else {
-    const observer = new IntersectionObserver((entries, revealObserver) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('is-visible');
-        revealObserver.unobserve(entry.target);
-      });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: .12 });
-    revealItems.forEach((item, index) => {
-      item.style.transitionDelay = `${(index % 3) * 70}ms`;
-      observer.observe(item);
+  if (frame) {
+    frame.addEventListener('load', function () {
+      if (!pending) return;
+      release('문의가 접수되었습니다');
+      form.reset();
+      setState('success', '접수가 완료되었습니다. 내용을 확인한 뒤 alexsoft.kr@gmail.com에서 회신드리겠습니다.');
+      window.setTimeout(function () { if (label) label.textContent = defaultLabel; }, 2600);
     });
   }
 
-  function setSubmissionState(state, message) {
-    if (!formStatus) return;
-    formStatus.dataset.state = state;
-    formStatus.textContent = message;
-  }
+  form.addEventListener('submit', function (event) {
+    if (!form.reportValidity()) { event.preventDefault(); return; }
+    if (honeypot && honeypot.value) { event.preventDefault(); form.reset(); return; }
 
-  function finishSubmission() {
-    if (!submissionPending) return;
-    submissionPending = false;
-    window.clearTimeout(submissionTimer);
-    form?.removeAttribute('aria-busy');
-    form?.reset();
-    if (submitButton) submitButton.disabled = false;
-    if (submitLabel) submitLabel.textContent = '문의가 접수되었습니다';
-    setSubmissionState('success', '접수가 완료되었습니다. 내용을 확인한 뒤 alexsoft.kr@gmail.com에서 회신드리겠습니다.');
-    window.setTimeout(() => { if (submitLabel) submitLabel.textContent = defaultSubmitLabel; }, 2600);
-  }
-
-  responseFrame?.addEventListener('load', finishSubmission);
-
-  form?.addEventListener('submit', (event) => {
-    if (!form.reportValidity()) {
-      event.preventDefault();
-      return;
-    }
-    if (honeypot?.value) {
-      event.preventDefault();
-      form.reset();
-      return;
-    }
-
-    submissionPending = true;
+    pending = true;
     form.setAttribute('aria-busy', 'true');
-    if (submitButton) submitButton.disabled = true;
-    if (submitLabel) submitLabel.textContent = '안전하게 전송 중입니다';
-    setSubmissionState('sending', '문의 내용을 전송하고 있습니다. 잠시만 기다려주세요.');
+    if (button) button.disabled = true;
+    if (label) label.textContent = '안전하게 전송 중입니다';
+    setState('sending', '문의 내용을 전송하고 있습니다. 잠시만 기다려주세요.');
 
-    window.clearTimeout(submissionTimer);
-    submissionTimer = window.setTimeout(() => {
-      if (!submissionPending) return;
-      submissionPending = false;
-      form.removeAttribute('aria-busy');
-      if (submitButton) submitButton.disabled = false;
-      if (submitLabel) submitLabel.textContent = defaultSubmitLabel;
-      setSubmissionState('error', '전송 확인이 지연되고 있습니다. 네트워크 상태를 확인한 뒤 다시 시도해주세요.');
+    window.clearTimeout(timer);
+    timer = window.setTimeout(function () {
+      if (!pending) return;
+      release(defaultLabel);
+      setState('error', '전송 확인이 지연되고 있습니다. 네트워크 상태를 확인한 뒤 다시 시도해주세요.');
     }, 15000);
   });
-
-  const year = document.querySelector('[data-year]');
-  if (year) year.textContent = new Date().getFullYear();
-  renderScrollState();
 })();

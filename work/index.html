@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#f2efe7">
+  <meta name="theme-color" content="#FAF8F4">
   <meta name="description" content="필리핀 국세청 e-invoice 시스템, 인증 클라우드 EMR, THE GRACE 브랜드 웹사이트까지 알렉스소프트(ALEXSOFT)의 설계·구현 사례입니다.">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta name="author" content="알렉스소프트(ALEXSOFT)">
@@ -86,142 +86,213 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="../styles.css?v=20260831-e-1">
-  <link rel="stylesheet" href="work.css?v=20260831-1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/assets/ink.css?v=20260901-i-1">
+  <noscript><style>[data-reveal]{opacity:1;transform:none}</style></noscript>
+  <link rel="stylesheet" href="work.css?v=20260901-i-1">
 </head>
-<body class="hybrid-concept work-page">
-  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
-  <div class="scroll-progress" aria-hidden="true"><span></span></div>
-
-  <header class="site-header" data-header>
-    <a class="wordmark" href="/" aria-label="ALEXSOFT 홈으로">
-      <svg class="wordmark-mark" viewBox="0 0 64 64" aria-hidden="true">
-        <path fill-rule="evenodd" d="M32 4 61 57H3L32 4Zm0 21L21.8 42l7.1 5.2V57h6.2v-9.8l7.1-5.2L32 25Z"/>
-        <circle class="logo-node" cx="32" cy="40" r="3.8"/>
-      </svg>
-      <span>ALEXSOFT</span>
-    </a>
-    <button class="menu-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
-      <span></span><span></span>
-    </button>
-    <nav class="site-nav" id="site-nav" aria-label="주요 메뉴" data-nav>
-      <a href="/work/">프로젝트</a>
-      <details class="nav-services" data-nav-services>
-        <summary>서비스 <span class="nav-chevron" aria-hidden="true"></span></summary>
-        <div class="nav-services-popover">
-          <a href="/diagnosis/" data-nav-path="/diagnosis/">
-            <span>01</span>
-            <strong>아키텍처 설계·구현</strong>
-            <small>설계한 사람이 끝까지 만듭니다.</small>
-          </a>
-          <a href="/e-invoicing/" data-nav-path="/e-invoicing/">
-            <span>02</span>
-            <strong>e-invoicing 대응</strong>
-            <small>국가 e-invoice 규격을 설계한 경험으로 대응합니다.</small>
-          </a>
-          <a href="/healthcare/" data-nav-path="/healthcare/">
-            <span>03</span>
-            <strong>의료정보 시스템</strong>
-            <small>EMR·병원 시스템 연동과 인증 대응.</small>
-          </a>
-          <a href="/brand-website/" data-nav-path="/brand-website/">
-            <span>04</span>
-            <strong>브랜드 웹사이트 제작</strong>
-            <small>브랜드의 태도를 화면과 경험으로 설계합니다.</small>
-          </a>
-        </div>
-      </details>
-      <a href="/#about">회사소개</a>
-      <a class="nav-contact" href="/#start">문의하기 <span>↘</span></a>
-    </nav>
+<body>
+  <header class="top">
+    <a class="skip" href="#main">본문으로 건너뛰기</a>
+    <div class="shell">
+      <a class="mark" href="/" aria-label="알렉스소프트 홈">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#17191D"/><path fill="#FAF8F4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/><circle cx="32" cy="40" r="3.7" fill="#4B78FF"/></svg>
+        ALEXSOFT
+      </a>
+      <nav aria-label="주요 메뉴">
+        <a href="/work/">프로젝트</a>
+        <a href="/#services">서비스</a>
+        <a href="/#about">회사소개</a>
+        <a class="cta" href="/#start">문의</a>
+      </nav>
+    </div>
   </header>
 
   <main id="main">
-    <section class="work-hero" aria-labelledby="work-title">
-      <div class="work-gridlines" aria-hidden="true"></div>
-      <div class="shell work-hero-layout">
-        <div>
-          <p class="work-kicker"><span>ALEXSOFT / SELECTED WORK</span><i>ARCHITECTURE TO OPERATIONS</i></p>
-          <h1 id="work-title">제약을 구조로,<br>구조를 <em>운영되는 시스템</em>으로.</h1>
-          <p>규격과 인증, 기존 시스템의 경계를 먼저 설계하고 구현과 운영 이관까지 이어간 사례입니다. 확인 가능한 역할과 결과만 적었습니다.</p>
+    <section class="hero-flat" aria-labelledby="work-title">
+      <div class="shell">
+        <h1 id="work-title">제약을 구조로, 구조를 <em>운영되는 시스템</em>으로.</h1>
+        <p class="hero-lede">규격과 인증, 기존 시스템의 경계를 먼저 설계하고 구현과 운영 이관까지 이어간 사례입니다. 확인 가능한 역할과 결과만 적었습니다.</p>
+        <div class="links">
+          <a href="#bir-eis">BIR EIS <span>→</span></a>
+          <a href="#cloud-emr">인증 클라우드 EMR <span>→</span></a>
+          <a href="#the-grace">THE GRACE <span>→</span></a>
         </div>
-        <ol class="work-index" aria-label="사례 목록">
-          <li><a href="#bir-eis"><span>01</span><strong>BIR EIS</strong><small>NATIONAL E-INVOICING</small></a></li>
-          <li><a href="#cloud-emr"><span>02</span><strong>인증 클라우드 EMR</strong><small>HEALTHCARE SYSTEMS</small></a></li>
-          <li><a href="#the-grace"><span>03</span><strong>THE GRACE</strong><small>BRAND EXPERIENCE</small></a></li>
-        </ol>
       </div>
     </section>
 
-    <article class="work-case work-case-bir" id="bir-eis" aria-labelledby="bir-title">
-      <div class="shell work-case-header">
-        <p class="eyebrow"><span></span>01 / NATIONAL E-INVOICING</p>
-        <div><span>BIR · KOICA · 2018–2022</span><h2 id="bir-title">필리핀 국세청<br>Electronic Invoicing and<br>Sales Reporting System</h2></div>
-      </div>
-      <div class="shell work-bir-stage" aria-hidden="true">
-        <div class="work-bir-monitor">
-          <div class="work-bir-toolbar"><i></i><i></i><i></i><span>EIS / OPERATIONS</span></div>
-          <div class="work-bir-dashboard"><div><b></b><b></b><b></b></div><ol><li><i></i><span></span><em></em></li><li><i></i><span></span><em></em></li><li><i></i><span></span><em></em></li><li><i></i><span></span><em></em></li></ol></div>
+    <section class="block" id="bir-eis" aria-labelledby="bir-title">
+      <div class="shell">
+        <div class="head">
+          <div>
+            <div class="nib" aria-hidden="true"><svg viewBox="0 0 64 64"><path fill="#2456E4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/></svg><span>NATIONAL E-INVOICING</span></div>
+            <h2 id="bir-title">필리핀 국세청 Electronic Invoicing and Sales Reporting System</h2>
+          </div>
+          <p>필리핀 국세청의 전자송장 의무화 기반을 만들기 위해 KOICA 무상원조로 2018–2022년 구축한 국가 단위 시스템입니다.</p>
         </div>
-        <div class="work-bir-note"><span>DOCUMENT STANDARD</span><b></b><b></b><b></b><i>SECURE EXCHANGE</i></div>
-      </div>
-      <div class="shell work-case-ledger">
-        <section><span>CONTEXT</span><h3>국가 전자송장 의무화</h3><p>필리핀 국세청의 전자송장 의무화 기반을 만들기 위해 KOICA 무상원조로 2018–2022년 구축한 국가 단위 시스템입니다.</p></section>
-        <section><span>ROLE</span><h3>개발 PL</h3><p>개발 아키텍처, e-invoice 문서 표준, 문서 및 교환체계 보안 표준을 설계하고 개발을 주도했습니다.</p></section>
-        <section><span>CONSTRAINTS</span><h3>모두가 따라야 하는 규격</h3><p>국가 규모 처리, 다수 사업자가 같은 의미로 해석해야 하는 문서와 전송 규격, 구축 뒤 정부 조직으로의 운영 이관을 함께 고려했습니다.</p></section>
-        <section><span>RESULT</span><h3>2022년 7월 가동</h3><p>대형납세자 100개사를 대상으로 가동했으며 현재 <a href="https://eis.bir.gov.ph" target="_blank" rel="noopener noreferrer">eis.bir.gov.ph</a>에서 운영 중입니다.</p></section>
-      </div>
-      <div class="shell work-boundary"><span>실적 구분</span><p><strong>2018–2022 1차 구축</strong>알렉스소프트의 경험</p><p><strong>2025–2026 2차 사후지원</strong>별도 수행사가 진행한 사업으로 알렉스소프트 실적이 아님</p></div>
-      <div class="shell work-implication"><span>같은 문제를 가진 곳에</span><p>의무화 대응은 API 하나를 붙이는 작업이 아닙니다. 문서 의미, 검증과 보안, 실패 처리, 감사 추적과 운영 이관이 같은 구조에서 이어져야 여러 기업과 시스템이 함께 움직일 수 있습니다.</p><a href="../e-invoicing/">e-invoicing 대응 보기 ↗</a></div>
-    </article>
 
-    <article class="work-case work-case-emr" id="cloud-emr" aria-labelledby="emr-title">
-      <div class="shell work-case-header">
-        <p class="eyebrow dark"><span></span>02 / HEALTHCARE SYSTEMS</p>
-        <div><span>CLOUD EMR · CERTIFICATION</span><h2 id="emr-title">EMR 인증을 받은 의원급 EMR 중<br>최초의 클라우드 제품</h2></div>
-      </div>
-      <div class="shell work-emr-layout">
-        <div class="work-emr-map" aria-hidden="true"><div><span>CLINICAL</span><i></i><i></i></div><div><span>CLAIMS</span><i></i><i></i></div><div><span>CERTIFICATION</span><i></i><i></i></div><svg viewBox="0 0 600 420"><path d="M105 90 C210 90 208 205 300 205"/><path d="M495 90 C392 90 394 205 300 205"/><path d="M300 350 L300 230"/></svg></div>
-        <div class="work-emr-copy">
-          <section><span>CONTEXT</span><h3>국내 대형 ERP 기업의 의료 사업 진입</h3><p>새로운 의료 사업에서 의원급 의료기관이 실제로 사용할 수 있는 클라우드 EMR 제품을 만들었습니다.</p></section>
-          <section><span>CONSTRAINTS</span><h3>의료법·청구·개인정보·EMR 인증</h3><p>기능 요구만이 아니라 법제, 청구 흐름, 민감정보 처리와 인증 항목이 제품 구조와 운영에 직접 연결됐습니다.</p></section>
-          <section><span>ROLE</span><h3>개발 리더 → 2023년부터 개발·기획설계 총괄</h3><p>2022년 개발 리더로 합류해 2023년부터 2026년까지 개발과 기획설계를 총괄했습니다. 병원정보시스템 배경을 바탕으로 제품과 현장 사이의 결정을 이어갔습니다.</p></section>
-          <section><span>RESULT</span><h3>인증을 통과한 클라우드 제품</h3><p>EMR 인증을 받은 의원급 EMR 중 최초의 클라우드 제품으로 완성했습니다.</p></section>
-          <a href="../healthcare/">의료정보 시스템 설계·연동 보기 ↗</a>
+        <dl class="facts wide">
+          <div><dt>배경</dt><dd>국가 전자송장 의무화</dd></div>
+          <div><dt>기간</dt><dd>2018–2022<small>BIR · KOICA 무상원조 1차 구축</small></dd></div>
+          <div><dt>역할</dt><dd>개발 PL</dd></div>
+          <div><dt>표준</dt><dd>e-invoice 문서 표준 · 문서와 교환체계 보안 표준</dd></div>
+          <div><dt>상태</dt><dd>운영 중<small>2022년 7월 가동</small></dd></div>
+          <div><dt>실적 구분</dt><dd>2018–2022 1차 구축 — 알렉스소프트의 경험<small>2025–2026 2차 사후지원은 별도 수행사가 진행한 사업으로 알렉스소프트 실적이 아님</small></dd></div>
+        </dl>
+
+        <div class="ink" data-ink style="margin-top:clamp(28px,4vw,44px)">
+          <svg viewBox="0 0 1200 300" role="img" aria-label="사업자 시스템에서 표준 문서로 변환되고 전자서명과 전송을 거쳐 국세청 EIS에서 검증·수신되고, 결과가 사업자에게 되돌아오는 교환 구조">
+            <path class="l draw" d="M40 130 H150 M330 130 H400 M580 130 H650 M830 130 H900 M1080 130 H1160"/>
+            <circle class="nf" cx="40" cy="130" r="4"/>
+            <rect class="bx" x="150" y="92" width="180" height="76" rx="2"/>
+            <text class="t" x="240" y="124" text-anchor="middle">사업자 시스템</text>
+            <text class="s" x="240" y="148" text-anchor="middle">ERP · POS · 회계</text>
+            <rect class="bx" x="400" y="92" width="180" height="76" rx="2"/>
+            <text class="t" x="490" y="124" text-anchor="middle">표준 문서</text>
+            <text class="s" x="490" y="148" text-anchor="middle">e-invoice 스키마</text>
+            <rect class="bx" x="650" y="92" width="180" height="76" rx="2"/>
+            <text class="t" x="740" y="124" text-anchor="middle">서명 · 전송</text>
+            <text class="s" x="740" y="148" text-anchor="middle">전자서명 · 보안 채널</text>
+            <rect class="bx" x="900" y="92" width="180" height="76" rx="2"/>
+            <text class="t" x="990" y="124" text-anchor="middle">수신 · 검증</text>
+            <text class="s" x="990" y="148" text-anchor="middle">국세청 EIS</text>
+            <circle class="n" cx="1160" cy="130" r="9"/>
+            <text class="s" x="1160" y="180" text-anchor="middle">조회 · 감사</text>
+            <text class="m" x="365" y="118" text-anchor="middle">변환</text>
+            <text class="m" x="615" y="118" text-anchor="middle">규격 검증</text>
+            <text class="m" x="865" y="118" text-anchor="middle">TLS</text>
+            <path class="l d draw late" d="M990 168 V236 H240 V168"/>
+            <text class="s" x="615" y="262" text-anchor="middle">수신 결과와 오류 코드가 사업자 시스템으로 돌아와 재전송 · 감사 추적으로 이어집니다</text>
+            <path class="l d" d="M400 60 H1080"/>
+            <text class="m" x="740" y="48" text-anchor="middle">설계 범위 — 문서 표준 · 교환체계 보안 표준 · 개발 아키텍처</text>
+          </svg>
         </div>
-      </div>
-    </article>
+        <p class="scroll-hint">← 옆으로 밀어 전체 구조를 볼 수 있습니다 →</p>
 
-    <article class="work-case work-case-grace" id="the-grace" aria-labelledby="grace-title">
-      <div class="shell work-case-header">
-        <p class="eyebrow"><span></span>03 / BRAND EXPERIENCE</p>
-        <div><span>THE GRACE · LIVE WORK</span><h2 id="grace-title">돌봄의 태도를<br>스크롤로 전한 웹사이트</h2></div>
-      </div>
-      <div class="shell work-grace-stage">
-        <div class="work-grace-browser"><div><i></i><i></i><i></i><span>gracedaycare.co.kr</span></div><img src="../assets/grace-site.webp" width="1400" height="834" loading="lazy" decoding="async" alt="더 그레이스 시니어 주간보호센터 브랜드 웹사이트 첫 화면"></div>
-        <div class="work-grace-copy"><p>시설 정보를 나열하기보다 가족이 돌봄의 태도와 신뢰를 이해하는 순서를 설계했습니다. 다섯 장면의 스크롤 경험, 데스크톱과 모바일의 일관된 흐름, 운영자가 콘텐츠를 바꾸는 배포 구조를 함께 만들었습니다.</p><a href="https://gracedaycare.co.kr" target="_blank" rel="noopener noreferrer">THE GRACE 사이트 보기 ↗</a><a href="../brand-website/">브랜드 웹사이트 제작 보기 ↗</a></div>
-      </div>
-    </article>
+        <div class="steps cols-3" style="margin-top:clamp(28px,4vw,48px)">
+          <div data-reveal><span class="mono">ROLE</span><h3>개발 PL</h3><p>개발 아키텍처, e-invoice 문서 표준, 문서 및 교환체계 보안 표준을 설계하고 개발을 주도했습니다.</p></div>
+          <div data-reveal><span class="mono">CONSTRAINTS</span><h3>모두가 따라야 하는 규격</h3><p>국가 규모 처리, 다수 사업자가 같은 의미로 해석해야 하는 문서와 전송 규격, 구축 뒤 정부 조직으로의 운영 이관을 함께 고려했습니다.</p></div>
+          <div data-reveal><span class="mono">RESULT</span><h3>2022년 7월 가동</h3><p>대형납세자 100개사를 대상으로 가동했으며 현재 <a href="https://eis.bir.gov.ph" target="_blank" rel="noopener noreferrer">eis.bir.gov.ph</a>에서 운영 중입니다.</p></div>
+        </div>
 
-    <section class="work-other" aria-labelledby="other-title">
-      <div class="shell work-other-layout"><p class="eyebrow dark"><span></span>다른 현장</p><div><h2 id="other-title">조선해양 기간계에서도<br>같은 기준을 지켰습니다.</h2><p>조선해양 현장에서는 설계·생산·운영 데이터가 여러 기간계 사이를 오가는 시스템을 다뤘습니다. 기존 업무를 멈추지 않으면서 시스템 경계와 책임, 데이터 흐름을 분명히 하는 일이 핵심이었습니다.</p></div></div>
+        <div class="quote" style="margin-top:clamp(32px,4.5vw,52px)">
+          <p>의무화 대응은 API 하나를 붙이는 작업이 아닙니다. 문서 의미, 검증과 보안, 실패 처리, 감사 추적과 운영 이관이 같은 구조에서 이어져야 여러 기업과 시스템이 함께 움직일 수 있습니다.</p>
+          <cite>같은 문제를 가진 곳에</cite>
+        </div>
+        <p class="case-more"><a class="link" href="/e-invoicing/">e-invoicing 대응 보기 <span>↗</span></a></p>
+      </div>
     </section>
 
-    <section class="work-products" aria-labelledby="products-title">
-      <div class="shell work-products-layout"><div><p class="eyebrow"><span></span>자체 제품</p><h2 id="products-title">문제를 관찰하고,<br>작은 제품으로 검증합니다.</h2></div><div><p>알렉스소프트가 직접 기획하고 운영하는 제품은 홈의 제품 캐러셀에서 확인할 수 있습니다.</p><a href="../#work">자체 제품 보기 ↗</a></div></div>
+    <section class="block" id="cloud-emr" aria-labelledby="emr-title">
+      <div class="shell">
+        <div class="head">
+          <div>
+            <div class="nib" aria-hidden="true"><svg viewBox="0 0 64 64"><path fill="#2456E4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/></svg><span>HEALTHCARE SYSTEMS</span></div>
+            <h2 id="emr-title">EMR 인증을 받은 의원급 EMR 중 최초의 클라우드 제품</h2>
+          </div>
+          <p>새로운 의료 사업에서 의원급 의료기관이 실제로 사용할 수 있는 클라우드 EMR 제품을 만들었습니다.</p>
+        </div>
+
+        <dl class="facts wide">
+          <div><dt>배경</dt><dd>국내 대형 ERP 기업의 의료 사업 진입</dd></div>
+          <div><dt>기간</dt><dd>2022–2026</dd></div>
+          <div><dt>역할</dt><dd>개발 리더 → 개발·기획설계 총괄<small>2023년부터 총괄</small></dd></div>
+          <div><dt>제약</dt><dd>의료법 · 청구 · 개인정보 · EMR 인증</dd></div>
+          <div><dt>상태</dt><dd>인증을 통과한 클라우드 제품</dd></div>
+        </dl>
+
+        <div class="ink" data-ink style="margin-top:clamp(28px,4vw,44px)">
+          <svg viewBox="0 0 1200 380" role="img" aria-label="진료·청구·인증 세 갈래의 요구가 하나의 클라우드 EMR 제품으로 모이고, 의원급 의료기관의 사용으로 이어지는 구조">
+            <rect class="bx" x="60" y="40" width="220" height="76" rx="2"/>
+            <text class="t" x="170" y="72" text-anchor="middle">진료</text>
+            <text class="s" x="170" y="96" text-anchor="middle">CLINICAL</text>
+            <rect class="bx" x="490" y="40" width="220" height="76" rx="2"/>
+            <text class="t" x="600" y="72" text-anchor="middle">청구</text>
+            <text class="s" x="600" y="96" text-anchor="middle">CLAIMS</text>
+            <rect class="bx" x="920" y="40" width="220" height="76" rx="2"/>
+            <text class="t" x="1030" y="72" text-anchor="middle">인증</text>
+            <text class="s" x="1030" y="96" text-anchor="middle">CERTIFICATION</text>
+            <path class="l draw" d="M170 116 C170 176, 600 148, 600 204 M600 116 V204 M1030 116 C1030 176, 600 148, 600 204"/>
+            <text class="m" x="330" y="182" text-anchor="middle">의료법 · 개인정보</text>
+            <text class="m" x="880" y="182" text-anchor="middle">인증 항목</text>
+            <rect class="n" x="430" y="204" width="340" height="76" rx="2"/>
+            <text class="t" x="600" y="240" text-anchor="middle">클라우드 EMR 제품</text>
+            <text class="s" x="600" y="264" text-anchor="middle">제품 구조 · 운영</text>
+            <path class="l d draw late" d="M600 280 V330"/>
+            <circle class="nf" cx="600" cy="338" r="6"/>
+            <text class="s" x="600" y="368" text-anchor="middle">의원급 의료기관의 사용</text>
+          </svg>
+        </div>
+        <p class="scroll-hint">← 옆으로 밀어 전체 구조를 볼 수 있습니다 →</p>
+
+        <div class="steps cols-3" style="margin-top:clamp(28px,4vw,48px)">
+          <div data-reveal><span class="mono">CONSTRAINTS</span><h3>의료법·청구·개인정보·EMR 인증</h3><p>기능 요구만이 아니라 법제, 청구 흐름, 민감정보 처리와 인증 항목이 제품 구조와 운영에 직접 연결됐습니다.</p></div>
+          <div data-reveal><span class="mono">ROLE</span><h3>개발 리더 → 2023년부터 개발·기획설계 총괄</h3><p>2022년 개발 리더로 합류해 2023년부터 2026년까지 개발과 기획설계를 총괄했습니다. 병원정보시스템 배경을 바탕으로 제품과 현장 사이의 결정을 이어갔습니다.</p></div>
+          <div data-reveal><span class="mono">RESULT</span><h3>인증을 통과한 클라우드 제품</h3><p>EMR 인증을 받은 의원급 EMR 중 최초의 클라우드 제품으로 완성했습니다.</p></div>
+        </div>
+        <p class="case-more"><a class="link" href="/healthcare/">의료정보 시스템 설계·연동 보기 <span>↗</span></a></p>
+      </div>
+    </section>
+
+    <section class="block" id="the-grace" aria-labelledby="grace-title">
+      <div class="shell">
+        <div class="head">
+          <div>
+            <div class="nib" aria-hidden="true"><svg viewBox="0 0 64 64"><path fill="#2456E4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/></svg><span>BRAND EXPERIENCE</span></div>
+            <h2 id="grace-title">돌봄의 태도를 스크롤로 전한 웹사이트</h2>
+          </div>
+          <p>시설 정보를 나열하기보다 가족이 돌봄의 태도와 신뢰를 이해하는 순서를 설계했습니다. 다섯 장면의 스크롤 경험, 데스크톱과 모바일의 일관된 흐름, 운영자가 콘텐츠를 바꾸는 배포 구조를 함께 만들었습니다.</p>
+        </div>
+
+        <div class="case-grid">
+          <figure class="shot">
+            <img src="/assets/grace-site.webp" width="1400" height="834" loading="lazy" decoding="async" alt="더 그레이스 시니어 주간보호센터 브랜드 웹사이트 첫 화면">
+            <figcaption>gracedaycare.co.kr</figcaption>
+          </figure>
+          <div>
+            <dl class="facts wide">
+              <div><dt>성격</dt><dd>브랜드 웹사이트</dd></div>
+              <div><dt>범위</dt><dd>정보 구조 · 스크롤 경험 · 콘텐츠 배포 구조</dd></div>
+              <div><dt>상태</dt><dd>운영 중<small>THE GRACE · LIVE WORK</small></dd></div>
+            </dl>
+            <div class="links" style="margin-top:22px">
+              <a href="https://gracedaycare.co.kr" target="_blank" rel="noopener noreferrer">THE GRACE 사이트 보기 <span>↗</span></a>
+              <a class="quiet" href="/brand-website/">브랜드 웹사이트 제작 보기 <span>↗</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" aria-label="다른 현장과 자체 제품">
+      <div class="shell">
+        <div class="steps cols-2" style="margin-top:0">
+          <div data-reveal>
+            <span class="mono">다른 현장</span>
+            <h3>조선해양 기간계에서도 같은 기준을 지켰습니다.</h3>
+            <p>조선해양 현장에서는 설계·생산·운영 데이터가 여러 기간계 사이를 오가는 시스템을 다뤘습니다. 기존 업무를 멈추지 않으면서 시스템 경계와 책임, 데이터 흐름을 분명히 하는 일이 핵심이었습니다.</p>
+          </div>
+          <div data-reveal>
+            <span class="mono">자체 제품</span>
+            <h3>문제를 관찰하고, 작은 제품으로 검증합니다.</h3>
+            <p>알렉스소프트가 직접 기획하고 운영하는 제품은 홈의 ‘설계한 것’ 섹션에 요약되어 있습니다.</p>
+            <p class="case-more"><a class="link" href="/#proof">자체 제품 보기 <span>↗</span></a></p>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site">
     <div class="shell">
-      <div class="footer-brand"><svg viewBox="0 0 64 64" aria-hidden="true"><path fill-rule="evenodd" d="M32 4 61 57H3L32 4Zm0 21L21.8 42l7.1 5.2V57h6.2v-9.8l7.1-5.2L32 25Z"/><circle class="logo-node" cx="32" cy="40" r="3.8"/></svg><span>ALEXSOFT</span></div>
-      <p>ARCHITECTURE · BUILD · ADVISORY</p>
-      <div><a href="../">홈으로</a><a href="../diagnosis/">아키텍처 설계·구현</a><a href="../e-invoicing/">e-invoicing 대응</a><a href="../healthcare/">의료정보 시스템</a><a href="../brand-website/">브랜드 웹사이트</a><a href="../work/">사례</a><a href="../en/" hreflang="en">English</a><a href="mailto:alexsoft.kr@gmail.com">이메일</a><a href="#main">맨 위로 ↑</a></div>
-      <div class="footer-bottom"><small>© <span data-year></span> ALEXSOFT. Crafted with intent.</small><nav class="footer-socials" aria-label="ALEXSOFT 소셜 채널"><span>CHANNELS</span><a href="https://blog.naver.com/alex-soft" target="_blank" rel="noopener" aria-label="ALEXSOFT 네이버 블로그 새 창에서 열기">Naver Blog <i aria-hidden="true">↗</i></a><a href="https://www.instagram.com/alexsoft.co.kr/" target="_blank" rel="noopener noreferrer" aria-label="ALEXSOFT Instagram 새 창에서 열기">Instagram <i aria-hidden="true">↗</i></a></nav></div>
+      <a class="mark" href="/"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#FAF8F4"/><path fill="#17191D" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/><circle cx="32" cy="40" r="3.7" fill="#4B78FF"/></svg>ALEXSOFT</a>
+      <nav aria-label="바닥글 메뉴"><a href="/diagnosis/">아키텍처 설계·구현</a><a href="/e-invoicing/">e-invoicing 대응</a><a href="/healthcare/">의료정보 시스템</a><a href="/brand-website/">브랜드 웹사이트</a><a href="/work/">사례</a><a href="/en/" hreflang="en">English</a><a href="mailto:alexsoft.kr@gmail.com">이메일</a></nav>
+      <div class="channels"><span class="mono">CHANNELS</span><a href="https://blog.naver.com/alex-soft" target="_blank" rel="noopener">Naver Blog ↗</a><a href="https://www.instagram.com/alexsoft.co.kr" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div>
+      <p class="biz" data-nosnippet>상호 알렉스소프트(ALEXSOFT) · 대표 이용민 · 사업자등록번호 212-64-01036 · 사업장 부산광역시 수영구 광안해변로15번길 10 · © <span data-year>2026</span> ALEXSOFT</p>
     </div>
   </footer>
-
-  <script src="../navigation.js?v=20260831-d-1" defer></script>
-  <script src="work.js?v=20260831-1" defer></script>
+  <script src="/assets/ink.js?v=20260901-i-1" defer></script>
 </body>
 </html>

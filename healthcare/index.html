@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#f2efe7">
+  <meta name="theme-color" content="#FAF8F4">
   <meta name="description" content="의료법·인증·개인정보와 기존 EMR·병원 시스템의 제약 안에서 작동하는 의료정보 시스템 구조를 설계하고, 설계한 것은 직접 만듭니다.">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta name="author" content="알렉스소프트(ALEXSOFT)">
@@ -109,77 +109,40 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="../styles.css?v=20260831-e-1">
-  <link rel="stylesheet" href="healthcare.css?v=20260831-1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/assets/ink.css?v=20260901-i-1">
+  <noscript><style>[data-reveal]{opacity:1;transform:none}</style></noscript>
+  <link rel="stylesheet" href="/healthcare/healthcare.css?v=20260901-i-1">
 </head>
-<body class="hybrid-concept healthcare-page">
-  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
-  <div class="scroll-progress" aria-hidden="true"><span></span></div>
-
-  <header class="site-header" data-header>
-    <a class="wordmark" href="/" aria-label="ALEXSOFT 홈으로">
-      <svg class="wordmark-mark" viewBox="0 0 64 64" aria-hidden="true">
-        <path fill-rule="evenodd" d="M32 4 61 57H3L32 4Zm0 21L21.8 42l7.1 5.2V57h6.2v-9.8l7.1-5.2L32 25Z"/>
-        <circle class="logo-node" cx="32" cy="40" r="3.8"/>
-      </svg>
-      <span>ALEXSOFT</span>
-    </a>
-    <button class="menu-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
-      <span></span><span></span>
-    </button>
-    <nav class="site-nav" id="site-nav" aria-label="주요 메뉴" data-nav>
-      <a href="/work/">프로젝트</a>
-      <details class="nav-services" data-nav-services>
-        <summary>서비스 <span class="nav-chevron" aria-hidden="true"></span></summary>
-        <div class="nav-services-popover">
-          <a href="/diagnosis/" data-nav-path="/diagnosis/">
-            <span>01</span>
-            <strong>아키텍처 설계·구현</strong>
-            <small>설계한 사람이 끝까지 만듭니다.</small>
-          </a>
-          <a href="/e-invoicing/" data-nav-path="/e-invoicing/">
-            <span>02</span>
-            <strong>e-invoicing 대응</strong>
-            <small>국가 e-invoice 규격을 설계한 경험으로 대응합니다.</small>
-          </a>
-          <a href="/healthcare/" data-nav-path="/healthcare/">
-            <span>03</span>
-            <strong>의료정보 시스템</strong>
-            <small>EMR·병원 시스템 연동과 인증 대응.</small>
-          </a>
-          <a href="/brand-website/" data-nav-path="/brand-website/">
-            <span>04</span>
-            <strong>브랜드 웹사이트 제작</strong>
-            <small>브랜드의 태도를 화면과 경험으로 설계합니다.</small>
-          </a>
-        </div>
-      </details>
-      <a href="/#about">회사소개</a>
-      <a class="nav-contact" href="/#start">문의하기 <span>↘</span></a>
-    </nav>
+<body>
+  <header class="top">
+    <a class="skip" href="#main">본문으로 건너뛰기</a>
+    <div class="shell">
+      <a class="mark" href="/" aria-label="알렉스소프트 홈">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#17191D"/><path fill="#FAF8F4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/><circle cx="32" cy="40" r="3.7" fill="#4B78FF"/></svg>
+        ALEXSOFT
+      </a>
+      <nav aria-label="주요 메뉴">
+        <a href="/work/">프로젝트</a>
+        <a href="/#services">서비스</a>
+        <a href="/#about">회사소개</a>
+        <a class="cta" href="/#start">문의</a>
+      </nav>
+    </div>
   </header>
 
   <main id="main">
-    <section class="healthcare-hero" aria-labelledby="healthcare-title" data-healthcare-hero>
-      <div class="healthcare-gridlines" aria-hidden="true"></div>
-      <div class="shell healthcare-hero-layout">
-        <div class="healthcare-hero-copy">
-          <p class="healthcare-kicker"><span>ALEXSOFT / HEALTHCARE SYSTEMS</span><i>CONSTRAINTS BEFORE CODE</i></p>
-          <h1 id="healthcare-title"><span>의료 시스템은</span><span>만들기 전에</span><span><em>통과해야 할 것</em>이 많습니다.</span></h1>
-          <p>의료법·인증·개인정보와 기존 EMR·병원 시스템의 제약 안에서 작동하는 구조를 설계하고, 설계한 것은 직접 만듭니다.</p>
-          <div class="healthcare-hero-actions">
-            <a class="healthcare-button" href="#inquiry">연동 범위 확인하기 <span>↘</span></a>
-            <a class="healthcare-text-link" href="#scope">하는 일 보기 <span>↘</span></a>
-          </div>
+    <section class="hero-flat" aria-labelledby="healthcare-title">
+      <div class="shell">
+        <h1 id="healthcare-title">의료 시스템은 만들기 전에 <em>통과해야 할 것</em>이 많습니다.</h1>
+        <p class="hero-lede">의료법·인증·개인정보와 기존 EMR·병원 시스템의 제약 안에서 작동하는 구조를 설계하고, 설계한 것은 직접 만듭니다.</p>
+        <div class="links">
+          <a class="solid" href="#inquiry">연동 범위 확인하기 <span>→</span></a>
+          <a class="quiet" href="#scope">하는 일 보기 <span>→</span></a>
         </div>
-        <div class="healthcare-system-map" aria-hidden="true">
-          <div class="healthcare-system-core"><span>CLINICAL WORKFLOW</span><i></i><i></i><i></i></div>
-          <div class="healthcare-system-node node-emr"><span>EMR</span><i></i><i></i></div>
-          <div class="healthcare-system-node node-saas"><span>SAAS</span><i></i><i></i></div>
-          <div class="healthcare-system-node node-fhir"><span>FHIR</span><i></i><i></i></div>
-          <svg viewBox="0 0 640 520"><path d="M118 142 C218 142 207 248 319 248"/><path d="M520 138 C425 138 436 248 319 248"/><path d="M319 409 C319 354 319 318 319 283"/></svg>
-        </div>
-        <dl class="healthcare-hero-facts" aria-label="의료정보 시스템 설계 기준">
+        <dl class="facts wide hero-facts" aria-label="의료정보 시스템 설계 기준">
           <div><dt>CONSTRAINT</dt><dd>의료법·인증·개인정보</dd></div>
           <div><dt>INTERFACE</dt><dd>EMR·병원 시스템 연동</dd></div>
           <div><dt>STANDARD</dt><dd>HL7 FHIR와 의료데이터 구조</dd></div>
@@ -187,69 +150,122 @@
       </div>
     </section>
 
-    <section class="healthcare-situations" aria-labelledby="situations-title">
-      <div class="shell healthcare-section-head">
-        <p class="eyebrow dark"><span></span>이런 상황</p>
-        <div><h2 id="situations-title">기능보다 먼저,<br><em>경계</em>를 정해야 할 때.</h2><p>의료 시스템은 필요한 기능만 나열해서 시작하기 어렵습니다. 누구의 시스템과 붙는지, 어떤 데이터를 다루는지, 어떤 인증과 운영 책임을 통과해야 하는지가 구조를 먼저 결정합니다.</p></div>
-      </div>
-      <div class="shell healthcare-situation-grid">
-        <article data-reveal><span>01 / DIGITAL HEALTH</span><h3>EMR과 붙어야 하는<br>의료 SaaS·디지털헬스</h3><p>제품의 가치가 진료 흐름과 연결돼야 하지만 EMR마다 인터페이스와 운영 방식이 다를 때.</p></article>
-        <article data-reveal><span>02 / COMPLIANCE</span><h3>인증·의료법·개인정보가<br>설계에 직접 걸릴 때</h3><p>나중에 문서로 보완할 수 없는 요구사항이 데이터 구조와 기능 경계를 바꿀 때.</p></article>
-        <article data-reveal><span>03 / MODERNIZATION</span><h3>병원 IT 고도화와<br>기존 시스템 연동</h3><p>기존 업무를 멈추지 않으면서 새 서비스와 데이터 흐름을 단계적으로 얹어야 할 때.</p></article>
-        <article data-reveal><span>04 / ARCHITECTURE</span><h3>EMR을 만들려는 팀의<br>아키텍처 판단</h3><p>제품 전체 개발에 들어가기 전 인증 범위, 표준, 모듈 경계와 운영 모델을 검토해야 할 때.</p></article>
-      </div>
-    </section>
-
-    <section class="healthcare-scope" id="scope" aria-labelledby="scope-title">
-      <div class="shell healthcare-scope-layout">
-        <div><p class="eyebrow"><span></span>하는 일</p><h2 id="scope-title">연동과 표준,<br>인증을 한 구조로.</h2><p>요건을 목록으로 남기는 데서 끝내지 않습니다. 실제 시스템 경계와 데이터 흐름으로 바꾸고, 합의한 범위는 직접 구현합니다.</p></div>
-        <ol>
-          <li data-reveal><span>01</span><div><h3>EMR·병원 시스템 연동 설계</h3><p>진료 흐름과 기존 인터페이스를 기준으로 API, 메시지, 동기화와 장애 경계를 정합니다.</p></div></li>
-          <li data-reveal><span>02</span><div><h3>의료데이터 표준 · HL7 FHIR</h3><p>표준 리소스와 현장 데이터의 차이를 분석하고 변환, 버전과 코드 체계를 설계합니다.</p></div></li>
-          <li data-reveal><span>03</span><div><h3>인증·개인정보 대응 아키텍처</h3><p>접근통제, 감사, 보관과 폐기 요건이 기능·데이터·운영에 반영되도록 구조화합니다.</p></div></li>
-          <li data-reveal><span>04</span><div><h3>EMR 벤더·신규 팀 아키텍처 자문</h3><p>제품 경계, 인증 범위, 개발 순서와 기존 자산을 함께 검토해 결정 기준을 남깁니다.</p></div></li>
-          <li data-reveal><span>05</span><div><h3>병원 IT 현대화</h3><p>운영 중인 시스템을 존중하면서 교체, 병행 운영과 단계적 이관의 순서를 설계합니다.</p></div></li>
-        </ol>
-      </div>
-      <div class="shell healthcare-boundary" data-reveal>
-        <span>SCOPE BOUNDARY</span>
-        <p>EMR 제품 전체를 새로 만드는 일은 맡지 않습니다. 이미 있는 시스템과 어떻게 붙일지, 무엇을 표준으로 삼을지, 인증을 어떻게 통과할지를 설계하고, 설계한 것은 직접 만듭니다.</p>
-        <small>특정 EMR 벤더의 제품 판매를 전제로 하지 않으며, 현재 환경과 표준·교체 가능성을 기준으로 벤더 중립적으로 판단합니다.</small>
-      </div>
-    </section>
-
-    <section class="healthcare-experience" aria-labelledby="experience-title">
-      <div class="shell healthcare-experience-layout">
-        <div><p class="eyebrow dark"><span></span>의료 IT 경험</p><h2 id="experience-title">인증을 통과한 제품과<br>운영되는 현장을 함께 봅니다.</h2></div>
-        <div>
-          <p>알렉스소프트(ALEXSOFT)는 국내 대형 ERP 기업의 의료 사업에서 EMR 인증을 받은 의원급 EMR 중 최초의 클라우드 제품(2022–2026)을 개발 리더로 시작해 2023년부터 개발·기획설계 총괄로 이끌었습니다. 병원정보시스템(HIS) 배경을 바탕으로 제품 기능, 인증과 실제 진료·운영 흐름을 같은 구조 안에서 판단합니다.</p>
-          <dl>
-            <div data-reveal><dt>CLOUD EMR</dt><dd><strong>EMR 인증 의원급 최초 클라우드 제품</strong><span>제품명이 아닌 확인 가능한 범위로 표기합니다.</span></dd></div>
-            <div data-reveal><dt>LEADERSHIP</dt><dd><strong>개발 리더 → 2023년부터 개발·기획설계 총괄</strong><span>구현과 제품 의사결정을 함께 경험했습니다.</span></dd></div>
-            <div data-reveal><dt>HIS</dt><dd><strong>병원정보시스템 배경</strong><span>진료·원무·청구와 주변 시스템의 연결을 이해합니다.</span></dd></div>
-          </dl>
-          <div class="healthcare-hero-actions">
-            <a class="healthcare-text-link" href="../work/#cloud-emr">인증 클라우드 EMR 사례 보기 <span>↗</span></a>
+    <section class="block" id="situations" aria-labelledby="situations-title">
+      <div class="shell">
+        <div class="head">
+          <div>
+            <div class="nib" aria-hidden="true"><svg viewBox="0 0 64 64"><path fill="#2456E4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/></svg><span>이런 상황</span></div>
+            <h2 id="situations-title">기능보다 먼저, <em>경계</em>를 정해야 할 때.</h2>
           </div>
+          <p>의료 시스템은 필요한 기능만 나열해서 시작하기 어렵습니다. 누구의 시스템과 붙는지, 어떤 데이터를 다루는지, 어떤 인증과 운영 책임을 통과해야 하는지가 구조를 먼저 결정합니다.</p>
+        </div>
+        <div class="steps">
+          <div data-reveal><span class="mono">DIGITAL HEALTH</span><h3>EMR과 붙어야 하는 의료 SaaS·디지털헬스</h3><p>제품의 가치가 진료 흐름과 연결돼야 하지만 EMR마다 인터페이스와 운영 방식이 다를 때.</p></div>
+          <div data-reveal><span class="mono">COMPLIANCE</span><h3>인증·의료법·개인정보가 설계에 직접 걸릴 때</h3><p>나중에 문서로 보완할 수 없는 요구사항이 데이터 구조와 기능 경계를 바꿀 때.</p></div>
+          <div data-reveal><span class="mono">MODERNIZATION</span><h3>병원 IT 고도화와 기존 시스템 연동</h3><p>기존 업무를 멈추지 않으면서 새 서비스와 데이터 흐름을 단계적으로 얹어야 할 때.</p></div>
+          <div data-reveal><span class="mono">ARCHITECTURE</span><h3>EMR을 만들려는 팀의 아키텍처 판단</h3><p>제품 전체 개발에 들어가기 전 인증 범위, 표준, 모듈 경계와 운영 모델을 검토해야 할 때.</p></div>
         </div>
       </div>
     </section>
 
-    <section class="healthcare-process" aria-labelledby="process-title">
-      <div class="shell healthcare-process-head"><p class="eyebrow"><span></span>진행 방식</p><div><h2 id="process-title">말로 판단한 뒤,<br>문서와 구현으로.</h2><p>상황에 맞는 단계에서 시작하고, 앞 단계의 판단을 다음 단계가 그대로 사용합니다. 자세한 범위는 <a href="../diagnosis/#options">아키텍처 설계·구현 진행 방식</a>에서 확인할 수 있습니다.</p></div></div>
-      <ol class="shell healthcare-ladder">
-        <li data-reveal><span>F</span><div><small>30분</small><h3>적합성 확인</h3><p>서로 맞는 일인지 판단합니다. 분석 문서·설계안은 제공하지 않습니다.</p></div></li>
-        <li data-reveal><span>T0</span><div><small>반나절–1일</small><h3>아키텍처 진단 세션</h3><p>현 구조의 리스크와 결정할 지점을 찾습니다.</p></div></li>
-        <li data-reveal><span>T1</span><div><small>2–6주</small><h3>설계·기술 실사</h3><p>목표 구조와 개발팀이 사용할 기준을 문서로 확정합니다.</p></div></li>
-        <li data-reveal><span>T3</span><div><small>범위별</small><h3>설계 기반 구현</h3><p>연동·백오피스·내부 시스템 규모를 직접 구현합니다.</p></div></li>
-        <li data-reveal><span>T2</span><div><small>월 단위</small><h3>월 자문 계약</h3><p>월 확정 일수 안에서 설계 리뷰와 기술 결정을 맡습니다.</p></div></li>
-      </ol>
+    <section class="block" id="scope" aria-labelledby="scope-title">
+      <div class="shell">
+        <div class="head">
+          <div>
+            <div class="nib" aria-hidden="true"><svg viewBox="0 0 64 64"><path fill="#2456E4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/></svg><span>하는 일</span></div>
+            <h2 id="scope-title">연동과 표준, 인증을 한 구조로.</h2>
+          </div>
+          <p>요건을 목록으로 남기는 데서 끝내지 않습니다. 실제 시스템 경계와 데이터 흐름으로 바꾸고, 합의한 범위는 직접 구현합니다.</p>
+        </div>
+
+        <div class="ink" data-ink>
+          <svg viewBox="0 0 1200 320" role="img" aria-label="의료 SaaS·디지털헬스 제품이 연동 계층을 거쳐 EMR과 병원 시스템에 연결되고, 연동 결과와 오류가 운영 절차로 되돌아오는 구조">
+            <path class="l d" d="M120 46 H1080"/>
+            <text class="m" x="600" y="32" text-anchor="middle">의료법 · 인증 · 개인정보 경계</text>
+            <rect class="bx" x="40" y="122" width="230" height="82" rx="2"/>
+            <text class="t" x="155" y="156" text-anchor="middle">의료 SaaS · 디지털헬스</text>
+            <text class="s" x="155" y="180" text-anchor="middle">제품 기능과 진료 흐름</text>
+            <path class="l draw" d="M270 163 H455"/>
+            <text class="m" x="362" y="150" text-anchor="middle">API · 메시지</text>
+            <rect class="bx" x="455" y="98" width="290" height="130" rx="2"/>
+            <text class="t" x="600" y="140" text-anchor="middle">연동 계층</text>
+            <text class="s" x="600" y="166" text-anchor="middle">표준 변환 · HL7 FHIR · 코드 체계</text>
+            <text class="s" x="600" y="192" text-anchor="middle">접근통제 · 감사 · 재처리</text>
+            <path class="l draw" d="M745 163 H845 M845 163 V112 H930 M845 163 V214 H930"/>
+            <rect class="bx" x="930" y="78" width="230" height="68" rx="2"/>
+            <text class="t" x="1045" y="108" text-anchor="middle">EMR</text>
+            <text class="s" x="1045" y="130" text-anchor="middle">진료 · 처방 · 기록</text>
+            <rect class="bx" x="930" y="180" width="230" height="68" rx="2"/>
+            <text class="t" x="1045" y="210" text-anchor="middle">병원 시스템</text>
+            <text class="s" x="1045" y="232" text-anchor="middle">예약 · 원무 · 청구</text>
+            <path class="l d draw late" d="M1045 248 V286 H155 V204"/>
+            <text class="s" x="600" y="308" text-anchor="middle">연동 결과와 오류는 담당자 화면과 운영 절차로 되돌아옵니다</text>
+          </svg>
+        </div>
+        <p class="scroll-hint">← 옆으로 밀어 전체 구조를 볼 수 있습니다 →</p>
+
+        <div class="steps cols-3">
+          <div data-reveal><h3>EMR·병원 시스템 연동 설계</h3><p>진료 흐름과 기존 인터페이스를 기준으로 API, 메시지, 동기화와 장애 경계를 정합니다.</p></div>
+          <div data-reveal><h3>의료데이터 표준 · HL7 FHIR</h3><p>표준 리소스와 현장 데이터의 차이를 분석하고 변환, 버전과 코드 체계를 설계합니다.</p></div>
+          <div data-reveal><h3>인증·개인정보 대응 아키텍처</h3><p>접근통제, 감사, 보관과 폐기 요건이 기능·데이터·운영에 반영되도록 구조화합니다.</p></div>
+          <div data-reveal><h3>EMR 벤더·신규 팀 아키텍처 자문</h3><p>제품 경계, 인증 범위, 개발 순서와 기존 자산을 함께 검토해 결정 기준을 남깁니다.</p></div>
+          <div data-reveal><h3>병원 IT 현대화</h3><p>운영 중인 시스템을 존중하면서 교체, 병행 운영과 단계적 이관의 순서를 설계합니다.</p></div>
+        </div>
+
+        <blockquote class="quote" style="margin-top:clamp(32px,4vw,52px)">
+          <p>EMR 제품 전체를 새로 만드는 일은 맡지 않습니다. 이미 있는 시스템과 어떻게 붙일지, 무엇을 표준으로 삼을지, 인증을 어떻게 통과할지를 설계하고, 설계한 것은 직접 만듭니다.</p>
+          <small>특정 EMR 벤더의 제품 판매를 전제로 하지 않으며, 현재 환경과 표준·교체 가능성을 기준으로 벤더 중립적으로 판단합니다.</small>
+          <cite>SCOPE BOUNDARY</cite>
+        </blockquote>
+      </div>
     </section>
 
-    <section class="healthcare-faq" id="faq" aria-labelledby="faq-title">
-      <div class="shell healthcare-faq-grid">
-        <div><p class="eyebrow dark"><span></span>자주 묻는 질문</p><h2 id="faq-title">범위를 정하기 전<br>확인할 것들.</h2></div>
-        <div class="healthcare-faq-list">
+    <section class="block" id="experience" aria-labelledby="experience-title">
+      <div class="shell">
+        <div class="head">
+          <div>
+            <div class="nib" aria-hidden="true"><svg viewBox="0 0 64 64"><path fill="#2456E4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/></svg><span>의료 IT 경험</span></div>
+            <h2 id="experience-title">인증을 통과한 제품과 운영되는 현장을 함께 봅니다.</h2>
+          </div>
+          <p>알렉스소프트(ALEXSOFT)는 국내 대형 ERP 기업의 의료 사업에서 EMR 인증을 받은 의원급 EMR 중 최초의 클라우드 제품(2022–2026)을 개발 리더로 시작해 2023년부터 개발·기획설계 총괄로 이끌었습니다. 병원정보시스템(HIS) 배경을 바탕으로 제품 기능, 인증과 실제 진료·운영 흐름을 같은 구조 안에서 판단합니다.</p>
+        </div>
+        <dl class="facts wide">
+          <div><dt>CLOUD EMR</dt><dd>EMR 인증 의원급 최초 클라우드 제품<small>제품명이 아닌 확인 가능한 범위로 표기합니다.</small></dd></div>
+          <div><dt>LEADERSHIP</dt><dd>개발 리더 → 2023년부터 개발·기획설계 총괄<small>구현과 제품 의사결정을 함께 경험했습니다.</small></dd></div>
+          <div><dt>HIS</dt><dd>병원정보시스템 배경<small>진료·원무·청구와 주변 시스템의 연결을 이해합니다.</small></dd></div>
+        </dl>
+        <p class="case-more"><a class="link" href="../work/#cloud-emr">인증 클라우드 EMR 사례 보기 <span>→</span></a></p>
+      </div>
+    </section>
+
+    <section class="block" id="process" aria-labelledby="process-title">
+      <div class="shell">
+        <div class="head">
+          <div>
+            <div class="nib" aria-hidden="true"><svg viewBox="0 0 64 64"><path fill="#2456E4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/></svg><span>진행 방식</span></div>
+            <h2 id="process-title">말로 판단한 뒤, 문서와 구현으로.</h2>
+          </div>
+          <p>상황에 맞는 단계에서 시작하고, 앞 단계의 판단을 다음 단계가 그대로 사용합니다. 자세한 범위는 <a class="inline" href="../diagnosis/#options">아키텍처 설계·구현 진행 방식</a>에서 확인할 수 있습니다.</p>
+        </div>
+        <div class="steps cols-3">
+          <div data-reveal><span class="mono">F</span><h3>적합성 확인</h3><p>서로 맞는 일인지 판단합니다. 분석 문서·설계안은 제공하지 않습니다.</p><small>30분</small></div>
+          <div data-reveal><span class="mono">T0</span><h3>아키텍처 진단 세션</h3><p>현 구조의 리스크와 결정할 지점을 찾습니다.</p><small>반나절–1일</small></div>
+          <div data-reveal><span class="mono">T1</span><h3>설계·기술 실사</h3><p>목표 구조와 개발팀이 사용할 기준을 문서로 확정합니다.</p><small>2–6주</small></div>
+          <div data-reveal><span class="mono">T3</span><h3>설계 기반 구현</h3><p>연동·백오피스·내부 시스템 규모를 직접 구현합니다.</p><small>범위별</small></div>
+          <div data-reveal><span class="mono">T2</span><h3>월 자문 계약</h3><p>월 확정 일수 안에서 설계 리뷰와 기술 결정을 맡습니다.</p><small>월 단위</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="faq" aria-labelledby="faq-title">
+      <div class="shell">
+        <div class="head">
+          <div>
+            <div class="nib" aria-hidden="true"><svg viewBox="0 0 64 64"><path fill="#2456E4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/></svg><span>자주 묻는 질문</span></div>
+            <h2 id="faq-title">범위를 정하기 전 확인할 것들.</h2>
+          </div>
+        </div>
+        <div class="qa">
           <details open><summary>어떤 EMR·병원 시스템 연동을 다루나요?<span aria-hidden="true">+</span></summary><p>진료·예약·접수·검사·청구 등 필요한 업무 흐름과 기존 시스템이 제공하는 인터페이스를 먼저 확인합니다. 가능한 연동 범위와 데이터를 정한 뒤 API, 메시지와 운영 절차를 설계합니다.</p></details>
           <details><summary>EMR 인증 대응도 함께 볼 수 있나요?<span aria-hidden="true">+</span></summary><p>인증 항목이 데이터 구조, 기능 경계와 운영 절차에 미치는 영향을 아키텍처 단계에서 함께 검토합니다. 인증 취득 자체를 보증하지 않으며, 적용 기준과 심사 범위는 착수 시 최신 자료로 확인합니다.</p></details>
           <details><summary>특정 EMR 벤더에 맞춘 제안인가요?<span aria-hidden="true">+</span></summary><p>아닙니다. 특정 벤더의 제품 판매를 전제로 하지 않습니다. 현재 사용 중인 시스템의 실제 인터페이스와 제약을 확인하고, 표준과 교체 가능성을 함께 고려해 벤더 중립적으로 설계합니다.</p></details>
@@ -259,35 +275,46 @@
       </div>
     </section>
 
-    <section class="healthcare-inquiry" id="inquiry" aria-labelledby="inquiry-title">
-      <div class="shell healthcare-inquiry-layout">
-        <div class="healthcare-inquiry-copy"><p class="eyebrow"><span></span>의료정보 시스템 문의</p><h2 id="inquiry-title">붙여야 할 시스템과<br>통과할 기준부터.</h2><p>현재 제품과 연동 대상, 확인한 인증·개인정보 요건을 알려주세요. 내용을 검토한 뒤 30분 적합성 확인 일정을 안내합니다.</p><a href="mailto:alexsoft.kr@gmail.com">alexsoft.kr@gmail.com</a></div>
-        <form class="healthcare-inquiry-form" action="https://docs.google.com/forms/d/e/1FAIpQLSe3Y0R4OwMIEWCu8aX6Z8y9aF-iMvkKao9TI9S7A7cdhCYvow/formResponse" method="post" target="healthcare-google-form-response" accept-charset="UTF-8" data-inquiry-form>
+    <section class="block" id="inquiry" aria-labelledby="inquiry-title">
+      <div class="shell">
+        <div class="head">
+          <div>
+            <div class="nib" aria-hidden="true"><svg viewBox="0 0 64 64"><path fill="#2456E4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/></svg><span>의료정보 시스템 문의</span></div>
+            <h2 id="inquiry-title">붙여야 할 시스템과 통과할 기준부터.</h2>
+          </div>
+          <p>현재 제품과 연동 대상, 확인한 인증·개인정보 요건을 알려주세요. 내용을 검토한 뒤 30분 적합성 확인 일정을 안내합니다.</p>
+        </div>
+        <div class="links" style="margin-bottom:clamp(24px,3vw,36px)">
+          <a class="quiet" href="mailto:alexsoft.kr@gmail.com">alexsoft.kr@gmail.com <span>→</span></a>
+        </div>
+        <form class="form" action="https://docs.google.com/forms/d/e/1FAIpQLSe3Y0R4OwMIEWCu8aX6Z8y9aF-iMvkKao9TI9S7A7cdhCYvow/formResponse" method="post" target="healthcare-google-form-response" accept-charset="UTF-8" data-inquiry-form>
           <input type="hidden" name="entry.354814586" value="의료정보 시스템">
-          <div class="form-honeypot" aria-hidden="true"><label>웹사이트<input type="text" name="website" tabindex="-1" autocomplete="off" data-form-honeypot></label></div>
-          <div class="form-row"><label>회사·조직명<input type="text" name="entry.1998693368" autocomplete="organization" placeholder="예: ALEXSOFT"></label><label>담당자명 <em>필수</em><input type="text" name="entry.2061346803" autocomplete="name" required placeholder="성함을 입력해주세요"></label></div>
-          <label>이메일 <em>필수</em><input type="email" name="entry.2008957627" autocomplete="email" required placeholder="reply@example.com"></label>
-          <label>현재 시스템·연동 대상<input type="text" name="entry.536924147" placeholder="예: 의료 SaaS · 의원급 EMR"></label>
-          <label>현재 검토 중인 범위와 제약 <em>필수</em><textarea name="entry.1400718553" required rows="6" data-message placeholder="제품의 목적, 연동 대상, 인증·개인정보 요건과 현재 막힌 지점을 편하게 적어주세요."></textarea></label>
-          <label>희망 시기<select name="entry.1009207624"><option value="미정">아직 미정</option><option value="1개월 이내">1개월 이내</option><option value="1~3개월">1~3개월</option><option value="3개월 이후">3개월 이후</option></select></label>
-          <button class="healthcare-inquiry-submit" type="submit"><span>연동 범위 확인 요청</span><i aria-hidden="true">↗</i></button>
+          <div class="visually-hidden" aria-hidden="true"><label>웹사이트<input type="text" name="website" tabindex="-1" autocomplete="off" data-form-honeypot></label></div>
+          <div class="row">
+            <label><span>회사·조직명</span><input type="text" name="entry.1998693368" autocomplete="organization" placeholder="예: ALEXSOFT"></label>
+            <label><span>담당자명 <em>필수</em></span><input type="text" name="entry.2061346803" autocomplete="name" required placeholder="성함을 입력해주세요"></label>
+          </div>
+          <label><span>이메일 <em>필수</em></span><input type="email" name="entry.2008957627" autocomplete="email" required placeholder="reply@example.com"></label>
+          <label><span>현재 시스템·연동 대상</span><input type="text" name="entry.536924147" placeholder="예: 의료 SaaS · 의원급 EMR"></label>
+          <label><span>현재 검토 중인 범위와 제약 <em>필수</em></span><textarea name="entry.1400718553" required rows="6" data-message placeholder="제품의 목적, 연동 대상, 인증·개인정보 요건과 현재 막힌 지점을 편하게 적어주세요."></textarea></label>
+          <label><span>희망 시기</span><select name="entry.1009207624"><option value="미정">아직 미정</option><option value="1개월 이내">1개월 이내</option><option value="1~3개월">1~3개월</option><option value="3개월 이후">3개월 이후</option></select></label>
+          <button type="submit"><span>연동 범위 확인 요청</span><i aria-hidden="true">↗</i></button>
           <p class="form-note" data-form-status aria-live="polite">입력 내용은 상담 확인을 위해 알렉스소프트(ALEXSOFT)의 Google Forms로 전송됩니다.</p>
         </form>
-        <iframe class="google-form-target" name="healthcare-google-form-response" title="문의 전송 결과" data-google-form-target></iframe>
+        <iframe class="visually-hidden" name="healthcare-google-form-response" title="문의 전송 결과" data-google-form-target></iframe>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site">
     <div class="shell">
-      <div class="footer-brand"><svg viewBox="0 0 64 64" aria-hidden="true"><path fill-rule="evenodd" d="M32 4 61 57H3L32 4Zm0 21L21.8 42l7.1 5.2V57h6.2v-9.8l7.1-5.2L32 25Z"/><circle class="logo-node" cx="32" cy="40" r="3.8"/></svg><span>ALEXSOFT</span></div>
-      <p>ARCHITECTURE · BUILD · ADVISORY</p>
-      <div><a href="../">홈으로</a><a href="../diagnosis/">아키텍처 설계·구현</a><a href="../e-invoicing/">e-invoicing 대응</a><a href="../healthcare/">의료정보 시스템</a><a href="../brand-website/">브랜드 웹사이트</a><a href="../work/">사례</a><a href="../en/" hreflang="en">English</a><a href="mailto:alexsoft.kr@gmail.com">이메일</a><a href="#main">맨 위로 ↑</a></div>
-      <div class="footer-bottom"><small>© <span data-year></span> ALEXSOFT. Crafted with intent.</small><nav class="footer-socials" aria-label="ALEXSOFT 소셜 채널"><span>CHANNELS</span><a href="https://blog.naver.com/alex-soft" target="_blank" rel="noopener" aria-label="ALEXSOFT 네이버 블로그 새 창에서 열기">Naver Blog <i aria-hidden="true">↗</i></a><a href="https://www.instagram.com/alexsoft.co.kr/" target="_blank" rel="noopener noreferrer" aria-label="ALEXSOFT Instagram 새 창에서 열기">Instagram <i aria-hidden="true">↗</i></a></nav></div>
+      <a class="mark" href="/"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#FAF8F4"/><path fill="#17191D" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/><circle cx="32" cy="40" r="3.7" fill="#4B78FF"/></svg>ALEXSOFT</a>
+      <nav aria-label="바닥글 메뉴"><a href="/diagnosis/">아키텍처 설계·구현</a><a href="/e-invoicing/">e-invoicing 대응</a><a href="/healthcare/">의료정보 시스템</a><a href="/brand-website/">브랜드 웹사이트</a><a href="/work/">사례</a><a href="/en/" hreflang="en">English</a><a href="mailto:alexsoft.kr@gmail.com">이메일</a></nav>
+      <div class="channels"><span class="mono">CHANNELS</span><a href="https://blog.naver.com/alex-soft" target="_blank" rel="noopener">Naver Blog ↗</a><a href="https://www.instagram.com/alexsoft.co.kr" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div>
+      <p class="biz" data-nosnippet>상호 알렉스소프트(ALEXSOFT) · 대표 이용민 · 사업자등록번호 212-64-01036 · 사업장 부산광역시 수영구 광안해변로15번길 10 · © <span data-year>2026</span> ALEXSOFT</p>
     </div>
   </footer>
-
-  <script src="../navigation.js?v=20260831-d-1" defer></script>
-  <script src="healthcare.js?v=20260831-1" defer></script>
+  <script src="/assets/ink.js?v=20260901-i-1" defer></script>
+  <script src="/healthcare/healthcare.js?v=20260901-i-1" defer></script>
 </body>
 </html>

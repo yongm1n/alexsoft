@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#e6ebf8">
+  <meta name="theme-color" content="#FAF8F4">
   <meta name="description" content="만들기 전에 구조를 먼저 판단합니다. 아키텍처 진단, 설계·기술 실사, 구현, 월 자문까지 알렉스소프트가 이어서 맡습니다.">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta name="author" content="알렉스소프트(ALEXSOFT)">
@@ -124,235 +124,225 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="../styles.css?v=20260831-e-1">
-  <link rel="stylesheet" href="diagnosis.css?v=20260831-d-1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/assets/ink.css?v=20260901-i-1">
+  <noscript><style>[data-reveal]{opacity:1;transform:none}</style></noscript>
+  <link rel="stylesheet" href="/diagnosis/diagnosis.css?v=20260901-i-1">
 </head>
-<body class="hybrid-concept diagnosis-page">
-  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
-  <div class="scroll-progress" aria-hidden="true"><span></span></div>
-
-  <header class="site-header" data-header>
-    <a class="wordmark" href="/" aria-label="ALEXSOFT 홈으로">
-      <svg class="wordmark-mark" viewBox="0 0 64 64" aria-hidden="true">
-        <path fill-rule="evenodd" d="M32 4 61 57H3L32 4Zm0 21L21.8 42l7.1 5.2V57h6.2v-9.8l7.1-5.2L32 25Z"/>
-        <circle class="logo-node" cx="32" cy="40" r="3.8"/>
-      </svg>
-      <span>ALEXSOFT</span>
-    </a>
-    <button class="menu-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
-      <span></span><span></span>
-    </button>
-    <nav class="site-nav" id="site-nav" aria-label="주요 메뉴" data-nav>
-      <a href="/work/">프로젝트</a>
-      <details class="nav-services" data-nav-services>
-        <summary>서비스 <span class="nav-chevron" aria-hidden="true"></span></summary>
-        <div class="nav-services-popover">
-          <a href="/diagnosis/" data-nav-path="/diagnosis/">
-            <span>01</span>
-            <strong>아키텍처 설계·구현</strong>
-            <small>설계한 사람이 끝까지 만듭니다.</small>
-          </a>
-          <a href="/e-invoicing/" data-nav-path="/e-invoicing/">
-            <span>02</span>
-            <strong>e-invoicing 대응</strong>
-            <small>국가 e-invoice 규격을 설계한 경험으로 대응합니다.</small>
-          </a>
-          <a href="/healthcare/" data-nav-path="/healthcare/">
-            <span>03</span>
-            <strong>의료정보 시스템</strong>
-            <small>EMR·병원 시스템 연동과 인증 대응.</small>
-          </a>
-          <a href="/brand-website/" data-nav-path="/brand-website/">
-            <span>04</span>
-            <strong>브랜드 웹사이트 제작</strong>
-            <small>브랜드의 태도를 화면과 경험으로 설계합니다.</small>
-          </a>
-        </div>
-      </details>
-      <a href="/#about">회사소개</a>
-      <a class="nav-contact" href="/#start">문의하기 <span>↘</span></a>
-    </nav>
+<body>
+  <header class="top">
+    <a class="skip" href="#main">본문으로 건너뛰기</a>
+    <div class="shell">
+      <a class="mark" href="/" aria-label="알렉스소프트 홈">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#17191D"/><path fill="#FAF8F4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/><circle cx="32" cy="40" r="3.7" fill="#4B78FF"/></svg>
+        ALEXSOFT
+      </a>
+      <nav aria-label="주요 메뉴">
+        <a href="/work/">프로젝트</a>
+        <a href="/#services">서비스</a>
+        <a href="/#about">회사소개</a>
+        <a class="cta" href="/#start">문의</a>
+      </nav>
+    </div>
   </header>
 
   <main id="main">
-    <section class="diagnosis-hero" aria-labelledby="diagnosis-title" data-diagnosis-hero>
-      <div class="diagnosis-gridlines" aria-hidden="true"></div>
-      <div class="diagnosis-system" aria-hidden="true" data-diagnosis-system>
-        <div class="system-halo halo-a"></div>
-        <div class="system-halo halo-b"></div>
-        <div class="system-route route-a"></div>
-        <div class="system-route route-b"></div>
-        <div class="system-core">
-          <small>ARCHITECTURE</small>
-          <strong>F → T3</strong>
-          <span>ASSESS · DESIGN · BUILD</span>
+    <section class="hero-flat" aria-labelledby="diagnosis-title">
+      <div class="shell">
+        <h1 id="diagnosis-title">만들기 전에, <em>구조</em>를 먼저 판단합니다.</h1>
+        <p class="hero-lede">법제와 인증, 기존 시스템의 제약 안에서 실제로 작동할 구조인지 먼저 판단합니다. 그다음 설계하고, 설계한 시스템은 직접 만듭니다.</p>
+        <div class="links">
+          <a class="solid" href="#inquiry" data-inquiry-type="아키텍처 자문">30분 적합성 확인 <span>→</span></a>
+          <a class="quiet" href="#options">진행 단계 보기 <span>→</span></a>
         </div>
-        <div class="system-node node-input"><i></i><span>INPUT</span></div>
-        <div class="system-node node-process"><i></i><span>PROCESS</span></div>
-        <div class="system-node node-decision"><i></i><span>DECISION</span></div>
-        <p class="system-status"><i></i>DECISION SIGNAL / READY</p>
-      </div>
-      <div class="shell diagnosis-hero-inner">
-        <div class="diagnosis-hero-copy">
-          <p class="diagnosis-kicker"><span>ALEXSOFT / ARCHITECTURE &amp; BUILD</span><i>SYSTEMS · 2026</i></p>
-          <h1 id="diagnosis-title">만들기 전에,<br><em>구조</em>를<br>먼저 판단합니다.</h1>
-          <p>법제와 인증, 기존 시스템의 제약 안에서 실제로 작동할 구조인지 먼저 판단합니다. 그다음 설계하고, 설계한 시스템은 직접 만듭니다.</p>
-          <div class="diagnosis-hero-actions">
-            <a class="diagnosis-button diagnosis-button-dark" href="#inquiry" data-inquiry-type="아키텍처 자문">30분 적합성 확인 <span>↓</span></a>
-            <a class="diagnosis-text-link" href="#options">진행 단계 보기 <span>↘</span></a>
-          </div>
-        </div>
-        <dl class="diagnosis-facts" aria-label="아키텍처 자문 주요 조건">
+        <dl class="facts" style="margin-top:clamp(28px,4vw,44px);max-width:620px" aria-label="아키텍처 자문 주요 조건">
           <div><dt>시작</dt><dd>30분 무료 확인</dd></div>
           <div><dt>진단</dt><dd>반나절~1일</dd></div>
           <div><dt>대금</dt><dd>진단비는 계약 시 차감</dd></div>
         </dl>
-        <p class="diagnosis-fineprint">말로 판단해 주는 것까지가 무료, 문서로 남기면 유료입니다.</p>
+        <p class="mono" style="margin-top:18px">말로 판단해 주는 것까지가 무료, 문서로 남기면 유료입니다.</p>
       </div>
     </section>
 
-    <section class="diagnosis-situations" aria-labelledby="situations-title">
+    <section class="block" aria-labelledby="situations-title">
       <div class="shell">
-        <div class="diagnosis-section-head">
-          <p class="eyebrow dark"><span></span>이런 상황</p>
-          <h2 id="situations-title">구조를 먼저 봐야 하는<br>순간이 있습니다.</h2>
+        <div class="head">
+          <div>
+            <div class="nib" aria-hidden="true"><svg viewBox="0 0 64 64"><path fill="#2456E4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/></svg><span>이런 상황</span></div>
+            <h2 id="situations-title">구조를 먼저 봐야 하는 순간이 있습니다.</h2>
+          </div>
           <p>업종이나 도구보다, 되돌리기 어려운 결정에 집중합니다. 아래 상황이 하나라도 있다면 설계에 들어가기 전에 구조를 확인할 이유가 있습니다.</p>
         </div>
-        <ol class="situation-grid">
-          <li data-reveal><span>01</span><strong>법제·인증 요건이 설계에 직접 걸립니다.</strong><p>요건을 나중에 붙이면 구조를 다시 짜야 합니다. 처음부터 제약으로 넣습니다.</p></li>
-          <li data-reveal><span>02</span><strong>기존 기간계·EMR·ERP와 붙어야 합니다.</strong><p>연동 지점의 데이터와 책임 경계를 설계 전에 정리합니다.</p></li>
-          <li data-reveal><span>03</span><strong>만들지, 도입할지, 연동할지 판단이 서지 않습니다.</strong><p>세 선택지를 같은 기준으로 비교하고 그렇게 정한 근거를 남깁니다.</p></li>
-          <li data-reveal><span>04</span><strong>개발팀은 있는데 구조를 책임질 사람이 없습니다.</strong><p>설계 판단을 맡을 자리를 필요한 기간만큼 채웁니다.</p></li>
-        </ol>
+        <div class="steps cols-2">
+          <div data-reveal><h3>법제·인증 요건이 설계에 직접 걸립니다.</h3><p>요건을 나중에 붙이면 구조를 다시 짜야 합니다. 처음부터 제약으로 넣습니다.</p></div>
+          <div data-reveal><h3>기존 기간계·EMR·ERP와 붙어야 합니다.</h3><p>연동 지점의 데이터와 책임 경계를 설계 전에 정리합니다.</p></div>
+          <div data-reveal><h3>만들지, 도입할지, 연동할지 판단이 서지 않습니다.</h3><p>세 선택지를 같은 기준으로 비교하고 그렇게 정한 근거를 남깁니다.</p></div>
+          <div data-reveal><h3>개발팀은 있는데 구조를 책임질 사람이 없습니다.</h3><p>설계 판단을 맡을 자리를 필요한 기간만큼 채웁니다.</p></div>
+        </div>
       </div>
     </section>
 
-    <section class="diagnosis-options" id="options" aria-labelledby="options-title">
+    <section class="block" id="options" aria-labelledby="options-title">
       <div class="shell">
-        <div class="diagnosis-section-head">
-          <p class="eyebrow dark"><span></span>진행 단계</p>
-          <h2 id="options-title">필요한 깊이만큼만,<br>단계로 나눴습니다.</h2>
+        <div class="head">
+          <div>
+            <div class="nib" aria-hidden="true"><svg viewBox="0 0 64 64"><path fill="#2456E4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/></svg><span>진행 단계</span></div>
+            <h2 id="options-title">필요한 깊이만큼만, 단계로 나눴습니다.</h2>
+          </div>
           <p>전부를 한 번에 맡길 필요는 없습니다. 30분 통화로 시작해 진단, 설계, 구현, 상시 자문까지 이어지며 어느 단계에서든 멈출 수 있습니다.</p>
         </div>
-        <div class="fit-check-strip" data-reveal>
-          <div><span>START HERE</span><strong>30분 적합성 확인</strong></div>
-          <p>서로 맞는 일인지 판단하는 자리입니다. 무료이며, 분석 문서·설계안은 제공하지 않습니다.</p>
-          <a href="#inquiry" data-inquiry-type="아키텍처 자문">적합성 확인 신청 <span>↗</span></a>
+
+        <dl class="facts wide" data-reveal>
+          <div><dt>START HERE</dt><dd>30분 적합성 확인<small>서로 맞는 일인지 판단하는 자리입니다. 무료이며, 분석 문서·설계안은 제공하지 않습니다.</small></dd></div>
+        </dl>
+        <div class="links" style="margin-top:14px">
+          <a class="solid" href="#inquiry" data-inquiry-type="아키텍처 자문">적합성 확인 신청 <span>→</span></a>
         </div>
-        <div class="option-grid">
-          <article class="option-card option-featured" data-reveal>
-            <div class="option-card-top"><span>01 / ASSESS</span><strong>선불</strong></div>
-            <div>
-              <p>반나절~1일</p>
-              <h3>아키텍처 진단 세션</h3>
-              <em>구조의 리스크와 결정할 지점을 하루 안에 정리합니다. 진단비는 이후 계약 시 전액 차감합니다.</em>
-            </div>
+
+        <div class="steps cols-3">
+          <div data-reveal>
+            <span class="mono">반나절~1일 · 선불</span>
+            <h3>아키텍처 진단 세션</h3>
+            <p>구조의 리스크와 결정할 지점을 하루 안에 정리합니다. 진단비는 이후 계약 시 전액 차감합니다.</p>
             <ul>
               <li>현 구조의 리스크 지도</li>
               <li>의사결정 포인트 3~5개</li>
               <li>다음 단계 권고</li>
             </ul>
-            <a href="#inquiry" data-inquiry-type="진단 세션">진단 세션 문의 <span>↗</span></a>
-          </article>
-          <article class="option-card" data-reveal>
-            <div class="option-card-top"><span>02 / DESIGN</span><strong>착수 50%</strong></div>
-            <div>
-              <p>2~6주</p>
-              <h3>아키텍처 설계 · 기술 실사</h3>
-              <em>개발팀이 그대로 착수할 수 있는 수준까지 구조를 문서로 확정합니다.</em>
-            </div>
+            <p class="case-more"><a class="link" href="#inquiry" data-inquiry-type="진단 세션">진단 세션 문의 <span>→</span></a></p>
+          </div>
+          <div data-reveal>
+            <span class="mono">2~6주 · 착수 50%</span>
+            <h3>아키텍처 설계 · 기술 실사</h3>
+            <p>개발팀이 그대로 착수할 수 있는 수준까지 구조를 문서로 확정합니다.</p>
             <ul>
               <li>규제 대응 설계와 레거시 현대화 로드맵</li>
               <li>벤더·솔루션 선정과 기술 감리</li>
               <li>투자·M&amp;A 기술 실사</li>
             </ul>
-            <a href="#inquiry" data-inquiry-type="설계·기술 실사">설계 · 실사 문의 <span>↗</span></a>
-          </article>
-          <article class="option-card option-complex" data-reveal>
-            <div class="option-card-top"><span>03 / BUILD</span><strong>마일스톤</strong></div>
-            <div>
-              <p>범위별 일정</p>
-              <h3>설계 기반 구현</h3>
-              <em>설계한 사람이 그대로 만듭니다.</em>
-            </div>
+            <p class="case-more"><a class="link" href="#inquiry" data-inquiry-type="설계·기술 실사">설계 · 실사 문의 <span>→</span></a></p>
+          </div>
+          <div data-reveal>
+            <span class="mono">범위별 일정 · 마일스톤</span>
+            <h3>설계 기반 구현</h3>
+            <p>설계한 사람이 그대로 만듭니다.</p>
             <ul>
               <li>문서가 아니라 동작하는 시스템으로 인도 — 설계와 구현 사이 손실이 없습니다</li>
               <li>연동·백오피스·내부 시스템·MVP 규모는 직접 구현</li>
               <li>그 이상의 규모는 설계·감리를 맡고 검증된 파트너를 배치</li>
             </ul>
-            <a href="#inquiry" data-inquiry-type="설계·구현">구현 상담 <span>↗</span></a>
-          </article>
+            <p class="case-more"><a class="link" href="#inquiry" data-inquiry-type="설계·구현">구현 상담 <span>→</span></a></p>
+          </div>
         </div>
-        <div class="fit-check-strip" data-reveal>
-          <div><span>ONGOING</span><strong>월 자문 계약</strong></div>
-          <p>월 확정 일수의 상시 아키텍트. 설계 리뷰, 기술 의사결정, 개발팀 질의를 그 안에서 처리하며 대금은 월 선불입니다.</p>
-          <a href="#inquiry" data-inquiry-type="월 자문">월 자문 상담 <span>↗</span></a>
+
+        <dl class="facts wide" style="margin-top:clamp(30px,4vw,48px)" data-reveal>
+          <div><dt>ONGOING</dt><dd>월 자문 계약<small>월 확정 일수의 상시 아키텍트. 설계 리뷰, 기술 의사결정, 개발팀 질의를 그 안에서 처리하며 대금은 월 선불입니다.</small></dd></div>
+        </dl>
+        <div class="links" style="margin-top:14px">
+          <a class="quiet" href="#inquiry" data-inquiry-type="월 자문">월 자문 상담 <span>→</span></a>
         </div>
-        <p class="option-note">말로 판단해 주는 것까지가 무료, 문서로 남기면 유료입니다. 금액은 범위 확인 후 제시하며, 동시에 진행하는 구현은 2건까지입니다.</p>
+
+        <p class="mono" style="margin-top:26px">말로 판단해 주는 것까지가 무료, 문서로 남기면 유료입니다. 금액은 범위 확인 후 제시하며, 동시에 진행하는 구현은 2건까지입니다.</p>
       </div>
     </section>
 
-    <section class="diagnosis-deliverables" id="deliverables" aria-labelledby="deliverables-title">
+    <section class="block" id="deliverables" aria-labelledby="deliverables-title">
       <div class="shell">
-        <div class="diagnosis-section-head inverse">
-          <p class="eyebrow"><span></span>진단 산출물</p>
-          <h2 id="deliverables-title">무엇이 걸려 있고,<br>무엇부터 정할지 남깁니다.</h2>
+        <div class="head">
+          <div>
+            <div class="nib" aria-hidden="true"><svg viewBox="0 0 64 64"><path fill="#2456E4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/></svg><span>진단 산출물</span></div>
+            <h2 id="deliverables-title">무엇이 걸려 있고, 무엇부터 정할지 남깁니다.</h2>
+          </div>
           <p>보고서를 위한 보고서가 아닙니다. 지금 구조에서 되돌리기 어려운 결정이 무엇이고 어떤 순서로 정해야 하는지, 여섯 가지로 남깁니다.</p>
         </div>
-        <div class="deliverable-grid">
-          <article data-reveal><span>01 / MAP</span><h3>현재 구조 지도</h3><p>시스템, 데이터, 연동 지점과 책임 경계를 한 장으로 정리합니다.</p></article>
-          <article data-reveal><span>02 / CONSTRAINT</span><h3>제약 조건 목록</h3><p>법제·인증·기존 시스템·데이터에서 오는 제약을 설계 요건으로 바꿉니다.</p></article>
-          <article data-reveal><span>03 / RISK</span><h3>리스크와 의사결정 포인트</h3><p>되돌리기 어려운 지점과 지금 결정해야 할 것을 구분해 표시합니다.</p></article>
-          <article data-reveal><span>04 / OPTIONS</span><h3>만들기·도입·연동 대안 비교</h3><p>세 선택지를 비용만이 아니라 제약과 수명으로 비교합니다.</p></article>
-          <article data-reveal><span>05 / TARGET</span><h3>권고 아키텍처</h3><p>제약을 통과하는 목표 구조와 그렇게 정한 이유를 함께 남깁니다.</p></article>
-          <article data-reveal><span>06 / SCOPE</span><h3>단계별 실행 범위</h3><p>무엇부터 어느 범위로 만들지 실행 단계로 나눕니다.</p></article>
+        <div class="steps cols-3">
+          <div data-reveal><span class="mono">MAP</span><h3>현재 구조 지도</h3><p>시스템, 데이터, 연동 지점과 책임 경계를 한 장으로 정리합니다.</p></div>
+          <div data-reveal><span class="mono">CONSTRAINT</span><h3>제약 조건 목록</h3><p>법제·인증·기존 시스템·데이터에서 오는 제약을 설계 요건으로 바꿉니다.</p></div>
+          <div data-reveal><span class="mono">RISK</span><h3>리스크와 의사결정 포인트</h3><p>되돌리기 어려운 지점과 지금 결정해야 할 것을 구분해 표시합니다.</p></div>
+          <div data-reveal><span class="mono">OPTIONS</span><h3>만들기·도입·연동 대안 비교</h3><p>세 선택지를 비용만이 아니라 제약과 수명으로 비교합니다.</p></div>
+          <div data-reveal><span class="mono">TARGET</span><h3>권고 아키텍처</h3><p>제약을 통과하는 목표 구조와 그렇게 정한 이유를 함께 남깁니다.</p></div>
+          <div data-reveal><span class="mono">SCOPE</span><h3>단계별 실행 범위</h3><p>무엇부터 어느 범위로 만들지 실행 단계로 나눕니다.</p></div>
         </div>
       </div>
     </section>
 
-    <section class="diagnosis-process" id="process" aria-labelledby="process-title">
-      <div class="shell process-layout">
-        <div class="diagnosis-section-head">
-          <p class="eyebrow dark"><span></span>진행 방식</p>
-          <h2 id="process-title">판단부터 실행까지,<br>같은 사람이 봅니다.</h2>
+    <section class="block" id="process" aria-labelledby="process-title">
+      <div class="shell">
+        <div class="head">
+          <div>
+            <div class="nib" aria-hidden="true"><svg viewBox="0 0 64 64"><path fill="#2456E4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/></svg><span>진행 방식</span></div>
+            <h2 id="process-title">판단부터 실행까지, 같은 사람이 봅니다.</h2>
+          </div>
           <p>30분 통화로 시작합니다. 맞지 않으면 그 자리에서 끝내고, 맞으면 필요한 단계만 이어갑니다.</p>
         </div>
-        <ol class="process-list">
-          <li data-reveal><div><span>01</span><small>BEFORE START</small></div><h3>30분 적합성 확인</h3><p>풀려는 문제와 걸려 있는 제약을 듣고 서로 맞는 일인지 판단합니다. 문서는 남기지 않습니다.</p></li>
-          <li data-reveal><div><span>02</span><small>ASSESS</small></div><h3>아키텍처 진단 세션</h3><p>반나절에서 하루 동안 현 구조를 훑고 리스크와 의사결정 포인트를 문서로 남깁니다.</p></li>
-          <li data-reveal><div><span>03</span><small>DESIGN</small></div><h3>설계 · 기술 실사</h3><p>목표 구조를 확정하거나, 대상 시스템과 조직의 기술 상태를 실사해 판단 근거를 만듭니다.</p></li>
-          <li data-reveal><div><span>04</span><small>BUILD</small></div><h3>설계 기반 구현</h3><p>설계한 구조를 직접 구현하고 현장에 적용합니다.</p></li>
-          <li data-reveal><div><span>05</span><small>ONGOING</small></div><h3>월 자문</h3><p>월 확정 일수로 상시 아키텍트가 붙어 이후의 설계 리뷰와 기술 의사결정을 함께 봅니다.</p></li>
-        </ol>
+
+        <div class="ink" data-ink>
+          <svg viewBox="0 0 1200 230" role="img" aria-label="30분 적합성 확인에서 진단 세션, 설계·기술 실사, 설계 기반 구현으로 이어지는 한 줄의 진행과, 구현 뒤에 갈라져 나오는 월 자문">
+            <path class="l draw" d="M40 120 H1040"/>
+            <circle class="nf" cx="40" cy="120" r="4"/>
+            <circle class="n" cx="170" cy="120" r="10"/>
+            <rect class="n" x="440" y="110" width="20" height="20"/>
+            <circle class="n" cx="720" cy="120" r="10"/>
+            <circle class="nf" cx="1000" cy="120" r="9"/>
+            <path class="l d" d="M460 120 C 520 60, 660 60, 710 112"/>
+            <text class="s" x="585" y="62" text-anchor="middle">설계 없이 구현으로 건너뛰지 않습니다</text>
+            <path class="l d draw late" d="M1000 120 C 1050 120, 1060 190, 1120 190 H1160"/>
+            <circle class="n" cx="1160" cy="190" r="7"/>
+            <text class="t" x="1090" y="222" text-anchor="middle">월 자문</text>
+            <text class="m" x="170" y="88" text-anchor="middle">30분 · 무료</text>
+            <text class="t" x="170" y="160" text-anchor="middle">적합성 확인</text>
+            <text class="m" x="450" y="88" text-anchor="middle">반나절–1일 · 선불</text>
+            <text class="t" x="450" y="160" text-anchor="middle">아키텍처 진단 세션</text>
+            <text class="m" x="720" y="88" text-anchor="middle">2–6주 · 착수 50%</text>
+            <text class="t" x="720" y="160" text-anchor="middle">설계 · 기술 실사</text>
+            <text class="m" x="1000" y="88" text-anchor="middle">마일스톤 · 동시 2건</text>
+            <text class="t" x="1000" y="160" text-anchor="middle">설계 기반 구현</text>
+          </svg>
+        </div>
+        <p class="scroll-hint">← 옆으로 밀어 전체 흐름을 볼 수 있습니다 →</p>
+
+        <dl class="facts wide" style="margin-top:clamp(30px,4vw,48px)">
+          <div><dt>BEFORE START</dt><dd>30분 적합성 확인<small>풀려는 문제와 걸려 있는 제약을 듣고 서로 맞는 일인지 판단합니다. 문서는 남기지 않습니다.</small></dd></div>
+          <div><dt>ASSESS</dt><dd>아키텍처 진단 세션<small>반나절에서 하루 동안 현 구조를 훑고 리스크와 의사결정 포인트를 문서로 남깁니다.</small></dd></div>
+          <div><dt>DESIGN</dt><dd>설계 · 기술 실사<small>목표 구조를 확정하거나, 대상 시스템과 조직의 기술 상태를 실사해 판단 근거를 만듭니다.</small></dd></div>
+          <div><dt>BUILD</dt><dd>설계 기반 구현<small>설계한 구조를 직접 구현하고 현장에 적용합니다.</small></dd></div>
+          <div><dt>ONGOING</dt><dd>월 자문<small>월 확정 일수로 상시 아키텍트가 붙어 이후의 설계 리뷰와 기술 의사결정을 함께 봅니다.</small></dd></div>
+        </dl>
       </div>
     </section>
 
-    <section class="diagnosis-trust" aria-labelledby="trust-title">
-      <div class="shell trust-layout">
-        <div>
-          <p class="eyebrow"><span></span>왜 알렉스소프트인가</p>
-          <h2 id="trust-title">국가가 쓰는 시스템을<br>설계하고 만들었습니다.</h2>
+    <section class="block" aria-labelledby="trust-title">
+      <div class="shell">
+        <div class="head">
+          <div>
+            <div class="nib" aria-hidden="true"><svg viewBox="0 0 64 64"><path fill="#2456E4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/></svg><span>왜 알렉스소프트인가</span></div>
+            <h2 id="trust-title">국가가 쓰는 시스템을 설계하고 만들었습니다.</h2>
+          </div>
           <p>필리핀 국세청 e-invoice 시스템 구축 사업(KOICA, 2018–2022)에서 개발 PL로 개발 아키텍처와 문서 표준, 문서 교환체계의 보안 표준을 설계하고 개발을 이끌었으며, 2022년 가동해 지금도 운영 중입니다. 이후 국내 대형 ERP 기업의 의료 사업에서 EMR 인증을 받은 의원급 EMR 중 최초의 클라우드 제품(2022–2026)을 개발 리더로 시작해 2023년부터 개발·기획설계 총괄로 이끌었습니다.</p>
         </div>
-        <dl>
-          <div data-reveal><dt>2018–22</dt><dd><strong>필리핀 국세청 e-invoice 구축</strong><span>개발 PL · 2022년 가동, 지금도 운영 중</span></dd></div>
-          <div data-reveal><dt>CLOUD EMR</dt><dd><strong>EMR 인증 의원급 최초 클라우드 제품</strong><span>개발 리더에서 개발·기획설계 총괄까지</span></dd></div>
-          <div data-reveal><dt>AWS</dt><dd><strong>Solutions Architect Professional</strong><span>클라우드 아키텍처 설계 자격 보유</span></dd></div>
-          <div data-reveal><dt>20+</dt><dd><strong>조세 인프라 · 의료 · 조선해양 기간계</strong><span>정확성과 가동률이 함께 요구되는 현장의 시스템</span></dd></div>
+        <dl class="facts wide">
+          <div data-reveal><dt>2018–22</dt><dd>필리핀 국세청 e-invoice 구축<small>개발 PL · 2022년 가동, 지금도 운영 중</small></dd></div>
+          <div data-reveal><dt>CLOUD EMR</dt><dd>EMR 인증 의원급 최초 클라우드 제품<small>개발 리더에서 개발·기획설계 총괄까지</small></dd></div>
+          <div data-reveal><dt>AWS</dt><dd>Solutions Architect Professional<small>클라우드 아키텍처 설계 자격 보유</small></dd></div>
+          <div data-reveal><dt>20+</dt><dd>조세 인프라 · 의료 · 조선해양 기간계<small>정확성과 가동률이 함께 요구되는 현장의 시스템</small></dd></div>
         </dl>
-        <div class="diagnosis-hero-actions">
-          <a class="diagnosis-button diagnosis-button-blue" href="../work/#bir-eis">필리핀 국세청 EIS 구축 사례 보기 <span>↗</span></a>
+        <div class="links" style="margin-top:26px">
+          <a class="quiet" href="../work/#bir-eis">필리핀 국세청 EIS 구축 사례 보기 <span>→</span></a>
         </div>
       </div>
     </section>
 
-    <section class="diagnosis-faq" id="faq" aria-labelledby="faq-title">
-      <div class="shell faq-layout">
-        <div class="diagnosis-section-head">
-          <p class="eyebrow dark"><span></span>자주 묻는 질문</p>
-          <h2 id="faq-title">시작 전에<br>궁금한 것들.</h2>
+    <section class="block" id="faq" aria-labelledby="faq-title">
+      <div class="shell">
+        <div class="head">
+          <div>
+            <div class="nib" aria-hidden="true"><svg viewBox="0 0 64 64"><path fill="#2456E4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/></svg><span>자주 묻는 질문</span></div>
+            <h2 id="faq-title">시작 전에 궁금한 것들.</h2>
+          </div>
         </div>
-        <div class="faq-list">
+        <div class="qa">
           <details open>
             <summary>30분 적합성 확인에서는 무엇을 하나요?<span aria-hidden="true">+</span></summary>
             <p>풀려는 문제와 걸려 있는 제약, 기존 시스템과 팀 상황을 듣고 서로 맞는 일인지 판단합니다. 판단은 말로 드리며, 분석 문서나 설계안은 제공하지 않습니다.</p>
@@ -389,39 +379,41 @@
       </div>
     </section>
 
-    <section class="diagnosis-inquiry" id="inquiry" aria-labelledby="inquiry-title">
-      <div class="shell inquiry-layout">
-        <div class="inquiry-copy">
-          <p class="eyebrow"><span></span>적합성 확인</p>
-          <h2 id="inquiry-title">서로 맞는 일인지<br>먼저 확인하겠습니다.</h2>
-          <p>검토 중인 시스템과 걸려 있는 제약만 알려주세요. 내용을 확인한 뒤 30분 적합성 확인 일정을 안내해 드립니다.</p>
-          <a href="mailto:alexsoft.kr@gmail.com">alexsoft.kr@gmail.com</a>
+    <section class="block" id="inquiry" aria-labelledby="inquiry-title">
+      <div class="shell">
+        <div class="head">
+          <div>
+            <div class="nib" aria-hidden="true"><svg viewBox="0 0 64 64"><path fill="#2456E4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/></svg><span>적합성 확인</span></div>
+            <h2 id="inquiry-title">서로 맞는 일인지 먼저 확인하겠습니다.</h2>
+          </div>
+          <div>
+            <p class="head-note">검토 중인 시스템과 걸려 있는 제약만 알려주세요. 내용을 확인한 뒤 30분 적합성 확인 일정을 안내해 드립니다.</p>
+            <div class="links" style="margin-top:6px"><a class="quiet" href="mailto:alexsoft.kr@gmail.com">alexsoft.kr@gmail.com <span>→</span></a></div>
+          </div>
         </div>
         <form
-          class="inquiry-form"
+          class="form"
           action="https://docs.google.com/forms/d/e/1FAIpQLSe3Y0R4OwMIEWCu8aX6Z8y9aF-iMvkKao9TI9S7A7cdhCYvow/formResponse"
           method="post"
           target="google-form-response"
           accept-charset="UTF-8"
           data-inquiry-form
         >
-          <div class="form-honeypot" aria-hidden="true">
+          <div class="visually-hidden" aria-hidden="true">
             <label>웹사이트
               <input type="text" name="website" tabindex="-1" autocomplete="off" data-form-honeypot>
             </label>
           </div>
-          <div class="form-row">
-            <label>회사·조직명
-              <input type="text" name="entry.1998693368" autocomplete="organization" placeholder="예: ALEXSOFT">
-            </label>
-            <label>담당자명 <em>필수</em>
-              <input type="text" name="entry.2061346803" autocomplete="name" required placeholder="성함을 입력해주세요">
-            </label>
-          </div>
-          <label>이메일 <em>필수</em>
+          <label><span>회사·조직명</span>
+            <input type="text" name="entry.1998693368" autocomplete="organization" placeholder="예: ALEXSOFT">
+          </label>
+          <label><span>담당자명 <em>필수</em></span>
+            <input type="text" name="entry.2061346803" autocomplete="name" required placeholder="성함을 입력해주세요">
+          </label>
+          <label><span>이메일 <em>필수</em></span>
             <input type="email" name="entry.2008957627" autocomplete="email" required placeholder="reply@example.com">
           </label>
-          <label>관심 있는 진행 단계
+          <label><span>관심 있는 진행 단계</span>
             <select name="entry.354814586" data-service-select>
               <option value="아키텍처 자문">아키텍처 자문 · 30분 적합성 확인</option>
               <option value="진단 세션">아키텍처 진단 세션</option>
@@ -431,47 +423,37 @@
               <option value="잘 모르겠음">아직 잘 모르겠음</option>
             </select>
           </label>
-          <label>현재 검토 중인 시스템과 고민 <em>필수</em>
+          <label><span>현재 검토 중인 시스템과 고민 <em>필수</em></span>
             <textarea name="entry.1400718553" required rows="6" placeholder="잘 정리하지 않아도 괜찮습니다. 시스템의 목적, 걸려 있는 규제·인증, 기존 시스템, 팀 상황을 편하게 적어주세요."></textarea>
           </label>
-          <div class="form-row">
-            <label>기존 시스템·도구
-              <input type="text" name="entry.536924147" placeholder="예: 자체 ERP, EMR, 그룹웨어">
-            </label>
-            <label>희망 시기
-              <select name="entry.1009207624">
-                <option value="미정">아직 미정</option>
-                <option value="1개월 이내">1개월 이내</option>
-                <option value="1~3개월">1~3개월</option>
-                <option value="3개월 이후">3개월 이후</option>
-              </select>
-            </label>
-          </div>
-          <button class="inquiry-submit" type="submit"><span>적합성 확인 신청</span><i aria-hidden="true">↗</i></button>
+          <label><span>기존 시스템·도구</span>
+            <input type="text" name="entry.536924147" placeholder="예: 자체 ERP, EMR, 그룹웨어">
+          </label>
+          <label><span>희망 시기</span>
+            <select name="entry.1009207624">
+              <option value="미정">아직 미정</option>
+              <option value="1개월 이내">1개월 이내</option>
+              <option value="1~3개월">1~3개월</option>
+              <option value="3개월 이후">3개월 이후</option>
+            </select>
+          </label>
+          <button type="submit"><span>적합성 확인 신청</span></button>
           <p class="form-note" data-form-status aria-live="polite">입력 내용은 상담 확인을 위해 알렉스소프트(ALEXSOFT)의 Google Forms로 전송됩니다.</p>
         </form>
-        <iframe class="google-form-target" name="google-form-response" title="문의 전송 결과" data-google-form-target></iframe>
+        <iframe class="visually-hidden" name="google-form-response" title="문의 전송 결과" data-google-form-target></iframe>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site">
     <div class="shell">
-      <div class="footer-brand"><svg viewBox="0 0 64 64" aria-hidden="true"><path fill-rule="evenodd" d="M32 4 61 57H3L32 4Zm0 21L21.8 42l7.1 5.2V57h6.2v-9.8l7.1-5.2L32 25Z"/><circle class="logo-node" cx="32" cy="40" r="3.8"/></svg><span>ALEXSOFT</span></div>
-      <p>ARCHITECTURE · BUILD · ADVISORY</p>
-      <div><a href="../">홈으로</a><a href="../diagnosis/">아키텍처 설계·구현</a><a href="../e-invoicing/">e-invoicing 대응</a><a href="../healthcare/">의료정보 시스템</a><a href="../brand-website/">브랜드 웹사이트</a><a href="../work/">사례</a><a href="../en/" hreflang="en">English</a><a href="mailto:alexsoft.kr@gmail.com">이메일</a><a href="#main">맨 위로 ↑</a></div>
-      <div class="footer-bottom">
-        <small>© <span data-year></span> ALEXSOFT. Crafted with intent.</small>
-        <nav class="footer-socials" aria-label="ALEXSOFT 소셜 채널">
-          <span>CHANNELS</span>
-          <a href="https://blog.naver.com/alex-soft" target="_blank" rel="noopener" aria-label="ALEXSOFT 네이버 블로그 새 창에서 열기">Naver Blog <i aria-hidden="true">↗</i></a>
-          <a href="https://www.instagram.com/alexsoft.co.kr/" target="_blank" rel="noopener noreferrer" aria-label="ALEXSOFT Instagram 새 창에서 열기">Instagram <i aria-hidden="true">↗</i></a>
-        </nav>
-      </div>
+      <a class="mark" href="/"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#FAF8F4"/><path fill="#17191D" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/><circle cx="32" cy="40" r="3.7" fill="#4B78FF"/></svg>ALEXSOFT</a>
+      <nav aria-label="바닥글 메뉴"><a href="/diagnosis/">아키텍처 설계·구현</a><a href="/e-invoicing/">e-invoicing 대응</a><a href="/healthcare/">의료정보 시스템</a><a href="/brand-website/">브랜드 웹사이트</a><a href="/work/">사례</a><a href="/en/" hreflang="en">English</a><a href="mailto:alexsoft.kr@gmail.com">이메일</a></nav>
+      <div class="channels"><span class="mono">CHANNELS</span><a href="https://blog.naver.com/alex-soft" target="_blank" rel="noopener">Naver Blog ↗</a><a href="https://www.instagram.com/alexsoft.co.kr" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div>
+      <p class="biz" data-nosnippet>상호 알렉스소프트(ALEXSOFT) · 대표 이용민 · 사업자등록번호 212-64-01036 · 사업장 부산광역시 수영구 광안해변로15번길 10 · © <span data-year>2026</span> ALEXSOFT</p>
     </div>
   </footer>
-
-  <script src="../navigation.js?v=20260831-d-1" defer></script>
-  <script src="diagnosis.js?v=20260804-nav-2" defer></script>
+  <script src="/assets/ink.js?v=20260901-i-1" defer></script>
+  <script src="/diagnosis/diagnosis.js?v=20260901-i-1" defer></script>
 </body>
 </html>

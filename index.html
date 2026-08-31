@@ -131,9 +131,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
   <link rel="stylesheet" href="/assets/ink.css?v=20260901-i-1">
+  <noscript><style>[data-reveal]{opacity:1;transform:none}</style></noscript>
 </head>
 <body>
   <header class="top">
+    <a class="skip" href="#main">본문으로 건너뛰기</a>
     <div class="shell">
       <a class="mark" href="/" aria-label="알렉스소프트 홈">
         <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#17191D"/><path fill="#FAF8F4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/><circle cx="32" cy="40" r="3.7" fill="#4B78FF"/></svg>
@@ -259,9 +261,7 @@
           <p>필리핀 국세청 전자송장 시스템(EIS)에서 개발 PL로 문서 표준과 교환체계의 보안 표준을 설계했습니다. 아래는 그 교환 구조를 공개 가능한 수준으로 단순화한 그림입니다 — 사업자의 시스템에서 나온 문서가 국세청에 닿기까지의 선입니다.</p>
         </div>
 
-        <div class="case-grid">
-          <div>
-            <div class="ink" data-ink>
+        <div class="ink" data-ink>
               <svg viewBox="0 0 1200 300" role="img" aria-label="사업자 시스템에서 표준 문서로 변환되고 전자서명과 전송을 거쳐 국세청 EIS에서 검증·수신되고, 결과가 사업자에게 되돌아오는 교환 구조">
                 <path class="l draw" d="M40 130 H150 M330 130 H400 M580 130 H650 M830 130 H900 M1080 130 H1160"/>
                 <circle class="nf" cx="40" cy="130" r="4"/>
@@ -288,18 +288,15 @@
                 <text class="m" x="740" y="48" text-anchor="middle">설계 범위 — 문서 표준 · 교환체계 보안 표준 · 개발 아키텍처</text>
               </svg>
             </div>
-            <p class="scroll-hint">← 옆으로 밀어 전체 구조를 볼 수 있습니다 →</p>
-            <p class="case-more"><a class="link" href="work/#bir-eis">사례 자세히 보기 <span>→</span></a></p>
-          </div>
-          <dl class="facts">
+        <p class="scroll-hint">← 옆으로 밀어 전체 구조를 볼 수 있습니다 →</p>
+        <dl class="facts wide" style="margin-top:clamp(24px,3vw,40px)">
             <div><dt>사업</dt><dd>필리핀 국세청(BIR) 전자송장 시스템 EIS<small>KOICA 무상원조 1차 구축 · 2018–2022</small></dd></div>
             <div><dt>역할</dt><dd>개발 PL<small>개발 아키텍처 · e-invoice 문서 표준 · 문서와 교환체계의 보안 표준 설계, 개발 주도</small></dd></div>
             <div><dt>지금</dt><dd>2022년 가동, 현재 운영 중<small>2025–2026년 2차 사후지원은 별도 수행사의 사업</small></dd></div>
             <div><dt>제품</dt><dd>CASCADE · CAREFLOW · GOALBOARD · THE GRACE<small>알렉스소프트가 직접 설계하고 만든 제품과 공개 프로젝트입니다.</small></dd></div>
           </dl>
-        </div>
-      </div>
-    </section>
+        <p class="case-more"><a class="link" href="work/#bir-eis">사례 자세히 보기 <span>→</span></a></p>
+      </section>
 
     <section class="block" id="about" aria-labelledby="about-title">
       <div class="shell">

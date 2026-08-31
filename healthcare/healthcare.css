@@ -1,159 +1,26 @@
-.healthcare-page { --health-paper:#f2efe7; --health-ink:#101114; --health-blue:#2d61ef; --health-blue-soft:#9ab3ff; color:var(--health-ink); background:var(--health-paper); }
-.healthcare-page .scroll-progress { background:rgba(5,5,5,.05); }
-.healthcare-page .scroll-progress span { background:linear-gradient(90deg,#2558e8,#9ab3ff); }
-.healthcare-page :focus-visible { outline:2px solid var(--health-blue); outline-offset:4px; }
+/* ==========================================================================
+   ALEXSOFT — 의료정보 시스템 페이지 추가분.
+   /assets/ink.css 다음에 로드된다. 공통 컴포넌트는 여기에 다시 쓰지 않는다.
+   ========================================================================== */
 
-.healthcare-hero { position:relative; min-height:980px; overflow:hidden; background:var(--health-paper); isolation:isolate; }
-.healthcare-hero::before { content:""; position:absolute; z-index:-2; width:min(74vw,1120px); aspect-ratio:1; top:-48%; right:-20%; border-radius:50%; background:radial-gradient(circle,rgba(55,96,229,.18),rgba(55,96,229,.05) 44%,transparent 70%); }
-.healthcare-gridlines { position:absolute; z-index:-1; inset:0; opacity:.52; background-image:linear-gradient(rgba(16,17,20,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(16,17,20,.07) 1px,transparent 1px); background-size:8.333vw 8.333vw; mask-image:linear-gradient(90deg,#000,rgba(0,0,0,.88) 64%,transparent); }
-.healthcare-hero-layout { min-height:980px; display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr auto; gap:38px 6vw; align-items:center; padding:148px 0 46px; }
-.healthcare-hero-copy { position:relative; z-index:3; max-width:760px; }
-.healthcare-kicker { display:flex; align-items:center; gap:18px; margin:0 0 40px; color:rgba(16,17,20,.49); font-size:8px; font-weight:760; letter-spacing:.14em; }
-.healthcare-kicker span { display:inline-flex; align-items:center; gap:12px; }
-.healthcare-kicker span::before { content:""; width:30px; height:1px; background:var(--health-blue); }
-.healthcare-kicker i { padding-left:18px; border-left:1px solid rgba(16,17,20,.17); color:rgba(16,17,20,.34); font-style:normal; }
-.healthcare-hero h1 { margin:0; font-size:clamp(3.15rem,4.9vw,5.65rem); line-height:.99; letter-spacing:-.064em; }
-.healthcare-hero h1 span { display:block; }
-.healthcare-hero h1 em { color:var(--health-blue); font-style:normal; }
-.healthcare-hero-copy > p:not(.healthcare-kicker) { max-width:620px; margin:34px 0 0; color:rgba(16,17,20,.61); font-size:clamp(15px,1.15vw,17px); line-height:1.82; letter-spacing:-.015em; }
-.healthcare-hero-actions { display:flex; align-items:center; gap:28px; margin-top:42px; }
-.healthcare-button { min-height:58px; display:inline-flex; align-items:center; justify-content:space-between; gap:44px; padding:0 20px 0 24px; border-radius:14px; color:#fff; background:var(--health-ink); font-size:12px; font-weight:720; transition:color .3s,background .3s,transform .2s; }
-.healthcare-button span { color:var(--health-blue-soft); font-size:17px; transition:transform .35s var(--ease-out); }
-.healthcare-button:hover { background:var(--health-blue); }
-.healthcare-button:hover span { color:#fff; transform:translate(3px,3px); }
-.healthcare-text-link { padding:12px 0; border-bottom:1px solid rgba(16,17,20,.32); color:rgba(16,17,20,.68); font-size:11px; font-weight:690; }
-.healthcare-text-link span { margin-left:10px; color:var(--health-blue); }
-.healthcare-system-map { position:relative; min-height:590px; }
-.healthcare-system-map svg { position:absolute; inset:4% 0 0; width:100%; height:88%; fill:none; stroke:var(--health-blue); stroke-width:2; stroke-dasharray:5 8; opacity:.65; }
-.healthcare-system-core,.healthcare-system-node { position:absolute; z-index:2; border:1px solid rgba(16,17,20,.18); background:#f9f7f1; box-shadow:0 34px 80px rgba(31,39,66,.14); }
-.healthcare-system-core { width:48%; min-height:230px; left:26%; top:29%; padding:30px; }
-.healthcare-system-node { width:29%; min-height:130px; padding:20px; }
-.node-emr { left:0; top:8%; }
-.node-saas { right:0; top:7%; }
-.node-fhir { left:35%; bottom:3%; }
-.healthcare-system-core span,.healthcare-system-node span { color:var(--health-blue); font:720 8px/1 ui-monospace,SFMono-Regular,Menlo,monospace; letter-spacing:.12em; }
-.healthcare-system-core i,.healthcare-system-node i { display:block; height:9px; margin-top:24px; background:rgba(45,97,239,.12); }
-.healthcare-system-core i:nth-of-type(2),.healthcare-system-node i:nth-of-type(2) { width:68%; }
-.healthcare-system-core i:nth-of-type(3) { width:82%; }
-.healthcare-hero-facts { grid-column:1 / -1; display:grid; grid-template-columns:repeat(3,1fr); margin:0; border-top:1px solid rgba(16,17,20,.18); border-left:1px solid rgba(16,17,20,.18); }
-.healthcare-hero-facts > div { display:grid; grid-template-columns:96px 1fr; gap:15px; padding:20px 22px; border-right:1px solid rgba(16,17,20,.18); border-bottom:1px solid rgba(16,17,20,.18); }
-.healthcare-hero-facts dt { color:rgba(16,17,20,.4); font-size:8px; font-weight:740; letter-spacing:.08em; }
-.healthcare-hero-facts dd { margin:0; font-size:12px; font-weight:700; }
+/* 잉크색 강조 — 제목 안의 <em> */
+.hero-flat h1 em,.head h2 em{font-style:normal;color:var(--cobalt)}
 
-[data-reveal] { opacity:0; transform:translate3d(0,22px,0); transition:opacity .72s var(--ease-out),transform .72s var(--ease-out); }
-[data-reveal].is-visible { opacity:1; transform:translate3d(0,0,0); }
-.healthcare-situations,.healthcare-experience,.healthcare-faq { padding:clamp(120px,14vw,220px) 0; background:#f7f5ef; }
-.healthcare-section-head,.healthcare-process-head { display:grid; grid-template-columns:.68fr 1.32fr; gap:8vw; align-items:start; }
-.healthcare-section-head h2,.healthcare-process-head h2 { margin:0; font-size:clamp(3rem,5vw,5.8rem); line-height:1.01; letter-spacing:-.06em; }
-.healthcare-section-head h2 em { color:var(--health-blue); font-style:normal; }
-.healthcare-section-head > div > p,.healthcare-process-head > div > p { max-width:650px; margin:34px 0 0; color:rgba(16,17,20,.58); font-size:15px; line-height:1.85; }
-.healthcare-situation-grid { display:grid; grid-template-columns:repeat(2,1fr); margin-top:clamp(80px,9vw,130px); border-top:1px solid rgba(16,17,20,.18); border-left:1px solid rgba(16,17,20,.18); }
-.healthcare-situation-grid article { min-height:360px; display:flex; flex-direction:column; padding:clamp(25px,3vw,44px); border-right:1px solid rgba(16,17,20,.18); border-bottom:1px solid rgba(16,17,20,.18); }
-.healthcare-situation-grid article > span { color:var(--health-blue); font-size:8px; font-weight:760; letter-spacing:.12em; }
-.healthcare-situation-grid h3 { margin:auto 0 20px; font-size:clamp(1.9rem,2.8vw,3.35rem); line-height:1.05; letter-spacing:-.05em; }
-.healthcare-situation-grid p { margin:0; color:rgba(16,17,20,.52); font-size:12px; line-height:1.75; }
+/* 히어로 아래 설계 기준 표 */
+.hero-facts{margin-top:clamp(30px,4vw,48px);max-width:720px}
 
-.healthcare-scope { padding:clamp(120px,14vw,220px) 0; color:#fff; background:#0a0b0e; }
-.healthcare-scope-layout { display:grid; grid-template-columns:.72fr 1.28fr; gap:8vw; }
-.healthcare-scope-layout > div { position:sticky; top:140px; align-self:start; }
-.healthcare-scope h2 { margin:34px 0 0; font-size:clamp(3rem,4.9vw,5.6rem); line-height:1; letter-spacing:-.06em; }
-.healthcare-scope-layout > div > p:last-child { max-width:480px; margin:32px 0 0; color:rgba(255,255,255,.56); font-size:14px; line-height:1.85; }
-.healthcare-scope ol { margin:0; border-top:1px solid rgba(255,255,255,.2); }
-.healthcare-scope li { display:grid; grid-template-columns:60px 1fr; gap:25px; padding:30px 0 34px; border-bottom:1px solid rgba(255,255,255,.18); }
-.healthcare-scope li > span { color:var(--health-blue-soft); font:720 10px/1 ui-monospace,SFMono-Regular,Menlo,monospace; }
-.healthcare-scope li h3 { margin:0 0 12px; font-size:clamp(1.45rem,2.2vw,2.55rem); letter-spacing:-.045em; }
-.healthcare-scope li p { margin:0; color:rgba(255,255,255,.52); font-size:12px; line-height:1.75; }
-.healthcare-boundary { margin-top:clamp(80px,9vw,125px); padding:clamp(30px,4vw,58px); border:1px solid rgba(255,255,255,.22); background:rgba(255,255,255,.045); }
-.healthcare-boundary > span { color:var(--health-blue-soft); font-size:8px; font-weight:760; letter-spacing:.12em; }
-.healthcare-boundary p { max-width:1080px; margin:32px 0 0; font-size:clamp(1.6rem,3vw,3.5rem); font-weight:730; line-height:1.22; letter-spacing:-.045em; }
-.healthcare-boundary small { display:block; max-width:760px; margin:30px 0 0; color:rgba(255,255,255,.5); font-size:11px; line-height:1.75; }
+/* 본문 안 인라인 링크 */
+.head p a.inline{border-bottom:1px solid var(--rule);color:var(--ink)}
+.head p a.inline:hover{color:var(--cobalt);border-bottom-color:var(--cobalt)}
 
-.healthcare-experience-layout { display:grid; grid-template-columns:.76fr 1.24fr; gap:8vw; }
-.healthcare-experience h2 { margin:34px 0 0; font-size:clamp(3rem,4.9vw,5.6rem); line-height:1; letter-spacing:-.06em; }
-.healthcare-experience-layout > div:last-child > p { margin:0; color:rgba(16,17,20,.61); font-size:15px; line-height:1.9; }
-.healthcare-experience dl { margin:56px 0 0; border-top:1px solid rgba(16,17,20,.2); }
-.healthcare-experience dl > div { display:grid; grid-template-columns:125px 1fr; gap:28px; padding:25px 0; border-bottom:1px solid rgba(16,17,20,.18); }
-.healthcare-experience dt { color:var(--health-blue); font:720 9px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace; }
-.healthcare-experience dd { margin:0; }
-.healthcare-experience dd strong,.healthcare-experience dd span { display:block; }
-.healthcare-experience dd strong { font-size:clamp(1.1rem,1.7vw,1.7rem); letter-spacing:-.03em; }
-.healthcare-experience dd span { margin-top:9px; color:rgba(16,17,20,.48); font-size:11px; line-height:1.6; }
+/* 범위 경계 인용의 보조 문장 */
+.quote small{display:block;margin-top:12px;font-size:13.5px;font-weight:400;line-height:1.75;color:var(--graphite)}
 
-.healthcare-process { padding:clamp(120px,14vw,220px) 0; color:#fff; background:var(--health-blue); }
-.healthcare-process-head a { border-bottom:1px solid rgba(255,255,255,.5); color:#fff; }
-.healthcare-process-head > div > p { color:rgba(255,255,255,.68); }
-.healthcare-ladder { display:grid; grid-template-columns:repeat(5,1fr); margin-top:clamp(80px,9vw,130px); border-top:1px solid rgba(255,255,255,.28); border-left:1px solid rgba(255,255,255,.28); }
-.healthcare-ladder li { min-height:350px; display:flex; flex-direction:column; padding:25px; border-right:1px solid rgba(255,255,255,.25); border-bottom:1px solid rgba(255,255,255,.25); }
-.healthcare-ladder li > span { color:rgba(255,255,255,.55); font:720 1.15rem/1 ui-monospace,SFMono-Regular,Menlo,monospace; }
-.healthcare-ladder li > div { margin-top:auto; }
-.healthcare-ladder small { color:rgba(255,255,255,.5); font-size:8px; letter-spacing:.1em; }
-.healthcare-ladder h3 { margin:13px 0 14px; font-size:clamp(1.35rem,1.8vw,2rem); line-height:1.08; letter-spacing:-.04em; }
-.healthcare-ladder p { margin:0; color:rgba(255,255,255,.62); font-size:11px; line-height:1.7; }
-
-.healthcare-faq-grid { display:grid; grid-template-columns:.68fr 1.32fr; gap:8vw; }
-.healthcare-faq h2 { margin:34px 0 0; font-size:clamp(3rem,5vw,5.8rem); line-height:1; letter-spacing:-.06em; }
-.healthcare-faq-list { border-top:1px solid rgba(16,17,20,.2); }
-.healthcare-faq-list details { border-bottom:1px solid rgba(16,17,20,.18); }
-.healthcare-faq-list summary { position:relative; padding:27px 58px 27px 0; cursor:pointer; list-style:none; font-size:clamp(1rem,1.4vw,1.35rem); font-weight:720; letter-spacing:-.025em; }
-.healthcare-faq-list summary::-webkit-details-marker { display:none; }
-.healthcare-faq-list summary span { position:absolute; right:10px; top:22px; color:var(--health-blue); font-size:1.5rem; font-weight:400; transition:transform .3s; }
-.healthcare-faq-list details[open] summary span { transform:rotate(45deg); }
-.healthcare-faq-list details p { max-width:680px; margin:-4px 0 28px; color:rgba(16,17,20,.58); font-size:13px; line-height:1.85; }
-
-.healthcare-inquiry { padding:clamp(110px,12vw,180px) 0; color:#fff; background:#0a0b0e; }
-.healthcare-inquiry-layout { position:relative; display:grid; grid-template-columns:.72fr 1.28fr; gap:8vw; }
-.healthcare-inquiry-copy h2 { margin:34px 0 0; font-size:clamp(3rem,4.8vw,5.4rem); line-height:1; letter-spacing:-.06em; }
-.healthcare-inquiry-copy > p:last-of-type { max-width:490px; margin:32px 0 0; color:rgba(255,255,255,.56); font-size:14px; line-height:1.85; }
-.healthcare-inquiry-copy > a { display:inline-block; margin-top:28px; padding-bottom:6px; border-bottom:1px solid rgba(255,255,255,.35); color:var(--health-blue-soft); font-size:12px; }
-.healthcare-inquiry-form { display:grid; gap:22px; }
-.healthcare-inquiry-form label { display:grid; gap:9px; color:rgba(255,255,255,.64); font-size:10px; font-weight:680; }
-.healthcare-inquiry-form label em { color:var(--health-blue-soft); font-style:normal; }
-.healthcare-inquiry-form input,.healthcare-inquiry-form textarea,.healthcare-inquiry-form select { width:100%; min-height:54px; padding:14px 16px; border:1px solid rgba(255,255,255,.18); border-radius:0; color:#fff; background:rgba(255,255,255,.045); font:inherit; font-size:12px; line-height:1.5; }
-.healthcare-inquiry-form textarea { min-height:145px; resize:vertical; }
-.healthcare-inquiry-form select { color-scheme:dark; }
-.healthcare-inquiry-form input::placeholder,.healthcare-inquiry-form textarea::placeholder { color:rgba(255,255,255,.3); }
-.healthcare-inquiry-form input:focus,.healthcare-inquiry-form textarea:focus,.healthcare-inquiry-form select:focus { border-color:var(--health-blue-soft); outline:none; }
-.form-row { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
-.form-honeypot { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); clip-path:inset(50%); }
-.healthcare-inquiry-submit { min-height:62px; display:flex; align-items:center; justify-content:space-between; padding:0 22px; border:0; color:var(--health-ink); background:#fff; font:inherit; font-size:12px; font-weight:760; cursor:pointer; transition:color .3s,background .3s; }
-.healthcare-inquiry-submit:hover { color:#fff; background:var(--health-blue); }
-.healthcare-inquiry-submit:disabled { opacity:.55; cursor:wait; }
-.healthcare-inquiry-submit i { color:var(--health-blue); font-size:18px; font-style:normal; }
-.form-note { min-height:20px; margin:0; color:rgba(255,255,255,.4); font-size:9px; line-height:1.65; }
-.form-note[data-state="success"] { color:#9bc0ff; }
-.form-note[data-state="error"] { color:#f0b3a9; }
-.google-form-target { position:absolute; width:1px; height:1px; border:0; opacity:0; pointer-events:none; }
-
-@media (max-width:1050px) {
-  .healthcare-hero { min-height:auto; }
-  .healthcare-hero-layout { min-height:auto; grid-template-columns:1fr; padding-top:150px; }
-  .healthcare-system-map { min-height:520px; }
-  .healthcare-hero-facts { grid-column:auto; }
-  .healthcare-ladder { grid-template-columns:repeat(2,1fr); }
-}
-@media (max-width:760px) {
-  .healthcare-hero-layout { gap:48px; padding:128px 0 28px; }
-  .healthcare-kicker { flex-wrap:wrap; gap:12px; margin-bottom:26px; }
-  .healthcare-kicker i { display:none; }
-  .healthcare-hero h1 { font-size:clamp(2.25rem,10.2vw,3.45rem); }
-  .healthcare-hero-copy > p:not(.healthcare-kicker) { margin-top:25px; }
-  .healthcare-hero-actions { align-items:flex-start; flex-direction:column; gap:14px; margin-top:32px; }
-  .healthcare-system-map { min-height:390px; }
-  .healthcare-system-core { min-height:170px; padding:18px; }
-  .healthcare-system-node { min-height:90px; padding:14px; }
-  .healthcare-system-core i,.healthcare-system-node i { margin-top:16px; }
-  .healthcare-hero-facts { grid-template-columns:1fr; }
-  .healthcare-hero-facts > div { grid-template-columns:92px 1fr; }
-  .healthcare-section-head,.healthcare-scope-layout,.healthcare-experience-layout,.healthcare-process-head,.healthcare-faq-grid,.healthcare-inquiry-layout { grid-template-columns:1fr; gap:48px; }
-  .healthcare-section-head h2,.healthcare-scope h2,.healthcare-experience h2,.healthcare-process-head h2,.healthcare-faq h2,.healthcare-inquiry-copy h2 { font-size:clamp(2.65rem,12.2vw,4.4rem); }
-  .healthcare-situation-grid { grid-template-columns:1fr; }
-  .healthcare-situation-grid article { min-height:300px; }
-  .healthcare-scope-layout > div { position:static; }
-  .healthcare-scope li { grid-template-columns:42px 1fr; }
-  .healthcare-boundary p { font-size:clamp(1.45rem,7vw,2.3rem); }
-  .healthcare-experience dl > div { grid-template-columns:1fr; gap:14px; }
-  .healthcare-ladder { grid-template-columns:1fr; }
-  .healthcare-ladder li { min-height:250px; }
-  .form-row { grid-template-columns:1fr; }
-}
-@media (prefers-reduced-motion:reduce) { [data-reveal] { opacity:1; transform:none; transition:none; } }
+/* 폼 보강 — ink.css .form 위에 얹는 최소 규칙 */
+.form .row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.form label em{font-style:normal;font-family:var(--mono);font-size:11px;color:var(--cobalt);letter-spacing:.04em}
+.form button[type="submit"] i{font-style:normal;color:var(--cobalt-soft);margin-left:8px}
+.form button[type="submit"]:disabled{opacity:.55;cursor:progress}
+.form .form-note[data-state="sending"],.form .form-note[data-state="success"]{color:var(--cobalt)}
+.form .form-note[data-state="error"]{color:#B4232A}
+@media (max-width:520px){.form .row{grid-template-columns:1fr}}
