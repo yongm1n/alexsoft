@@ -103,6 +103,7 @@
 }
 .system-core small { font-size: 7px; font-weight: 760; letter-spacing: .18em; }
 .system-core strong { margin: .03em 0 .04em; color: var(--diagnosis-blue); font-size: clamp(5.5rem, 10vw, 9rem); font-weight: 780; line-height: .9; letter-spacing: -.1em; transform: translateX(-.05em); }
+.diagnosis-page .system-core strong { font-size: clamp(1.5rem, 4.2vw, 3.6rem); }
 .system-core span { font: 650 6px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .13em; opacity: .55; }
 .system-node { position: absolute; display: flex; align-items: center; gap: 8px; color: rgba(19,41,104,.58); font: 680 7px/1 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .12em; }
 .system-node i { width: 9px; height: 9px; border: 1px solid rgba(27,67,182,.4); border-radius: 50%; background: rgba(231,236,250,.8); box-shadow: 0 0 0 5px rgba(45,98,244,.06); }
@@ -217,10 +218,10 @@
 
 .diagnosis-trust { padding: clamp(105px, 12vw, 180px) 0; color: #fff; background: #101217; }
 .trust-layout { display: grid; grid-template-columns: 1fr 1.1fr; gap: 9vw; }
-.trust-layout h2 { margin: 32px 0 0; font-size: clamp(2.7rem, 4.6vw, 5.25rem); line-height: 1.02; letter-spacing: -.055em; }
+.trust-layout h2 { margin: 32px 0 0; font-size: clamp(2.7rem, 4vw, 4.7rem); line-height: 1.02; letter-spacing: -.055em; }
 .trust-layout > div > p:last-child { max-width: 540px; margin: 30px 0 0; color: rgba(255,255,255,.5); font-size: 15px; line-height: 1.8; }
 .trust-layout dl { margin: 0; border-top: 1px solid rgba(255,255,255,.18); }
-.trust-layout dl > div { display: grid; grid-template-columns: 105px 1fr; gap: 28px; align-items: center; padding: 26px 0; border-bottom: 1px solid rgba(255,255,255,.15); }
+.trust-layout dl > div { display: grid; grid-template-columns: 130px 1fr; gap: 28px; align-items: center; padding: 26px 0; border-bottom: 1px solid rgba(255,255,255,.15); }
 .trust-layout dt { color: #83a3ff; font-size: clamp(1.2rem, 2vw, 2rem); font-weight: 760; letter-spacing: -.035em; }
 .trust-layout dd { display: flex; flex-direction: column; gap: 8px; margin: 0; }
 .trust-layout dd strong { font-size: 1.1rem; }
@@ -298,7 +299,7 @@
   .diagnosis-hero-inner { display: flex; flex-direction: column; justify-content: flex-end; padding: 125px 0 29px; }
   .diagnosis-kicker { align-items: flex-start; flex-direction: column; gap: 9px; margin-bottom: 25px; font-size: 8px; }
   .diagnosis-kicker i { margin-left: 34px; }
-  .diagnosis-hero h1 { font-size: clamp(3rem, 13.7vw, 4.25rem); line-height: .99; }
+  .diagnosis-hero h1 { font-size: clamp(2.65rem, 11.8vw, 3.65rem); line-height: .99; }
   .diagnosis-hero-copy > p:not(.diagnosis-kicker) { margin-top: 25px; font-size: 14px; line-height: 1.7; }
   .diagnosis-hero-actions { align-items: flex-start; flex-direction: column; gap: 10px; margin-top: 28px; }
   .diagnosis-button { min-width: min(100%, 310px); }

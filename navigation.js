@@ -10,6 +10,14 @@
 
   if (!toggle || !nav) return;
 
+  const supportsInert = 'inert' in HTMLElement.prototype;
+  const backgroundRegions = [document.querySelector('main'), document.querySelector('footer')].filter(Boolean);
+
+  function setBackgroundInert(active) {
+    if (!supportsInert) return;
+    backgroundRegions.forEach((region) => { region.inert = active; });
+  }
+
   const currentPath = window.location.pathname
     .replace(/\/index\.html$/, '')
     .replace(/\/+$/, '');
@@ -36,6 +44,7 @@
     nav.classList.remove('is-open');
     toggle.setAttribute('aria-expanded', 'false');
     toggle.setAttribute('aria-label', '메뉴 열기');
+    setBackgroundInert(false);
     closeServices();
   }
 
@@ -45,6 +54,7 @@
     nav.classList.toggle('is-open', opening);
     toggle.setAttribute('aria-expanded', String(opening));
     toggle.setAttribute('aria-label', opening ? '메뉴 닫기' : '메뉴 열기');
+    setBackgroundInert(opening);
     if (!opening) closeServices();
   });
 
