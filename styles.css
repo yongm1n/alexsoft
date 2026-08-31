@@ -743,7 +743,7 @@ img, svg { display: block; }
   .contact-signature { gap: 8px; }
   .site-footer .shell { grid-template-columns: 1fr auto; }
   .site-footer p { display: none; }
-  .site-footer .shell > div:nth-child(3) { gap: 12px; font-size: 8px; }
+  .site-footer .shell > div:nth-child(3) { gap: 10px 12px; font-size: 8px; flex-wrap: wrap; justify-content: flex-end; }
   .footer-business { flex-direction: column; gap: 5px; }
   .footer-bottom { align-items: flex-start; flex-direction: column; gap: 14px; }
   .footer-socials { flex-wrap: wrap; gap: 11px 16px; }
@@ -807,6 +807,8 @@ img, svg { display: block; }
 .capability-detail-link span { color: #2458e6; transition: transform .35s var(--ease-out); }
 .capability-detail-link:hover span { transform: translate(4px,-4px); }
 .capability-detail-link:active { opacity: .58; }
+.capability-primary .capability-detail-link, .capability-wide .capability-detail-link { color: #f6f5f1; border-bottom-color: rgba(255,255,255,.34); }
+.capability-primary .capability-detail-link span, .capability-wide .capability-detail-link span { color: #7898ff; }
 
 .start-paths {
   position: relative;

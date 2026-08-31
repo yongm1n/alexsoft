@@ -34,7 +34,7 @@ python3 -m http.server 8080
 
 - `assets/alexsoft-hero.webp`: ALEXSOFT 전용 AI 생성 비주얼
 - `assets/brand/alexsoft-signature-hero.webp`: ALEXSOFT의 공식 대표 비주얼 웹 최적화본
-- `assets/brand/alexsoft-signature-hero-master.png`: 공식 대표 비주얼 고해상도 보존 원본
+- `.private/assets-master/alexsoft-signature-hero-master.png`: 공식 대표 비주얼 고해상도 보존 원본(저장소 미추적, 로컬 보관)
 - `assets/logo-mark.svg`: AI 콘셉트를 16px까지 선명하게 작동하도록 재구성한 벡터 로고
 - `assets/grace-site.webp`: 더 그레이스 공개 사이트의 실제 화면
 
