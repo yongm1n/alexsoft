@@ -214,7 +214,7 @@ footer.site .biz{width:100%;font-family:var(--mono);font-size:11px;line-height:1
    <footer class="site">
      <div class="shell">
        <a class="mark" href="/"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#FAF8F4"/><path fill="#17191D" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/><circle cx="32" cy="40" r="3.7" fill="#4B78FF"/></svg>ALEXSOFT</a>
-       <nav aria-label="바닥글 메뉴"><a href="/diagnosis/">아키텍처 설계·구현</a><a href="/e-invoicing/">e-invoicing 대응</a><a href="/healthcare/">의료정보 시스템</a><a href="/brand-website/">브랜드 웹사이트</a><a href="/work/">사례</a><a href="/en/" hreflang="en">English</a><a href="mailto:alexsoft.kr@gmail.com">이메일</a></nav>
+       <nav aria-label="바닥글 메뉴"><a href="/diagnosis/">아키텍처 설계·구현</a><a href="/e-invoicing/">e-invoicing이란</a><a href="/healthcare/">의료정보 시스템</a><a href="/brand-website/">브랜드 웹사이트</a><a href="/work/">사례</a><a href="/en/" hreflang="en">English</a><a href="mailto:alexsoft.kr@gmail.com">이메일</a></nav>
        <div class="channels"><span class="mono">CHANNELS</span><a href="https://blog.naver.com/alex-soft" target="_blank" rel="noopener">Naver Blog ↗</a><a href="https://www.instagram.com/alexsoft.co.kr" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div>
        <p class="biz" data-nosnippet>상호 알렉스소프트(ALEXSOFT) · 대표 이용민 · 사업자등록번호 212-64-01036 · 사업장 부산광역시 수영구 광안해변로15번길 10 · © <span data-year>2026</span> ALEXSOFT</p>
      </div>
