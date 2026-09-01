@@ -147,7 +147,9 @@ section.block:last-of-type{border-bottom:0}
 .entries .mono{margin:0}
 .entries a.more{margin-top:auto;align-self:flex-start;display:inline-flex;gap:8px;align-items:center;font-size:14px;border-bottom:1px solid var(--rule);padding-bottom:2px}
 .entries a.more span{color:var(--cobalt)}
-@media (max-width:720px){.entries{grid-template-columns:1fr}}
+.entries.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:900px){.entries.cols-3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:720px){.entries,.entries.cols-3{grid-template-columns:1fr}}
 
 /* --- 인용(원칙) ----------------------------------------------------------- */
 .quote{border-left:3px solid var(--cobalt);padding:6px 0 6px 22px;max-width:60ch}
