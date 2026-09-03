@@ -43,7 +43,7 @@
     form.reset();
     if (submitButton) submitButton.disabled = false;
     if (submitLabel) submitLabel.textContent = '신청이 접수되었습니다';
-    setStatus('success', '접수가 완료되었습니다. 내용을 확인한 뒤 alexsoft.kr@gmail.com에서 회신드리겠습니다.');
+    setStatus('success', '접수가 완료되었습니다. 내용을 확인한 뒤 contact@alexsoft.co.kr에서 회신드리겠습니다.');
     window.setTimeout(function () {
       if (submitLabel) submitLabel.textContent = defaultLabel;
     }, 2600);
