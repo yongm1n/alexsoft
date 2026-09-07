@@ -252,22 +252,21 @@
 
         <figure class="shot hero">
           <video src="/assets/work/cascade-demo.mp4" poster="/assets/work/cascade-demo-poster.webp" width="1280" height="800" autoplay muted loop playsinline controls preload="metadata" data-motion aria-label="Cascade 뷰어 22초 데모. 개요 다이얼에서 시작해 컬럼 retail_price가 닿는 SQL statement와 엔드포인트를 따라가고, statement 하나의 실제 MyBatis SQL과 프로젝트 전체 그래프를 지나 mall 프로젝트의 ERD로 끝납니다."></video>
-          <figcaption>DEMO — 개요 다이얼에서 컬럼 하나(retail_price)의 영향 범위로, 그 statement의 실제 MyBatis SQL로, 다시 프로젝트 전체 그래프와 ERD로. 오픈소스 쇼핑몰 litemall과 mall을 실제로 분석한 22초 화면입니다.</figcaption>
+          <figcaption>DEMO — 개요 화면에서 컬럼 하나(retail_price)의 영향 범위로, 그 statement의 실제 MyBatis SQL로, 다시 프로젝트 전체 그래프와 ERD로. 오픈소스 쇼핑몰 litemall과 mall을 실제로 분석한 22초 화면입니다.</figcaption>
         </figure>
 
         <dl class="facts wide" style="margin-top:clamp(24px,3vw,40px)">
-          <div><dt>성격</dt><dd>오픈소스 정적분석 엔진 · 로컬 뷰어 · MCP 서버<small>Apache-2.0 · github.com/alexsoft-hq/Cascade · README 영문·한국어</small></dd></div>
-          <div><dt>답하는 질문</dt><dd>컬럼 → SQL → 메서드 → API → 화면, 양방향 영향 범위<small>endpoint_impact · screen_impact · column_impact · flow · changed_impact · coupling</small></dd></div>
-          <div><dt>읽는 스택</dt><dd>Java Spring MVC · MyBatis(XML·어노테이션·Plus) · JPA/Spring Data · SQL DDL(MySQL·PostgreSQL·Oracle·H2) · JS/TS·Vue·React 라우터 · OpenAPI · HAR<small>Kotlin, GraphQL, 런타임 와이어링·리플렉션·AOP는 읽지 않는다고 명시합니다</small></dd></div>
-          <div><dt>원칙</dt><dd>증명한 것보다 더 주장하지 않습니다<small>모든 엣지에 등급(EXACT · SOUND_SET · HEURISTIC) · 만들 수 없던 축은 빈 배열이 아니라 ‘선언’으로 돌려줍니다</small></dd></div>
-          <div><dt>구조</dt><dd>Node 20+, npm 의존성 0 · JDK 자체 파서(parse-only) · sqlglot<small>테스트 파일 91개 · 골든과 증분 오라클로 정확도를 측정하고 직전 인증 실행과 비교합니다</small></dd></div>
-          <div><dt>상태</dt><dd>공개 저장소, 마일스톤 M0–M11 완료<small>2026-09 · pre-1.0 · 뷰어 한국어·영어 전환</small></dd></div>
+          <div><dt>성격</dt><dd>오픈소스 정적분석 엔진 · 로컬 뷰어 · MCP 서버<small>Apache-2.0 공개 · github.com/alexsoft-hq/Cascade</small></dd></div>
+          <div><dt>답하는 질문</dt><dd>컬럼 → SQL → 메서드 → API → 화면, 양방향 영향 범위<small>바꾸려는 컬럼에서 영향받는 화면까지, 열려는 화면에서 도달하는 컬럼까지</small></dd></div>
+          <div><dt>읽는 스택</dt><dd>Java Spring MVC · MyBatis(XML·어노테이션·Plus) · JPA/Spring Data · SQL DDL(MySQL·PostgreSQL·Oracle·H2) · JS/TS·Vue·React 라우터 · OpenAPI · HAR<small>Kotlin과 GraphQL, 그리고 실행 중에만 정해지는 연결은 읽지 못한다고 밝힙니다</small></dd></div>
+          <div><dt>원칙</dt><dd>증명한 것보다 더 주장하지 않습니다<small>확인한 연결과 추정한 연결을 구분해 표시하고, 확인하지 못한 부분은 못 봤다고 적습니다</small></dd></div>
+          <div><dt>도입</dt><dd>내 컴퓨터에서만 도는 도구입니다<small>소스와 분석 결과가 밖으로 나가지 않습니다 · 데이터베이스에 연결하더라도 테이블·컬럼 이름만 읽고 데이터는 읽지 않습니다</small></dd></div>
         </dl>
 
         <div class="gallery">
           <figure class="shot">
             <a href="/assets/work/cascade-flow-from-screen-ko.webp" target="_blank" rel="noopener"><img src="/assets/work/cascade-flow-from-screen-ko.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Cascade 흐름 탭. 화면 /mall/order에서 프런트엔드 함수 14개, 엔드포인트 7개, 서비스 계층 37개, 매퍼 statement로 이어지는 홉 컬럼"></a>
-            <figcaption>흐름 — 화면 /mall/order에서 시작해 프런트엔드 함수, 엔드포인트, 서비스 계층, 매퍼 statement까지 홉 단위로 따라갑니다. 실선은 증명된 호출, 점선은 후보 호출입니다.</figcaption>
+            <figcaption>흐름 — 화면 /mall/order에서 시작해 프런트엔드 함수, 엔드포인트, 서비스 계층, 매퍼 SQL까지 한 단계씩 따라갑니다. 실선은 증명된 호출, 점선은 후보 호출입니다.</figcaption>
           </figure>
           <figure class="shot">
             <a href="/assets/work/cascade-impact-column.webp" target="_blank" rel="noopener"><img src="/assets/work/cascade-impact-column.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Cascade 영향 탭. 컬럼 하나에서 거꾸로 매퍼 statement, 서비스 메서드, 엔드포인트, 프런트엔드 함수로 올라가는 화면"></a>
@@ -295,13 +294,13 @@
           </figure>
           <figure class="shot">
             <a href="/assets/work/cascade-explore-screen-card.webp" target="_blank" rel="noopener"><img src="/assets/work/cascade-explore-screen-card.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Cascade 탐색 탭의 화면 카드. 마운트하는 컴포넌트 파일, 실행하는 프런트엔드 함수 14개, 닿는 API 라우트 7개"></a>
-            <figcaption>탐색 — 화면 하나가 마운트하는 컴포넌트, 실행하는 함수, 닿는 API 라우트를 등급과 함께 카드 한 장으로 봅니다.</figcaption>
+            <figcaption>탐색 — 화면 하나가 여는 파일, 실행하는 함수, 닿는 API를 카드 한 장으로 봅니다.</figcaption>
           </figure>
         </div>
 
         <div class="steps cols-3" style="margin-top:clamp(28px,4vw,48px)">
           <div data-reveal><span class="mono">WHY</span><h3>변경 영향은 문서가 아니라 사람의 기억에 있었습니다</h3><p>컬럼 하나를 고칠 때 어느 화면이 깨지는지 확인하는 데 며칠이 걸립니다. 코드를 고치는 주체가 AI 코딩 에이전트로 넓어지는 지금은, 그 질문에 기계가 먼저 답해야 합니다.</p></div>
-          <div data-reveal><span class="mono">HOW</span><h3>그래프의 모든 선에 등급을 답니다</h3><p>파서가 볼 수 없는 런타임 와이어링·리플렉션·AOP는 그래프에 넣지 않고 ‘못 봤다’고 선언합니다. 뷰어의 모든 숫자는 MCP로 에이전트가 받는 답과 같은 엔진에서 나와, 사람과 모델이 서로 다른 이야기를 들을 수 없습니다.</p></div>
+          <div data-reveal><span class="mono">HOW</span><h3>그래프의 모든 선에 등급을 답니다</h3><p>소스만 읽어서는 알 수 없는 연결은 아는 척하지 않고 못 봤다고 적습니다. 사람이 보는 화면과 AI 에이전트가 받는 답이 같은 엔진에서 나오므로, 둘이 서로 다른 이야기를 들을 일이 없습니다.</p></div>
           <div data-reveal><span class="mono">SO WHAT</span><h3>레거시의 영향 범위를 소스로부터 복원합니다</h3><p>레거시 현대화와 시스템 연동 설계에서 가장 오래 걸리는 일이 ‘어디까지 영향이 가는가’를 알아내는 일입니다. 같은 방식으로 귀사 시스템의 지도를 그릴 수 있습니다.</p></div>
         </div>
 
@@ -333,12 +332,12 @@
         </figure>
 
         <dl class="facts wide" style="margin-top:clamp(24px,3vw,40px)">
-          <div><dt>성격</dt><dd>팀 목표·OKR 관리 SaaS<small>워크스페이스 → 프로젝트(계층) → 목표 → 하위 목표(Key Result) · 역할 OWNER / ADMIN / MEMBER · 이메일 초대</small></dd></div>
-          <div><dt>다섯 가지 뷰</dt><dd>카드 · 테이블 · 보드 · 타임라인 · 대시보드<small>같은 데이터를 다르게 봅니다 · 담당자별 현황 · 변경 이력 · 저장된 뷰 · 커스텀 필드</small></dd></div>
+          <div><dt>성격</dt><dd>팀 목표·OKR 관리 SaaS<small>워크스페이스 → 프로젝트(계층) → 목표 → 하위 목표 · 소유자·관리자·구성원 권한 · 이메일 초대</small></dd></div>
+          <div><dt>다섯 가지 뷰</dt><dd>카드 · 테이블 · 보드 · 타임라인 · 대시보드<small>담당자별 현황 · 변경 이력 · 자주 쓰는 조건 저장 · 팀에 맞춘 항목 추가</small></dd></div>
           <div><dt>자동으로</dt><dd>Key Result 진행률의 상위 집계 · 자동화 규칙(트리거 6종 × 액션 6종) · 멘션·마감 알림<small>사이클(분기) · 체크인 · 댓글과 @멘션 · 첨부파일 · 감사 로그</small></dd></div>
-          <div><dt>기술</dt><dd>React 18 · TypeScript · Vite / Express 5 · Prisma · PostgreSQL<small>JWT + Google OAuth · 로컬/S3 저장소 어댑터 · 요청 제한과 보안 헤더 · CI에서 타입검사 → 린트 → 테스트 → 빌드</small></dd></div>
-          <div><dt>배포</dt><dd>Docker 멀티스테이지 · 폐쇄망 서버용 오프라인 번들<small>컨테이너 기동 시 마이그레이션 자동 적용 · 헬스체크</small></dd></div>
-          <div><dt>상태</dt><dd>설계·구현 중인 자체 제품<small>2025-11 시작 · 화면은 데모 데이터</small></dd></div>
+          <div><dt>기술</dt><dd>React · TypeScript / Express · Prisma · PostgreSQL<small>구글 로그인 · 첨부파일은 서버 디스크 또는 S3 · 조직 단위로 데이터를 분리합니다</small></dd></div>
+          <div><dt>배포</dt><dd>컨테이너 한 벌, 또는 인터넷이 없는 폐쇄망 서버용 오프라인 설치본</dd></div>
+          <div><dt>상태</dt><dd>직접 만들어 쓰는 자체 제품<small>아래 화면은 가상의 팀과 목표로 채운 데모입니다</small></dd></div>
         </dl>
 
         <div class="gallery">
@@ -378,13 +377,13 @@
           </figure>
           <figure class="shot phone">
             <a href="/assets/work/mokpyo-mobile-cards.webp" target="_blank" rel="noopener"><img src="/assets/work/mokpyo-mobile-cards.webp" width="720" height="900" loading="lazy" decoding="async" alt="Mokpyo 카드 뷰를 390px 폭 모바일 화면에서 본 모습"></a>
-            <figcaption>모바일 — 같은 화면이 390px 폭에서도 그대로 동작합니다.</figcaption>
+            <figcaption>모바일 — 같은 화면이 휴대폰에서도 그대로 동작합니다.</figcaption>
           </figure>
         </div>
 
         <div class="steps cols-3" style="margin-top:clamp(28px,4vw,48px)">
           <div data-reveal><span class="mono">WHY</span><h3>목표는 시트에, 진행은 메신저에, 마감은 머릿속에</h3><p>흩어진 목표를 한 곳에 두고, 팀은 ‘어떻게 볼지’만 고르게 했습니다. 다섯 개 뷰가 같은 데이터를 쓰기 때문에 어느 화면에서 고쳐도 나머지가 함께 바뀝니다.</p></div>
-          <div data-reveal><span class="mono">HOW</span><h3>화면보다 뼈대를 먼저 세웠습니다</h3><p>조직 단위 데이터 격리, 역할과 초대, 감사 로그, 자동화 엔진과 스케줄러, 저장소 어댑터처럼 팀 도구가 갖춰야 할 구조를 먼저 설계하고 그 위에 뷰를 올렸습니다.</p></div>
+          <div data-reveal><span class="mono">HOW</span><h3>화면보다 뼈대를 먼저 세웠습니다</h3><p>조직별 데이터 분리, 권한과 초대, 누가 무엇을 언제 바꿨는지 남는 기록, 규칙을 실행하는 자동화까지 팀 도구가 갖춰야 할 뼈대를 먼저 설계하고 그 위에 화면을 올렸습니다.</p></div>
           <div data-reveal><span class="mono">SO WHAT</span><h3>업무 도구의 품질은 데이터 구조와 권한, 이력이 정합니다</h3><p>귀사의 내부 시스템과 백오피스도 같은 순서로 설계하고 만듭니다. 화면은 마지막에 옵니다.</p></div>
         </div>
 
