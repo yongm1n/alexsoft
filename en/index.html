@@ -56,14 +56,15 @@
         "publisher": {"@id": "https://alexsoft.co.kr/#organization"}
       },
       {
-        "@type": "ProfilePage",
-        "@id": "https://alexsoft.co.kr/en/#profile",
+        "@type": "WebPage",
+        "@id": "https://alexsoft.co.kr/en/#webpage",
         "url": "https://alexsoft.co.kr/en/",
         "name": "ALEXSOFT — Systems Architecture for Regulated Industries",
         "inLanguage": "en",
         "isPartOf": {"@id": "https://alexsoft.co.kr/#website"},
         "about": {"@id": "https://alexsoft.co.kr/#organization"},
-        "mainEntity": {
+        "mainEntity": {"@id": "https://alexsoft.co.kr/#organization"},
+        "mentions": {
           "@type": "Person",
           "@id": "https://alexsoft.co.kr/#founder",
           "name": "Yongmin Lee",
@@ -115,8 +116,8 @@
     <section class="hero-flat" aria-labelledby="en-hero-title">
       <div class="shell">
         <h1 id="en-hero-title">Systems architecture for places where failure is not an option.</h1>
-        <p class="hero-lede">I design structures that actually work inside legal, certification and legacy-system constraints — national tax infrastructure, healthcare information systems, marine engineering — and I build what I design.</p>
-        <p class="mono" style="margin-top:16px">Based in Busan, Korea. I work remotely.</p>
+        <p class="hero-lede">ALEXSOFT designs structures that actually work inside legal, certification and legacy-system constraints — national tax infrastructure, healthcare information systems, marine engineering — and builds what it designs.</p>
+        <p class="mono" style="margin-top:16px">Based in Busan, Korea. Working remotely.</p>
       </div>
     </section>
 
@@ -124,10 +125,10 @@
       <div class="shell">
         <div class="head">
           <div>
-            <div class="nib" aria-hidden="true"><svg viewBox="0 0 64 64"><path fill="#2456E4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/></svg><span>Profile</span></div>
+            <div class="nib" aria-hidden="true"><svg viewBox="0 0 64 64"><path fill="#2456E4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/></svg><span>Founder</span></div>
             <h2 id="en-profile-title">Yongmin Lee</h2>
           </div>
-          <p>More than twenty-five years of experience across shipbuilding and marine engineering, public-sector systems, and healthcare information systems. I have worked as an architect and a development lead on regulated, mission-critical systems, where a design has to satisfy an auditor as well as a user.</p>
+          <p>ALEXSOFT is led by its founder, Yongmin Lee: more than twenty-five years across shipbuilding and marine engineering, public-sector systems and healthcare information systems, as an architect and a development lead on regulated, mission-critical systems — where a design has to satisfy an auditor as well as a user.</p>
         </div>
         <p class="mono">AWS Certified Solutions Architect – Professional.</p>
       </div>
@@ -163,7 +164,7 @@
             <div><dt>Scope</dt><dd>KOICA-funded · 2018–2022 · development lead (PL)</dd></div>
             <div><dt>Status</dt><dd>In production since 2022</dd></div>
           </dl>
-          <p>As development lead, I designed the development architecture, the e-invoice document standard, and the security standards for documents and the exchange system, and led development. The system is live at <span class="mono">eis.bir.gov.ph</span>. A separate 2025–2026 follow-on support project was delivered by another vendor and is not ALEXSOFT's work.</p>
+          <p>In the development lead role, ALEXSOFT designed the development architecture, the e-invoice document standard, and the security standards for documents and the exchange system, and led development. The system is live at <span class="mono">eis.bir.gov.ph</span>. A separate 2025–2026 follow-on support project was delivered by another vendor and is not ALEXSOFT's work.</p>
           <p class="case-more"><a class="link" href="/work/#bir-eis">Case detail (Korean) <span aria-hidden="true">→</span></a></p>
         </article>
 
@@ -173,7 +174,7 @@
             <div><dt>Scope</dt><dd>Development lead · product design</dd></div>
             <div><dt>Status</dt><dd>Korean EMR certification</dd></div>
           </dl>
-          <p>The first cloud-based clinic EMR to receive Korea's EMR certification. I joined as development lead in 2022 and headed development and product planning and design from 2023 to 2026.</p>
+          <p>The first cloud-based clinic EMR to receive Korea's EMR certification. ALEXSOFT started as development lead in 2022 and headed development and product planning and design from 2023 to 2026.</p>
           <p class="case-more"><a class="link" href="/work/#cloud-emr">Case detail (Korean) <span aria-hidden="true">→</span></a></p>
         </article>
 
@@ -185,9 +186,9 @@
       <div class="shell">
         <div class="head">
           <div>
-            <h2 id="en-products-title">Products I build</h2>
+            <h2 id="en-products-title">Products built in house</h2>
           </div>
-          <p>Evidence that the person who designs also ships. Screens and structure are on the Korean case page.</p>
+          <p>Evidence that the people who design also ship. Screens and structure are on the Korean case page.</p>
         </div>
 
         <article class="record">
@@ -211,7 +212,7 @@
             <div><dt>What</dt><dd>A goal/OKR tool for teams of 10–100: card, table, board, timeline and dashboard views over one dataset, with per-owner status and an audit trail</dd></div>
             <div><dt>Automatic</dt><dd>Sub-goal progress rolls up to the parent goal; automation rules (6 triggers × 6 actions); mention and due-date notifications</dd></div>
             <div><dt>Stack</dt><dd>React · TypeScript / Express · Prisma · PostgreSQL, shipped as a container image or as an offline bundle for air-gapped servers</dd></div>
-            <div><dt>Status</dt><dd>Own product, in development since November 2025; screenshots use a demo workspace with fictional data</dd></div>
+            <div><dt>Status</dt><dd>ALEXSOFT's own product, built since November 2025; screenshots use a demo workspace with fictional data</dd></div>
           </dl>
           <div class="links" style="margin-top:16px">
             <a class="quiet" href="/work/#mokpyo">Screens (Korean) <span aria-hidden="true">→</span></a>
@@ -224,14 +225,14 @@
       <div class="shell">
         <div class="head">
           <div>
-            <h2 id="en-process-title">How I work</h2>
+            <h2 id="en-process-title">How an engagement runs</h2>
           </div>
         </div>
         <dl class="facts wide">
           <div><dt>Fit call</dt><dd>30 minutes, free. No documents are produced.</dd></div>
           <div><dt>Assessment</dt><dd>Half a day to one day of architecture assessment, paid in advance and fully credited toward a follow-on engagement.</dd></div>
           <div><dt>Engagement</dt><dd>Design and technical due diligence, two to six weeks; 50% due at kickoff.</dd></div>
-          <div><dt>Build</dt><dd>I implement what I designed. Integration, back-office and MVP-scale systems directly; larger systems with design oversight and vetted partners. Two concurrent builds at most. Milestone billing.</dd></div>
+          <div><dt>Build</dt><dd>ALEXSOFT implements what it designed. Integration, back-office and MVP-scale systems directly; larger systems with design oversight and vetted partners. Two concurrent builds at most. Milestone billing.</dd></div>
           <div><dt>Advisory</dt><dd>A fixed number of days per month, paid monthly in advance.</dd></div>
         </dl>
       </div>
