@@ -19,8 +19,8 @@ python3 -m http.server 8080
 
 ## 콘텐츠 근거
 
-- `Cascade`: 로컬 프로젝트 README와 정적분석 엔진 Spec의 commit→screen→API→method→SQL→table 계보 설계
-- `Goalboard`: SQLite의 Goal/SubGoal/Category/Note 구조와 현재 Prisma의 조직·프로젝트·다중 뷰·자동화 모델
+- `Cascade`(`/work/#cascade`): 공개 저장소 `github.com/alexsoft-hq/Cascade`의 README·CHANGELOG. 스크린샷은 저장소의 `docs/assets/screens/*.png`를 `assets/work/cascade-*.webp`로 변환한 것
+- `Mokpyo`(`/work/#mokpyo`, 구 Goalboard): 로컬 프로젝트 README(다섯 뷰·자동화·역할·배포)와 데모 워크스페이스(`prisma/seed-demo.ts`, 가상 팀·가상 목표). 스크린샷은 `assets/work/mokpyo-*.webp` — 로컬 데모를 1440×900(2x)·390px로 캡처
 - `The Grace`: 실제 공개 사이트 및 프로젝트 README의 시네마틱 스크롤/에디션 전환 구조
 - `CareFlow`: SQLite에서 확인한 82개 도메인 테이블과 장기요양 화면 분석 기록
 
@@ -37,6 +37,7 @@ python3 -m http.server 8080
 - 대표 비주얼 고해상도 원본: 저장소 외부(운영 문서 폴더 `40-브랜드-원본/`)에 보관, 저장소 미추적
 - `assets/logo-mark.svg`: AI 콘셉트를 16px까지 선명하게 작동하도록 재구성한 벡터 로고
 - `assets/grace-site.webp`: 더 그레이스 공개 사이트의 실제 화면
+- `assets/work/cascade-*.webp`, `assets/work/mokpyo-*.webp`: 자체 제품 화면(`/work/`와 홈 `#products`에서 사용)
 
 대표 비주얼의 의미와 사용 규칙은 `BRAND-ASSETS.md`를 기준으로 합니다.
 

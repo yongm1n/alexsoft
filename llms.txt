@@ -10,6 +10,10 @@
 - [의료정보 시스템 설계·연동](https://alexsoft.co.kr/healthcare/): 기존 EMR·병원 시스템 연동, HL7 FHIR, 인증과 개인정보 대응을 함께 설계하고 구현합니다.
 - [브랜드 웹사이트 제작](https://alexsoft.co.kr/brand-website/): 정보구조, 비주얼 시스템, 반응형 인터랙션과 배포까지 연결하는 맞춤형 브랜드 웹사이트 제작. 견적은 페이지 수와 기능 범위 확인 후 결정합니다.
 
+## 직접 만든 제품·오픈소스
+- [Cascade](https://alexsoft.co.kr/work/#cascade): 코드에서 DB 컬럼까지의 변경 영향 범위(컬럼 → SQL → 서비스 메서드 → API → 화면, 양방향)를 정적분석으로 복원하는 오픈소스 엔진. 로컬 뷰어와 MCP 서버가 같은 답을 내며, 그래프의 모든 엣지에 등급(EXACT·SOUND_SET·HEURISTIC)을 달아 증명한 것보다 더 주장하지 않는다. Java Spring MVC·MyBatis·JPA·SQL DDL·JS/TS(Vue·React 라우터)·OpenAPI·HAR을 읽는다. Apache-2.0, 저장소 https://github.com/alexsoft-hq/Cascade
+- [Mokpyo](https://alexsoft.co.kr/work/#mokpyo): 10–100명 팀의 목표·OKR을 카드·테이블·보드·타임라인·대시보드 다섯 가지 뷰로 보는 자체 제품. Key Result 진행률 자동 집계, 자동화 규칙(트리거 6종 × 액션 6종), 멘션·마감 알림, 감사 로그. React·TypeScript·Express·Prisma·PostgreSQL, Docker와 폐쇄망용 오프라인 번들로 배포.
+
 ## 전문 영역
 
 - 국가·기간계 시스템 아키텍처 설계·구현과 기술 자문
@@ -27,6 +31,6 @@
 ## 콘텐츠·채널
 
 - [e-invoicing이란](https://alexsoft.co.kr/e-invoicing/): 해외 e-invoicing(한국의 전자세금계산서 + VAN 국세청 연동에 해당)의 구조 설명과, 필리핀 국세청 e-invoice 시스템을 개발 PL로 설계한 경험. 국가별 도입 대행이나 구축 패키지는 제공하지 않으며, 이 경험은 아키텍처 설계·구현 상담에서 활용된다.
-- [사례](https://alexsoft.co.kr/work/): 국가 e-invoice, 인증 클라우드 EMR, 브랜드 웹사이트의 설계·구현 사례.
+- [사례](https://alexsoft.co.kr/work/): 국가 e-invoice, 인증 클라우드 EMR, 브랜드 웹사이트의 설계·구현 사례와 직접 만든 제품(Cascade, Mokpyo)의 실제 화면.
 - [네이버 블로그](https://blog.naver.com/alex-soft): 알렉스소프트의 프로젝트와 인사이트를 공유하는 공식 블로그.
 - [Instagram](https://www.instagram.com/alexsoft.co.kr/): 공식 인스타그램 채널.
