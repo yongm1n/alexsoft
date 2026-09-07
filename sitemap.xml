@@ -60,7 +60,7 @@
     <video:video>
       <video:thumbnail_loc>https://alexsoft.co.kr/assets/work/cascade-demo-poster.webp</video:thumbnail_loc>
       <video:title>Cascade 뷰어 데모</video:title>
-      <video:description>개요 다이얼에서 컬럼 retail_price의 영향 범위로, statement의 실제 MyBatis SQL로, 프로젝트 전체 그래프와 ERD로 이어지는 Cascade 뷰어 22초 데모입니다.</video:description>
+      <video:description>개요 화면에서 컬럼 retail_price의 영향 범위로, 그 SQL문이 실제로 어떻게 쓰였는지로, 프로젝트 전체 그래프와 ERD로 이어지는 Cascade 뷰어 22초 데모입니다.</video:description>
       <video:content_loc>https://alexsoft.co.kr/assets/work/cascade-demo.mp4</video:content_loc>
       <video:duration>22</video:duration>
       <video:family_friendly>yes</video:family_friendly>
