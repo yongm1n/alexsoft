@@ -67,7 +67,7 @@
         "itemListElement": [
           {"@type": "ListItem", "position": 1, "item": {"@type": "CreativeWork", "name": "필리핀 국세청 Electronic Invoicing and Sales Reporting System", "description": "KOICA 무상원조로 2018–2022년 구축한 국가 단위 e-invoice 시스템의 개발 아키텍처와 문서·교환체계 표준 설계 및 개발 주도", "url": "https://alexsoft.co.kr/work/#bir-eis"}},
           {"@type": "ListItem", "position": 2, "item": {"@type": "CreativeWork", "name": "인증 클라우드 EMR", "description": "EMR 인증을 받은 의원급 EMR 중 최초의 클라우드 제품에서 개발 리더로 시작해 개발·기획설계를 총괄한 사례", "url": "https://alexsoft.co.kr/work/#cloud-emr"}},
-          {"@type": "ListItem", "position": 3, "item": {"@type": "SoftwareSourceCode", "name": "Cascade", "description": "코드에서 DB 컬럼까지의 변경 영향 범위를 정적분석으로 복원해 로컬 뷰어와 MCP 서버로 답하는 오픈소스 엔진 (Apache-2.0)", "codeRepository": "https://github.com/alexsoft-hq/Cascade", "programmingLanguage": "JavaScript", "image": "https://alexsoft.co.kr/assets/work/cascade-overview-ko.webp", "keywords": "static analysis, impact analysis, code-to-column, knowledge graph, MCP", "license": "https://www.apache.org/licenses/LICENSE-2.0", "url": "https://alexsoft.co.kr/work/#cascade", "author": {"@id": "https://alexsoft.co.kr/#organization"}}},
+          {"@type": "ListItem", "position": 3, "item": {"@type": "SoftwareSourceCode", "name": "Cascade", "description": "코드에서 DB 컬럼까지의 변경 영향 범위를 정적분석으로 복원해 로컬 뷰어와 MCP 서버로 답하는 오픈소스 엔진 (Apache-2.0)", "codeRepository": "https://github.com/alexsoft-hq/Cascade", "programmingLanguage": "JavaScript", "image": "https://alexsoft.co.kr/assets/work/cascade-demo-poster.webp", "keywords": "static analysis, impact analysis, code-to-column, knowledge graph, MCP", "video": {"@type": "VideoObject", "name": "Cascade 뷰어 데모", "description": "개요 다이얼에서 컬럼 retail_price의 영향 범위로, statement의 실제 MyBatis SQL로, 프로젝트 전체 그래프와 ERD로 이어지는 Cascade 뷰어 22초 데모. 오픈소스 프로젝트 litemall과 mall을 실제로 분석한 화면입니다.", "thumbnailUrl": "https://alexsoft.co.kr/assets/work/cascade-demo-poster.webp", "contentUrl": "https://alexsoft.co.kr/assets/work/cascade-demo.mp4", "uploadDate": "2026-09-07", "duration": "PT22S", "inLanguage": "en", "publisher": {"@id": "https://alexsoft.co.kr/#organization"}}, "license": "https://www.apache.org/licenses/LICENSE-2.0", "url": "https://alexsoft.co.kr/work/#cascade", "author": {"@id": "https://alexsoft.co.kr/#organization"}}},
           {"@type": "ListItem", "position": 4, "item": {"@type": "SoftwareApplication", "name": "Mokpyo", "applicationCategory": "BusinessApplication", "operatingSystem": "Web", "image": "https://alexsoft.co.kr/assets/work/mokpyo-cards.webp", "screenshot": "https://alexsoft.co.kr/assets/work/mokpyo-dashboard.webp", "keywords": "OKR, 목표 관리, 팀 목표, 자동화", "description": "카드·테이블·보드·타임라인·대시보드 다섯 가지 뷰와 자동화 규칙을 갖춘 팀 목표·OKR 관리 도구", "url": "https://alexsoft.co.kr/work/#mokpyo", "author": {"@id": "https://alexsoft.co.kr/#organization"}}},
           {"@type": "ListItem", "position": 5, "item": {"@type": "CreativeWork", "name": "THE GRACE 브랜드 웹사이트", "description": "돌봄의 태도와 운영 흐름을 화면, 콘텐츠와 인터랙션으로 설계한 브랜드 웹사이트", "url": "https://alexsoft.co.kr/work/#the-grace"}}
         ]
@@ -91,9 +91,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
-  <link rel="stylesheet" href="/assets/ink.css?v=20260901-i-1">
+  <link rel="stylesheet" href="/assets/ink.css?v=20260907-i-2">
   <noscript><style>[data-reveal]{opacity:1;transform:none}</style></noscript>
-  <link rel="stylesheet" href="work.css?v=20260907-w-1">
+  <link rel="stylesheet" href="work.css?v=20260907-w-2">
 </head>
 <body>
   <header class="top">
@@ -251,8 +251,8 @@
         </div>
 
         <figure class="shot hero">
-          <a href="/assets/work/cascade-overview-ko.webp" target="_blank" rel="noopener"><img src="/assets/work/cascade-overview-ko.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Cascade 뷰어 개요 탭. SQL까지 닿는 엔드포인트 90%, 닿은 테이블 100%, 닿은 컬럼 100%, 테이블까지 닿는 화면 45%의 다이얼과 프로젝트 전체 지도, 엔진이 못 본 것의 목록"></a>
-          <figcaption>OVERVIEW — 엔드포인트 219개 중 198개가 SQL까지 닿고, 화면 89개 중 40개가 테이블에 닿습니다. 못 본 자리 8가지도 같은 화면에 적습니다. 샘플: 오픈소스 쇼핑몰 litemall</figcaption>
+          <video src="/assets/work/cascade-demo.mp4" poster="/assets/work/cascade-demo-poster.webp" width="1280" height="800" autoplay muted loop playsinline controls preload="metadata" data-motion aria-label="Cascade 뷰어 22초 데모. 개요 다이얼에서 시작해 컬럼 retail_price가 닿는 SQL statement와 엔드포인트를 따라가고, statement 하나의 실제 MyBatis SQL과 프로젝트 전체 그래프를 지나 mall 프로젝트의 ERD로 끝납니다."></video>
+          <figcaption>DEMO — 개요 다이얼에서 컬럼 하나(retail_price)의 영향 범위로, 그 statement의 실제 MyBatis SQL로, 다시 프로젝트 전체 그래프와 ERD로. 오픈소스 쇼핑몰 litemall과 mall을 실제로 분석한 22초 화면입니다.</figcaption>
         </figure>
 
         <dl class="facts wide" style="margin-top:clamp(24px,3vw,40px)">
@@ -452,6 +452,6 @@
       <p class="biz" data-nosnippet>상호 알렉스소프트(ALEXSOFT) · 대표 이용민 · 사업자등록번호 212-64-01036 · 사업장 부산광역시 수영구 광안해변로15번길 10 · © <span data-year>2026</span> ALEXSOFT</p>
     </div>
   </footer>
-  <script src="/assets/ink.js?v=20260901-i-1" defer></script>
+  <script src="/assets/ink.js?v=20260907-i-2" defer></script>
 </body>
 </html>

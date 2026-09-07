@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://alexsoft.co.kr/</loc>
     <lastmod>2026-09-07</lastmod>
@@ -35,7 +36,7 @@
   <url>
     <loc>https://alexsoft.co.kr/work/</loc>
     <lastmod>2026-09-07</lastmod>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/cascade-overview-ko.webp</image:loc></image:image>
+    <image:image><image:loc>https://alexsoft.co.kr/assets/work/cascade-demo-poster.webp</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/assets/work/cascade-flow-from-screen-ko.webp</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/assets/work/cascade-impact-column.webp</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/assets/work/cascade-graph-map.webp</image:loc></image:image>
@@ -55,6 +56,15 @@
     <image:image><image:loc>https://alexsoft.co.kr/assets/work/mokpyo-notifications.webp</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/assets/work/mokpyo-mobile-cards.webp</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/assets/grace-site.webp</image:loc></image:image>
+    <video:video>
+      <video:thumbnail_loc>https://alexsoft.co.kr/assets/work/cascade-demo-poster.webp</video:thumbnail_loc>
+      <video:title>Cascade 뷰어 데모</video:title>
+      <video:description>개요 다이얼에서 컬럼 retail_price의 영향 범위로, statement의 실제 MyBatis SQL로, 프로젝트 전체 그래프와 ERD로 이어지는 Cascade 뷰어 22초 데모입니다.</video:description>
+      <video:content_loc>https://alexsoft.co.kr/assets/work/cascade-demo.mp4</video:content_loc>
+      <video:duration>22</video:duration>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
   </url>
   <url>
     <loc>https://alexsoft.co.kr/en/</loc>

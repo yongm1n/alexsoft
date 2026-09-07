@@ -7,6 +7,16 @@
     el.textContent = String(new Date().getFullYear());
   });
 
+  // 자동재생 데모 영상: 모션을 줄이도록 설정한 환경에서는 재생하지 않는다.
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (reduce && reduce.matches) {
+    document.querySelectorAll('video[data-motion]').forEach(function (v) {
+      v.removeAttribute('autoplay');
+      v.autoplay = false;
+      v.pause();
+    });
+  }
+
   // 현재 페이지 표시 (헤더 내비, 루트 절대경로 기준)
   var path = location.pathname;
   document.querySelectorAll('.top nav a[href]').forEach(function (a) {

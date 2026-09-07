@@ -11,6 +11,9 @@
 .shot img{display:block;width:100%;height:auto}
 .shot figcaption{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--graphite);padding:9px 12px;border-top:1px solid var(--rule-soft)}
 
+/* 데모 영상 — 스크린샷 도판과 같은 틀, 16:10 */
+.shot video{display:block;width:100%;height:auto;aspect-ratio:16/10;background:#0F1115}
+
 /* 사실 표의 긴 식별자(저장소 경로·도구 이름)가 좁은 화면에서 셀을 밀어내지 않게 */
 .facts dd{min-width:0;overflow-wrap:anywhere}
 
