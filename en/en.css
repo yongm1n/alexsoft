@@ -10,3 +10,7 @@
 
 /* Short English headings: keep the two head columns top-aligned. */
 .head{align-items:start}
+
+/* Inside a case record the swipe hint keeps its own small type. */
+.record>p.scroll-hint{font-size:11px;margin-top:6px;max-width:none}
+.record .ink+p+p{margin-top:16px}

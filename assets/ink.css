@@ -194,6 +194,27 @@ footer.site .channels a{color:rgba(255,255,255,.62)}
 footer.site .channels a:hover{color:#fff}
 footer.site .biz{width:100%;font-family:var(--mono);font-size:11px;line-height:1.9;color:rgba(255,255,255,.4)}
 
+/* --- 스크린샷 도판·갤러리·데모 영상 (work · en · 홈 티저 공용) ------------------ */
+.shot{margin:0;border:1px solid var(--rule);background:#fff}
+.shot img{display:block;width:100%;height:auto}
+.shot figcaption{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--graphite);padding:9px 12px;border-top:1px solid var(--rule-soft)}
+
+.shot video{display:block;width:100%;height:auto;aspect-ratio:16/10;background:#0F1115}
+
+.facts dd{min-width:0;overflow-wrap:anywhere}
+
+.shot.hero{margin-top:clamp(20px,3vw,32px)}
+.shot a{display:block}
+.shot a:hover img{opacity:.96}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(16px,2.2vw,28px);margin-top:clamp(16px,2.2vw,28px)}
+.gallery .shot{margin:0;display:flex;flex-direction:column}
+.gallery .shot img{aspect-ratio:16/10;object-fit:cover;object-position:top}
+.gallery .shot figcaption{letter-spacing:0;font-size:12px;line-height:1.6;margin-top:auto}
+.gallery.mixed{grid-template-columns:repeat(2,minmax(0,1fr)) minmax(0,.62fr)}
+.gallery .shot.phone img{aspect-ratio:4/5}
+@media (max-width:900px){.gallery.mixed{grid-template-columns:repeat(2,minmax(0,1fr))}.gallery .shot.phone{grid-column:1/-1;max-width:360px}}
+@media (max-width:640px){.gallery,.gallery.mixed{grid-template-columns:1fr}.gallery .shot.phone{max-width:none}.gallery .shot.phone img{aspect-ratio:auto}}
+
 /* ==========================================================================
    표준 헤더(국문 7페이지 byte-identical — 루트 절대경로, 그대로 복사):
    <header class="top">
