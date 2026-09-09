@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#FAF8F4">
+  <meta name="description" content="처음 홈페이지를 만드는 사장님을 위한 알렉스소프트(ALEXSOFT)의 무료 교육자료. ChatGPT 앱으로 말하듯 홈페이지를 만들고 Cloudflare Pages로 공개하는 과정을 74장 슬라이드와 블로그 글로 정리했습니다.">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="author" content="알렉스소프트(ALEXSOFT)">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:site_name" content="알렉스소프트(ALEXSOFT)">
+  <meta property="og:url" content="https://alexsoft.co.kr/learn/ai-business-website/">
+  <meta property="og:title" content="내 가게 홈페이지, 말로 만들어 공개하기 — 교육자료 | 알렉스소프트(ALEXSOFT)">
+  <meta property="og:description" content="ChatGPT 앱으로 홍보용 홈페이지를 만들고 Cloudflare Pages로 공개하는 과정. 74장 슬라이드와 블로그 글, 로그인 없이 열립니다.">
+  <meta property="og:image" content="https://alexsoft.co.kr/learn/ai-business-website/og.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="작은 가게의 주인이 노트북으로 자신의 가게 소개 화면을 살펴보는 삽화">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="내 가게 홈페이지, 말로 만들어 공개하기 — 교육자료 | 알렉스소프트(ALEXSOFT)">
+  <meta name="twitter:description" content="ChatGPT 앱으로 홍보용 홈페이지를 만들고 Cloudflare Pages로 공개하는 과정. 74장 슬라이드와 블로그 글, 로그인 없이 열립니다.">
+  <meta name="twitter:image" content="https://alexsoft.co.kr/learn/ai-business-website/og.jpg">
+  <link rel="canonical" href="https://alexsoft.co.kr/learn/ai-business-website/">
+  <link rel="alternate" hreflang="ko-KR" href="https://alexsoft.co.kr/learn/ai-business-website/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <title>내 가게 홈페이지, 말로 만들어 공개하기 — 교육자료 | 알렉스소프트(ALEXSOFT)</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://alexsoft.co.kr/#organization",
+        "name": "알렉스소프트",
+        "alternateName": ["ALEXSOFT", "알렉스 소프트"],
+        "url": "https://alexsoft.co.kr/",
+        "email": "contact@alexsoft.co.kr",
+        "sameAs": ["https://blog.naver.com/alex-soft", "https://www.instagram.com/alexsoft.co.kr/", "https://github.com/alexsoft-hq"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://alexsoft.co.kr/#website",
+        "url": "https://alexsoft.co.kr/",
+        "name": "알렉스소프트",
+        "alternateName": ["ALEXSOFT", "알렉스 소프트", "alexsoft.co.kr"],
+        "inLanguage": "ko-KR",
+        "publisher": {"@id": "https://alexsoft.co.kr/#organization"}
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://alexsoft.co.kr/learn/ai-business-website/#breadcrumb",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "알렉스소프트", "item": "https://alexsoft.co.kr/"},
+          {"@type": "ListItem", "position": 2, "name": "교육자료: 내 가게 홈페이지, 말로 만들어 공개하기", "item": "https://alexsoft.co.kr/learn/ai-business-website/"}
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://alexsoft.co.kr/learn/ai-business-website/#webpage",
+        "url": "https://alexsoft.co.kr/learn/ai-business-website/",
+        "name": "내 가게 홈페이지, 말로 만들어 공개하기 — 교육자료 | 알렉스소프트(ALEXSOFT)",
+        "description": "ChatGPT 앱으로 홍보용 홈페이지를 만들고 Cloudflare Pages로 공개하는 과정을 정리한 무료 교육자료. 74장 슬라이드와 블로그 글.",
+        "inLanguage": "ko-KR",
+        "isPartOf": {"@id": "https://alexsoft.co.kr/#website"},
+        "about": {"@id": "https://alexsoft.co.kr/#organization"},
+        "breadcrumb": {"@id": "https://alexsoft.co.kr/learn/ai-business-website/#breadcrumb"},
+        "primaryImageOfPage": {"@type": "ImageObject", "url": "https://alexsoft.co.kr/learn/ai-business-website/og.jpg", "width": 1200, "height": 630},
+        "hasPart": [
+          {"@type": "LearningResource", "name": "내 가게 홈페이지, 말로 만들어 공개하기 — 자습용 슬라이드 74장", "learningResourceType": "슬라이드", "url": "https://alexsoft.co.kr/learn/ai-business-website/slides.html", "inLanguage": "ko-KR", "isAccessibleForFree": true, "educationalLevel": "입문", "audience": {"@type": "Audience", "audienceType": "처음 홈페이지를 만드는 소상공인"}, "author": {"@id": "https://alexsoft.co.kr/#organization"}},
+          {"@type": "BlogPosting", "headline": "사장님도 ChatGPT로 하루 만에 홍보용 웹사이트를 만들 수 있을까?", "url": "https://alexsoft.co.kr/learn/ai-business-website/blog.html", "inLanguage": "ko-KR", "isAccessibleForFree": true, "datePublished": "2026-09-09", "author": {"@id": "https://alexsoft.co.kr/#organization"}, "publisher": {"@id": "https://alexsoft.co.kr/#organization"}}
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/assets/ink.css?v=20260908-i-3">
+  <noscript><style>[data-reveal]{opacity:1;transform:none}</style></noscript>
+  <style>.hero-flat h1 em{font-style:normal;color:var(--cobalt)}</style>
+</head>
+<body>
+  <header class="top">
+    <a class="skip" href="#main">본문으로 건너뛰기</a>
+    <div class="shell">
+      <a class="mark" href="/" aria-label="알렉스소프트 홈">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#17191D"/><path fill="#FAF8F4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/><circle cx="32" cy="40" r="3.7" fill="#4B78FF"/></svg>
+        ALEXSOFT
+      </a>
+      <nav aria-label="주요 메뉴">
+        <a href="/work/">프로젝트</a>
+        <a href="/#services">서비스</a>
+        <a href="/#about">회사소개</a>
+        <a class="cta" href="/#start">문의</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero-flat" aria-labelledby="learn-title">
+      <div class="shell">
+        <p class="mono" style="margin-bottom:14px">교육자료 · 무료 · 로그인 없이 열립니다</p>
+        <h1 id="learn-title">내 가게 홈페이지, <em>말로 만들어</em> 공개하기.</h1>
+        <p class="hero-lede">처음 홈페이지를 만드는 사장님을 위한 자료입니다. ChatGPT 앱에 말하듯 부탁해 홍보용 홈페이지를 만들고, Cloudflare Pages로 공개하고, 고치고 싶을 때 다시 말로 고치는 과정을 74장 슬라이드와 한 편의 글로 정리했습니다. 도메인 구매와 검색 등록은 선택 단계로 두었습니다.</p>
+        <div class="links">
+          <a class="solid" href="slides.html">강좌 슬라이드 보기 <span>→</span></a>
+          <a href="blog.html">블로그 읽기 <span>→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" aria-label="자료 두 가지">
+      <div class="shell">
+        <div class="entries cols-2">
+          <article data-reveal>
+            <figure class="shot" style="margin-bottom:4px"><a href="slides.html"><img src="cover-slides.webp" width="1200" height="675" loading="lazy" decoding="async" alt="작은 가게의 주인이 노트북으로 자신의 가게 소개 화면을 살펴보는 삽화"></a></figure>
+            <h3><a href="slides.html">따라 해보는 슬라이드 74장</a></h3>
+            <p>내 정보 준비, AI와 첫 화면, 내 주소 열기까지 한 장에 한 걸음씩 갑니다. ChatGPT에 붙여 넣을 요청문 14개가 들어 있고, 대괄호 안을 내 가게 정보로 바꾼 뒤 복사 버튼으로 그대로 옮기면 됩니다. 컴퓨터에서는 방향키로, 휴대전화에서는 아래 버튼으로 넘깁니다.</p>
+            <a class="more" href="slides.html">슬라이드 열기 <span>→</span></a>
+          </article>
+          <article data-reveal>
+            <figure class="shot" style="margin-bottom:4px"><a href="blog.html"><img src="cover-blog.webp" width="1200" height="675" loading="lazy" decoding="async" alt="가게 주인이 휴대전화로 자신의 웹사이트를 확인하며 도메인과 파일을 직접 관리하는 삽화"></a></figure>
+            <h3><a href="blog.html">읽어 보는 블로그 글</a></h3>
+            <p>“사장님도 ChatGPT로 하루 만에 홍보용 웹사이트를 만들 수 있을까?” 같은 과정을 글로 읽습니다. 왼쪽 목차로 필요한 부분만 골라 읽을 수 있고, 요청문 4개와 삽화 3장이 들어 있습니다. 슬라이드를 보기 전에 전체 그림을 잡기에 좋습니다.</p>
+            <a class="more" href="blog.html">블로그 열기 <span>→</span></a>
+          </article>
+        </div>
+
+        <dl class="facts wide" style="margin-top:clamp(28px,4vw,48px)">
+          <div><dt>대상</dt><dd>홈페이지가 처음인 소상공인·1인 사업자<small>코드나 Git을 몰라도 됩니다. 필요한 것은 ChatGPT 앱과 내 가게 정보입니다.</small></dd></div>
+          <div><dt>도구</dt><dd>ChatGPT 데스크톱 앱(Codex) · GitHub · Cloudflare Pages<small>무료 계정으로 시작할 수 있고, 그림을 여러 번 만드는 수업에는 ChatGPT Plus를 권합니다.</small></dd></div>
+          <div><dt>안전</dt><dd>입력한 내용은 브라우저 안에만 남습니다<small>이 자료는 어디로도 전송하지 않습니다. 로그인·결제·개인정보 수집 기능은 실습 범위에 없습니다.</small></dd></div>
+          <div><dt>출처</dt><dd>알렉스소프트(ALEXSOFT) 제작<small>삽화 3장은 AI로 생성한 그림이며 실제 가게나 인물이 아닙니다. 서비스 화면·요금은 수업 전에 다시 확인하세요.</small></dd></div>
+        </dl>
+
+        <div class="quote" style="margin-top:clamp(32px,4.5vw,52px)">
+          <p>먼저 미리보기를 보여 달라고 하고, 확인한 뒤에 실제 홈페이지에 반영하라고 합니다. 이 순서 하나가 초보자를 지켜 줍니다.</p>
+          <cite>이 자료의 한 가지 원칙</cite>
+        </div>
+        <p class="case-more" style="margin-top:22px"><a class="link quiet" href="/brand-website/">직접 만들기보다 맡기고 싶다면, 알렉스소프트의 브랜드 웹사이트 제작 <span>→</span></a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="shell">
+      <a class="mark" href="/"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#FAF8F4"/><path fill="#17191D" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/><circle cx="32" cy="40" r="3.7" fill="#4B78FF"/></svg>ALEXSOFT</a>
+      <nav aria-label="바닥글 메뉴"><a href="/diagnosis/">아키텍처 설계·구현</a><a href="/e-invoicing/">e-invoicing이란</a><a href="/healthcare/">의료정보 시스템</a><a href="/brand-website/">브랜드 웹사이트</a><a href="/work/">사례</a><a href="/en/" hreflang="en">English</a><a href="mailto:contact@alexsoft.co.kr">이메일</a></nav>
+      <div class="channels"><span class="mono">CHANNELS</span><a href="https://blog.naver.com/alex-soft" target="_blank" rel="noopener">Naver Blog ↗</a><a href="https://www.instagram.com/alexsoft.co.kr" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://github.com/alexsoft-hq" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+      <p class="biz" data-nosnippet>상호 알렉스소프트(ALEXSOFT) · 대표 이용민 · 사업자등록번호 212-64-01036 · 사업장 부산광역시 수영구 광안해변로15번길 10 · © <span data-year>2026</span> ALEXSOFT</p>
+    </div>
+  </footer>
+  <script src="/assets/ink.js?v=20260908-i-3" defer></script>
+</body>
+</html>

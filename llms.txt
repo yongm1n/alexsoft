@@ -32,6 +32,7 @@
 
 - [e-invoicing이란](https://alexsoft.co.kr/e-invoicing/): 해외 e-invoicing(한국의 전자세금계산서 + VAN 국세청 연동에 해당)의 구조 설명과, 필리핀 국세청 e-invoice 시스템을 개발 PL로 설계한 경험. 국가별 도입 대행이나 구축 패키지는 제공하지 않으며, 이 경험은 아키텍처 설계·구현 상담에서 활용된다.
 - [사례](https://alexsoft.co.kr/work/): 국가 e-invoice, 인증 클라우드 EMR, 브랜드 웹사이트의 설계·구현 사례와 직접 만든 제품(Cascade, Mokpyo)의 실제 화면.
+- [교육자료: 내 가게 홈페이지, 말로 만들어 공개하기](https://alexsoft.co.kr/learn/ai-business-website/): 처음 홈페이지를 만드는 소상공인을 위한 무료 자료. ChatGPT 앱(Codex)으로 홍보용 홈페이지를 만들고 GitHub·Cloudflare Pages로 공개·수정하는 과정을 74장 슬라이드(slides.html)와 블로그 글(blog.html)로 정리. 로그인 없이 열리며 입력 내용은 전송되지 않는다.
 - [네이버 블로그](https://blog.naver.com/alex-soft): 알렉스소프트의 프로젝트와 인사이트를 공유하는 공식 블로그.
 - [Instagram](https://www.instagram.com/alexsoft.co.kr/): 공식 인스타그램 채널.
 - [GitHub](https://github.com/alexsoft-hq): 알렉스소프트의 오픈소스 저장소(Cascade 등).

@@ -92,4 +92,18 @@
       <video:live>no</video:live>
     </video:video>
   </url>
+  <url>
+    <loc>https://alexsoft.co.kr/learn/ai-business-website/</loc>
+    <lastmod>2026-09-09</lastmod>
+    <image:image><image:loc>https://alexsoft.co.kr/learn/ai-business-website/cover-slides.webp</image:loc></image:image>
+    <image:image><image:loc>https://alexsoft.co.kr/learn/ai-business-website/cover-blog.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://alexsoft.co.kr/learn/ai-business-website/slides.html</loc>
+    <lastmod>2026-09-09</lastmod>
+  </url>
+  <url>
+    <loc>https://alexsoft.co.kr/learn/ai-business-website/blog.html</loc>
+    <lastmod>2026-09-09</lastmod>
+  </url>
 </urlset>

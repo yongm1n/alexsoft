@@ -38,6 +38,7 @@ python3 -m http.server 8080
 - `assets/logo-mark.svg`: AI 콘셉트를 16px까지 선명하게 작동하도록 재구성한 벡터 로고
 - `assets/grace-site.webp`: 더 그레이스 공개 사이트의 실제 화면
 - `assets/work/cascade-*.webp`, `assets/work/mokpyo-*.webp`: 자체 제품 화면(`/work/`와 홈 `#products`에서 사용)
+- `learn/ai-business-website/`: 교육자료 「내 가게 홈페이지, 말로 만들어 공개하기」. `slides.html`·`blog.html`은 `~/Projects/articles/posts/2026/005-ai-business-website/materials/`의 사본이며 원본이 바뀌면 두 파일을 그대로 다시 복사한다(이미지 내장, 상대 참조는 `blog.html → slides.html` 하나). `index.html`(안내), `cover-*.webp`·`og.jpg`(내장 삽화에서 추출)는 이 저장소에서 관리한다.
 
 대표 비주얼의 의미와 사용 규칙은 `BRAND-ASSETS.md`를 기준으로 합니다.
 
