@@ -38,8 +38,8 @@ python3 -m http.server 8080
 - `assets/logo-mark.svg`: AI 콘셉트를 16px까지 선명하게 작동하도록 재구성한 벡터 로고
 - `assets/grace-site.webp`: 더 그레이스 공개 사이트의 실제 화면
 - `assets/work/cascade-*.webp`, `assets/work/mokpyo-*.webp`: 자체 제품 화면(`/work/`와 홈 `#products`에서 사용)
-- `learn/ai-business-website/`: 교육자료 「내 가게 홈페이지, 말로 만들어 공개하기」(63장, GitHub Pages 흐름). `slides.html`은 `~/Projects/articles/posts/2026/005-ai-business-website/materials/`의 사본 그대로, `blog.html`은 사본에서 상단 브랜드 링크 한 곳만 `href="#top"` → `href="/insights/"`로 바꾼 것(목록으로 돌아가는 길). 원본이 바뀌면 두 파일을 다시 복사하고 blog.html의 그 한 곳만 다시 바꾼다. `index.html`(안내), `cover-*.webp`·`og.jpg`는 이 저장소에서 관리한다.
-- `insights/index.html`: 글 목록. 새 글은 `article.post` 블록을 복사해 목록 맨 앞에 넣고(최신이 위), JSON-LD `ItemList`·`sitemap.xml`·`llms.txt`·홈 `#insights` 카드를 함께 갱신한다. 글 본문은 `/learn/<slug>/` 같은 자체 폴더에 두고 목록에서 링크한다.
+- `insights/index.html`: 글 목록. 새 글은 `article.post` 블록을 복사해 목록 맨 앞에 넣고(최신이 위), JSON-LD `ItemList`·`sitemap.xml`·`llms.txt`를 함께 갱신한다. 홈 `#insights`는 글과 무관한 고정 소개라 글이 늘어도 고치지 않는다.
+- `insights/<slug>/`: 글 한 편. `index.html`(글)·`slides.html`(있으면)은 articles 원고의 공개 HTML에서 `python3 .private/import_insight.py <materials 폴더> <slug> --no 005 --published YYYY-MM-DD [--modified YYYY-MM-DD]`로 만든다. 스크립트는 원본 본문·스타일·스크립트·이미지를 그대로 두고 사이트 헤더·푸터·정식 주소·OG·JSON-LD·파비콘만 넣는다. 원본이 바뀌면 같은 명령을 다시 실행한다. 목록 카드 `cover.webp`와 공유 이미지 `og.jpg`(1200×630)는 같은 폴더에 직접 둔다. 첫 글: `insights/ai-business-website/`(articles `posts/2026/005-ai-business-website/materials/`).
 
 대표 비주얼의 의미와 사용 규칙은 `BRAND-ASSETS.md`를 기준으로 합니다.
 

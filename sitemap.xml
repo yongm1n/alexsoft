@@ -95,20 +95,15 @@
   <url>
     <loc>https://alexsoft.co.kr/insights/</loc>
     <lastmod>2026-09-11</lastmod>
-    <image:image><image:loc>https://alexsoft.co.kr/learn/ai-business-website/cover-slides.webp</image:loc></image:image>
+    <image:image><image:loc>https://alexsoft.co.kr/insights/ai-business-website/cover.webp</image:loc></image:image>
   </url>
   <url>
-    <loc>https://alexsoft.co.kr/learn/ai-business-website/</loc>
+    <loc>https://alexsoft.co.kr/insights/ai-business-website/</loc>
     <lastmod>2026-09-11</lastmod>
-    <image:image><image:loc>https://alexsoft.co.kr/learn/ai-business-website/cover-slides.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/learn/ai-business-website/cover-blog.webp</image:loc></image:image>
+    <image:image><image:loc>https://alexsoft.co.kr/insights/ai-business-website/og.jpg</image:loc></image:image>
   </url>
   <url>
-    <loc>https://alexsoft.co.kr/learn/ai-business-website/slides.html</loc>
-    <lastmod>2026-09-11</lastmod>
-  </url>
-  <url>
-    <loc>https://alexsoft.co.kr/learn/ai-business-website/blog.html</loc>
+    <loc>https://alexsoft.co.kr/insights/ai-business-website/slides.html</loc>
     <lastmod>2026-09-11</lastmod>
   </url>
 </urlset>

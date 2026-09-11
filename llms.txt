@@ -32,8 +32,8 @@
 
 - [e-invoicing이란](https://alexsoft.co.kr/e-invoicing/): 해외 e-invoicing(한국의 전자세금계산서 + VAN 국세청 연동에 해당)의 구조 설명과, 필리핀 국세청 e-invoice 시스템을 개발 PL로 설계한 경험. 국가별 도입 대행이나 구축 패키지는 제공하지 않으며, 이 경험은 아키텍처 설계·구현 상담에서 활용된다.
 - [사례](https://alexsoft.co.kr/work/): 국가 e-invoice, 인증 클라우드 EMR, 브랜드 웹사이트의 설계·구현 사례와 직접 만든 제품(Cascade, Mokpyo)의 실제 화면.
-- [인사이트](https://alexsoft.co.kr/insights/): 현장에서 본 것을 글과 교육자료로 남기는 목록. 첫 글 「사장님도 ChatGPT로 하루 만에 홍보용 웹사이트를 만들 수 있을까?」(2026-09-10, https://alexsoft.co.kr/learn/ai-business-website/blog.html).
-- [교육자료: 내 가게 홈페이지, 말로 만들어 공개하기](https://alexsoft.co.kr/learn/ai-business-website/): 처음 홈페이지를 만드는 소상공인을 위한 무료 자료. ChatGPT 데스크톱 앱(Codex)으로 홍보용 홈페이지를 만들고 내 GitHub 공개 저장소에서 GitHub Pages로 공개·수정하는 과정을 63장 슬라이드(slides.html, 기본 1–30·선택 31–63, 요청문 15개)와 블로그 글(blog.html)로 정리. 도메인·검색 등록은 선택. 로그인 없이 열리며 입력 내용은 전송되지 않는다.
+- [인사이트](https://alexsoft.co.kr/insights/): 현장에서 본 것을 글과 교육자료로 남기는 목록. 글은 https://alexsoft.co.kr/insights/<slug>/ 에 있다.
+- [사장님도 ChatGPT로 하루 만에 홍보용 웹사이트를 만들 수 있을까?](https://alexsoft.co.kr/insights/ai-business-website/): 2026-09-10 글(2026-09-11 수정). 처음 홈페이지를 만드는 소상공인이 ChatGPT 데스크톱 앱(Codex)으로 소개 홈페이지를 만들고 내 GitHub 공개 저장소에서 GitHub Pages로 공개·수정하는 과정. 도메인·검색 등록은 선택. 같은 과정을 따라 하는 슬라이드 63장(기본 1–30·선택 31–63, 요청문 15개): https://alexsoft.co.kr/insights/ai-business-website/slides.html
 - [네이버 블로그](https://blog.naver.com/alex-soft): 알렉스소프트의 프로젝트와 인사이트를 공유하는 공식 블로그.
 - [Instagram](https://www.instagram.com/alexsoft.co.kr/): 공식 인스타그램 채널.
 - [GitHub](https://github.com/alexsoft-hq): 알렉스소프트의 오픈소스 저장소(Cascade 등).
