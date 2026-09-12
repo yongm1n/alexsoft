@@ -4,7 +4,7 @@
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://alexsoft.co.kr/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <image:image><image:loc>https://alexsoft.co.kr/assets/brand/alexsoft-signature-hero.webp</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/assets/brand/capability-ai-workflow.webp</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/assets/brand/capability-product-engineering.webp</image:loc></image:image>
@@ -94,16 +94,42 @@
   </url>
   <url>
     <loc>https://alexsoft.co.kr/insights/</loc>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <image:image><image:loc>https://alexsoft.co.kr/insights/ai-business-website/cover.webp</image:loc></image:image>
+    <image:image><image:loc>https://alexsoft.co.kr/insights/when-spreadsheet-needs-system/images/image-01.png</image:loc></image:image>
+    <image:image><image:loc>https://alexsoft.co.kr/insights/automation-without-new-system/images/image-01.png</image:loc></image:image>
+    <image:image><image:loc>https://alexsoft.co.kr/insights/senior-developer-value/images/image-01.png</image:loc></image:image>
+    <image:image><image:loc>https://alexsoft.co.kr/insights/ai-result-quality/images/image-01.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://alexsoft.co.kr/insights/ai-business-website/</loc>
-    <lastmod>2026-09-11</lastmod>
-    <image:image><image:loc>https://alexsoft.co.kr/insights/ai-business-website/og.jpg</image:loc></image:image>
+    <lastmod>2026-09-12</lastmod>
   </url>
   <url>
     <loc>https://alexsoft.co.kr/insights/ai-business-website/slides.html</loc>
     <lastmod>2026-09-11</lastmod>
+  </url>
+  <url>
+    <loc>https://alexsoft.co.kr/insights/when-spreadsheet-needs-system/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <image:image><image:loc>https://alexsoft.co.kr/insights/when-spreadsheet-needs-system/images/image-01.png</image:loc></image:image>
+    <image:image><image:loc>https://alexsoft.co.kr/insights/when-spreadsheet-needs-system/images/image-02.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://alexsoft.co.kr/insights/automation-without-new-system/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <image:image><image:loc>https://alexsoft.co.kr/insights/automation-without-new-system/images/image-01.png</image:loc></image:image>
+    <image:image><image:loc>https://alexsoft.co.kr/insights/automation-without-new-system/images/image-02.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://alexsoft.co.kr/insights/senior-developer-value/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <image:image><image:loc>https://alexsoft.co.kr/insights/senior-developer-value/images/image-01.png</image:loc></image:image>
+    <image:image><image:loc>https://alexsoft.co.kr/insights/senior-developer-value/images/image-02.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://alexsoft.co.kr/insights/ai-result-quality/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <image:image><image:loc>https://alexsoft.co.kr/insights/ai-result-quality/images/image-01.png</image:loc></image:image>
   </url>
 </urlset>

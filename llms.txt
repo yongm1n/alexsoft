@@ -32,8 +32,12 @@
 
 - [e-invoicing이란](https://alexsoft.co.kr/e-invoicing/): 해외 e-invoicing(한국의 전자세금계산서 + VAN 국세청 연동에 해당)의 구조 설명과, 필리핀 국세청 e-invoice 시스템을 개발 PL로 설계한 경험. 국가별 도입 대행이나 구축 패키지는 제공하지 않으며, 이 경험은 아키텍처 설계·구현 상담에서 활용된다.
 - [사례](https://alexsoft.co.kr/work/): 국가 e-invoice, 인증 클라우드 EMR, 브랜드 웹사이트의 설계·구현 사례와 직접 만든 제품(Cascade, Mokpyo)의 실제 화면.
-- [인사이트](https://alexsoft.co.kr/insights/): 현장에서 본 것을 글과 교육자료로 남기는 목록. 글은 https://alexsoft.co.kr/insights/<slug>/ 에 있다.
-- [사장님도 ChatGPT로 하루 만에 홍보용 웹사이트를 만들 수 있을까?](https://alexsoft.co.kr/insights/ai-business-website/): 2026-09-10 글(2026-09-11 수정). 처음 홈페이지를 만드는 소상공인이 ChatGPT 데스크톱 앱(Codex)으로 소개 홈페이지를 만들고 내 GitHub 공개 저장소에서 GitHub Pages로 공개·수정하는 과정. 도메인·검색 등록은 선택. 같은 과정을 따라 하는 슬라이드 63장(기본 1–30·선택 31–63, 요청문 15개): https://alexsoft.co.kr/insights/ai-business-website/slides.html
+- [인사이트](https://alexsoft.co.kr/insights/): AI 활용, 개발자의 경험, 업무자동화와 시스템 도입에 관한 글과 교육자료를 모은 목록. 글은 https://alexsoft.co.kr/insights/<slug>/ 에 있다.
+- [ChatGPT로 하루 만에 홍보용 웹사이트 만들고 무료로 운영하기](https://alexsoft.co.kr/insights/ai-business-website/): 2026-09-10 글(2026-09-12 수정). 처음 홈페이지를 만드는 소상공인이 ChatGPT 데스크톱 앱(Codex)으로 소개 홈페이지를 만들고 내 GitHub 공개 저장소에서 GitHub Pages로 공개·수정하는 과정. 도메인·검색 등록은 선택. 같은 과정을 따라 하는 슬라이드 63장(기본 1–30·선택 31–63, 요청문 15개): https://alexsoft.co.kr/insights/ai-business-website/slides.html
+- [엑셀과 구글 스프레드시트로 관리하던 업무, 언제 별도 시스템이 필요할까?](https://alexsoft.co.kr/insights/when-spreadsheet-needs-system/): 2026-08-22 글. 엑셀과 구글 스프레드시트를 계속 사용할 때와 별도 업무 시스템으로 전환할 때를 구분하는 판단 기준을 설명한 글.
+- [업무자동화, 꼭 새로운 프로그램을 개발해야 할까?](https://alexsoft.co.kr/insights/automation-without-new-system/): 2026-08-08 글. 업무자동화에서는 새 프로그램부터 만들기보다 기존 도구를 유지하고 필요한 연결과 자동화부터 찾아야 한다는 글.
+- [AI 시대에는 왜 오히려 시니어 개발자의 가치가 커질까요?](https://alexsoft.co.kr/insights/senior-developer-value/): 2026-08-06 글. AI가 실행의 범위를 넓힐수록 경험을 바탕으로 무엇을 해야 하는지 판단하는 시니어의 역할이 중요해진다는 글.
+- [같은 AI를 쓰는데, 왜 결과물의 수준은 이렇게 다를까?](https://alexsoft.co.kr/insights/ai-result-quality/): 2026-08-05 글. 같은 AI를 사용해도 결과가 달라지는 이유를 업무 지시, 피드백, 지식과 경험의 차이에서 살펴본 글.
 - [네이버 블로그](https://blog.naver.com/alex-soft): 알렉스소프트의 프로젝트와 인사이트를 공유하는 공식 블로그.
 - [Instagram](https://www.instagram.com/alexsoft.co.kr/): 공식 인스타그램 채널.
 - [GitHub](https://github.com/alexsoft-hq): 알렉스소프트의 오픈소스 저장소(Cascade 등).
