@@ -94,12 +94,19 @@
   </url>
   <url>
     <loc>https://alexsoft.co.kr/insights/</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-09-15</lastmod>
+    <image:image><image:loc>https://alexsoft.co.kr/insights/cascade-change-impact/images/cascade-flow-from-screen-ko.png</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/insights/ai-business-website/cover.webp</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/insights/when-spreadsheet-needs-system/images/image-01.png</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/insights/automation-without-new-system/images/image-01.png</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/insights/senior-developer-value/images/image-01.png</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/insights/ai-result-quality/images/image-01.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://alexsoft.co.kr/insights/cascade-change-impact/</loc>
+    <lastmod>2026-09-15</lastmod>
+    <image:image><image:loc>https://alexsoft.co.kr/insights/cascade-change-impact/images/cascade-flow-from-screen-ko.png</image:loc></image:image>
+    <image:image><image:loc>https://alexsoft.co.kr/insights/cascade-change-impact/images/cascade-compare-report-ko-light.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://alexsoft.co.kr/insights/ai-business-website/</loc>
