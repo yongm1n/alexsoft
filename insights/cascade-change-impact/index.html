@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#FAF8F4">
-  <meta name="description" content="ALEXSOFT의 오픈소스 Cascade로 DB 컬럼·SQL·API·화면의 변경 영향을 살펴봅니다. 개발 중인 비교 보고서의 검증 사례와 분석 품질, 지원 범위, 코드 리뷰 연계의 발전 방향을 소개합니다.">
+  <meta name="description" content="ALEXSOFT의 오픈소스 Cascade로 DB 컬럼·SQL·API·화면의 변경 영향을 살펴봅니다. 비교 보고서의 실제 검증 사례와 분석 품질, 지원 범위, 코드 리뷰 연계의 발전 방향을 소개합니다.">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta name="author" content="알렉스소프트(ALEXSOFT)">
   <meta property="og:type" content="article">
@@ -13,7 +13,7 @@
   <meta property="og:site_name" content="알렉스소프트(ALEXSOFT)">
   <meta property="og:url" content="https://alexsoft.co.kr/insights/cascade-change-impact/">
   <meta property="og:title" content="DB부터 화면까지, 코드 변경의 영향을 따라가는 Cascade | 알렉스소프트(ALEXSOFT)">
-  <meta property="og:description" content="ALEXSOFT의 오픈소스 Cascade로 DB 컬럼·SQL·API·화면의 변경 영향을 살펴봅니다. 개발 중인 비교 보고서의 검증 사례와 분석 품질, 지원 범위, 코드 리뷰 연계의 발전 방향을 소개합니다.">
+  <meta property="og:description" content="ALEXSOFT의 오픈소스 Cascade로 DB 컬럼·SQL·API·화면의 변경 영향을 살펴봅니다. 비교 보고서의 실제 검증 사례와 분석 품질, 지원 범위, 코드 리뷰 연계의 발전 방향을 소개합니다.">
   <meta property="og:image" content="https://alexsoft.co.kr/insights/cascade-change-impact/images/cascade-flow-from-screen-ko.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1440">
@@ -23,7 +23,7 @@
   <meta property="article:modified_time" content="2026-09-15">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="DB부터 화면까지, 코드 변경의 영향을 따라가는 Cascade | 알렉스소프트(ALEXSOFT)">
-  <meta name="twitter:description" content="ALEXSOFT의 오픈소스 Cascade로 DB 컬럼·SQL·API·화면의 변경 영향을 살펴봅니다. 개발 중인 비교 보고서의 검증 사례와 분석 품질, 지원 범위, 코드 리뷰 연계의 발전 방향을 소개합니다.">
+  <meta name="twitter:description" content="ALEXSOFT의 오픈소스 Cascade로 DB 컬럼·SQL·API·화면의 변경 영향을 살펴봅니다. 비교 보고서의 실제 검증 사례와 분석 품질, 지원 범위, 코드 리뷰 연계의 발전 방향을 소개합니다.">
   <meta name="twitter:image" content="https://alexsoft.co.kr/insights/cascade-change-impact/images/cascade-flow-from-screen-ko.png">
   <meta name="twitter:image:alt" content="공개 오픈소스 litemall의 주문 화면에서 프런트엔드 함수, 서버 API, 서비스와 SQL 매퍼로 이어지는 Cascade 흐름 화면">
   <link rel="canonical" href="https://alexsoft.co.kr/insights/cascade-change-impact/">
@@ -75,7 +75,7 @@
       "@type": "BlogPosting",
       "@id": "https://alexsoft.co.kr/insights/cascade-change-impact/#post",
       "headline": "DB부터 화면까지, 코드 변경의 영향을 따라가는 Cascade",
-      "description": "ALEXSOFT의 오픈소스 Cascade로 DB 컬럼·SQL·API·화면의 변경 영향을 살펴봅니다. 개발 중인 비교 보고서의 검증 사례와 분석 품질, 지원 범위, 코드 리뷰 연계의 발전 방향을 소개합니다.",
+      "description": "ALEXSOFT의 오픈소스 Cascade로 DB 컬럼·SQL·API·화면의 변경 영향을 살펴봅니다. 비교 보고서의 실제 검증 사례와 분석 품질, 지원 범위, 코드 리뷰 연계의 발전 방향을 소개합니다.",
       "url": "https://alexsoft.co.kr/insights/cascade-change-impact/",
       "mainEntityOfPage": {
         "@id": "https://alexsoft.co.kr/insights/cascade-change-impact/#webpage"
@@ -189,7 +189,7 @@ footer.site .biz{width:100%;font-family:var(--mono);font-size:11px;line-height:1
       <section class="insight-hero" aria-labelledby="article-title">
         <p class="insight-eyebrow">ALEXSOFT INSIGHTS</p>
         <h1 id="article-title">DB부터 화면까지, 코드 변경의 영향을 따라가는 Cascade</h1>
-        <p class="insight-dek">코드를 고친 곳은 알지만 어디까지 확인해야 할지는 쉽게 보이지 않습니다. Cascade를 만들며 DB 컬럼부터 화면까지 관계를 따라가고, 변경 영향의 근거와 한계를 함께 읽을 수 있도록 다듬고 있습니다.</p>
+        <p class="insight-dek">DB 컬럼에서 SQL과 서버 API, 화면까지 이어지는 관계를 따라가며 코드 변경을 검토합니다. Cascade의 비교 보고서를 다듬은 경험과 앞으로의 발전 방향을 정리했습니다.</p>
         <div class="insight-meta"><span>글 · <a href="/#about" rel="author">알렉스소프트(ALEXSOFT)</a> · 소프트웨어 개발</span><span>게시 <time datetime="2026-09-15">2026-09-15</time></span><span>수정 <time datetime="2026-09-15">2026-09-15</time></span></div>
         <figure class="insight-hero-image">
   <a href="images/cascade-flow-from-screen-ko.png" target="_blank" rel="noopener" aria-label="공개 오픈소스 litemall의 주문 화면에서 프런트엔드 함수, 서버 API, 서비스와 SQL 매퍼로 이어지는 Cascade 흐름 화면 — 원본 크기로 보기 (새 창)"><img src="images/cascade-flow-from-screen-ko.png" alt="공개 오픈소스 litemall의 주문 화면에서 프런트엔드 함수, 서버 API, 서비스와 SQL 매퍼로 이어지는 Cascade 흐름 화면" width="1440" height="900" loading="eager" fetchpriority="high" decoding="async"></a>
@@ -201,10 +201,10 @@ footer.site .biz{width:100%;font-family:var(--mono);font-size:11px;line-height:1
       <div class="insight-layout">
         <nav class="insight-contents" aria-label="글 목차">
           <p>이 글에서</p>
-          <a href="#evidence-for-connections">연결된 선에도 근거가 필요합니다</a>
+          <a href="#evidence-for-connections">연결 경로와 근거를 함께 읽습니다</a>
           <a href="#change-review-report">변경 목록을 검토할 수 있는 보고서로</a>
-          <a href="#reviewing-the-report">그럴듯한 보고서도 다시 읽어야 했습니다</a>
-          <a href="#future-directions">앞으로는 실제 검토에서 만나는 빈틈을 줄여가려 합니다</a>
+          <a href="#reviewing-the-report">원본을 대조하며 비교 결과를 다듬었습니다</a>
+          <a href="#future-directions">Cascade를 이렇게 발전시켜 가려 합니다</a>
           <a href="#related-title">함께 읽을 글</a>
         </nav>
         <div class="insight-reading">
@@ -213,35 +213,33 @@ footer.site .biz{width:100%;font-family:var(--mono);font-size:11px;line-height:1
 <p>이 값을 읽는 코드는 어디에 있고, 어느 화면까지 다시 확인해야 할까요?</p>
 <p>컬럼 이름을 검색하면 데이터를 읽고 쓰는 SQL은 찾을 수 있습니다. 그 SQL을 부르는 서버 코드를 따라가고, 서버에 요청을 보내는 화면도 찾아야 합니다. 코드를 고친 사람에게는 익숙한 연결이라도, 검토하는 사람이 같은 흐름을 이해하려면 다시 소스를 열어봐야 합니다. 변경된 파일 목록만으로는 이 범위가 잘 드러나지 않습니다.</p>
 <p>제가 만들고 있는 Cascade는 이 연결을 살펴보는 도구입니다. DB 컬럼에서 SQL과 서버 코드를 거쳐 화면까지, 반대로 화면에서 데이터가 있는 곳까지 따라갈 수 있도록 소스의 관계를 모읍니다. 그 사이에는 화면이 서버에 작업을 요청하는 창구인 API가 있습니다. ALEXSOFT의 <a href="https://github.com/alexsoft-hq/Cascade">공개 오픈소스 프로젝트</a>로 개발하고 있습니다.</p>
-<h2 id="evidence-for-connections">연결된 선에도 근거가 필요합니다</h2>
+<h2 id="evidence-for-connections">연결 경로와 근거를 함께 읽습니다</h2>
 <p>프로그램을 구성하는 요소와 그 사이의 관계를 모으면 하나의 지도가 됩니다. Cascade에서는 이것을 변경 영향 지식 그래프라고 부릅니다. 이름은 조금 거창하지만, 알고 싶은 것은 구체적입니다. 이 컬럼을 읽는 SQL은 무엇이고, 그 SQL을 실행하는 기능과 사용자 화면은 어디인지입니다.</p>
 <p>현재는 Java Spring과 MyBatis 계열의 서버, DB 테이블 정의, JavaScript·TypeScript로 작성한 웹 코드와 Vue·React의 화면 경로 등을 읽습니다. 소스를 실행하지 않고 연결을 찾는 정적 분석이 바탕입니다.</p>
-<p>여기서 선이 이어져 있다는 사실만으로는 부족합니다. 소스에 직접 선언된 관계도 있고, 실행할 수 있는 여러 후보 중 하나인 관계도 있습니다. 둘을 똑같이 그리면 화면을 보는 사람은 모두 확인된 호출이라고 받아들이기 쉽습니다.</p>
-<p>그래서 Cascade는 연결마다 근거 등급을 붙입니다. 소스에서 확인한 것인지, 가능한 후보인지, 실행 기록에서만 관측한 것인지 구분하고, 분석하지 못한 범위도 함께 알립니다. Kotlin 소스나 Angular·Svelte 라우터, 실행할 때 조립되는 일부 호출 관계처럼 아직 읽지 못하는 부분이 있습니다.</p>
-<p>이 지도에서 어떤 화면까지 길이 이어진다는 것은 그곳을 확인할 이유가 있다는 뜻입니다. 운영 중 그 경로가 반드시 실행된다거나, 이번 수정으로 장애가 생긴다는 판정은 아닙니다. 반대로 선이 없다고 해서 영향도 없다고 단정할 수는 없습니다. 분석이 어디까지 읽었는지부터 봐야 합니다.</p>
+<p>같은 선으로 보이는 연결도 근거는 서로 다릅니다. 소스에서 직접 확인한 관계인지, 실행할 수 있는 후보인지, 실행 기록에서 관측한 관계인지에 따라 읽는 방식이 달라집니다. Cascade는 연결마다 이 근거를 등급으로 표시합니다.</p>
+<p>검토자는 화면에 이른 경로를 따라가며 어떤 코드를 확인해야 하는지 살펴볼 수 있습니다. 개발자가 찾아본 연결을 검토자도 같은 화면에서 이어서 읽을 수 있다는 점에 의미가 있습니다.</p>
 <h2 id="change-review-report">변경 목록을 검토할 수 있는 보고서로</h2>
 <p>최근에는 변경 전후를 비교하는 부분을 다듬었습니다. 기존에도 두 시점의 분석 결과를 비교할 수 있었지만, 같은 이름을 가진 요소 안에서 내용이 달라진 경우까지 더 잘 읽을 필요가 있었습니다. 컬럼 이름은 그대로인데 타입이 달라지거나, 같은 서버 메서드(처리 함수)에 트랜잭션 표시가 붙는 경우입니다. 트랜잭션은 여러 데이터 작업을 한 묶음으로 처리하는 단위를 말합니다.</p>
-<p>검증용으로 만든 작은 주문 예제에서 DB 정의의 <code>VARCHAR(16)</code>을 <code>VARCHAR(64)</code>로 바꾸고, 서버 메서드에 트랜잭션 표시를 추가하고, 화면 이름도 바꿨습니다. API 하나를 추가하고 다른 하나를 삭제하는 변경도 함께 넣었습니다. 실제 고객 시스템이 아닌 Spring·MyBatis·Vue를 사용한 합성 예제입니다.</p>
-<p>그 비교에서는 속성이 바뀐 요소 세 개와 관련 API 세 개, 화면 한 개가 나왔습니다. 이 숫자는 예제에 넣은 여러 변경을 함께 분석한 결과입니다. 컬럼 길이 하나만 바꿨을 때의 영향 범위로 읽으면 안 됩니다.</p>
-<p>보고서에서는 컬럼 타입의 이전 값과 새 값을 나란히 읽을 수 있습니다. 내용이 바뀐 것과 소스의 파일·줄 위치만 이동한 것도 구분합니다. 검토자가 확인할 곳을 찾을 때, 단순한 위치 이동 때문에 영향 범위가 늘어난 것처럼 보이지 않게 하기 위해서입니다.</p>
-<p>이 비교에 나타나는 것은 Cascade가 기록한 관계와 속성의 변화입니다. 소스 본문에 생긴 모든 변화가 이 보고서에 잡히는 것은 아닙니다.</p>
+<p>검증용으로 만든 작은 주문 예제에서 DB 정의의 <code>VARCHAR(16)</code>을 <code>VARCHAR(64)</code>로 바꾸고, 서버 메서드에 트랜잭션 표시를 추가하고, 화면 이름도 바꿨습니다. API 하나를 추가하고 다른 하나를 삭제하는 변경도 함께 넣었습니다. Spring·MyBatis·Vue로 구성한 합성 주문 예제입니다.</p>
+<p>그 비교에서는 속성이 바뀐 요소 세 개와 관련 API 세 개, 화면 한 개가 나왔습니다. 이 숫자는 예제에 넣은 여러 변경을 함께 분석한 결과입니다.</p>
+<p>보고서에서는 컬럼 타입의 이전 값과 새 값을 나란히 읽을 수 있습니다. 내용이 바뀐 것과 소스의 파일·줄 위치만 이동한 것도 구분합니다. 검토자는 실제 값의 변화부터 읽고, 위치 이동은 따로 확인할 수 있습니다.</p>
 <figure>
-  <a href="images/cascade-compare-report-ko-light.png" target="_blank" rel="noopener" aria-label="합성 주문 예제의 변경 보고서에서 비교 기준, 분석 조건과 빠진 범위, 변경 요약, 관련 API를 보여 주는 화면 — 원본 크기로 보기 (새 창)"><img src="images/cascade-compare-report-ko-light.png" alt="합성 주문 예제의 변경 보고서에서 비교 기준, 분석 조건과 빠진 범위, 변경 요약, 관련 API를 보여 주는 화면" width="1440" height="1050" loading="lazy" decoding="async"></a>
-  <figcaption><em>개발 중인 버전에서 검증한 합성 주문 예제입니다. 변경 개수 앞에 비교 기준과 분석 조건, 이번 분석에 포함되지 않은 범위를 배치했습니다. 보고서 개선은 아직 배포 전입니다.</em></figcaption>
+  <a href="images/cascade-compare-report-ko-light.png" target="_blank" rel="noopener" aria-label="합성 주문 예제의 변경 보고서에서 비교 기준과 분석 조건, 변경 요약과 관련 API를 보여 주는 화면 — 원본 크기로 보기 (새 창)"><img src="images/cascade-compare-report-ko-light.png" alt="합성 주문 예제의 변경 보고서에서 비교 기준과 분석 조건, 변경 요약과 관련 API를 보여 주는 화면" width="1440" height="1050" loading="lazy" decoding="async"></a>
+  <figcaption><em>여러 변경을 함께 넣은 합성 주문 예제의 Compare 보고서입니다. 비교 기준과 분석 조건을 읽고, 변경 요약에서 관련 API로 이어갈 수 있습니다.</em></figcaption>
   <div class="insight-image-links"><a href="images/cascade-compare-report-ko-light.png" target="_blank" rel="noopener">원본 크기로 보기 ↗</a></div>
 </figure>
-<p>이번에 다듬은 Compare 화면은 위에서부터 한 편의 보고서로 읽도록 구성했습니다. 어느 시점끼리 비교했는지, 두 시점을 같은 조건으로 분석했는지, 빠지거나 일부만 표시된 내용이 있는지부터 보여 줍니다. 그다음 변경 요약과 관련 API·화면, 이전 값과 새 값이 이어집니다. 현재 빌드에 남아 있는 항목은 Flow 화면으로 열어 연결을 더 따라갈 수 있습니다.</p>
-<p>보고서는 Markdown 파일로 저장하거나 인쇄할 수도 있습니다. 검토 내용을 공유할 때도 분석 조건과 한계가 함께 남도록 했습니다. 여기서 소개하는 보고서 개선은 개발 중인 버전에서 로컬 검증을 마친 내용으로, 글을 쓰는 시점에는 아직 배포되지 않았습니다.</p>
-<h2 id="reviewing-the-report">그럴듯한 보고서도 다시 읽어야 했습니다</h2>
-<p>이번 작업에서는 Codex와 Claude가 분석 엔진과 보고서 화면을 나누어 작업하고, 실제 응답과 화면을 교차 검토했습니다. 테스트를 통과한 뒤에도 예제를 직접 읽는 과정은 필요했습니다.</p>
+<p>이번에 다듬은 Compare 화면은 위에서부터 한 편의 보고서로 읽도록 구성했습니다. 어느 시점끼리 비교했는지, 두 시점을 같은 조건으로 분석했는지부터 보여 줍니다. 그다음 변경 요약과 관련 API·화면, 이전 값과 새 값이 이어집니다. 현재 빌드에 남아 있는 항목은 Flow 화면으로 열어 연결을 더 따라갈 수 있습니다.</p>
+<p>보고서는 Markdown 파일로 저장하거나 인쇄할 수도 있습니다. 비교 기준과 분석 조건, 변경 내역이 함께 남아 다른 사람이 같은 근거로 검토를 이어갈 수 있습니다.</p>
+<h2 id="reviewing-the-report">원본을 대조하며 비교 결과를 다듬었습니다</h2>
+<p>이번 작업에서는 Codex와 Claude가 분석 엔진과 보고서 화면을 나누어 작업하고, 실제 응답과 화면을 교차 검토했습니다. 테스트를 통과한 뒤에는 합성 예제의 원본 기록과 보고서가 맞는지 하나씩 대조했습니다.</p>
 <p>처음 보고서에는 실제로 바뀌지 않은 연결 근거 일곱 건이 변경으로 표시됐습니다. 원본 기록에는 차이가 없었는데, 조회를 위해 한쪽 데이터에 채운 빈 값이 비교에 섞여 들어간 것이 원인이었습니다. 두 시점의 원본 기록을 같은 기준으로 비교하도록 바로잡은 뒤, 같은 예제에서 불필요한 일곱 건이 사라지는지 확인했습니다.</p>
-<p>변경을 찾는 도구가 불필요한 변경까지 많이 보여 주면 검토자는 그 차이를 해명하는 데 시간을 쓰게 됩니다. 놓친 연결을 찾는 일과 함께, 달라지지 않은 것을 달라졌다고 말하지 않는 일도 필요합니다. 이번 보고서를 다듬으며 확인한 구체적인 과제였습니다.</p>
-<h2 id="future-directions">앞으로는 실제 검토에서 만나는 빈틈을 줄여가려 합니다</h2>
-<p>우선은 분석 품질을 더 다듬으려 합니다. 실제 프로젝트에서 발견한 누락과 잘못된 연결을 다시 실행할 수 있는 검증 사례로 남기고, 이미 운영하는 회귀 검사와 공개 저장소 기반 측정을 보강할 생각입니다. 지원하는 기능의 이름이 늘어나는 것만큼, 어떤 조건에서 결과를 믿고 읽을 수 있는지 드러나는 것이 필요합니다.</p>
-<p>분석 범위도 실제 프로젝트가 요구하는 순서로 넓혀가려 합니다. 지금의 Java·DB·웹 연결을 바탕으로 프레임워크별 공백과 동적으로 결정되는 관계를 보완하는 방향입니다. 브라우저 요청 기록인 HAR과 서버의 실행 경로를 남기는 OpenTelemetry 기록을 읽는 기능은 이미 있습니다. 앞으로는 이 실행 기록과 정적 분석 결과를 더 잘 대조해, 관측한 경로와 여전히 확인하지 못한 후보를 이해하기 쉽게 보여 주고 싶습니다.</p>
-<p>개발자의 평소 변경 검토에도 더 자연스럽게 이어지면 좋겠습니다. 기존 명령줄 도구와 변경 비교, 내보내기를 바탕으로 코드 리뷰와 자동 검사 과정에서 보고서를 쉽게 읽고, 먼저 확인할 지점과 테스트할 범위를 고르는 데 도움을 주려 합니다. 보고서가 분석하지 못한 부분은 그 과정에서도 남아 있어야 합니다. 배포가 안전하다는 보증이나 테스트가 빠짐없다는 판정을 목표로 하지는 않습니다.</p>
-<p>사람과 AI가 같은 근거를 읽게 하는 것도 이어갈 방향입니다. Cascade에는 이미 AI 에이전트가 분석 결과를 요청하는 연결 방식인 MCP가 있습니다. 개발자가 화면에서 읽는 연결 경로와 한계를 에이전트도 같은 기준으로 사용하고, 왜 그 부분을 검토해야 하는지 설명할 수 있도록 다듬으려 합니다. 아직 출시 일정이 정해진 계획은 아니며, 실제 사용에서 드러나는 문제를 보면서 순서를 조정할 생각입니다.</p>
-<p>코드를 검토하다 보면 “여기까지 확인했습니다”라고 설명해야 할 때가 있습니다. 그때 어떤 연결을 따라 확인했고 어느 부분은 더 살펴봐야 하는지 함께 보여 줄 수 있으면 좋겠습니다. Cascade를 그런 설명에 쓸 수 있는 도구로 계속 만들어가려 합니다.</p>
+<p>수정 후에는 명령줄과 AI 연결 도구, 화면이 같은 비교 결과를 보여 주는지도 확인했습니다. 어느 쪽에서 검토를 시작하더라도 같은 변경을 읽을 수 있도록 하는 작업이었습니다.</p>
+<h2 id="future-directions">Cascade를 이렇게 발전시켜 가려 합니다</h2>
+<p>우선은 분석 품질을 더 다듬으려 합니다. 실제 프로젝트에서 만난 코드와 연결 관계를 재현 가능한 검증 사례로 남기고, 이미 운영하는 회귀 검사와 공개 저장소 기반 측정을 보강할 생각입니다. 분석 방식을 고쳤을 때 기존에 읽던 연결도 계속 잘 읽는지 확인하는 데 이런 사례들이 쓰입니다.</p>
+<p>분석 범위도 실제 프로젝트가 요구하는 순서로 넓혀가려 합니다. 지금의 Java·DB·웹 연결을 바탕으로 프레임워크별 코드 구조와 동적으로 결정되는 관계를 더 다양하게 읽는 방향입니다. 브라우저 요청 기록인 HAR과 서버의 실행 경로를 남기는 OpenTelemetry 기록을 읽는 기능은 이미 있습니다. 앞으로는 이 실행 기록과 정적 분석 결과를 더 잘 대조해, 소스에서 찾은 후보 경로와 실행 중 관측된 경로를 나란히 읽을 수 있도록 다듬고 싶습니다.</p>
+<p>개발자의 평소 변경 검토에도 더 자연스럽게 이어지면 좋겠습니다. 기존 명령줄 도구와 변경 비교, 내보내기를 바탕으로 코드 리뷰와 자동 검사 과정에서 보고서를 쉽게 읽고, 먼저 확인할 지점과 테스트할 범위를 고르는 데 도움을 주려 합니다.</p>
+<p>사람과 AI가 같은 근거를 읽게 하는 것도 이어갈 방향입니다. Cascade에는 이미 AI 에이전트가 분석 결과를 요청하는 연결 방식인 MCP가 있습니다. 개발자가 화면에서 읽는 연결 경로와 근거 등급을 에이전트도 같은 기준으로 사용하고, 왜 그 부분을 검토해야 하는지 설명할 수 있도록 다듬으려 합니다. 실제 사용에서 자주 만나는 검토 과제를 기준으로 개발 순서도 잡아가겠습니다.</p>
+<p>코드를 검토하다 보면 “여기까지 확인했습니다”라고 설명해야 할 때가 있습니다. 어떤 변경을 확인했고, 어떤 연결을 따라 검토했는지 함께 보여 주고 싶습니다. Cascade를 그런 설명에 쓸 수 있는 도구로 계속 만들어가려 합니다.</p>
           </div>
           <aside class="insight-related" aria-labelledby="related-title">
             <h2 id="related-title">함께 읽을 글</h2>

@@ -51,7 +51,7 @@ python3 -m http.server 8080
 | 005-ai-business-website | `/insights/ai-business-website/` |
 | 006-cascade-change-impact | `/insights/cascade-change-impact/` |
 
-006 Cascade 글은 articles의 `posts/2026/006-cascade-change-impact/article.md`가 승인 원문입니다. 전체 본문·발전 방향·캡션을 보존하며 001–004와 같은 `article.css`를 사용합니다. 첫 PNG와 캡션은 대표 이미지로 한 번 표시하고, 두 PNG 모두 원본 비율과 바이트를 유지하며 원본 크기로 여는 링크를 제공합니다. `summary`는 리드·목록 카드, `description`은 검색 메타·ItemList에 반영합니다. 2026-09-15 Insights가 첫 게시처이므로 네이버 원문 링크나 `isBasedOn`은 넣지 않습니다. 비교 보고서의 합성 예제·개발 중·배포 전 설명은 제품 배포 증거와 원문 승인이 있을 때만 바꿉니다.
+006 Cascade 글은 articles의 `posts/2026/006-cascade-change-impact/article.md`가 승인 원문입니다. 전체 본문·발전 방향·캡션을 보존하며 001–004와 같은 `article.css`를 사용합니다. 첫 PNG와 캡션은 대표 이미지로 한 번 표시하고, 두 PNG 모두 원본 비율과 바이트를 유지하며 원본 크기로 여는 링크를 제공합니다. `summary`는 리드·목록 카드, `description`은 검색 메타·ItemList에 반영합니다. 2026-09-15 Insights가 첫 게시처이므로 네이버 원문 링크나 `isBasedOn`은 넣지 않습니다. 제품 기능과 배포에 관한 설명은 승인 개정본을 기준으로 합니다. 2026-09-15 개정본은 [Cascade 0.8.11](https://github.com/alexsoft-hq/Cascade/releases/tag/v0.8.11)의 npm 공개 및 배포 패키지 설치·검증 완료를 확인한 뒤 반영했습니다. 합성 주문 예제와 여러 변경을 함께 분석했다는 출처 설명은 유지합니다.
 
 글을 수정하거나 추가하면 목록·개별 글의 제목과 날짜·JSON-LD·`sitemap.xml`·`llms.txt`를 함께 맞춘다. 목록은 원래 게시일 기준 최신순이며, 001–004는 원래 블로그 게시일, 005는 기존 사이트 공개일(2026-09-10)을 유지한다. 사이트 수록·편집일은 `dateModified`로 구분한다. `/blog/`와 푸터의 Naver Blog는 네이버 채널 연결을 유지한다.
 
