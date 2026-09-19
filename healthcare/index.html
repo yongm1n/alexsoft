@@ -61,7 +61,7 @@
         "@id": "https://alexsoft.co.kr/healthcare/#service",
         "name": "의료정보 시스템 설계·연동",
         "serviceType": "EMR·병원 시스템 연동 및 의료정보 아키텍처",
-        "description": "기존 EMR과 병원 시스템 연동, HL7 FHIR, 인증과 개인정보 대응을 함께 설계하고 구현하는 서비스",
+        "description": "기존 EMR과 병원 시스템 연동, HL7 FHIR, 인증과 개인정보 대응을 함께 설계하고 개발하는 서비스",
         "provider": {"@id": "https://alexsoft.co.kr/#organization"},
         "areaServed": {"@type": "Country", "name": "대한민국"},
         "audience": {"@type": "BusinessAudience", "audienceType": "의료 SaaS·디지털헬스 팀, 의료기관 IT 조직과 EMR 사업자"},
@@ -78,7 +78,7 @@
           {"@type": "Question", "name": "어떤 EMR·병원 시스템 연동을 다루나요?", "acceptedAnswer": {"@type": "Answer", "text": "진료·예약·접수·검사·청구 등 필요한 업무 흐름과 기존 시스템이 제공하는 인터페이스를 먼저 확인합니다. 가능한 연동 범위와 데이터를 정한 뒤 API, 메시지와 운영 절차를 설계합니다."}},
           {"@type": "Question", "name": "EMR 인증 대응도 함께 볼 수 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "인증 항목이 데이터 구조, 기능 경계와 운영 절차에 미치는 영향을 아키텍처 단계에서 함께 검토합니다. 인증 취득 자체를 보증하지 않으며, 적용 기준과 심사 범위는 착수 시 최신 자료로 확인합니다."}},
           {"@type": "Question", "name": "특정 EMR 벤더에 맞춘 제안인가요?", "acceptedAnswer": {"@type": "Answer", "text": "아닙니다. 특정 벤더의 제품 판매를 전제로 하지 않습니다. 현재 사용 중인 시스템의 실제 인터페이스와 제약을 확인하고, 표준과 교체 가능성을 함께 고려해 벤더 중립적으로 설계합니다."}},
-          {"@type": "Question", "name": "EMR을 직접 만들어 주나요?", "acceptedAnswer": {"@type": "Answer", "text": "아닙니다. EMR 제품 전체를 새로 만드는 일은 맡지 않습니다. 기존 시스템과의 연동, 의료정보 아키텍처, 인증 대응 설계와 필요한 구현을 맡습니다."}},
+          {"@type": "Question", "name": "EMR을 직접 만들어 주나요?", "acceptedAnswer": {"@type": "Answer", "text": "아닙니다. EMR 제품 전체를 새로 만드는 일은 맡지 않습니다. 기존 시스템과의 연동, 의료정보 아키텍처, 인증 대응 설계와 필요한 개발을 맡습니다."}},
           {"@type": "Question", "name": "환자·의료기관 자료는 어떻게 다루나요?", "acceptedAnswer": {"@type": "Answer", "text": "판단에 필요한 최소 범위만 요청하고, 합의한 전달 수단과 보관 기간을 따릅니다. 초기 검토는 비식별 구조와 샘플 데이터로 진행하며 실제 개인정보가 필요하면 접근·처리·폐기 기준을 먼저 정합니다."}}
         ]
       },
@@ -177,7 +177,7 @@
             <div class="nib" aria-hidden="true"><svg viewBox="0 0 64 64"><path fill="#2456E4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/></svg><span>하는 일</span></div>
             <h2 id="scope-title">연동과 표준, 인증을 한 구조로.</h2>
           </div>
-          <p>요건을 목록으로 남기는 데서 끝내지 않습니다. 실제 시스템 경계와 데이터 흐름으로 바꾸고, 합의한 범위는 직접 구현합니다.</p>
+          <p>요건을 목록으로 남기는 데서 끝내지 않습니다. 실제 시스템 경계와 데이터 흐름으로 바꾸고, 합의한 범위는 직접 개발합니다.</p>
         </div>
 
         <div class="ink" data-ink>
@@ -233,7 +233,7 @@
         </div>
         <dl class="facts wide">
           <div><dt>CLOUD EMR</dt><dd>EMR 인증 의원급 최초 클라우드 제품<small>2022–2026년, 국내 대형 ERP 기업의 의료 사업에서 만들었습니다.</small></dd></div>
-          <div><dt>LEADERSHIP</dt><dd>개발 리더 → 2023년부터 개발·기획설계 총괄<small>구현과 제품 의사결정을 함께 경험했습니다.</small></dd></div>
+          <div><dt>LEADERSHIP</dt><dd>개발 리더 → 2023년부터 개발·기획설계 총괄<small>직접 만드는 일과 제품 의사결정을 함께 경험했습니다.</small></dd></div>
           <div><dt>HIS</dt><dd>병원정보시스템 배경<small>진료·원무·청구와 주변 시스템의 연결을 이해합니다.</small></dd></div>
         </dl>
         <p class="case-more"><a class="link" href="../work/#cloud-emr">인증 클라우드 EMR 사례 보기 <span>→</span></a></p>
@@ -245,15 +245,15 @@
         <div class="head">
           <div>
             <div class="nib" aria-hidden="true"><svg viewBox="0 0 64 64"><path fill="#2456E4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/></svg><span>진행 방식</span></div>
-            <h2 id="process-title">말로 판단한 뒤, 문서와 구현으로.</h2>
+            <h2 id="process-title">말로 판단한 뒤, 문서와 개발로.</h2>
           </div>
-          <p>상황에 맞는 단계에서 시작하고, 앞 단계의 판단을 다음 단계가 그대로 사용합니다. 자세한 범위는 <a class="inline" href="../diagnosis/#options">아키텍처 설계·구현 진행 방식</a>에서 확인할 수 있습니다.</p>
+          <p>상황에 맞는 단계에서 시작하고, 앞 단계의 판단을 다음 단계가 그대로 사용합니다. 자세한 범위는 <a class="inline" href="../diagnosis/#options">아키텍처 설계·개발 진행 방식</a>에서 확인할 수 있습니다.</p>
         </div>
         <div class="steps cols-3">
           <div data-reveal><span class="mono">20분 · 무료</span><h3>적합성 확인</h3><p>서로 맞는 일인지 판단합니다. 분석 문서·설계안은 제공하지 않습니다.</p><small>20분</small></div>
           <div data-reveal><span class="mono">반나절–1일</span><h3>아키텍처 진단 세션</h3><p>현 구조의 리스크와 결정할 지점을 찾습니다.</p><small>반나절–1일</small></div>
           <div data-reveal><span class="mono">2–6주</span><h3>설계·기술 실사</h3><p>목표 구조와 개발팀이 사용할 기준을 문서로 확정합니다.</p><small>2–6주</small></div>
-          <div data-reveal><span class="mono">마일스톤</span><h3>설계 기반 구현</h3><p>연동·백오피스·내부 시스템 규모를 직접 구현합니다.</p><small>범위별</small></div>
+          <div data-reveal><span class="mono">마일스톤</span><h3>설계 기반 개발</h3><p>연동·백오피스·내부 시스템을 직접 개발합니다.</p><small>범위별</small></div>
           <div data-reveal><span class="mono">월 단위</span><h3>월 자문 계약</h3><p>월 확정 일수 안에서 설계 리뷰와 기술 결정을 맡습니다.</p><small>월 단위</small></div>
         </div>
       </div>
@@ -271,7 +271,7 @@
           <details open><summary>어떤 EMR·병원 시스템 연동을 다루나요?<span aria-hidden="true">+</span></summary><p>진료·예약·접수·검사·청구 등 필요한 업무 흐름과 기존 시스템이 제공하는 인터페이스를 먼저 확인합니다. 가능한 연동 범위와 데이터를 정한 뒤 API, 메시지와 운영 절차를 설계합니다.</p></details>
           <details><summary>EMR 인증 대응도 함께 볼 수 있나요?<span aria-hidden="true">+</span></summary><p>인증 항목이 데이터 구조, 기능 경계와 운영 절차에 미치는 영향을 아키텍처 단계에서 함께 검토합니다. 인증 취득 자체를 보증하지 않으며, 적용 기준과 심사 범위는 착수 시 최신 자료로 확인합니다.</p></details>
           <details><summary>특정 EMR 벤더에 맞춘 제안인가요?<span aria-hidden="true">+</span></summary><p>아닙니다. 특정 벤더의 제품 판매를 전제로 하지 않습니다. 현재 사용 중인 시스템의 실제 인터페이스와 제약을 확인하고, 표준과 교체 가능성을 함께 고려해 벤더 중립적으로 설계합니다.</p></details>
-          <details><summary>EMR을 직접 만들어 주나요?<span aria-hidden="true">+</span></summary><p>아닙니다. EMR 제품 전체를 새로 만드는 일은 맡지 않습니다. 기존 시스템과의 연동, 의료정보 아키텍처, 인증 대응 설계와 필요한 구현을 맡습니다.</p></details>
+          <details><summary>EMR을 직접 만들어 주나요?<span aria-hidden="true">+</span></summary><p>아닙니다. EMR 제품 전체를 새로 만드는 일은 맡지 않습니다. 기존 시스템과의 연동, 의료정보 아키텍처, 인증 대응 설계와 필요한 개발을 맡습니다.</p></details>
           <details><summary>환자·의료기관 자료는 어떻게 다루나요?<span aria-hidden="true">+</span></summary><p>판단에 필요한 최소 범위만 요청하고, 합의한 전달 수단과 보관 기간을 따릅니다. 초기 검토는 비식별 구조와 샘플 데이터로 진행하며 실제 개인정보가 필요하면 접근·처리·폐기 기준을 먼저 정합니다.</p></details>
         </div>
       </div>
@@ -311,7 +311,7 @@
   <footer class="site">
     <div class="shell">
       <a class="mark" href="/"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#FAF8F4"/><path fill="#17191D" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/><circle cx="32" cy="40" r="3.7" fill="#4B78FF"/></svg>ALEXSOFT</a>
-      <nav aria-label="바닥글 메뉴"><a href="/diagnosis/">아키텍처 설계·구현</a><a href="/e-invoicing/">e-invoicing이란</a><a href="/healthcare/">의료정보 시스템</a><a href="/brand-website/">브랜드 웹사이트</a><a href="/work/">사례</a><a href="/insights/">인사이트</a><a href="/en/" hreflang="en">English</a><a href="mailto:contact@alexsoft.co.kr">이메일</a></nav>
+      <nav aria-label="바닥글 메뉴"><a href="/diagnosis/">아키텍처 설계·개발</a><a href="/e-invoicing/">e-invoicing이란</a><a href="/healthcare/">의료정보 시스템</a><a href="/brand-website/">브랜드 웹사이트</a><a href="/work/">사례</a><a href="/insights/">인사이트</a><a href="/en/" hreflang="en">English</a><a href="mailto:contact@alexsoft.co.kr">이메일</a></nav>
       <div class="channels"><span class="mono">CHANNELS</span><a href="https://blog.naver.com/alex-soft" target="_blank" rel="noopener">Naver Blog ↗</a><a href="https://www.instagram.com/alexsoft.co.kr" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://github.com/alexsoft-hq" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
       <p class="biz" data-nosnippet>상호 알렉스소프트(ALEXSOFT) · 대표 이용민 · 사업자등록번호 212-64-01036 · 사업장 부산광역시 수영구 광안해변로15번길 10 · © <span data-year>2026</span> ALEXSOFT</p>
     </div>
