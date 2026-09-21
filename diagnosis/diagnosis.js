@@ -43,7 +43,7 @@
     form.reset();
     if (submitButton) submitButton.disabled = false;
     if (submitLabel) submitLabel.textContent = '신청이 접수되었습니다';
-    setStatus('success', '접수가 완료되었습니다. 내용을 확인한 뒤 contact@alexsoft.co.kr에서 회신드리겠습니다.');
+    setStatus('success', '접수가 완료되었습니다. 내용을 확인한 뒤 contact@alexsoft.co.kr에서 회신드리겠습니다. 급하시면 010-6548-0292로 전화 주세요.');
     window.setTimeout(function () {
       if (submitLabel) submitLabel.textContent = defaultLabel;
     }, 2600);
@@ -75,7 +75,7 @@
       form.removeAttribute('aria-busy');
       if (submitButton) submitButton.disabled = false;
       if (submitLabel) submitLabel.textContent = defaultLabel;
-      setStatus('error', '전송 확인이 지연되고 있습니다. 네트워크 상태를 확인한 뒤 다시 시도해주세요.');
+      setStatus('error', '전송 확인이 지연되고 있습니다. 네트워크 상태를 확인한 뒤 다시 시도해주세요. 010-6548-0292로 전화 주셔도 됩니다.');
     }, 15000);
   });
 })();
