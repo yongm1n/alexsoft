@@ -4,7 +4,7 @@
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://alexsoft.co.kr/</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <image:image><image:loc>https://alexsoft.co.kr/assets/brand/alexsoft-signature-hero.webp</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/assets/brand/capability-ai-workflow.webp</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/assets/brand/capability-product-engineering.webp</image:loc></image:image>
@@ -13,6 +13,7 @@
     <image:image><image:loc>https://alexsoft.co.kr/assets/grace-site.webp</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/assets/work/cascade-graph-map.webp</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/assets/work/mokpyo-dashboard.webp</image:loc></image:image>
+    <image:image><image:loc>https://alexsoft.co.kr/assets/work/bridge-console-coverage.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://alexsoft.co.kr/diagnosis/</loc>
@@ -35,7 +36,7 @@
   </url>
   <url>
     <loc>https://alexsoft.co.kr/work/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <image:image><image:loc>https://alexsoft.co.kr/assets/work/cascade-demo-poster.webp</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/assets/work/cascade-overview-ko.webp</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/assets/work/cascade-flow-from-screen-ko.webp</image:loc></image:image>
@@ -56,6 +57,7 @@
     <image:image><image:loc>https://alexsoft.co.kr/assets/work/mokpyo-automation-rule.webp</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/assets/work/mokpyo-notifications.webp</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/assets/work/mokpyo-mobile-cards.webp</image:loc></image:image>
+    <image:image><image:loc>https://alexsoft.co.kr/assets/work/bridge-console-coverage.webp</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/assets/grace-site.webp</image:loc></image:image>
     <video:video>
       <video:thumbnail_loc>https://alexsoft.co.kr/assets/work/cascade-demo-poster.webp</video:thumbnail_loc>
@@ -69,7 +71,7 @@
   </url>
   <url>
     <loc>https://alexsoft.co.kr/en/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <image:image><image:loc>https://alexsoft.co.kr/assets/brand/alexsoft-signature-hero.webp</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/assets/grace-site.webp</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/assets/work/cascade-demo-poster.webp</image:loc></image:image>
@@ -82,6 +84,7 @@
     <image:image><image:loc>https://alexsoft.co.kr/assets/work/mokpyo-timeline.webp</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/assets/work/mokpyo-goal-detail.webp</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/assets/work/mokpyo-members-treemap.webp</image:loc></image:image>
+    <image:image><image:loc>https://alexsoft.co.kr/assets/work/bridge-console-coverage.webp</image:loc></image:image>
     <video:video>
       <video:thumbnail_loc>https://alexsoft.co.kr/assets/work/cascade-demo-poster.webp</video:thumbnail_loc>
       <video:title>Cascade viewer demo</video:title>

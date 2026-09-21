@@ -12,7 +12,7 @@
   <meta property="og:site_name" content="ALEXSOFT">
   <meta property="og:url" content="https://alexsoft.co.kr/en/">
   <meta property="og:title" content="ALEXSOFT — Systems Architecture for Regulated Industries">
-  <meta property="og:description" content="Architecture for places where failure is not an option — national tax infrastructure, healthcare information systems, marine engineering — and two products built in house, Cascade and Mokpyo.">
+  <meta property="og:description" content="Architecture for places where failure is not an option — national tax infrastructure, healthcare information systems, marine engineering — and three products built in house: Cascade, Mokpyo and ALEXSOFT Bridge.">
   <meta property="og:image" content="https://alexsoft.co.kr/assets/brand/alexsoft-architecture-og-v1.jpg">
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1536">
@@ -326,7 +326,7 @@
             <div class="nib" aria-hidden="true"><svg viewBox="0 0 64 64"><path fill="#2456E4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/></svg><span>Products built in house</span></div>
             <h2 id="en-products-title">Evidence that the people who design also ship.</h2>
           </div>
-          <p>Alongside client work, ALEXSOFT builds and publishes products of its own. Both are shown with real screens here; the Korean case page has the full set.</p>
+          <p>Alongside client work, ALEXSOFT builds and publishes products of its own. All three are shown with real screens here; the Korean case page has more.</p>
         </div>
 
         <article class="record">
@@ -399,6 +399,25 @@
           <div class="links" style="margin-top:16px">
             <a class="quiet" href="/work/#mokpyo">All screens (Korean) <span aria-hidden="true">→</span></a>
           </div>
+        </article>
+
+        <article class="record">
+          <h3>ALEXSOFT Bridge — EMR and LIS data into KR Core, with every record accounted for</h3>
+          <figure class="shot hero">
+            <a href="/assets/work/bridge-console-coverage.webp" target="_blank" rel="noopener"><img src="/assets/work/bridge-console-coverage.webp" width="1478" height="812" loading="lazy" decoding="async" alt="ALEXSOFT Bridge console, mapping-rules tab: totals across the top (9,313 in scope, 8,938 converted, 329 excluded, 46 failed), six scenarios on the left, and a table of the elements the KR Core profile asks for, each with the source column that fills it and its approval status"></a>
+            <figcaption>Console, mapping-rules tab — for each element the KR Core profile asks for: whether it is filled, and from which source column. Across the top: 9,313 in scope = 8,938 converted + 329 excluded + 46 failed. The 506 valid count in the top strip is a sample validated when the console starts; the full set is validated separately. Synthetic data; the interface is in Korean.</figcaption>
+          </figure>
+          <dl class="facts wide">
+            <div><dt>What</dt><dd>HL7® FHIR® KR Core exchange. Data from hospital and clinic EMR and LIS systems is converted to KR Core 2.0.0, a Korean standard built on HL7 FHIR and published by HL7 Korea</dd></div>
+            <div><dt>Every record</dt><dd>In scope = converted + excluded + failed, and nothing disappears without a reason. On synthetic data, 9,313 source rows = 8,938 + 329 + 46. Excluded means deliberately not generated under the rules, such as a local code still awaiting approval; failed means the source made it impossible, such as a unit mismatch or a result that points to a patient who does not exist</dd></div>
+            <div><dt>Validated</dt><dd>All 8,938 generated resources were validated against the KR Core 2.0.0 rules published by HL7 Korea, using the HAPI FHIR validator, with 0 errors</dd></div>
+            <div><dt>Source</dt><dd>Only read, never written</dd></div>
+            <div><dt>Status</dt><dd>Every figure comes from synthetic data; it has not been run on real patient data and is not a certified product</dd></div>
+          </dl>
+          <div class="links" style="margin-top:16px">
+            <a class="quiet" href="/work/#bridge">More detail (Korean) <span aria-hidden="true">→</span></a>
+          </div>
+          <p class="mono" style="font-size:12px;line-height:1.6">HL7®, and FHIR® are the registered trademarks of Health Level Seven International and their use of these trademarks does not constitute an endorsement by HL7.</p>
         </article>
       </div>
     </section>

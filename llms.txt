@@ -13,6 +13,7 @@
 ## 직접 만든 제품·오픈소스
 - [Cascade](https://alexsoft.co.kr/work/#cascade): 코드에서 DB 컬럼까지의 변경 영향 범위(컬럼 → SQL → 서비스 메서드 → API → 화면, 양방향)를 정적분석으로 복원하는 오픈소스 엔진. 로컬 뷰어와 MCP 서버가 같은 답을 내며, 확인한 연결과 추정한 연결을 구분해 표시하고 확인하지 못한 부분은 못 봤다고 적는다. 소스와 분석 결과는 사용자의 컴퓨터를 벗어나지 않는다. Java Spring MVC·MyBatis·JPA·SQL DDL·JS/TS(Vue·React 라우터)·OpenAPI·HAR을 읽는다. Apache-2.0, 저장소 https://github.com/alexsoft-hq/Cascade. 사례 페이지에 뷰어 22초 데모 영상이 있다.
 - [Mokpyo](https://alexsoft.co.kr/work/#mokpyo): 10–100명 팀의 목표·OKR을 카드·테이블·보드·타임라인·대시보드 다섯 가지 뷰로 보는 자체 제품. Key Result 진행률 자동 집계, 자동화 규칙(트리거 6종 × 액션 6종), 멘션·마감 알림, 감사 로그. React·TypeScript·Express·Prisma·PostgreSQL, Docker와 폐쇄망용 오프라인 번들로 배포.
+- [ALEXSOFT Bridge](https://alexsoft.co.kr/work/#bridge): HL7® FHIR® KR Core 연계. 병원·의원 EMR·LIS의 데이터를 HL7 FHIR를 바탕으로 한 국내 표준 KR Core 2.0.0(HL7 Korea 배포) 형식으로 옮기고, 옮기지 못한 건을 전부 사유와 함께 보고한다. 대상 = 성공 + 제외 + 실패로 한 건도 빠짐없이 세며, 사유 없이 사라진 건은 0이다(가상 원본 9,313건 = 성공 8,938 + 제외 329 + 실패 46). 옮긴 결과는 KR Core 2.0.0 규칙으로 자동 검사한다(가상 데이터 8,938건 전수, 오류 0). 원본은 읽기만 한다. 공개한 숫자는 모두 가상 데이터 기준이다. HL7®, and FHIR® are the registered trademarks of Health Level Seven International and their use of these trademarks does not constitute an endorsement by HL7.
 
 ## 전문 영역
 
@@ -31,7 +32,7 @@
 ## 콘텐츠·채널
 
 - [e-invoicing이란](https://alexsoft.co.kr/e-invoicing/): 해외 e-invoicing(한국의 전자세금계산서 + VAN 국세청 연동에 해당)의 구조 설명과, 필리핀 국세청 e-invoice 시스템을 개발 PL로 설계한 경험. 국가별 도입 대행이나 구축 패키지는 제공하지 않으며, 이 경험은 아키텍처 설계·개발 상담에서 활용된다.
-- [사례](https://alexsoft.co.kr/work/): 국가 e-invoice, 인증 클라우드 EMR, 브랜드 웹사이트의 설계·개발 사례와 직접 만든 제품(Cascade, Mokpyo)의 실제 화면.
+- [사례](https://alexsoft.co.kr/work/): 국가 e-invoice, 인증 클라우드 EMR, 브랜드 웹사이트의 설계·개발 사례와 직접 만든 제품(Cascade, Mokpyo, ALEXSOFT Bridge)의 실제 화면.
 - [인사이트](https://alexsoft.co.kr/insights/): AI 활용, 개발자의 경험, 업무자동화와 시스템 도입에 관한 글과 교육자료를 모은 목록. 글은 https://alexsoft.co.kr/insights/<slug>/ 에 있다.
 - [DB부터 화면까지, 코드 변경의 영향을 따라가는 Cascade](https://alexsoft.co.kr/insights/cascade-change-impact/): 2026-09-15 글. ALEXSOFT의 오픈소스 Cascade로 DB 컬럼·SQL·API·화면의 변경 영향을 살펴봅니다. 비교 보고서의 실제 검증 사례와 분석 품질, 지원 범위, 코드 리뷰 연계의 발전 방향을 소개합니다.
 - [ChatGPT로 하루 만에 홍보용 웹사이트 만들고 무료로 운영하기](https://alexsoft.co.kr/insights/ai-business-website/): 2026-09-10 글(2026-09-13 수정). 처음 홈페이지를 만드는 소상공인이 ChatGPT 데스크톱 앱(Codex)으로 소개 홈페이지를 만들고 내 GitHub 공개 저장소에서 GitHub Pages로 공개·수정하는 과정. 도메인·검색 등록은 선택. 같은 과정을 따라 하는 슬라이드 63장(기본 1–30·선택 31–63, 요청문 15개): https://alexsoft.co.kr/insights/ai-business-website/slides.html
