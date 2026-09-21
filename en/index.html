@@ -410,9 +410,8 @@
           <dl class="facts wide">
             <div><dt>What</dt><dd>HL7® FHIR® KR Core exchange. Data from hospital and clinic EMR and LIS systems is converted to KR Core 2.0.0, a Korean standard built on HL7 FHIR and published by HL7 Korea</dd></div>
             <div><dt>Every record</dt><dd>In scope = converted + excluded + failed, and nothing disappears without a reason. On synthetic data, 9,313 source rows = 8,938 + 329 + 46. Excluded means deliberately not generated under the rules, such as a local code still awaiting approval; failed means the source made it impossible, such as a unit mismatch or a result that points to a patient who does not exist</dd></div>
-            <div><dt>Validated</dt><dd>All 8,938 generated resources were validated against the KR Core 2.0.0 rules published by HL7 Korea, using the HAPI FHIR validator, with 0 errors</dd></div>
+            <div><dt>Validated</dt><dd>All 8,938 resources generated from the synthetic source were validated against the KR Core 2.0.0 rules published by HL7 Korea, using the HAPI FHIR validator, with 0 errors</dd></div>
             <div><dt>Source</dt><dd>Only read, never written</dd></div>
-            <div><dt>Status</dt><dd>Every figure comes from synthetic data; it has not been run on real patient data and is not a certified product</dd></div>
           </dl>
           <div class="links" style="margin-top:16px">
             <a class="quiet" href="/work/#bridge">More detail (Korean) <span aria-hidden="true">→</span></a>
