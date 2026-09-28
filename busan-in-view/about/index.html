@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>부산 한눈 소개 · 자료 출처와 이용조건</title>
-  <meta name="description" content="부산 한눈의 3D 지도, 16개 구·군 통계, 기록사진 651장을 소개합니다. 자료별 기준 시점과 공식 원자료, 사진 이용조건을 확인하세요." />
+  <meta name="description" content="부산 한눈의 3D 지도, 16개 구·군 통계, 역 이용량·동네 생활과 소비 자료, 기록사진 651장을 소개합니다. 기준 시점과 원자료, 이용조건을 확인하세요." />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <link rel="canonical" href="https://alexsoft.co.kr/busan-in-view/about/" />
   <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
@@ -51,6 +51,7 @@
     p:last-child { margin-bottom: 0; }
     .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
     .features p { color: var(--muted); font-size: 15px; }
+    .features + .data-note { margin-top: 24px; }
     .data-note { color: var(--muted); font-size: 14px; }
     dl { margin: 26px 0 0; }
     .data-row { display: grid; grid-template-columns: 175px 1fr; gap: 24px; padding: 24px 0; border-top: 1px solid var(--line); }
@@ -90,7 +91,7 @@
       "@id": "https://alexsoft.co.kr/busan-in-view/about/#webpage",
       "url": "https://alexsoft.co.kr/busan-in-view/about/",
       "name": "부산 한눈 소개 · 자료 출처와 이용조건",
-      "description": "부산 한눈의 지도·지역 통계·기록사진 수록 범위, 기준 시점, 원자료와 사진 이용조건을 안내합니다.",
+      "description": "부산 한눈의 지도·지역 통계·역 이용량·생활과 소비 자료·기록사진 수록 범위, 기준 시점, 원자료와 이용조건을 안내합니다.",
       "inLanguage": "ko-KR",
       "about": {
         "@id": "https://alexsoft.co.kr/busan-in-view/#app"
@@ -132,9 +133,10 @@
       <div class="section-head"><span>01</span><h2 id="explore-title">세 가지 방법으로 읽는 부산</h2></div>
       <div class="features">
         <article><h3>도시 지도</h3><p>실제 수치표고모형의 산과 해안을 보며 통계, 생활시설, 사진 위치를 겹쳐 봅니다. 구·군을 선택하면 지역 수치와 추세를 볼 수 있습니다.</p></article>
-        <article><h3>지역 탐구</h3><p>인구·고령화·복지·근로소득 지표를 비교합니다. 같은 기준 시점의 자료가 있는 조합만 함께 볼 수 있습니다.</p></article>
+        <article><h3>지역 탐구</h3><p>질문과 시점을 골라 최대 네 구·군의 인구·연령·복지·소득을 비교하고 시설·사진을 살핍니다. ‘유동인구·상권’에서는 역 이용량, 주변 업종, 생활인구, 소비 활동을 확인합니다.</p></article>
         <article><h3>도시의 기록</h3><p>기록사진 651장을 연대·지역·장소로 찾습니다. 사진을 열면 촬영시기, 저작자, 이용조건과 원문 링크가 함께 나옵니다.</p></article>
       </div>
+      <p class="data-note">지역탐구의 일곱 주제에서 차트와 원값·출처를 함께 읽습니다. 통계 탐구는 선택 조건을 URL로 다시 열고 CSV로 받을 수 있으며, 같은 기준 시점의 실제 값이 있는 조합만 함께 비교합니다.</p>
     </section>
     <section class="section" aria-labelledby="data-title">
       <div class="section-head"><span>02</span><h2 id="data-title">수록 자료와 기준 시점</h2></div>
@@ -144,6 +146,9 @@
         <div class="data-row"><dt>기초생활보장</dt><dd><p>16개 구·군의 수급 인원·세대·비율·전월 인원 증감. 2025년 12월과 2026년 8월 자료입니다.</p><p class="detail">수급은 제도 적용 현황이며 빈곤율이 아닙니다. 비율은 부산시 원본에 실린 인구를 분모로 유지합니다.</p><div class="sources"><a href="https://www.busan.go.kr/ghopen09/view?schCommand=List&amp;schUpperClNo=135&amp;schClNo=0&amp;schBizNo=0&amp;schIndx=20868&amp;bizCurPage=1&amp;cntPerPage=50&amp;schSdate=&amp;schEdate=&amp;srchKey=&amp;srchText=">부산광역시 2025년 12월 원자료 ↗</a><a href="https://www.busan.go.kr/ghopen09/view?schCommand=List&amp;schUpperClNo=130&amp;schClNo=0&amp;schBizNo=0&amp;schIndx=21979&amp;bizCurPage=1&amp;cntPerPage=50&amp;srchKey=bizCn&amp;srchText=%EA%B8%B0%EC%B4%88%EC%83%9D%ED%99%9C%EB%B3%B4%EC%9E%A5%20%EC%88%98%EA%B8%89%EC%9E%90%20%ED%98%84%ED%99%A9">2026년 8월 원자료 ↗</a></div></dd></div>
         <div class="data-row"><dt>근로소득</dt><dd><p>16개 구·군의 주소지 기준 근로소득 연말정산 신고 통계. 2024년 귀속, 2025년 공표 자료입니다.</p><p class="detail">전체 주민·가구의 소득이나 개인 연봉을 뜻하지 않습니다. 동 단위 소득은 수록하지 않았습니다.</p><a href="https://tasis.nts.go.kr/websquare/websquare.html?w2xPath=/ui/ep/e/a/UTWEPEAA02.xml&amp;sttPblYr=2025&amp;sttsMtaInfrId=20250103D01202541132">국세청 TASIS 4-2-15 원자료 ↗</a></dd></div>
         <div class="data-row"><dt>도시철도·생활시설</dt><dd><p>도시철도역은 부산교통공사의 2021년 2월 26일 기준 114행으로, 양산 소재 역을 포함합니다. 버스정류소 1,784개·의료시설 601개·도서관 57개는 2026년 9월 26일 Geofabrik 추출본의 OpenStreetMap 노드입니다.</p><p class="detail">도시철도는 이후 신설·폐역을 반영하지 않습니다. OSM 시설은 미등록 장소나 노드가 아닌 시설이 빠질 수 있어 공식 전수 목록이나 접근성 지표로 사용할 수 없습니다.</p><div class="sources"><a href="https://www.data.go.kr/data/15043686/fileData.do">부산교통공사 원자료 ↗</a><a href="https://www.openstreetmap.org/">OpenStreetMap ↗</a></div></dd></div>
+        <div class="data-row"><dt>역 이용량</dt><dd><p>2026년 1~8월 도시철도 1~4호선의 일별·시간대별 승하차 자료입니다. 양산 소재 5개 역을 포함한 112개 역코드를 수록하며, 동해선·부산김해경전철은 포함하지 않습니다.</p><p class="detail">게이트 이용 횟수로 주변 보행자 수나 고유 방문자 수가 아닙니다. 일평균은 선택한 월·요일 유형의 합계를 관측 일수로 나눕니다. 월~금 공휴일도 평일에 포함하며 환승역은 원본 코드·게이트 단위를 유지합니다. 무료·이용허락범위 제한 없음으로 공개된 자료입니다.</p><a href="https://www.data.go.kr/data/3057229/fileData.do">부산교통공사 시간대별 승하차 원자료 ↗</a></dd></div>
+        <div class="data-row"><dt>주변 상가업소</dt><dd><p>2026년 6월 30일 기준 부산광역시 상가업소 159,689행의 업종·주소·좌표를 수록했습니다. 역이나 지도에서 선택한 중심의 직선 반경으로 살펴봅니다.</p><p class="detail">실시간 영업 현황이 아니며 도보 거리나 실제 상권 경계를 뜻하지 않습니다. 업소 수를 수요·매출·창업 적합도로 해석하지 않습니다. 무료·이용허락범위 제한 없음으로 공개된 자료입니다.</p><a href="https://www.data.go.kr/data/15083033/fileData.do">소상공인시장진흥공단 상가정보 원자료 ↗</a></dd></div>
+        <div class="data-row"><dt>생활인구·카드 이용</dt><dd><p>2023년 1월~2026년 7월의 43개월, 기간 전체 206개 행정동 코드의 자료입니다. 월별 수록 코드는 205~206개입니다. 생활인구는 시간대별 주거·직장·방문인구, 카드는 업종 대분류별 이용건수를 표시합니다.</p><p class="detail">생활인구는 통신 신호로 산출한 값이며 시간별 합을 하루 고유인구로 해석하지 않습니다. 두 자료는 원본의 월별 일평균으로, 정확한 일수 분모·보정 방식은 확인하지 못했습니다. 카드 금액은 단위를 확인할 수 없어 표시하지 않습니다. 원문 명칭의 공백·철자 차이와 미수록을 보존합니다. 무료·이용허락범위 제한 없음으로 공개된 자료입니다.</p><div class="sources"><a href="https://data.busan.go.kr/bdip/opendata/detail.do?publicdatapk=PD_LP00003">부산시 시간대별 생활인구 원자료 ↗</a><a href="https://data.busan.go.kr/bdip/opendata/detail.do?publicdatapk=PD_CS00004">부산시 업종별 카드 이용 원자료 ↗</a></div></dd></div>
         <div class="data-row"><dt>행정경계·3D 지형</dt><dd><p>SGIS 기반 2026년 7월 1일 행정동 경계를 합친 16개 구·군 경계와 Mapzen/AWS의 Terrarium 수치표고모형을 사용합니다.</p><p class="detail">과거 통계도 현재 경계에 표시하며 경계 변경을 별도로 보정하지 않았습니다. 지형은 원천별 관측시점과 해상도가 다릅니다. 1.5·2배 높이는 시각적 강조이며 건물에는 추정 높이가 포함됩니다.</p><div class="sources"><a href="https://github.com/vuski/admdongkor">SGIS 기반 경계 가공 자료 ↗</a><a href="https://registry.opendata.aws/terrain-tiles/">Mapzen / AWS 지형 자료 ↗</a></div></dd></div>
         <div class="data-row"><dt>기록사진 651장</dt><dd><p>1891~1930년으로 추정되는 사진부터 2025년까지의 기록을 담았습니다. 촬영 시기 미상 28장은 따로 표시합니다. 모든 연대와 지역의 전수 기록은 아닙니다.</p><p class="detail">업로드 날짜를 촬영 연도로 사용하지 않으며, 원문이 제시한 시기 범위와 불확실성을 보존합니다. 위치는 촬영지 또는 장소 대표점입니다. 위치를 확인할 수 없는 사진에는 지도 핀을 만들지 않습니다.</p><div class="sources"><a href="https://library.busan.go.kr/archive/module/archive/index.do?large_code=A&amp;menu_idx=43&amp;type=0004&amp;viewPage=1">부산도서관 · 부산의 기억 ↗</a><a href="https://gongu.copyright.or.kr/gongu/wrt/wrt/view.do?wrtSn=13071740&amp;menuNo=200018">공유마당 / KTV 수록 원문 ↗</a><a href="https://commons.wikimedia.org/wiki/File:1950%EB%85%84_9%EC%9B%94_20%EC%9D%BC_%EB%B6%80%EC%82%B0_%EB%8F%99%EA%B5%AC_%EB%B6%80%EC%82%B0%EC%A7%84%EC%8B%9C%EC%9E%A5_%EC%95%9E%EA%B8%B8.jpg">Wikimedia Commons 수록 원문 ↗</a><a href="https://earthobservatory.nasa.gov/images/92703/decades-of-growth-at-port-of-busan">NASA 부산항 비교영상 ↗</a></div></dd></div>
       </dl>
@@ -161,7 +166,8 @@
         <li>자료마다 기준 시점과 단위가 다릅니다. 같은 시점의 실제 값이 있는 지표만 함께 비교합니다.</li>
         <li>2015년 대비 증감률과 고령 인구 비중 변화(%p)를 구분합니다. 세대당 인구는 가구원 수나 1인 가구 비율이 아닙니다.</li>
         <li>지도 색상은 지표별 수록 기간 전체에 고정합니다. 음수 증감과 자료 미수록을 구분하며, 추세 그래프의 세로축은 별도로 표시합니다.</li>
-        <li>측량 모형이나 재난 예측 도구가 아닙니다. 실시간 버스·유동인구와 공개되지 않은 동 단위 소득을 추정해 넣지 않았습니다.</li>
+        <li>상권 자료도 기준 시점의 공개 스냅샷입니다. 실시간 버스·유동인구 API로 자동 갱신하지 않으며 공개되지 않은 동 단위 소득을 추정해 넣지 않았습니다.</li>
+        <li>측량 모형이나 재난 예측 도구가 아닙니다. 원본의 관측값·추정값과 자료마다 다른 집계 범위를 구분합니다.</li>
       </ul>
     </section>
   </main>
