@@ -17,3 +17,4 @@
 .busan-reading p{font-size:15px;line-height:1.85;color:var(--graphite);margin-top:12px}
 .busan-reading h3:not(:first-child){margin-top:32px}
 @media(max-width:860px){.busan-overview,.busan-detail{grid-template-columns:1fr}.busan-detail .shot{grid-row:1}.busan-summary .facts>div{grid-template-columns:64px 1fr}}
+.busan-project .nowrap{white-space:nowrap}
