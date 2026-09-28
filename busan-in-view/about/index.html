@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>부산 한눈 소개 · 자료 출처와 이용조건</title>
+  <meta name="description" content="부산 한눈의 3D 지도, 16개 구·군 통계, 기록사진 651장을 소개합니다. 자료별 기준 시점과 공식 원자료, 사진 이용조건을 확인하세요." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <link rel="canonical" href="https://alexsoft.co.kr/busan-in-view/about/" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:site_name" content="부산 한눈 · Busan in View" />
+  <meta property="og:title" content="부산 한눈 소개 · 자료 출처와 이용조건" />
+  <meta property="og:description" content="부산의 지형과 통계, 도시의 기록을 읽는 방법. 수록 범위와 기준 시점, 원자료와 사진 이용조건을 안내합니다." />
+  <meta property="og:url" content="https://alexsoft.co.kr/busan-in-view/about/" />
+  <meta property="og:image" content="https://alexsoft.co.kr/busan-in-view/brand-tower.png" />
+  <meta property="og:image:alt" content="부산 한눈의 부산타워와 바다 로고" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="부산 한눈 소개 · 자료 출처와 이용조건" />
+  <meta name="twitter:description" content="부산 한눈의 수록 범위와 기준 시점, 원자료와 사진 이용조건을 안내합니다." />
+  <meta name="twitter:image" content="https://alexsoft.co.kr/busan-in-view/brand-tower.png" />
+  <meta name="twitter:image:alt" content="부산 한눈의 부산타워와 바다 로고" />
+  <style>
+    :root { color-scheme: light; --ink: #10264b; --blue: #2455d6; --muted: #58667b; --line: #d9e2ed; --paper: #f6f8fc; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.8 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; word-break: keep-all; overflow-wrap: anywhere; }
+    a { color: #1748c1; text-underline-offset: 4px; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible { outline: 2px solid var(--blue); outline-offset: 5px; border-radius: 2px; }
+    .wrap { width: min(960px, calc(100% - 64px)); margin: auto; }
+    .masthead { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 104px; border-bottom: 1px solid var(--line); }
+    .brand { display: flex; align-items: center; gap: 12px; color: var(--ink); text-decoration: none; }
+    .brand img { width: 36px; height: 44px; }
+    .brand strong { display: block; font-size: 21px; letter-spacing: -.04em; line-height: 1.3; }
+    .brand small { display: block; font-size: 11px; color: var(--muted); letter-spacing: .04em; }
+    .back { font-size: 14px; white-space: nowrap; }
+    .hero { padding: 72px 0 56px; }
+    .eyebrow { margin: 0 0 20px; color: var(--blue); font-size: 12px; font-weight: 700; letter-spacing: .1em; }
+    h1 { margin: 0 0 24px; font-size: clamp(36px, 5.2vw, 58px); line-height: 1.22; font-weight: 750; letter-spacing: -.06em; }
+    .lede { max-width: 740px; margin: 0; font-size: 19px; line-height: 1.85; letter-spacing: -.02em; }
+    .hero-note { margin: 24px 0 0; color: var(--muted); font-size: 14px; }
+    .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; margin-top: 30px; font-size: 14px; }
+    .primary { padding: 11px 22px; background: var(--blue); border-radius: 4px; color: white; text-decoration: none; font-weight: 650; }
+    .section { padding: 42px 0 46px; border-top: 1px solid var(--line); }
+    .section-head { display: flex; align-items: baseline; gap: 16px; margin-bottom: 24px; }
+    .section-head span { color: var(--blue); font-size: 12px; font-weight: 700; }
+    h2 { margin: 0; font-size: 26px; line-height: 1.4; letter-spacing: -.04em; }
+    h3 { margin: 0 0 8px; font-size: 17px; letter-spacing: -.02em; }
+    p { margin: 0 0 16px; }
+    p:last-child { margin-bottom: 0; }
+    .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .features p { color: var(--muted); font-size: 15px; }
+    .data-note { color: var(--muted); font-size: 14px; }
+    dl { margin: 26px 0 0; }
+    .data-row { display: grid; grid-template-columns: 175px 1fr; gap: 24px; padding: 24px 0; border-top: 1px solid var(--line); }
+    dt { font-weight: 700; }
+    dd { margin: 0; }
+    dd p { margin-bottom: 8px; }
+    dd .detail { color: var(--muted); font-size: 14px; }
+    .sources { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 14px; }
+    .note-box { padding: 26px 30px; margin: 24px 0; border-left: 3px solid var(--blue); background: #eaf0fd; }
+    .note-box p { font-size: 15px; }
+    ul { padding-left: 21px; margin: 0; }
+    li { padding-left: 3px; margin: 12px 0; }
+    .end { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 28px 0 38px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
+    .end a { color: var(--ink); }
+    @media (max-width: 620px) {
+      .wrap { width: calc(100% - 40px); }
+      .masthead { min-height: 88px; gap: 14px; }
+      .brand strong { font-size: 19px; }
+      .brand img { width: 30px; height: 38px; }
+      .back { font-size: 13px; }
+      .hero { padding: 44px 0 38px; }
+      h1 { font-size: 38px; }
+      .lede { font-size: 17px; }
+      .section { padding: 32px 0; }
+      h2 { font-size: 23px; }
+      .features { grid-template-columns: 1fr; gap: 24px; }
+      .data-row { grid-template-columns: 1fr; gap: 9px; padding: 20px 0; }
+      .note-box { padding: 22px 20px; }
+      .end { align-items: flex-start; flex-direction: column; gap: 8px; }
+    }
+  </style>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      "@id": "https://alexsoft.co.kr/busan-in-view/about/#webpage",
+      "url": "https://alexsoft.co.kr/busan-in-view/about/",
+      "name": "부산 한눈 소개 · 자료 출처와 이용조건",
+      "description": "부산 한눈의 지도·지역 통계·기록사진 수록 범위, 기준 시점, 원자료와 사진 이용조건을 안내합니다.",
+      "inLanguage": "ko-KR",
+      "about": {
+        "@id": "https://alexsoft.co.kr/busan-in-view/#app"
+      },
+      "publisher": {
+        "@id": "https://alexsoft.co.kr/#organization"
+      },
+      "relatedLink": [
+        "https://alexsoft.co.kr/busan-in-view/",
+        "https://alexsoft.co.kr/work/#busan-in-view"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://alexsoft.co.kr/#organization",
+      "name": "ALEXSOFT",
+      "url": "https://alexsoft.co.kr/"
+    }
+  ]
+}</script>
+</head>
+<body>
+  <header class="masthead wrap">
+    <a class="brand" href="../" aria-label="부산 한눈 지도 열기">
+      <img src="../brand-tower.svg" width="36" height="44" alt="" />
+      <span><strong>부산 한눈</strong><small>BUSAN IN VIEW</small></span>
+    </a>
+    <a class="back" href="../">지도 열기 ↗</a>
+  </header>
+  <main class="wrap">
+    <section class="hero" aria-labelledby="about-title">
+      <p class="eyebrow">부산 한눈 소개 · 자료 안내</p>
+      <h1 id="about-title">지형과 숫자,<br />도시의 기록을 한눈에.</h1>
+      <p class="lede">부산 한눈은 부산의 실제 3D 지형, 16개 구·군의 지역 통계, 흩어져 있던 기록사진을 함께 읽는 독립 웹사이트입니다. 지도로 동네를 둘러보고, 숫자로 변화를 비교하고, 사진으로 그곳의 시간을 살펴봅니다.</p>
+      <p class="hero-note">ALEXSOFT가 만든 비영리 감상·탐색 프로젝트입니다. 부산광역시 공식 서비스가 아니며, 자료를 실시간으로 자동 갱신하지 않습니다.</p>
+      <div class="actions"><a class="primary" href="../">부산 한눈 둘러보기</a><a href="https://alexsoft.co.kr/work/#busan-in-view">ALEXSOFT 프로젝트 소개 ↗</a></div>
+    </section>
+    <section class="section" aria-labelledby="explore-title">
+      <div class="section-head"><span>01</span><h2 id="explore-title">세 가지 방법으로 읽는 부산</h2></div>
+      <div class="features">
+        <article><h3>도시 지도</h3><p>실제 수치표고모형의 산과 해안을 보며 통계, 생활시설, 사진 위치를 겹쳐 봅니다. 구·군을 선택하면 지역 수치와 추세를 볼 수 있습니다.</p></article>
+        <article><h3>지역 탐구</h3><p>인구·고령화·복지·근로소득 지표를 비교합니다. 같은 기준 시점의 자료가 있는 조합만 함께 볼 수 있습니다.</p></article>
+        <article><h3>도시의 기록</h3><p>기록사진 651장을 연대·지역·장소로 찾습니다. 사진을 열면 촬영시기, 저작자, 이용조건과 원문 링크가 함께 나옵니다.</p></article>
+      </div>
+    </section>
+    <section class="section" aria-labelledby="data-title">
+      <div class="section-head"><span>02</span><h2 id="data-title">수록 자료와 기준 시점</h2></div>
+      <p class="data-note">2026년 9월 28일 수록본 기준입니다. 아래 날짜는 자료마다 다릅니다. 통계 연도를 바꾸어도 시설이나 행정경계가 그해의 모습으로 바뀌지는 않습니다.</p>
+      <dl>
+        <div class="data-row"><dt>인구·세대·연령</dt><dd><p>16개 구·군의 2015–2025년 통계와 부산 전체의 2008–2025년 추세. 매년 12월 말 기준입니다.</p><p class="detail">주민등록인구는 외국인을 제외합니다. 0–19세는 원자료의 0–9세와 10–19세를 합산했습니다.</p><a href="https://jumin.mois.go.kr/">행정안전부 주민등록 인구통계 ↗</a></dd></div>
+        <div class="data-row"><dt>기초생활보장</dt><dd><p>16개 구·군의 수급 인원·세대·비율·전월 인원 증감. 2025년 12월과 2026년 8월 자료입니다.</p><p class="detail">수급은 제도 적용 현황이며 빈곤율이 아닙니다. 비율은 부산시 원본에 실린 인구를 분모로 유지합니다.</p><div class="sources"><a href="https://www.busan.go.kr/ghopen09/view?schCommand=List&amp;schUpperClNo=135&amp;schClNo=0&amp;schBizNo=0&amp;schIndx=20868&amp;bizCurPage=1&amp;cntPerPage=50&amp;schSdate=&amp;schEdate=&amp;srchKey=&amp;srchText=">부산광역시 2025년 12월 원자료 ↗</a><a href="https://www.busan.go.kr/ghopen09/view?schCommand=List&amp;schUpperClNo=130&amp;schClNo=0&amp;schBizNo=0&amp;schIndx=21979&amp;bizCurPage=1&amp;cntPerPage=50&amp;srchKey=bizCn&amp;srchText=%EA%B8%B0%EC%B4%88%EC%83%9D%ED%99%9C%EB%B3%B4%EC%9E%A5%20%EC%88%98%EA%B8%89%EC%9E%90%20%ED%98%84%ED%99%A9">2026년 8월 원자료 ↗</a></div></dd></div>
+        <div class="data-row"><dt>근로소득</dt><dd><p>16개 구·군의 주소지 기준 근로소득 연말정산 신고 통계. 2024년 귀속, 2025년 공표 자료입니다.</p><p class="detail">전체 주민·가구의 소득이나 개인 연봉을 뜻하지 않습니다. 동 단위 소득은 수록하지 않았습니다.</p><a href="https://tasis.nts.go.kr/websquare/websquare.html?w2xPath=/ui/ep/e/a/UTWEPEAA02.xml&amp;sttPblYr=2025&amp;sttsMtaInfrId=20250103D01202541132">국세청 TASIS 4-2-15 원자료 ↗</a></dd></div>
+        <div class="data-row"><dt>도시철도·생활시설</dt><dd><p>도시철도역은 부산교통공사의 2021년 2월 26일 기준 114행으로, 양산 소재 역을 포함합니다. 버스정류소 1,784개·의료시설 601개·도서관 57개는 2026년 9월 26일 Geofabrik 추출본의 OpenStreetMap 노드입니다.</p><p class="detail">도시철도는 이후 신설·폐역을 반영하지 않습니다. OSM 시설은 미등록 장소나 노드가 아닌 시설이 빠질 수 있어 공식 전수 목록이나 접근성 지표로 사용할 수 없습니다.</p><div class="sources"><a href="https://www.data.go.kr/data/15043686/fileData.do">부산교통공사 원자료 ↗</a><a href="https://www.openstreetmap.org/">OpenStreetMap ↗</a></div></dd></div>
+        <div class="data-row"><dt>행정경계·3D 지형</dt><dd><p>SGIS 기반 2026년 7월 1일 행정동 경계를 합친 16개 구·군 경계와 Mapzen/AWS의 Terrarium 수치표고모형을 사용합니다.</p><p class="detail">과거 통계도 현재 경계에 표시하며 경계 변경을 별도로 보정하지 않았습니다. 지형은 원천별 관측시점과 해상도가 다릅니다. 1.5·2배 높이는 시각적 강조이며 건물에는 추정 높이가 포함됩니다.</p><div class="sources"><a href="https://github.com/vuski/admdongkor">SGIS 기반 경계 가공 자료 ↗</a><a href="https://registry.opendata.aws/terrain-tiles/">Mapzen / AWS 지형 자료 ↗</a></div></dd></div>
+        <div class="data-row"><dt>기록사진 651장</dt><dd><p>1891~1930년으로 추정되는 사진부터 2025년까지의 기록을 담았습니다. 촬영 시기 미상 28장은 따로 표시합니다. 모든 연대와 지역의 전수 기록은 아닙니다.</p><p class="detail">업로드 날짜를 촬영 연도로 사용하지 않으며, 원문이 제시한 시기 범위와 불확실성을 보존합니다. 위치는 촬영지 또는 장소 대표점입니다. 위치를 확인할 수 없는 사진에는 지도 핀을 만들지 않습니다.</p><div class="sources"><a href="https://library.busan.go.kr/archive/module/archive/index.do?large_code=A&amp;menu_idx=43&amp;type=0004&amp;viewPage=1">부산도서관 · 부산의 기억 ↗</a><a href="https://gongu.copyright.or.kr/gongu/wrt/wrt/view.do?wrtSn=13071740&amp;menuNo=200018">공유마당 / KTV 수록 원문 ↗</a><a href="https://commons.wikimedia.org/wiki/File:1950%EB%85%84_9%EC%9B%94_20%EC%9D%BC_%EB%B6%80%EC%82%B0_%EB%8F%99%EA%B5%AC_%EB%B6%80%EC%82%B0%EC%A7%84%EC%8B%9C%EC%9E%A5_%EC%95%9E%EA%B8%B8.jpg">Wikimedia Commons 수록 원문 ↗</a><a href="https://earthobservatory.nasa.gov/images/92703/decades-of-growth-at-port-of-busan">NASA 부산항 비교영상 ↗</a></div></dd></div>
+      </dl>
+    </section>
+    <section class="section" aria-labelledby="rights-title">
+      <div class="section-head"><span>03</span><h2 id="rights-title">사진을 보고 이용할 때</h2></div>
+      <p>사진마다 권리 조건이 다릅니다. 큰 사진 화면에서 저작자·소장처·이용조건과 원문을 확인할 수 있습니다. 다른 곳에 사용하려면 해당 사진의 원문 조건을 먼저 확인해 주세요.</p>
+      <div class="note-box"><p><strong>부산도서관 원본 477장은 비영리 감상용입니다.</strong> 공공누리 제2·4유형의 출처표시·비영리 조건을 표시하고, 제4유형의 변경금지 조건을 보존합니다. 원본 URL을 직접 읽어 사진의 전체 비율을 표시하며 크롭·재압축·채색하지 않습니다. 외부 원본 서버 상태에 따라 사진이 열리지 않을 수 있습니다.</p></div>
+      <p>다른 출처의 사진도 개별 CC 라이선스·퍼블릭도메인·기증저작물 조건을 표시합니다. 사진을 AI로 복원하거나 착색하지 않았습니다.</p>
+      <p class="data-note">부산 미국문화원 사진은 원문의 생산연도와 설명만으로 촬영 시점을 특정하기 어려워 ‘촬영 시기 미상’으로 정정했습니다. 사진의 연도와 위치는 확인할 수 있는 근거의 범위에서 표시합니다.</p>
+    </section>
+    <section class="section" aria-labelledby="reading-title">
+      <div class="section-head"><span>04</span><h2 id="reading-title">숫자를 읽을 때의 약속</h2></div>
+      <ul>
+        <li>자료마다 기준 시점과 단위가 다릅니다. 같은 시점의 실제 값이 있는 지표만 함께 비교합니다.</li>
+        <li>2015년 대비 증감률과 고령 인구 비중 변화(%p)를 구분합니다. 세대당 인구는 가구원 수나 1인 가구 비율이 아닙니다.</li>
+        <li>지도 색상은 지표별 수록 기간 전체에 고정합니다. 음수 증감과 자료 미수록을 구분하며, 추세 그래프의 세로축은 별도로 표시합니다.</li>
+        <li>측량 모형이나 재난 예측 도구가 아닙니다. 실시간 버스·유동인구와 공개되지 않은 동 단위 소득을 추정해 넣지 않았습니다.</li>
+      </ul>
+    </section>
+  </main>
+  <footer class="end wrap"><span>부산 한눈 · Busan in View · 안내 갱신 2026.09.28</span><span><a href="../">지도 열기</a> · <a href="https://alexsoft.co.kr/">ALEXSOFT</a></span></footer>
+</body>
+</html>

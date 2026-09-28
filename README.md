@@ -22,6 +22,8 @@ python3 -m http.server 8080
 - `Cascade`(`/work/#cascade`): 공개 저장소 `github.com/alexsoft-hq/Cascade`의 README·CHANGELOG. 스크린샷은 저장소의 `docs/assets/screens/*.png`를 `assets/work/cascade-*.webp`로 변환한 것
 - `Mokpyo`(`/work/#mokpyo`, 구 Goalboard): 로컬 프로젝트 README(다섯 뷰·자동화·역할·배포)와 데모 워크스페이스(`prisma/seed-demo.ts`, 가상 팀·가상 목표). 스크린샷은 `assets/work/mokpyo-*.webp` — 로컬 데모를 1440×900(2x)·390px로 캡처
 - `ALEXSOFT Bridge`(`/work/#bridge`): 비공개 제품 저장소의 문서와 콘솔 화면(가상 데이터). 문구의 사실 여부는 제품 담당 세션이 확인. 스크린샷은 콘솔 캡처(1478×812)를 `assets/work/bridge-*.webp`로 변환한 것. 제품명에 FHIR를 넣지 않고, HL7·FHIR를 쓰는 페이지에는 HL7 상표 문구를 함께 둔다
+- `부산 한눈`(`/work/#busan-in-view`, 서비스 `/busan-in-view/`): ALEXSOFT 자체 기획·개발. 부산의 3D 지형·16개 구·군 통계·기록사진 651장을 다루며 자료별 출처·기준시점·이용조건을 표시한다. 포트폴리오 화면은 실제 서비스 캡처 `assets/work/busan-map.jpg`·`assets/work/busan-statistics.jpg`(1440×1000). 홈 `#products`·`/work/#busan-in-view`·`/en/#en-products`에서 소개한다.
+- `/busan-in-view/about/`: JavaScript 없이 읽을 수 있는 서비스 소개·자료 출처·이용 기준. 부산 원본의 `public/about/index.html`을 Pages 빌드에 포함한 산출물이며, 수정할 때는 부산 원본과 함께 맞춘다. 앱과 안내 페이지의 정식 주소·구조화 데이터, 루트 `sitemap.xml`·`llms.txt`도 동기화한다.
 - `The Grace`: 실제 공개 사이트 및 프로젝트 README의 시네마틱 스크롤/에디션 전환 구조
 - `CareFlow`: SQLite에서 확인한 82개 도메인 테이블과 장기요양 화면 분석 기록
 
