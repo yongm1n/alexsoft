@@ -1,0 +1,58 @@
+[
+  {
+    "id": "metro",
+    "title": "도시철도역",
+    "category": "대중교통",
+    "file": "/data/busan-official-metro.geojson",
+    "kind": "point",
+    "count": 114,
+    "color": "#d89732",
+    "sourceUrl": "https://www.data.go.kr/data/15043686/fileData.do",
+    "provider": "부산교통공사",
+    "date": "2021-02-26",
+    "license": "공공데이터포털 공개 자료 · 부산교통공사 출처 표시",
+    "note": "원본 114개 역 레코드입니다. 부산교통공사 운행권역의 양산 소재 역을 포함합니다. 원본 행 기준일은 2021-02-26이며 카탈로그 수정일 2025-09-11과 구분했습니다. 이후 신설역·폐역·노선 변동 및 다른 운영기관 노선은 반영하지 않습니다."
+  },
+  {
+    "id": "busan-bus-stops",
+    "title": "버스 정류소",
+    "category": "생활시설",
+    "file": "/data/busan-bus-stops.geojson",
+    "kind": "point",
+    "count": 1784,
+    "color": "#247b8b",
+    "sourceUrl": "https://www.openstreetmap.org/",
+    "provider": "OpenStreetMap / Geofabrik",
+    "date": "2026-09-26",
+    "license": "© OpenStreetMap contributors · ODbL 1.0",
+    "note": "공식 시설 등록부가 아닌 OSM 지도 노드입니다. 미등록·폐업·폴리곤으로만 등록된 시설은 누락될 수 있어 시설의 전수 수량이나 접근성 평가로 해석할 수 없습니다."
+  },
+  {
+    "id": "busan-health-facilities",
+    "title": "의료기관·의원·약국",
+    "category": "생활시설",
+    "file": "/data/busan-health-facilities.geojson",
+    "kind": "point",
+    "count": 601,
+    "color": "#d1635c",
+    "sourceUrl": "https://www.openstreetmap.org/",
+    "provider": "OpenStreetMap / Geofabrik",
+    "date": "2026-09-26",
+    "license": "© OpenStreetMap contributors · ODbL 1.0",
+    "note": "공식 시설 등록부가 아닌 OSM 지도 노드입니다. 미등록·폐업·폴리곤으로만 등록된 시설은 누락될 수 있어 시설의 전수 수량이나 접근성 평가로 해석할 수 없습니다."
+  },
+  {
+    "id": "busan-libraries",
+    "title": "도서관",
+    "category": "생활시설",
+    "file": "/data/busan-libraries.geojson",
+    "kind": "point",
+    "count": 57,
+    "color": "#8663b5",
+    "sourceUrl": "https://www.openstreetmap.org/",
+    "provider": "OpenStreetMap / Geofabrik",
+    "date": "2026-09-26",
+    "license": "© OpenStreetMap contributors · ODbL 1.0",
+    "note": "공식 시설 등록부가 아닌 OSM 지도 노드입니다. 미등록·폐업·폴리곤으로만 등록된 시설은 누락될 수 있어 시설의 전수 수량이나 접근성 평가로 해석할 수 없습니다."
+  }
+]
