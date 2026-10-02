@@ -50,11 +50,7 @@ p{margin:0}
 .hero-copy h1{font-size:clamp(30px,3.4vw,48px);line-height:1.28}
 .hero-copy h1 em{font-style:normal;color:var(--cobalt)}
 .hero-lede{font-size:clamp(15px,1.25vw,17px);line-height:1.85;max-width:42ch}
-.hero-caption{position:absolute;right:16px;bottom:58px;font-family:var(--mono);font-size:11px;color:rgba(23,25,29,.45);letter-spacing:.08em}
-.hero-fact{position:absolute;left:0;right:0;bottom:0;border-top:1px solid rgba(23,25,29,.14);background:linear-gradient(180deg,rgba(250,248,244,0),rgba(250,248,244,.42))}
-.hero-fact .shell{height:auto;display:flex;gap:14px;align-items:baseline;padding-top:14px;padding-bottom:16px;flex-direction:row;justify-content:flex-start}
-.hero-fact .mono{color:var(--cobalt);white-space:nowrap}
-.hero-fact p{font-size:13.5px;color:rgba(23,25,29,.78);line-height:1.6;max-width:62ch}
+.hero-caption{position:absolute;right:16px;bottom:18px;font-family:var(--mono);font-size:11px;color:rgba(23,25,29,.45);letter-spacing:.08em}
 @media (max-width:860px){
   .hero-full{height:min(92svh,760px);min-height:520px}
   .hero-full>img{object-position:66% 50%}
@@ -62,7 +58,6 @@ p{margin:0}
   .hero-full .shell{justify-content:flex-start;padding-top:clamp(28px,7vh,64px)}
   .hero-copy{max-width:none}
   .hero-caption{display:none}
-  .hero-fact p{font-size:12.5px}
 }
 /* 서브페이지용 낮은 히어로(이미지 없음): 제목 + 리드 */
 .hero-flat{padding:clamp(48px,7vw,88px) 0 clamp(36px,5vw,64px);border-bottom:1px solid var(--rule-soft)}
