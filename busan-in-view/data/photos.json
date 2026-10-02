@@ -12279,9 +12279,9 @@
     "id": "library-busan-2488",
     "libraryRecordId": "2488",
     "title": "온천천 복개 공사",
-    "year": 1945,
-    "decade": "1940s",
-    "dateLabel": "1945",
+    "year": null,
+    "decade": "시기 미상",
+    "dateLabel": "촬영 시기 미상",
     "place": "부산시",
     "district": "부산시",
     "coordinates": null,
@@ -12294,7 +12294,7 @@
     "sourceName": "부산도서관 · 부산의 기억",
     "license": "공공누리 제4유형 · 출처표시·비영리·변경금지",
     "credit": "생산: 금정구 · 소장: 금정구",
-    "caption": "1945년 온천천 복개공사 모습",
+    "caption": "온천천 복개 공사 모습. 원문에는 1945년으로 기재돼 있으나 사진 속 차량·건물과 맞지 않아 해당 연도 표기를 철회했습니다. 정확한 촬영연도는 확인되지 않았습니다.",
     "precision": "촬영 위치 미확인"
   },
   {
