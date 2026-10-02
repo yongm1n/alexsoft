@@ -1,0 +1,2798 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6221124,
+          34.8911942
+        ]
+      },
+      "properties": {
+        "name": "차충량신경외과",
+        "address": "",
+        "category": "의료기관",
+        "sourceId": "osm:node/11013580305",
+        "sourceUrl": "https://www.openstreetmap.org/node/11013580305",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6216114,
+          34.8910415
+        ]
+      },
+      "properties": {
+        "name": "신동훈 재활의학과의원",
+        "address": "",
+        "category": "의료기관",
+        "sourceId": "osm:node/12314364682",
+        "sourceUrl": "https://www.openstreetmap.org/node/12314364682",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6215265,
+          34.8910372
+        ]
+      },
+      "properties": {
+        "name": "바로그의원",
+        "address": "",
+        "category": "의료기관",
+        "sourceId": "osm:node/12314364683",
+        "sourceUrl": "https://www.openstreetmap.org/node/12314364683",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.622152,
+          34.8909725
+        ]
+      },
+      "properties": {
+        "name": "온누리약국",
+        "address": "",
+        "category": "약국",
+        "sourceId": "osm:node/12314364800",
+        "sourceUrl": "https://www.openstreetmap.org/node/12314364800",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6220463,
+          34.8899655
+        ]
+      },
+      "properties": {
+        "name": "거제아동의원",
+        "address": "",
+        "category": "의료기관",
+        "sourceId": "osm:node/12314365307",
+        "sourceUrl": "https://www.openstreetmap.org/node/12314365307",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6219508,
+          34.889532
+        ]
+      },
+      "properties": {
+        "name": "지앤미의원",
+        "address": "",
+        "category": "의료기관",
+        "sourceId": "osm:node/12314365308",
+        "sourceUrl": "https://www.openstreetmap.org/node/12314365308",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6212454,
+          34.8893019
+        ]
+      },
+      "properties": {
+        "name": "서울아동병원",
+        "address": "",
+        "category": "의료기관",
+        "sourceId": "osm:node/12314365310",
+        "sourceUrl": "https://www.openstreetmap.org/node/12314365310",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6210097,
+          34.8891751
+        ]
+      },
+      "properties": {
+        "name": "고현서울약국",
+        "address": "",
+        "category": "약국",
+        "sourceId": "osm:node/12314365311",
+        "sourceUrl": "https://www.openstreetmap.org/node/12314365311",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.622821,
+          34.8895185
+        ]
+      },
+      "properties": {
+        "name": "메디칼약국",
+        "address": "",
+        "category": "약국",
+        "sourceId": "osm:node/12314365337",
+        "sourceUrl": "https://www.openstreetmap.org/node/12314365337",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6228794,
+          34.8891747
+        ]
+      },
+      "properties": {
+        "name": "거제프라자약국",
+        "address": "",
+        "category": "약국",
+        "sourceId": "osm:node/12314365340",
+        "sourceUrl": "https://www.openstreetmap.org/node/12314365340",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6236165,
+          34.8897274
+        ]
+      },
+      "properties": {
+        "name": "온누리약국",
+        "address": "",
+        "category": "약국",
+        "sourceId": "osm:node/12314365353",
+        "sourceUrl": "https://www.openstreetmap.org/node/12314365353",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6243326,
+          34.8899816
+        ]
+      },
+      "properties": {
+        "name": "더큰사랑의원",
+        "address": "",
+        "category": "의료기관",
+        "sourceId": "osm:node/12314365363",
+        "sourceUrl": "https://www.openstreetmap.org/node/12314365363",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6245452,
+          34.890084
+        ]
+      },
+      "properties": {
+        "name": "새조은약국",
+        "address": "",
+        "category": "약국",
+        "sourceId": "osm:node/12314365371",
+        "sourceUrl": "https://www.openstreetmap.org/node/12314365371",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6247424,
+          34.8901509
+        ]
+      },
+      "properties": {
+        "name": "터미널약국",
+        "address": "",
+        "category": "약국",
+        "sourceId": "osm:node/12314365373",
+        "sourceUrl": "https://www.openstreetmap.org/node/12314365373",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6224515,
+          34.8901951
+        ]
+      },
+      "properties": {
+        "name": "고현한의원",
+        "address": "",
+        "category": "의료기관",
+        "sourceId": "osm:node/12314365395",
+        "sourceUrl": "https://www.openstreetmap.org/node/12314365395",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6218525,
+          34.8905946
+        ]
+      },
+      "properties": {
+        "name": "건항외과의원",
+        "address": "",
+        "category": "의료기관",
+        "sourceId": "osm:node/12314365420",
+        "sourceUrl": "https://www.openstreetmap.org/node/12314365420",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6172516,
+          34.8914993
+        ]
+      },
+      "properties": {
+        "name": "튼튼i약국",
+        "address": "",
+        "category": "약국",
+        "sourceId": "osm:node/12314388814",
+        "sourceUrl": "https://www.openstreetmap.org/node/12314388814",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831057000",
+        "districtName": "장평동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6232758,
+          34.8884065
+        ]
+      },
+      "properties": {
+        "name": "신세계약국",
+        "address": "",
+        "category": "약국",
+        "sourceId": "osm:node/12317891798",
+        "sourceUrl": "https://www.openstreetmap.org/node/12317891798",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6261245,
+          34.8829978
+        ]
+      },
+      "properties": {
+        "name": "온누리약국",
+        "address": "",
+        "category": "약국",
+        "sourceId": "osm:node/12317895433",
+        "sourceUrl": "https://www.openstreetmap.org/node/12317895433",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6299041,
+          34.8940792
+        ]
+      },
+      "properties": {
+        "name": "현대약국",
+        "address": "",
+        "category": "약국",
+        "sourceId": "osm:node/12319218135",
+        "sourceUrl": "https://www.openstreetmap.org/node/12319218135",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6917574,
+          34.8935772
+        ]
+      },
+      "properties": {
+        "name": "따뜻한약국",
+        "address": "",
+        "category": "약국",
+        "sourceId": "osm:node/12319218158",
+        "sourceUrl": "https://www.openstreetmap.org/node/12319218158",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831055000",
+        "districtName": "옥포1동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6088618,
+          34.8929324
+        ]
+      },
+      "properties": {
+        "name": "보생당약국",
+        "address": "",
+        "category": "약국",
+        "sourceId": "osm:node/12325462126",
+        "sourceUrl": "https://www.openstreetmap.org/node/12325462126",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831057000",
+        "districtName": "장평동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6130592,
+          34.8912537
+        ]
+      },
+      "properties": {
+        "name": "거제한의원",
+        "address": "",
+        "category": "병원",
+        "sourceId": "osm:node/12471399692",
+        "sourceUrl": "https://www.openstreetmap.org/node/12471399692",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831057000",
+        "districtName": "장평동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6102719,
+          34.8923178
+        ]
+      },
+      "properties": {
+        "name": "장평삼성약국",
+        "address": "",
+        "category": "약국",
+        "sourceId": "osm:node/12471449421",
+        "sourceUrl": "https://www.openstreetmap.org/node/12471449421",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831057000",
+        "districtName": "장평동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6131233,
+          34.8909671
+        ]
+      },
+      "properties": {
+        "name": "장평온누리약국",
+        "address": "",
+        "category": "약국",
+        "sourceId": "osm:node/12471449422",
+        "sourceUrl": "https://www.openstreetmap.org/node/12471449422",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831057000",
+        "districtName": "장평동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6166799,
+          34.8909911
+        ]
+      },
+      "properties": {
+        "name": "행복플러스약국",
+        "address": "",
+        "category": "약국",
+        "sourceId": "osm:node/12471449433",
+        "sourceUrl": "https://www.openstreetmap.org/node/12471449433",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831057000",
+        "districtName": "장평동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.621257,
+          34.8900201
+        ]
+      },
+      "properties": {
+        "name": "편작한의원 거제점",
+        "address": "",
+        "category": "병원",
+        "sourceId": "osm:node/368848289",
+        "sourceUrl": "https://www.openstreetmap.org/node/368848289",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.623903,
+          34.8871115
+        ]
+      },
+      "properties": {
+        "name": "조비뇨기과의원",
+        "address": "",
+        "category": "병원",
+        "sourceId": "osm:node/368848294",
+        "sourceUrl": "https://www.openstreetmap.org/node/368848294",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6297586,
+          34.8846589
+        ]
+      },
+      "properties": {
+        "name": "용하한의원",
+        "address": "",
+        "category": "의료기관",
+        "sourceId": "osm:node/368848299",
+        "sourceUrl": "https://www.openstreetmap.org/node/368848299",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.622919,
+          34.889138
+        ]
+      },
+      "properties": {
+        "name": "미서울성형외과",
+        "address": "",
+        "category": "병원",
+        "sourceId": "osm:node/368848322",
+        "sourceUrl": "https://www.openstreetmap.org/node/368848322",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.622411,
+          34.8885
+        ]
+      },
+      "properties": {
+        "name": "자경한의원",
+        "address": "",
+        "category": "병원",
+        "sourceId": "osm:node/368848329",
+        "sourceUrl": "https://www.openstreetmap.org/node/368848329",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6232699,
+          34.8896302
+        ]
+      },
+      "properties": {
+        "name": "옥재철정형외과",
+        "address": "",
+        "category": "병원",
+        "sourceId": "osm:node/368848350",
+        "sourceUrl": "https://www.openstreetmap.org/node/368848350",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6254735,
+          34.8885294
+        ]
+      },
+      "properties": {
+        "name": "우리정형외과",
+        "address": "",
+        "category": "병원",
+        "sourceId": "osm:node/368848363",
+        "sourceUrl": "https://www.openstreetmap.org/node/368848363",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.623393,
+          34.888162
+        ]
+      },
+      "properties": {
+        "name": "중앙이비인후과의원",
+        "address": "",
+        "category": "병원",
+        "sourceId": "osm:node/368848365",
+        "sourceUrl": "https://www.openstreetmap.org/node/368848365",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6220912,
+          34.8892134
+        ]
+      },
+      "properties": {
+        "name": "리츠성형외과의원",
+        "address": "서문로 56",
+        "category": "병원",
+        "sourceId": "osm:node/368848370",
+        "sourceUrl": "https://www.openstreetmap.org/node/368848370",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.692112,
+          34.890331
+        ]
+      },
+      "properties": {
+        "name": "박내과의원",
+        "address": "",
+        "category": "병원",
+        "sourceId": "osm:node/368848375",
+        "sourceUrl": "https://www.openstreetmap.org/node/368848375",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831055000",
+        "districtName": "옥포1동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6298163,
+          34.8969747
+        ]
+      },
+      "properties": {
+        "name": "신세계내과의원",
+        "address": "",
+        "category": "병원",
+        "sourceId": "osm:node/368848383",
+        "sourceUrl": "https://www.openstreetmap.org/node/368848383",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.623199,
+          34.888559
+        ]
+      },
+      "properties": {
+        "name": "참조은피부과",
+        "address": "",
+        "category": "병원",
+        "sourceId": "osm:node/368848397",
+        "sourceUrl": "https://www.openstreetmap.org/node/368848397",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6229791,
+          34.8889792
+        ]
+      },
+      "properties": {
+        "name": "박태준내과의원",
+        "address": "",
+        "category": "병원",
+        "sourceId": "osm:node/368848403",
+        "sourceUrl": "https://www.openstreetmap.org/node/368848403",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6242502,
+          34.8864617
+        ]
+      },
+      "properties": {
+        "name": "파티마의원",
+        "address": "",
+        "category": "병원",
+        "sourceId": "osm:node/368848407",
+        "sourceUrl": "https://www.openstreetmap.org/node/368848407",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.622747,
+          34.889499
+        ]
+      },
+      "properties": {
+        "name": "김내과의원",
+        "address": "",
+        "category": "병원",
+        "sourceId": "osm:node/368848415",
+        "sourceUrl": "https://www.openstreetmap.org/node/368848415",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.623393,
+          34.888162
+        ]
+      },
+      "properties": {
+        "name": "김경민신경통증의원",
+        "address": "",
+        "category": "병원",
+        "sourceId": "osm:node/368848416",
+        "sourceUrl": "https://www.openstreetmap.org/node/368848416",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6236066,
+          34.8897534
+        ]
+      },
+      "properties": {
+        "name": "장성호이비인후과",
+        "address": "",
+        "category": "병원",
+        "sourceId": "osm:node/368848421",
+        "sourceUrl": "https://www.openstreetmap.org/node/368848421",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.622919,
+          34.889138
+        ]
+      },
+      "properties": {
+        "name": "이안과",
+        "address": "",
+        "category": "병원",
+        "sourceId": "osm:node/368848439",
+        "sourceUrl": "https://www.openstreetmap.org/node/368848439",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6248288,
+          34.8899988
+        ]
+      },
+      "properties": {
+        "name": "대한항맥외과의원",
+        "address": "",
+        "category": "병원",
+        "sourceId": "osm:node/368848443",
+        "sourceUrl": "https://www.openstreetmap.org/node/368848443",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.622919,
+          34.889138
+        ]
+      },
+      "properties": {
+        "name": "굿모닝이비인후과",
+        "address": "",
+        "category": "병원",
+        "sourceId": "osm:node/368848446",
+        "sourceUrl": "https://www.openstreetmap.org/node/368848446",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.623199,
+          34.888559
+        ]
+      },
+      "properties": {
+        "name": "자모산부인과",
+        "address": "",
+        "category": "병원",
+        "sourceId": "osm:node/368848453",
+        "sourceUrl": "https://www.openstreetmap.org/node/368848453",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.623393,
+          34.888162
+        ]
+      },
+      "properties": {
+        "name": "청담연세안과",
+        "address": "",
+        "category": "병원",
+        "sourceId": "osm:node/368848460",
+        "sourceUrl": "https://www.openstreetmap.org/node/368848460",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.478429,
+          34.8830426
+        ]
+      },
+      "properties": {
+        "name": "하나의원",
+        "address": "거제시 거제남서로 5344",
+        "category": "의원",
+        "sourceId": "osm:node/368848486",
+        "sourceUrl": "https://www.openstreetmap.org/node/368848486",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831036000",
+        "districtName": "사등면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6655883,
+          34.8124936
+        ]
+      },
+      "properties": {
+        "name": "망치보건진료소",
+        "address": "거제시 망치2길 12",
+        "category": "의원",
+        "sourceId": "osm:node/368848506",
+        "sourceUrl": "https://www.openstreetmap.org/node/368848506",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831031000",
+        "districtName": "일운면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.7064627,
+          34.8293546
+        ]
+      },
+      "properties": {
+        "name": "일운보건지소",
+        "address": "거제시 지세포해안로 105",
+        "category": "병원",
+        "sourceId": "osm:node/368848520",
+        "sourceUrl": "https://www.openstreetmap.org/node/368848520",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831031000",
+        "districtName": "일운면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6302266,
+          34.893904
+        ]
+      },
+      "properties": {
+        "name": "송재한의원",
+        "address": "",
+        "category": "병원",
+        "sourceId": "osm:node/368848531",
+        "sourceUrl": "https://www.openstreetmap.org/node/368848531",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6892628,
+          34.8969882
+        ]
+      },
+      "properties": {
+        "name": "온누리한의원",
+        "address": "거제시 옥포로 253",
+        "category": "병원",
+        "sourceId": "osm:node/368848542",
+        "sourceUrl": "https://www.openstreetmap.org/node/368848542",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831056000",
+        "districtName": "옥포2동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6225522,
+          34.8891655
+        ]
+      },
+      "properties": {
+        "name": "영신한의원",
+        "address": "",
+        "category": "병원",
+        "sourceId": "osm:node/368848547",
+        "sourceUrl": "https://www.openstreetmap.org/node/368848547",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.5061744,
+          34.837677
+        ]
+      },
+      "properties": {
+        "name": "둔덕면보건지소",
+        "address": "거제시 거제남서로 4606",
+        "category": "의원",
+        "sourceId": "osm:node/368848572",
+        "sourceUrl": "https://www.openstreetmap.org/node/368848572",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831035000",
+        "districtName": "둔덕면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6906573,
+          34.8958015
+        ]
+      },
+      "properties": {
+        "name": "대우한의원",
+        "address": "",
+        "category": "병원",
+        "sourceId": "osm:node/368848602",
+        "sourceUrl": "https://www.openstreetmap.org/node/368848602",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831056000",
+        "districtName": "옥포2동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.729792,
+          34.8720335
+        ]
+      },
+      "properties": {
+        "name": "수경한의원",
+        "address": "거제시 능포로 89",
+        "category": "병원",
+        "sourceId": "osm:node/368848615",
+        "sourceUrl": "https://www.openstreetmap.org/node/368848615",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831051000",
+        "districtName": "장승포동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.4782696,
+          34.882871
+        ]
+      },
+      "properties": {
+        "name": "안성한의원",
+        "address": "거제시 거제남서로 5342",
+        "category": "의원",
+        "sourceId": "osm:node/368848623",
+        "sourceUrl": "https://www.openstreetmap.org/node/368848623",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831036000",
+        "districtName": "사등면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6563517,
+          34.9145551
+        ]
+      },
+      "properties": {
+        "name": "연초보건지소",
+        "address": "거제시 죽토로 11",
+        "category": "의원",
+        "sourceId": "osm:node/368848634",
+        "sourceUrl": "https://www.openstreetmap.org/node/368848634",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831037000",
+        "districtName": "연초면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.4786559,
+          34.883074
+        ]
+      },
+      "properties": {
+        "name": "거제대교의원",
+        "address": "거제시 거제남서로 5348",
+        "category": "의원",
+        "sourceId": "osm:node/368848641",
+        "sourceUrl": "https://www.openstreetmap.org/node/368848641",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831036000",
+        "districtName": "사등면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6311366,
+          34.980308
+        ]
+      },
+      "properties": {
+        "name": "칠천보건진료소",
+        "address": "거제시 칠천로 274",
+        "category": "의원",
+        "sourceId": "osm:node/368848644",
+        "sourceUrl": "https://www.openstreetmap.org/node/368848644",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831038000",
+        "districtName": "하청면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.5209483,
+          34.9572249
+        ]
+      },
+      "properties": {
+        "name": "창호보건진료소",
+        "address": "거제시 가조로 1295",
+        "category": "의원",
+        "sourceId": "osm:node/368848662",
+        "sourceUrl": "https://www.openstreetmap.org/node/368848662",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831036000",
+        "districtName": "사등면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6556106,
+          34.955147
+        ]
+      },
+      "properties": {
+        "name": "하청보건지소",
+        "address": "거제시 하청로 12-9",
+        "category": "의원",
+        "sourceId": "osm:node/368848671",
+        "sourceUrl": "https://www.openstreetmap.org/node/368848671",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831038000",
+        "districtName": "하청면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6077836,
+          34.7306806
+        ]
+      },
+      "properties": {
+        "name": "거제남부보건지소",
+        "address": "",
+        "category": "병원",
+        "sourceId": "osm:node/368848727",
+        "sourceUrl": "https://www.openstreetmap.org/node/368848727",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831033000",
+        "districtName": "남부면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.684418,
+          34.895316
+        ]
+      },
+      "properties": {
+        "name": "꿈나무언어치료실",
+        "address": "",
+        "category": "병원",
+        "sourceId": "osm:node/368848738",
+        "sourceUrl": "https://www.openstreetmap.org/node/368848738",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831056000",
+        "districtName": "옥포2동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.7016887,
+          34.8299773
+        ]
+      },
+      "properties": {
+        "name": "청구한의원",
+        "address": "거제시 거제대로 2504",
+        "category": "의원",
+        "sourceId": "osm:node/368848752",
+        "sourceUrl": "https://www.openstreetmap.org/node/368848752",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831031000",
+        "districtName": "일운면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6313677,
+          34.898727
+        ]
+      },
+      "properties": {
+        "name": "무량한의원",
+        "address": "거제시 연하해안로 200",
+        "category": "의원",
+        "sourceId": "osm:node/368848763",
+        "sourceUrl": "https://www.openstreetmap.org/node/368848763",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831037000",
+        "districtName": "연초면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6225609,
+          34.8911184
+        ]
+      },
+      "properties": {
+        "name": "고현 정의원",
+        "address": "거제중앙로 1938-3",
+        "category": "병원",
+        "sourceId": "osm:node/3981418100",
+        "sourceUrl": "https://www.openstreetmap.org/node/3981418100",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6222468,
+          34.8905025
+        ]
+      },
+      "properties": {
+        "name": "하담약국",
+        "address": "거제중앙로 1932",
+        "category": "약국",
+        "sourceId": "osm:node/3981418124",
+        "sourceUrl": "https://www.openstreetmap.org/node/3981418124",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6222623,
+          34.890463
+        ]
+      },
+      "properties": {
+        "name": "박영명내과",
+        "address": "거제중앙로 1932",
+        "category": "의원",
+        "sourceId": "osm:node/3981418126",
+        "sourceUrl": "https://www.openstreetmap.org/node/3981418126",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6222784,
+          34.8904182
+        ]
+      },
+      "properties": {
+        "name": "우신비뇨기과",
+        "address": "거제중앙로 1932",
+        "category": "의원",
+        "sourceId": "osm:node/3981418127",
+        "sourceUrl": "https://www.openstreetmap.org/node/3981418127",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6223184,
+          34.890475
+        ]
+      },
+      "properties": {
+        "name": "현세한의원",
+        "address": "거제중앙로 1932",
+        "category": "의원",
+        "sourceId": "osm:node/3981418129",
+        "sourceUrl": "https://www.openstreetmap.org/node/3981418129",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6223501,
+          34.8905288
+        ]
+      },
+      "properties": {
+        "name": "고현한의원",
+        "address": "거제중앙로 1932",
+        "category": "의원",
+        "sourceId": "osm:node/3981418130",
+        "sourceUrl": "https://www.openstreetmap.org/node/3981418130",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6223975,
+          34.8905354
+        ]
+      },
+      "properties": {
+        "name": "압구정 크로버 성형외과",
+        "address": "거제중앙로 1932",
+        "category": "의원",
+        "sourceId": "osm:node/3981418132",
+        "sourceUrl": "https://www.openstreetmap.org/node/3981418132",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6226254,
+          34.8898386
+        ]
+      },
+      "properties": {
+        "name": "김내과",
+        "address": "서문로 63",
+        "category": "의원",
+        "sourceId": "osm:node/3983556528",
+        "sourceUrl": "https://www.openstreetmap.org/node/3983556528",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6229757,
+          34.8897963
+        ]
+      },
+      "properties": {
+        "name": "부부약국",
+        "address": "서문로 65",
+        "category": "약국",
+        "sourceId": "osm:node/3983556533",
+        "sourceUrl": "https://www.openstreetmap.org/node/3983556533",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6231021,
+          34.889856
+        ]
+      },
+      "properties": {
+        "name": "약손명가 에스테틱",
+        "address": "서문로 67",
+        "category": "의원",
+        "sourceId": "osm:node/3983556535",
+        "sourceUrl": "https://www.openstreetmap.org/node/3983556535",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6231493,
+          34.8898761
+        ]
+      },
+      "properties": {
+        "name": "김지영산부인과의원",
+        "address": "서문로 67",
+        "category": "의원",
+        "sourceId": "osm:node/3983556536",
+        "sourceUrl": "https://www.openstreetmap.org/node/3983556536",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6222382,
+          34.8898588
+        ]
+      },
+      "properties": {
+        "name": "친절한약국",
+        "address": "거제중앙로 1925",
+        "category": "약국",
+        "sourceId": "osm:node/3987604947",
+        "sourceUrl": "https://www.openstreetmap.org/node/3987604947",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.622247,
+          34.8896339
+        ]
+      },
+      "properties": {
+        "name": "자이의원",
+        "address": "거제중앙로 1925",
+        "category": "의원",
+        "sourceId": "osm:node/3987604949",
+        "sourceUrl": "https://www.openstreetmap.org/node/3987604949",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6222178,
+          34.8897184
+        ]
+      },
+      "properties": {
+        "name": "미담한의원",
+        "address": "거제중앙로 1925",
+        "category": "의원",
+        "sourceId": "osm:node/3987604950",
+        "sourceUrl": "https://www.openstreetmap.org/node/3987604950",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6221206,
+          34.8897489
+        ]
+      },
+      "properties": {
+        "name": "엘르메디여성의원",
+        "address": "거제중앙로 1925",
+        "category": "의원",
+        "sourceId": "osm:node/3987604952",
+        "sourceUrl": "https://www.openstreetmap.org/node/3987604952",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6221205,
+          34.8891813
+        ]
+      },
+      "properties": {
+        "name": "김한표국회의원",
+        "address": "서문로 56",
+        "category": "의원",
+        "sourceId": "osm:node/3987635994",
+        "sourceUrl": "https://www.openstreetmap.org/node/3987635994",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.689935,
+          34.8907459
+        ]
+      },
+      "properties": {
+        "name": "푸른약국",
+        "address": "거제시 거제대로 3744",
+        "category": "약국",
+        "sourceId": "osm:node/4022545739",
+        "sourceUrl": "https://www.openstreetmap.org/node/4022545739",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831055000",
+        "districtName": "옥포1동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6261427,
+          34.8829129
+        ]
+      },
+      "properties": {
+        "name": "거제아동병원",
+        "address": "",
+        "category": "병원",
+        "sourceId": "osm:node/4545958675",
+        "sourceUrl": "https://www.openstreetmap.org/node/4545958675",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6411276,
+          34.8649422
+        ]
+      },
+      "properties": {
+        "name": "상문약국",
+        "address": "거제시 거제중앙로 1601",
+        "category": "약국",
+        "sourceId": "osm:node/4572771349",
+        "sourceUrl": "https://www.openstreetmap.org/node/4572771349",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831059000",
+        "districtName": "상문동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6912289,
+          34.8938081
+        ]
+      },
+      "properties": {
+        "name": "모범약국",
+        "address": "",
+        "category": "약국",
+        "sourceId": "osm:node/4574420002",
+        "sourceUrl": "https://www.openstreetmap.org/node/4574420002",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831056000",
+        "districtName": "옥포2동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6921798,
+          34.8944213
+        ]
+      },
+      "properties": {
+        "name": "세광약국",
+        "address": "거제시 옥포로20길 12",
+        "category": "약국",
+        "sourceId": "osm:node/4574420065",
+        "sourceUrl": "https://www.openstreetmap.org/node/4574420065",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831056000",
+        "districtName": "옥포2동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6918287,
+          34.8935596
+        ]
+      },
+      "properties": {
+        "name": "대우아동병원",
+        "address": "거제시 옥포대첩로 38",
+        "category": "병원",
+        "sourceId": "osm:node/4576678559",
+        "sourceUrl": "https://www.openstreetmap.org/node/4576678559",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831055000",
+        "districtName": "옥포1동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6914764,
+          34.8909452
+        ]
+      },
+      "properties": {
+        "name": "백수약국",
+        "address": "거제시 옥포로 181",
+        "category": "약국",
+        "sourceId": "osm:node/4579127198",
+        "sourceUrl": "https://www.openstreetmap.org/node/4579127198",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831055000",
+        "districtName": "옥포1동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6895222,
+          34.8673922
+        ]
+      },
+      "properties": {
+        "name": "아주프라임약국",
+        "address": "거제시 아주1로2길 20",
+        "category": "약국",
+        "sourceId": "osm:node/4611104484",
+        "sourceUrl": "https://www.openstreetmap.org/node/4611104484",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831054000",
+        "districtName": "아주동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6899589,
+          34.8651067
+        ]
+      },
+      "properties": {
+        "name": "대우아동의원",
+        "address": "거제시 아주로 42",
+        "category": "병원",
+        "sourceId": "osm:node/4613516667",
+        "sourceUrl": "https://www.openstreetmap.org/node/4613516667",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831054000",
+        "districtName": "아주동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6899015,
+          34.8651121
+        ]
+      },
+      "properties": {
+        "name": "아주약국",
+        "address": "거제시 아주로 42",
+        "category": "약국",
+        "sourceId": "osm:node/4613516668",
+        "sourceUrl": "https://www.openstreetmap.org/node/4613516668",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831054000",
+        "districtName": "아주동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6855962,
+          34.8673669
+        ]
+      },
+      "properties": {
+        "name": "건강약국",
+        "address": "거제시 아주1로2길 62",
+        "category": "약국",
+        "sourceId": "osm:node/4613766089",
+        "sourceUrl": "https://www.openstreetmap.org/node/4613766089",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831054000",
+        "districtName": "아주동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6923715,
+          34.866561
+        ]
+      },
+      "properties": {
+        "name": "남문약국",
+        "address": "거제시 아주로3길 2",
+        "category": "약국",
+        "sourceId": "osm:node/4634129865",
+        "sourceUrl": "https://www.openstreetmap.org/node/4634129865",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831054000",
+        "districtName": "아주동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.7217302,
+          34.8707816
+        ]
+      },
+      "properties": {
+        "name": "지인한의원",
+        "address": "거제시 두모길 3-8",
+        "category": "의원",
+        "sourceId": "osm:node/4655421215",
+        "sourceUrl": "https://www.openstreetmap.org/node/4655421215",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831051000",
+        "districtName": "장승포동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.7220819,
+          34.871029
+        ]
+      },
+      "properties": {
+        "name": "대우약국",
+        "address": "거제시 두모길 13",
+        "category": "약국",
+        "sourceId": "osm:node/4655421224",
+        "sourceUrl": "https://www.openstreetmap.org/node/4655421224",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831051000",
+        "districtName": "장승포동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.7218075,
+          34.8711899
+        ]
+      },
+      "properties": {
+        "name": "미래약국",
+        "address": "",
+        "category": "약국",
+        "sourceId": "osm:node/4655807162",
+        "sourceUrl": "https://www.openstreetmap.org/node/4655807162",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831051000",
+        "districtName": "장승포동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.7222854,
+          34.8711952
+        ]
+      },
+      "properties": {
+        "name": "우당약국",
+        "address": "",
+        "category": "약국",
+        "sourceId": "osm:node/4658586571",
+        "sourceUrl": "https://www.openstreetmap.org/node/4658586571",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831051000",
+        "districtName": "장승포동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.7216967,
+          34.8676
+        ]
+      },
+      "properties": {
+        "name": "양호실",
+        "address": "",
+        "category": "의원",
+        "sourceId": "osm:node/4658942867",
+        "sourceUrl": "https://www.openstreetmap.org/node/4658942867",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831051000",
+        "districtName": "장승포동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.7279056,
+          34.868211
+        ]
+      },
+      "properties": {
+        "name": "동양한의원",
+        "address": "거제시 장승포로 33-1",
+        "category": "의원",
+        "sourceId": "osm:node/4675846217",
+        "sourceUrl": "https://www.openstreetmap.org/node/4675846217",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831051000",
+        "districtName": "장승포동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.7279716,
+          34.868213
+        ]
+      },
+      "properties": {
+        "name": "새부산약국",
+        "address": "거제시 장승포로 33-1",
+        "category": "약국",
+        "sourceId": "osm:node/4675846218",
+        "sourceUrl": "https://www.openstreetmap.org/node/4675846218",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831051000",
+        "districtName": "장승포동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.7316998,
+          34.8756597
+        ]
+      },
+      "properties": {
+        "name": "희보약국",
+        "address": "거제시 능포로 134",
+        "category": "약국",
+        "sourceId": "osm:node/4678060122",
+        "sourceUrl": "https://www.openstreetmap.org/node/4678060122",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831053000",
+        "districtName": "능포동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.7039113,
+          34.8294896
+        ]
+      },
+      "properties": {
+        "name": "조은약국",
+        "address": "거제시 지세포4길 12",
+        "category": "약국",
+        "sourceId": "osm:node/4709622051",
+        "sourceUrl": "https://www.openstreetmap.org/node/4709622051",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831031000",
+        "districtName": "일운면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.7042507,
+          34.8294469
+        ]
+      },
+      "properties": {
+        "name": "바다의원",
+        "address": "거제시 지세포로 98-1",
+        "category": "의원",
+        "sourceId": "osm:node/4711218230",
+        "sourceUrl": "https://www.openstreetmap.org/node/4711218230",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831031000",
+        "districtName": "일운면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6953847,
+          34.8065797
+        ]
+      },
+      "properties": {
+        "name": "구조라보건진료소",
+        "address": "거제시 구조라로 22",
+        "category": "의원",
+        "sourceId": "osm:node/4721371129",
+        "sourceUrl": "https://www.openstreetmap.org/node/4721371129",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831031000",
+        "districtName": "일운면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6401687,
+          34.7767273
+        ]
+      },
+      "properties": {
+        "name": "학동보건진료소",
+        "address": "거제시 거제중앙로 21",
+        "category": "의원",
+        "sourceId": "osm:node/4728960168",
+        "sourceUrl": "https://www.openstreetmap.org/node/4728960168",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831032000",
+        "districtName": "동부면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6439733,
+          34.8988664
+        ]
+      },
+      "properties": {
+        "name": "하늘샘약국",
+        "address": "거제시 거제대로 4469",
+        "category": "약국",
+        "sourceId": "osm:node/4740996472",
+        "sourceUrl": "https://www.openstreetmap.org/node/4740996472",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831037000",
+        "districtName": "연초면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6020579,
+          34.931544
+        ]
+      },
+      "properties": {
+        "name": "한내보건진료소",
+        "address": "거제시 연하해안로 796",
+        "category": "의원",
+        "sourceId": "osm:node/4759075744",
+        "sourceUrl": "https://www.openstreetmap.org/node/4759075744",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831037000",
+        "districtName": "연초면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6823245,
+          34.9504115
+        ]
+      },
+      "properties": {
+        "name": "명동보건진로소",
+        "address": "거제시 대금산로 386",
+        "category": "의원",
+        "sourceId": "osm:node/4772503156",
+        "sourceUrl": "https://www.openstreetmap.org/node/4772503156",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831037000",
+        "districtName": "연초면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.5884925,
+          34.8499972
+        ]
+      },
+      "properties": {
+        "name": "홍제한의원",
+        "address": "거제시 읍내로 69",
+        "category": "의원",
+        "sourceId": "osm:node/4814822121",
+        "sourceUrl": "https://www.openstreetmap.org/node/4814822121",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831034000",
+        "districtName": "거제면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.5887711,
+          34.8507065
+        ]
+      },
+      "properties": {
+        "name": "동한한의원",
+        "address": "거제시 기성로 31",
+        "category": "의원",
+        "sourceId": "osm:node/4817261585",
+        "sourceUrl": "https://www.openstreetmap.org/node/4817261585",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831034000",
+        "districtName": "거제면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.5903286,
+          34.8503465
+        ]
+      },
+      "properties": {
+        "name": "시민약국",
+        "address": "",
+        "category": "약국",
+        "sourceId": "osm:node/4827997941",
+        "sourceUrl": "https://www.openstreetmap.org/node/4827997941",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831034000",
+        "districtName": "거제면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.5908047,
+          34.8504248
+        ]
+      },
+      "properties": {
+        "name": "참사랑의원",
+        "address": "거제시 기성로6길 15",
+        "category": "의원",
+        "sourceId": "osm:node/4829759471",
+        "sourceUrl": "https://www.openstreetmap.org/node/4829759471",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831034000",
+        "districtName": "거제면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.590997,
+          34.847691
+        ]
+      },
+      "properties": {
+        "name": "거제면보건지소",
+        "address": "거제시 읍내로7길 23",
+        "category": "의원",
+        "sourceId": "osm:node/4844877444",
+        "sourceUrl": "https://www.openstreetmap.org/node/4844877444",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831034000",
+        "districtName": "거제면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6065236,
+          34.822417
+        ]
+      },
+      "properties": {
+        "name": "현대의원",
+        "address": "거제시 거제남서로 3066",
+        "category": "의원",
+        "sourceId": "osm:node/4863028502",
+        "sourceUrl": "https://www.openstreetmap.org/node/4863028502",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831032000",
+        "districtName": "동부면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.607249,
+          34.8220731
+        ]
+      },
+      "properties": {
+        "name": "동부면보건지소",
+        "address": "거제시 동부로2길 21-1",
+        "category": "의원",
+        "sourceId": "osm:node/4863028563",
+        "sourceUrl": "https://www.openstreetmap.org/node/4863028563",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831032000",
+        "districtName": "동부면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.5692824,
+          34.7849985
+        ]
+      },
+      "properties": {
+        "name": "가배보건진료소",
+        "address": "거제시 거제남서로 2269",
+        "category": "의원",
+        "sourceId": "osm:node/4891404415",
+        "sourceUrl": "https://www.openstreetmap.org/node/4891404415",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831032000",
+        "districtName": "동부면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.5322952,
+          34.8154308
+        ]
+      },
+      "properties": {
+        "name": "산달보건진료소",
+        "address": "거제시 산달길 12",
+        "category": "의원",
+        "sourceId": "osm:node/4939669149",
+        "sourceUrl": "https://www.openstreetmap.org/node/4939669149",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831034000",
+        "districtName": "거제면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.618911,
+          34.9613645
+        ]
+      },
+      "properties": {
+        "name": "덕곡보건진료소",
+        "address": "거제시 덕곡3길 5",
+        "category": "의원",
+        "sourceId": "osm:node/4950046582",
+        "sourceUrl": "https://www.openstreetmap.org/node/4950046582",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831038000",
+        "districtName": "하청면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6387255,
+          34.957259
+        ]
+      },
+      "properties": {
+        "name": "유계리노인요양병원",
+        "address": "거제시 유계7길 6-10",
+        "category": "병원",
+        "sourceId": "osm:node/4953836680",
+        "sourceUrl": "https://www.openstreetmap.org/node/4953836680",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831038000",
+        "districtName": "하청면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.715819,
+          34.9426274
+        ]
+      },
+      "properties": {
+        "name": "외포보건진료소",
+        "address": "거제시 외포4길 9",
+        "category": "의원",
+        "sourceId": "osm:node/5071170743",
+        "sourceUrl": "https://www.openstreetmap.org/node/5071170743",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831039000",
+        "districtName": "장목면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.7170027,
+          34.9431163
+        ]
+      },
+      "properties": {
+        "name": "보건약국",
+        "address": "거제시 옥포대첩로 928",
+        "category": "약국",
+        "sourceId": "osm:node/5078234617",
+        "sourceUrl": "https://www.openstreetmap.org/node/5078234617",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831039000",
+        "districtName": "장목면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6817689,
+          34.9886135
+        ]
+      },
+      "properties": {
+        "name": "우리의원",
+        "address": "거제시 거제북로 1184",
+        "category": "의원",
+        "sourceId": "osm:node/5164425472",
+        "sourceUrl": "https://www.openstreetmap.org/node/5164425472",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831039000",
+        "districtName": "장목면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6817892,
+          34.9887765
+        ]
+      },
+      "properties": {
+        "name": "명제한의원",
+        "address": "",
+        "category": "의원",
+        "sourceId": "osm:node/5164425513",
+        "sourceUrl": "https://www.openstreetmap.org/node/5164425513",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831039000",
+        "districtName": "장목면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6966083,
+          35.0301213
+        ]
+      },
+      "properties": {
+        "name": "구영보건진료소",
+        "address": "거제시 거제북로 1918-1",
+        "category": "의원",
+        "sourceId": "osm:node/5203429034",
+        "sourceUrl": "https://www.openstreetmap.org/node/5203429034",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831039000",
+        "districtName": "장목면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.5227219,
+          34.91856
+        ]
+      },
+      "properties": {
+        "name": "사등보건지소",
+        "address": "거제시 성포로 104-1",
+        "category": "의원",
+        "sourceId": "osm:node/5240357576",
+        "sourceUrl": "https://www.openstreetmap.org/node/5240357576",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831036000",
+        "districtName": "사등면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.5207774,
+          34.9016477
+        ]
+      },
+      "properties": {
+        "name": "21세기한일병원",
+        "address": "거제시 지석로 70",
+        "category": "병원",
+        "sourceId": "osm:node/5249993428",
+        "sourceUrl": "https://www.openstreetmap.org/node/5249993428",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831036000",
+        "districtName": "사등면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.4726435,
+          34.8277491
+        ]
+      },
+      "properties": {
+        "name": "화도보건진료소",
+        "address": "거제시 화도길 137",
+        "category": "의원",
+        "sourceId": "osm:node/5309737227",
+        "sourceUrl": "https://www.openstreetmap.org/node/5309737227",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831035000",
+        "districtName": "둔덕면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6365483,
+          34.8684162
+        ]
+      },
+      "properties": {
+        "name": "상문약국",
+        "address": "",
+        "category": "약국",
+        "sourceId": "osm:node/9416819581",
+        "sourceUrl": "https://www.openstreetmap.org/node/9416819581",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831059000",
+        "districtName": "상문동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6374178,
+          34.8687615
+        ]
+      },
+      "properties": {
+        "name": "산들한의원",
+        "address": "",
+        "category": "의료기관",
+        "sourceId": "osm:node/9416819591",
+        "sourceUrl": "https://www.openstreetmap.org/node/9416819591",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831059000",
+        "districtName": "상문동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6364284,
+          34.8909393
+        ]
+      },
+      "properties": {
+        "name": "삼성한의원",
+        "address": "거제시 제산로 2-5",
+        "category": "의원",
+        "sourceId": "osm:node/950245555",
+        "sourceUrl": "https://www.openstreetmap.org/node/950245555",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831060000",
+        "districtName": "수양동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.5837198,
+          34.8573551
+        ]
+      },
+      "properties": {
+        "name": "굿뉴스요양병원",
+        "address": "거제시 거제남서로 3554",
+        "category": "병원",
+        "sourceId": "osm:node/955609968",
+        "sourceUrl": "https://www.openstreetmap.org/node/955609968",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831034000",
+        "districtName": "거제면"
+      }
+    }
+  ]
+}

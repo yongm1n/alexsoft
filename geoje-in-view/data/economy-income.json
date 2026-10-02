@@ -1,0 +1,292 @@
+{
+  "format": 1,
+  "referenceYear": 2024,
+  "publicationYear": 2025,
+  "years": [
+    2024
+  ],
+  "city": {
+    "code": "48310",
+    "name": "거제시",
+    "level": "municipality",
+    "year": 2024,
+    "wageReporters": 95813,
+    "grossWagesMillionWon": 4240457,
+    "wageAverage": 4425.763727260392,
+    "wageAverageWon": 44257637.27260393,
+    "sourceRowCode": "20250103D010224253"
+  },
+  "municipalities": [
+    {
+      "code": "48120",
+      "name": "창원시",
+      "level": "municipality",
+      "year": 2024,
+      "wageReporters": 412608,
+      "grossWagesMillionWon": 18638010,
+      "wageAverage": 4517.122789669614,
+      "wageAverageWon": 45171227.896696135,
+      "sourceRowCode": "20250103D010224265"
+    },
+    {
+      "code": "48170",
+      "name": "진주시",
+      "level": "municipality",
+      "year": 2024,
+      "wageReporters": 128449,
+      "grossWagesMillionWon": 5468875,
+      "wageAverage": 4257.623648296211,
+      "wageAverageWon": 42576236.48296211,
+      "sourceRowCode": "20250103D010224263"
+    },
+    {
+      "code": "48220",
+      "name": "통영시",
+      "level": "municipality",
+      "year": 2024,
+      "wageReporters": 35804,
+      "grossWagesMillionWon": 1270357,
+      "wageAverage": 3548.08680594347,
+      "wageAverageWon": 35480868.0594347,
+      "sourceRowCode": "20250103D010224266"
+    },
+    {
+      "code": "48240",
+      "name": "사천시",
+      "level": "municipality",
+      "year": 2024,
+      "wageReporters": 41079,
+      "grossWagesMillionWon": 1740092,
+      "wageAverage": 4235.964848219285,
+      "wageAverageWon": 42359648.48219285,
+      "sourceRowCode": "20250103D010224259"
+    },
+    {
+      "code": "48250",
+      "name": "김해시",
+      "level": "municipality",
+      "year": 2024,
+      "wageReporters": 231187,
+      "grossWagesMillionWon": 9441171,
+      "wageAverage": 4083.7810949577615,
+      "wageAverageWon": 40837810.949577615,
+      "sourceRowCode": "20250103D010224256"
+    },
+    {
+      "code": "48270",
+      "name": "밀양시",
+      "level": "municipality",
+      "year": 2024,
+      "wageReporters": 32838,
+      "grossWagesMillionWon": 1188998,
+      "wageAverage": 3620.799074243255,
+      "wageAverageWon": 36207990.74243255,
+      "sourceRowCode": "20250103D010224258"
+    },
+    {
+      "code": "48310",
+      "name": "거제시",
+      "level": "municipality",
+      "year": 2024,
+      "wageReporters": 95813,
+      "grossWagesMillionWon": 4240457,
+      "wageAverage": 4425.763727260392,
+      "wageAverageWon": 44257637.27260393,
+      "sourceRowCode": "20250103D010224253"
+    },
+    {
+      "code": "48330",
+      "name": "양산시",
+      "level": "municipality",
+      "year": 2024,
+      "wageReporters": 146181,
+      "grossWagesMillionWon": 5832733,
+      "wageAverage": 3990.0760016691634,
+      "wageAverageWon": 39900760.01669163,
+      "sourceRowCode": "20250103D010224261"
+    },
+    {
+      "code": "48720",
+      "name": "의령군",
+      "level": "municipality",
+      "year": 2024,
+      "wageReporters": 7112,
+      "grossWagesMillionWon": 262676,
+      "wageAverage": 3693.419572553431,
+      "wageAverageWon": 36934195.725534305,
+      "sourceRowCode": "20250103D010224262"
+    },
+    {
+      "code": "48730",
+      "name": "함안군",
+      "level": "municipality",
+      "year": 2024,
+      "wageReporters": 22485,
+      "grossWagesMillionWon": 860217,
+      "wageAverage": 3825.7371581054035,
+      "wageAverageWon": 38257371.58105404,
+      "sourceRowCode": "20250103D010224268"
+    },
+    {
+      "code": "48740",
+      "name": "창녕군",
+      "level": "municipality",
+      "year": 2024,
+      "wageReporters": 17332,
+      "grossWagesMillionWon": 616868,
+      "wageAverage": 3559.127625201939,
+      "wageAverageWon": 35591276.25201938,
+      "sourceRowCode": "20250103D010224264"
+    },
+    {
+      "code": "48820",
+      "name": "고성군",
+      "level": "municipality",
+      "year": 2024,
+      "wageReporters": 13895,
+      "grossWagesMillionWon": 493831,
+      "wageAverage": 3554.019431450162,
+      "wageAverageWon": 35540194.31450162,
+      "sourceRowCode": "20250103D010224255"
+    },
+    {
+      "code": "48840",
+      "name": "남해군",
+      "level": "municipality",
+      "year": 2024,
+      "wageReporters": 10491,
+      "grossWagesMillionWon": 358335,
+      "wageAverage": 3415.641978839005,
+      "wageAverageWon": 34156419.78839005,
+      "sourceRowCode": "20250103D010224257"
+    },
+    {
+      "code": "48850",
+      "name": "하동군",
+      "level": "municipality",
+      "year": 2024,
+      "wageReporters": 10185,
+      "grossWagesMillionWon": 359509,
+      "wageAverage": 3529.7889052528226,
+      "wageAverageWon": 35297889.052528225,
+      "sourceRowCode": "20250103D010224267"
+    },
+    {
+      "code": "48860",
+      "name": "산청군",
+      "level": "municipality",
+      "year": 2024,
+      "wageReporters": 8793,
+      "grossWagesMillionWon": 301362,
+      "wageAverage": 3427.294438758103,
+      "wageAverageWon": 34272944.38758103,
+      "sourceRowCode": "20250103D010224260"
+    },
+    {
+      "code": "48870",
+      "name": "함양군",
+      "level": "municipality",
+      "year": 2024,
+      "wageReporters": 9750,
+      "grossWagesMillionWon": 348680,
+      "wageAverage": 3576.2051282051284,
+      "wageAverageWon": 35762051.28205128,
+      "sourceRowCode": "20250103D010224269"
+    },
+    {
+      "code": "48880",
+      "name": "거창군",
+      "level": "municipality",
+      "year": 2024,
+      "wageReporters": 17876,
+      "grossWagesMillionWon": 667681,
+      "wageAverage": 3735.0693667487135,
+      "wageAverageWon": 37350693.66748714,
+      "sourceRowCode": "20250103D010224254"
+    },
+    {
+      "code": "48890",
+      "name": "합천군",
+      "level": "municipality",
+      "year": 2024,
+      "wageReporters": 10156,
+      "grossWagesMillionWon": 358721,
+      "wageAverage": 3532.1090980701065,
+      "wageAverageWon": 35321090.98070107,
+      "sourceRowCode": "20250103D010224270"
+    }
+  ],
+  "benchmarks": [
+    {
+      "code": "48",
+      "name": "경상남도",
+      "level": "province",
+      "year": 2024,
+      "wageReporters": 1252034,
+      "grossWagesMillionWon": 52448571,
+      "wageAverage": 4189.06922655455,
+      "wageAverageWon": 41890692.2655455,
+      "sourceRowCode": "20250103D010424252"
+    },
+    {
+      "code": "00",
+      "name": "전국",
+      "level": "national",
+      "year": 2024,
+      "wageReporters": 21078535,
+      "grossWagesMillionWon": 964796387,
+      "wageAverage": 4577.151054378305,
+      "wageAverageWon": 45771510.54378305,
+      "sourceRowCode": "20250103D010224017"
+    }
+  ],
+  "units": {
+    "wageReporters": "명",
+    "grossWagesMillionWon": "백만원",
+    "wageAverage": "만원/신고인",
+    "wageAverageWon": "원/신고인"
+  },
+  "coverage": {
+    "geographicBasis": "근로소득 연말정산 신고자의 주소지",
+    "eupMyeonDongAvailable": false
+  },
+  "sources": [
+    {
+      "id": "nts-wage-2024",
+      "title": "4-2-15. 시·군·구별 근로소득 연말정산 신고현황(주소지)",
+      "provider": "국세청 국세통계포털 TASIS",
+      "url": "https://tasis.nts.go.kr/websquare/websquare.html?w2xPath=/ui/ep/e/a/UTWEPEAA02.xml&sttPblYr=2025&sttsMtaInfrId=20250103D01202541132",
+      "date": "2024년 귀속 · 2025년 공표",
+      "fetchedAt": "2026-10-02T02:26:27.865565+00:00",
+      "license": "공개 통계 수치 재가공 · 국세청 출처 표시(별도 열린 라이선스 미확인)",
+      "note": "공식 금액·인원을 보존하고 신고인당 평균만 계산. 읍·면·동 소득 제공 안 됨."
+    }
+  ],
+  "caveat": "연말정산 신고인에 대한 주소지 기준 통계이며 전체 주민·가구의 소득이나 처분가능소득이 아닙니다. 신규입사·중도퇴사·이중근로자의 급여가 포함되고 중복 신고가 있을 수 있어 개인의 연간 급여수준을 뜻하지 않습니다. 공개 표에 면동 자료가 없으므로 면동별 값을 만들지 않았습니다.",
+  "officialNotes": "[A] 해당년도 귀속분 근로소득 연말정산 지급명세서 신고자의 신고실적을 기준으로 작성함. 신규입사자 및 중도퇴사자,\t\t\t\t\t\t\t\t\t\n    이중근로자의 급여가 포함되어 있으므로 본 통계표상의 급여는 근로자의 급여수준에 대한 지표로 사용하기 곤란함.\t\t\t\t\t\t\t\t\t\n    (2개 이상의 근무지가 있는 근로자의 주(현)사업장에서 합산하여 신고하지 않은 경우 중복으로 집계될 수 있음)\t\t\t\t\t\t\t\t\t\n[B] 원천징수의무자의 소재지가 불분명하거나 사업자가 아닌 경우(주민등록번호 신고분, 외국인 등) 기타로 구분함",
+  "verification": {
+    "rawResponseSha256": "ed2430323abf95b05e208e006e7a80db3feca9f64c40652777e67633ba961f40",
+    "rawRows": 1976,
+    "municipalityCount": 18,
+    "officialGyeongnamSubtotal": {
+      "code": "48",
+      "name": "경상남도",
+      "level": "province",
+      "year": 2024,
+      "wageReporters": 1252034,
+      "grossWagesMillionWon": 52448571,
+      "wageAverage": 4189.06922655455,
+      "wageAverageWon": 41890692.2655455,
+      "sourceRowCode": "20250103D010424252"
+    },
+    "municipalitySums": {
+      "wageReporters": 1252034,
+      "grossWagesMillionWon": 52448573
+    },
+    "reporterDifference": 0,
+    "millionWonDifference": 2,
+    "rowSelection": "ROW2=경남, ROW1=시군명, COL2=급여총계, COL1=인원/금액, COL6=2024",
+    "averageFormula": "wageAverage[만원] = grossWagesMillionWon * 100 / wageReporters",
+    "note": "시군 금액과 도 소계는 백만원 단위의 별도 공표값이다. 차이를 보정하거나 임의 배분하지 않음."
+  }
+}

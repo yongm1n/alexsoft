@@ -4,7 +4,7 @@
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://alexsoft.co.kr/</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <image:image><image:loc>https://alexsoft.co.kr/assets/brand/alexsoft-signature-hero.webp</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/assets/brand/capability-ai-workflow.webp</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/assets/brand/capability-product-engineering.webp</image:loc></image:image>
@@ -15,6 +15,7 @@
     <image:image><image:loc>https://alexsoft.co.kr/assets/work/mokpyo-dashboard.webp</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/assets/work/bridge-console-coverage.webp</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/assets/work/busan-map.jpg</image:loc></image:image>
+    <image:image><image:loc>https://alexsoft.co.kr/assets/work/geoje-map.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://alexsoft.co.kr/diagnosis/</loc>
@@ -37,7 +38,7 @@
   </url>
   <url>
     <loc>https://alexsoft.co.kr/work/</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <image:image><image:loc>https://alexsoft.co.kr/assets/work/cascade-demo-poster.webp</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/assets/work/cascade-overview-ko.webp</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/assets/work/cascade-flow-from-screen-ko.webp</image:loc></image:image>
@@ -71,10 +72,12 @@
     </video:video>
     <image:image><image:loc>https://alexsoft.co.kr/assets/work/busan-map.jpg</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/assets/work/busan-statistics.jpg</image:loc></image:image>
+    <image:image><image:loc>https://alexsoft.co.kr/assets/work/geoje-map.jpg</image:loc></image:image>
+    <image:image><image:loc>https://alexsoft.co.kr/assets/work/geoje-care.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://alexsoft.co.kr/en/</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <image:image><image:loc>https://alexsoft.co.kr/assets/brand/alexsoft-signature-hero.webp</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/assets/grace-site.webp</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/assets/work/cascade-demo-poster.webp</image:loc></image:image>
@@ -98,6 +101,7 @@
       <video:live>no</video:live>
     </video:video>
     <image:image><image:loc>https://alexsoft.co.kr/assets/work/busan-map.jpg</image:loc></image:image>
+    <image:image><image:loc>https://alexsoft.co.kr/assets/work/geoje-map.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://alexsoft.co.kr/insights/</loc>
@@ -151,10 +155,19 @@
   </url>
   <url>
     <loc>https://alexsoft.co.kr/busan-in-view/</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-02</lastmod>
   </url>
   <url>
     <loc>https://alexsoft.co.kr/busan-in-view/about/</loc>
     <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://alexsoft.co.kr/geoje-in-view/</loc>
+    <lastmod>2026-10-02</lastmod>
+    <image:image><image:loc>https://alexsoft.co.kr/geoje-in-view/og-geoje.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://alexsoft.co.kr/geoje-in-view/about/</loc>
+    <lastmod>2026-10-02</lastmod>
   </url>
 </urlset>

@@ -1,0 +1,311 @@
+{
+  "provider": "USGS / NASA Landsat · Microsoft Planetary Computer",
+  "license": "퍼블릭 도메인",
+  "licenseUrl": "https://www.usgs.gov/faqs/are-there-any-restrictions-use-or-redistribution-landsat-data",
+  "resolutionMeters": 30,
+  "captures": [
+    {
+      "id": "LT05_L2SP_114036_19841105_02_T1",
+      "date": "1984-11-05",
+      "year": 1984,
+      "sensor": "Landsat 5",
+      "sourceUrl": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/landsat-c2-l2/items/LT05_L2SP_114036_19841105_02_T1"
+    },
+    {
+      "id": "LT05_L2SP_114036_20000423_02_T1",
+      "date": "2000-04-23",
+      "year": 2000,
+      "sensor": "Landsat 5",
+      "sourceUrl": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/landsat-c2-l2/items/LT05_L2SP_114036_20000423_02_T1"
+    },
+    {
+      "id": "LC08_L2SP_114036_20150417_02_T1",
+      "date": "2015-04-17",
+      "year": 2015,
+      "sensor": "Landsat 8",
+      "sourceUrl": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/landsat-c2-l2/items/LC08_L2SP_114036_20150417_02_T1"
+    },
+    {
+      "id": "LC08_L2SP_114036_20251122_02_T1",
+      "date": "2025-11-22",
+      "year": 2025,
+      "sensor": "Landsat 8",
+      "sourceUrl": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/landsat-c2-l2/items/LC08_L2SP_114036_20251122_02_T1"
+    }
+  ],
+  "places": [
+    {
+      "id": "gohyeon",
+      "title": "고현만과 장평",
+      "bounds": [
+        128.585,
+        34.87,
+        128.655,
+        34.935
+      ],
+      "description": "고현항과 장평 조선소 주변. 두 시기의 해안선과 시가지 범위를 겹쳐 보세요.",
+      "images": [
+        {
+          "captureId": "LT05_L2SP_114036_19841105_02_T1",
+          "image": "/satellite/gohyeon-1984-11-05.jpg",
+          "dimensions": [
+            215,
+            242
+          ]
+        },
+        {
+          "captureId": "LT05_L2SP_114036_20000423_02_T1",
+          "image": "/satellite/gohyeon-2000-04-23.jpg",
+          "dimensions": [
+            215,
+            242
+          ]
+        },
+        {
+          "captureId": "LC08_L2SP_114036_20150417_02_T1",
+          "image": "/satellite/gohyeon-2015-04-17.jpg",
+          "dimensions": [
+            215,
+            242
+          ]
+        },
+        {
+          "captureId": "LC08_L2SP_114036_20251122_02_T1",
+          "image": "/satellite/gohyeon-2025-11-22.jpg",
+          "dimensions": [
+            215,
+            242
+          ]
+        }
+      ]
+    },
+    {
+      "id": "okpo",
+      "title": "옥포만과 아주",
+      "bounds": [
+        128.665,
+        34.845,
+        128.735,
+        34.91
+      ],
+      "description": "옥포항, 조선소와 아주 일대. 바다와 맞닿은 작업장, 주변 시가지의 모습을 살펴보세요.",
+      "images": [
+        {
+          "captureId": "LT05_L2SP_114036_19841105_02_T1",
+          "image": "/satellite/okpo-1984-11-05.jpg",
+          "dimensions": [
+            215,
+            242
+          ]
+        },
+        {
+          "captureId": "LT05_L2SP_114036_20000423_02_T1",
+          "image": "/satellite/okpo-2000-04-23.jpg",
+          "dimensions": [
+            215,
+            242
+          ]
+        },
+        {
+          "captureId": "LC08_L2SP_114036_20150417_02_T1",
+          "image": "/satellite/okpo-2015-04-17.jpg",
+          "dimensions": [
+            215,
+            242
+          ]
+        },
+        {
+          "captureId": "LC08_L2SP_114036_20251122_02_T1",
+          "image": "/satellite/okpo-2025-11-22.jpg",
+          "dimensions": [
+            215,
+            242
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sadeung",
+      "title": "거제대교와 사등",
+      "bounds": [
+        128.445,
+        34.86,
+        128.56,
+        34.965
+      ],
+      "description": "거제대교에서 성포와 가조도까지. 다리 주변 도로와 연안의 변화를 비교할 수 있습니다.",
+      "images": [
+        {
+          "captureId": "LT05_L2SP_114036_19841105_02_T1",
+          "image": "/satellite/sadeung-1984-11-05.jpg",
+          "dimensions": [
+            353,
+            391
+          ]
+        },
+        {
+          "captureId": "LT05_L2SP_114036_20000423_02_T1",
+          "image": "/satellite/sadeung-2000-04-23.jpg",
+          "dimensions": [
+            353,
+            391
+          ]
+        },
+        {
+          "captureId": "LC08_L2SP_114036_20150417_02_T1",
+          "image": "/satellite/sadeung-2015-04-17.jpg",
+          "dimensions": [
+            353,
+            391
+          ]
+        },
+        {
+          "captureId": "LC08_L2SP_114036_20251122_02_T1",
+          "image": "/satellite/sadeung-2025-11-22.jpg",
+          "dimensions": [
+            353,
+            391
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jangmok",
+      "title": "장목과 거가대교",
+      "bounds": [
+        128.65,
+        34.975,
+        128.755,
+        35.07
+      ],
+      "description": "장목 북부와 거가대교 연결 구간. 육지와 섬을 잇는 길, 주변 해안을 함께 보세요.",
+      "images": [
+        {
+          "captureId": "LT05_L2SP_114036_19841105_02_T1",
+          "image": "/satellite/jangmok-1984-11-05.jpg",
+          "dimensions": [
+            322,
+            354
+          ]
+        },
+        {
+          "captureId": "LT05_L2SP_114036_20000423_02_T1",
+          "image": "/satellite/jangmok-2000-04-23.jpg",
+          "dimensions": [
+            322,
+            354
+          ]
+        },
+        {
+          "captureId": "LC08_L2SP_114036_20150417_02_T1",
+          "image": "/satellite/jangmok-2015-04-17.jpg",
+          "dimensions": [
+            322,
+            354
+          ]
+        },
+        {
+          "captureId": "LC08_L2SP_114036_20251122_02_T1",
+          "image": "/satellite/jangmok-2025-11-22.jpg",
+          "dimensions": [
+            322,
+            354
+          ]
+        }
+      ]
+    },
+    {
+      "id": "geoje-myeon",
+      "title": "거제면과 동부",
+      "bounds": [
+        128.545,
+        34.785,
+        128.655,
+        34.885
+      ],
+      "description": "거제면 들녘과 동부의 산·마을. 계절에 따른 숲과 농경지의 색 차이도 함께 보입니다.",
+      "images": [
+        {
+          "captureId": "LT05_L2SP_114036_19841105_02_T1",
+          "image": "/satellite/geoje-myeon-1984-11-05.jpg",
+          "dimensions": [
+            337,
+            372
+          ]
+        },
+        {
+          "captureId": "LT05_L2SP_114036_20000423_02_T1",
+          "image": "/satellite/geoje-myeon-2000-04-23.jpg",
+          "dimensions": [
+            337,
+            372
+          ]
+        },
+        {
+          "captureId": "LC08_L2SP_114036_20150417_02_T1",
+          "image": "/satellite/geoje-myeon-2015-04-17.jpg",
+          "dimensions": [
+            337,
+            372
+          ]
+        },
+        {
+          "captureId": "LC08_L2SP_114036_20251122_02_T1",
+          "image": "/satellite/geoje-myeon-2025-11-22.jpg",
+          "dimensions": [
+            337,
+            372
+          ]
+        }
+      ]
+    },
+    {
+      "id": "island",
+      "title": "거제 전역",
+      "bounds": [
+        128.44,
+        34.665,
+        128.8,
+        35.075
+      ],
+      "description": "섬 전체의 해안과 산지, 도시와 항구를 한 화면에서 비교합니다. 일부 주변 섬과 통영 연안도 포함됩니다.",
+      "images": [
+        {
+          "captureId": "LT05_L2SP_114036_19841105_02_T1",
+          "image": "/satellite/island-1984-11-05.jpg",
+          "dimensions": [
+            1103,
+            1521
+          ]
+        },
+        {
+          "captureId": "LT05_L2SP_114036_20000423_02_T1",
+          "image": "/satellite/island-2000-04-23.jpg",
+          "dimensions": [
+            1103,
+            1521
+          ]
+        },
+        {
+          "captureId": "LC08_L2SP_114036_20150417_02_T1",
+          "image": "/satellite/island-2015-04-17.jpg",
+          "dimensions": [
+            1103,
+            1521
+          ]
+        },
+        {
+          "captureId": "LC08_L2SP_114036_20251122_02_T1",
+          "image": "/satellite/island-2025-11-22.jpg",
+          "dimensions": [
+            1103,
+            1521
+          ]
+        }
+      ]
+    }
+  ],
+  "processing": "Landsat Collection 2 Level 2 지표반사도 RGB. 같은 UTM 52N 30m 격자, 반사도 0–0.35·감마 1.8로 표시. 촬영 날짜별 단일 장면이며 합성·AI 복원 없음.",
+  "limitations": "계절·조수·태양각·센서 차이로 색과 그림자가 달라집니다. 30m 격자에서는 작은 건물과 다리를 자세히 읽기 어렵고, 색 차이가 곧 토지 변화는 아닙니다.",
+  "verifiedAt": "2026-10-02"
+}

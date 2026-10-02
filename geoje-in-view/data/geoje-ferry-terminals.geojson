@@ -1,0 +1,320 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6959586,
+          34.8063543
+        ]
+      },
+      "properties": {
+        "name": "내도도선",
+        "address": "",
+        "category": "선착장",
+        "sourceId": "osm:node/244754456",
+        "sourceUrl": "https://www.openstreetmap.org/node/244754456",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831031000",
+        "districtName": "일운면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.662728,
+          34.7419779
+        ]
+      },
+      "properties": {
+        "name": "도장포유람선터미널",
+        "address": "거제시 도장포1길 55",
+        "category": "선착장",
+        "sourceId": "osm:node/2494806771",
+        "sourceUrl": "https://www.openstreetmap.org/node/2494806771",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831033000",
+        "districtName": "남부면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.7096352,
+          34.7697805
+        ]
+      },
+      "properties": {
+        "name": "이름 미등록 선착장",
+        "address": "",
+        "category": "선착장",
+        "sourceId": "osm:node/2495461583",
+        "sourceUrl": "https://www.openstreetmap.org/node/2495461583",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831031000",
+        "districtName": "일운면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.7278301,
+          34.8671707
+        ]
+      },
+      "properties": {
+        "name": "동백섬 지심도 터미널",
+        "address": "",
+        "category": "선착장",
+        "sourceId": "osm:node/3626267634",
+        "sourceUrl": "https://www.openstreetmap.org/node/3626267634",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831051000",
+        "districtName": "장승포동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.7242629,
+          34.8631358
+        ]
+      },
+      "properties": {
+        "name": "장승포항여객선터미널(구)",
+        "address": "",
+        "category": "선착장",
+        "sourceId": "osm:node/4666787744",
+        "sourceUrl": "https://www.openstreetmap.org/node/4666787744",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831051000",
+        "districtName": "장승포동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.7035708,
+          34.8313774
+        ]
+      },
+      "properties": {
+        "name": "지세포유람선터미널",
+        "address": "거제시 지세포해안로 89-19",
+        "category": "선착장",
+        "sourceId": "osm:node/4707836098",
+        "sourceUrl": "https://www.openstreetmap.org/node/4707836098",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831031000",
+        "districtName": "일운면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.7047847,
+          34.8118595
+        ]
+      },
+      "properties": {
+        "name": "와현유람선",
+        "address": "거제시 와현해변길 46",
+        "category": "선착장",
+        "sourceId": "osm:node/4719687814",
+        "sourceUrl": "https://www.openstreetmap.org/node/4719687814",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831031000",
+        "districtName": "일운면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6952443,
+          34.8051779
+        ]
+      },
+      "properties": {
+        "name": "구조라유람선터미널",
+        "address": "거제시 구조라로 37",
+        "category": "선착장",
+        "sourceId": "osm:node/4721500436",
+        "sourceUrl": "https://www.openstreetmap.org/node/4721500436",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831031000",
+        "districtName": "일운면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.7472877,
+          34.8173547
+        ]
+      },
+      "properties": {
+        "name": "지심도선착장",
+        "address": "",
+        "category": "선착장",
+        "sourceId": "osm:node/4768740264",
+        "sourceUrl": "https://www.openstreetmap.org/node/4768740264",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831031000",
+        "districtName": "일운면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.5688628,
+          34.7851522
+        ]
+      },
+      "properties": {
+        "name": "장사도가배유람선",
+        "address": "거제시 거제남서로 2271-1",
+        "category": "선착장",
+        "sourceId": "osm:node/4891404408",
+        "sourceUrl": "https://www.openstreetmap.org/node/4891404408",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831032000",
+        "districtName": "동부면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6283907,
+          34.7322841
+        ]
+      },
+      "properties": {
+        "name": "다대관광유람선",
+        "address": "거제시 다대5길 50",
+        "category": "선착장",
+        "sourceId": "osm:node/5354103270",
+        "sourceUrl": "https://www.openstreetmap.org/node/5354103270",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831033000",
+        "districtName": "남부면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.5866121,
+          34.7150523
+        ]
+      },
+      "properties": {
+        "name": "대포크루스",
+        "address": "거제시 대포길 82",
+        "category": "선착장",
+        "sourceId": "osm:node/5360571860",
+        "sourceUrl": "https://www.openstreetmap.org/node/5360571860",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831033000",
+        "districtName": "남부면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6067702,
+          34.7307267
+        ]
+      },
+      "properties": {
+        "name": "매물도여객선터미널",
+        "address": "거제시 저구해안길 60",
+        "category": "선착장",
+        "sourceId": "osm:node/5369602887",
+        "sourceUrl": "https://www.openstreetmap.org/node/5369602887",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831033000",
+        "districtName": "남부면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6054797,
+          34.7356968
+        ]
+      },
+      "properties": {
+        "name": "장사도유람선",
+        "address": "거제시 저구해안길 16-17",
+        "category": "선착장",
+        "sourceId": "osm:node/5372153792",
+        "sourceUrl": "https://www.openstreetmap.org/node/5372153792",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831033000",
+        "districtName": "남부면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6280845,
+          34.7318319
+        ]
+      },
+      "properties": {
+        "name": "이름 미등록 선착장",
+        "address": "",
+        "category": "선착장",
+        "sourceId": "osm:node/5559957040",
+        "sourceUrl": "https://www.openstreetmap.org/node/5559957040",
+        "date": "2026-10-02",
+        "coordinateSource": "OSM node geometry",
+        "districtId": "4831033000",
+        "districtName": "남부면"
+      }
+    }
+  ]
+}

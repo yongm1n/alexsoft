@@ -1,0 +1,489 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.5960591,
+          34.85109169
+        ]
+      },
+      "properties": {
+        "name": "거제면참새미작은도서관",
+        "address": "경상남도 거제시 거제면 동상3길 26",
+        "category": "작은도서관",
+        "operationType": "공립",
+        "sourceId": "data.go.kr:15130712/1",
+        "sourceUrl": "https://www.data.go.kr/data/15130712/fileData.do",
+        "date": "2026-06-15",
+        "coordinateSource": "거제시 공개 CSV 위도·경도",
+        "districtId": "4831034000",
+        "districtName": "거제면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6953228,
+          34.89812548
+        ]
+      },
+      "properties": {
+        "name": "이편한세상옥포아파트 작은도서관",
+        "address": "경상남도 거제시 성산로 33",
+        "category": "작은도서관",
+        "operationType": "사립",
+        "sourceId": "data.go.kr:15130712/10",
+        "sourceUrl": "https://www.data.go.kr/data/15130712/fileData.do",
+        "date": "2026-06-15",
+        "coordinateSource": "거제시 공개 CSV 위도·경도",
+        "districtId": "4831056000",
+        "districtName": "옥포2동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6849367,
+          34.8664323
+        ]
+      },
+      "properties": {
+        "name": "덕산아내프리미엄1차아파트 작은도서관",
+        "address": "경상남도 거제시 아주로 100-10",
+        "category": "작은도서관",
+        "operationType": "사립",
+        "sourceId": "data.go.kr:15130712/11",
+        "sourceUrl": "https://www.data.go.kr/data/15130712/fileData.do",
+        "date": "2026-06-15",
+        "coordinateSource": "거제시 공개 CSV 위도·경도",
+        "districtId": "4831054000",
+        "districtName": "아주동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6832826,
+          34.86690134
+        ]
+      },
+      "properties": {
+        "name": "덕산아내2차프리미엄아파트 작은도서관",
+        "address": "경상남도 거제시 아주로 100-11",
+        "category": "작은도서관",
+        "operationType": "사립",
+        "sourceId": "data.go.kr:15130712/12",
+        "sourceUrl": "https://www.data.go.kr/data/15130712/fileData.do",
+        "date": "2026-06-15",
+        "coordinateSource": "거제시 공개 CSV 위도·경도",
+        "districtId": "4831054000",
+        "districtName": "아주동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.651537,
+          34.86524744
+        ]
+      },
+      "properties": {
+        "name": "거제시종합사회복지관 작은도서관",
+        "address": "경상남도 거제시 수양로 102",
+        "category": "작은도서관",
+        "operationType": "공립",
+        "sourceId": "data.go.kr:15130712/13",
+        "sourceUrl": "https://www.data.go.kr/data/15130712/fileData.do",
+        "date": "2026-06-15",
+        "coordinateSource": "거제시 공개 CSV 위도·경도",
+        "districtId": "4831059000",
+        "districtName": "상문동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6960556,
+          34.8940211
+        ]
+      },
+      "properties": {
+        "name": "옥포작은도서관",
+        "address": "경상남도 거제시 옥포대첩로 84",
+        "category": "작은도서관",
+        "operationType": "공립",
+        "sourceId": "data.go.kr:15130712/14",
+        "sourceUrl": "https://www.data.go.kr/data/15130712/fileData.do",
+        "date": "2026-06-15",
+        "coordinateSource": "거제시 공개 CSV 위도·경도",
+        "districtId": "4831056000",
+        "districtName": "옥포2동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6904176,
+          34.89473577
+        ]
+      },
+      "properties": {
+        "name": "대한글로벌 작은도서관",
+        "address": "경상남도 거제시 옥포로 21길 3, 금란빌딩 3층, 302호",
+        "category": "작은도서관",
+        "operationType": "사립",
+        "sourceId": "data.go.kr:15130712/15",
+        "sourceUrl": "https://www.data.go.kr/data/15130712/fileData.do",
+        "date": "2026-06-15",
+        "coordinateSource": "거제시 공개 CSV 위도·경도",
+        "districtId": "4831056000",
+        "districtName": "옥포2동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.7173644,
+          34.83607269
+        ]
+      },
+      "properties": {
+        "name": "엘마르작은도서관",
+        "address": "경상남도 거제시 일운면 지세포해안로 258",
+        "category": "작은도서관",
+        "operationType": "사립",
+        "sourceId": "data.go.kr:15130712/16",
+        "sourceUrl": "https://www.data.go.kr/data/15130712/fileData.do",
+        "date": "2026-06-15",
+        "coordinateSource": "거제시 공개 CSV 위도·경도",
+        "districtId": "4831031000",
+        "districtName": "일운면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.7152603,
+          34.94326291
+        ]
+      },
+      "properties": {
+        "name": "외포바다마을작은도서관",
+        "address": "경상남도 거제시 장목면 외포4길 12",
+        "category": "작은도서관",
+        "operationType": "공립",
+        "sourceId": "data.go.kr:15130712/17",
+        "sourceUrl": "https://www.data.go.kr/data/15130712/fileData.do",
+        "date": "2026-06-15",
+        "coordinateSource": "거제시 공개 CSV 위도·경도",
+        "districtId": "4831039000",
+        "districtName": "장목면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6030767,
+          34.8891883
+        ]
+      },
+      "properties": {
+        "name": "참빛 작은도서관",
+        "address": "경상남도 거제시 장평3로 5길 51-1, 별관1층",
+        "category": "작은도서관",
+        "operationType": "사립",
+        "sourceId": "data.go.kr:15130712/18",
+        "sourceUrl": "https://www.data.go.kr/data/15130712/fileData.do",
+        "date": "2026-06-15",
+        "coordinateSource": "거제시 공개 CSV 위도·경도",
+        "districtId": "4831057000",
+        "districtName": "장평동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6376348,
+          34.89053127
+        ]
+      },
+      "properties": {
+        "name": "꿈꾸는놀이터작은도서관",
+        "address": "경상남도 거제시 제산로 17",
+        "category": "작은도서관",
+        "operationType": "사립",
+        "sourceId": "data.go.kr:15130712/19",
+        "sourceUrl": "https://www.data.go.kr/data/15130712/fileData.do",
+        "date": "2026-06-15",
+        "coordinateSource": "거제시 공개 CSV 위도·경도",
+        "districtId": "4831060000",
+        "districtName": "수양동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6252527,
+          34.88346684
+        ]
+      },
+      "properties": {
+        "name": "새마을문고 작은도서관",
+        "address": "경상남도 거제시 거제중앙로 1849",
+        "category": "작은도서관",
+        "operationType": "사립",
+        "sourceId": "data.go.kr:15130712/2",
+        "sourceUrl": "https://www.data.go.kr/data/15130712/fileData.do",
+        "date": "2026-06-15",
+        "coordinateSource": "거제시 공개 CSV 위도·경도",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6411271,
+          34.89000694
+        ]
+      },
+      "properties": {
+        "name": "힐 나눔 도서관",
+        "address": "경상남도 거제시 제산로 51",
+        "category": "작은도서관",
+        "operationType": "사립",
+        "sourceId": "data.go.kr:15130712/20",
+        "sourceUrl": "https://www.data.go.kr/data/15130712/fileData.do",
+        "date": "2026-06-15",
+        "coordinateSource": "거제시 공개 CSV 위도·경도",
+        "districtId": "4831060000",
+        "districtName": "수양동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6355877,
+          34.89750863
+        ]
+      },
+      "properties": {
+        "name": "덕산베스트작은도서관",
+        "address": "경상남도 거제시 중곡2로 89",
+        "category": "작은도서관",
+        "operationType": "사립",
+        "sourceId": "data.go.kr:15130712/21",
+        "sourceUrl": "https://www.data.go.kr/data/15130712/fileData.do",
+        "date": "2026-06-15",
+        "coordinateSource": "거제시 공개 CSV 위도·경도",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.5908371,
+          34.88255745
+        ]
+      },
+      "properties": {
+        "name": "오션파크자이작은도서관",
+        "address": "경상남도 거제시 두동로 259-90",
+        "category": "작은도서관",
+        "operationType": "사립",
+        "sourceId": "data.go.kr:15130712/22",
+        "sourceUrl": "https://www.data.go.kr/data/15130712/fileData.do",
+        "date": "2026-06-15",
+        "coordinateSource": "거제시 공개 CSV 위도·경도",
+        "districtId": "4831034000",
+        "districtName": "거제면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.61935,
+          34.8842936
+        ]
+      },
+      "properties": {
+        "name": "글밭 작은도서관",
+        "address": "경상남도 거제시 계룡로13길 6",
+        "category": "작은도서관",
+        "operationType": "공립",
+        "sourceId": "data.go.kr:15130712/3",
+        "sourceUrl": "https://www.data.go.kr/data/15130712/fileData.do",
+        "date": "2026-06-15",
+        "coordinateSource": "거제시 공개 CSV 위도·경도",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6264272,
+          34.87945884
+        ]
+      },
+      "properties": {
+        "name": "파라미타작은도서관",
+        "address": "경상남도 거제시 계룡로2길 69-1",
+        "category": "작은도서관",
+        "operationType": "사립",
+        "sourceId": "data.go.kr:15130712/4",
+        "sourceUrl": "https://www.data.go.kr/data/15130712/fileData.do",
+        "date": "2026-06-15",
+        "coordinateSource": "거제시 공개 CSV 위도·경도",
+        "districtId": "4831058000",
+        "districtName": "고현동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6101227,
+          34.73224984
+        ]
+      },
+      "properties": {
+        "name": "남부면 작은도서관",
+        "address": "경상남도 거제시 남부면 남부해안로 30",
+        "category": "작은도서관",
+        "operationType": "공립",
+        "sourceId": "data.go.kr:15130712/5",
+        "sourceUrl": "https://www.data.go.kr/data/15130712/fileData.do",
+        "date": "2026-06-15",
+        "coordinateSource": "거제시 공개 CSV 위도·경도",
+        "districtId": "4831033000",
+        "districtName": "남부면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.5047387,
+          34.83654167
+        ]
+      },
+      "properties": {
+        "name": "둔덕청마꽃들작은도서관",
+        "address": "경상남도 거제시 둔덕면 거제남서로 4624",
+        "category": "작은도서관",
+        "operationType": "공립",
+        "sourceId": "data.go.kr:15130712/6",
+        "sourceUrl": "https://www.data.go.kr/data/15130712/fileData.do",
+        "date": "2026-06-15",
+        "coordinateSource": "거제시 공개 CSV 위도·경도",
+        "districtId": "4831035000",
+        "districtName": "둔덕면"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6307673,
+          34.8605918
+        ]
+      },
+      "properties": {
+        "name": "벽산e-솔렌스힐2차아파트 작은도서관",
+        "address": "경상남도 거제시 상동5길 117-16",
+        "category": "작은도서관",
+        "operationType": "사립",
+        "sourceId": "data.go.kr:15130712/7",
+        "sourceUrl": "https://www.data.go.kr/data/15130712/fileData.do",
+        "date": "2026-06-15",
+        "coordinateSource": "거제시 공개 CSV 위도·경도",
+        "districtId": "4831059000",
+        "districtName": "상문동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6345189,
+          34.85852319
+        ]
+      },
+      "properties": {
+        "name": "벽산3차새마을작은도서관",
+        "address": "경상남도 거제시 상동5길 117-50",
+        "category": "작은도서관",
+        "operationType": "사립",
+        "sourceId": "data.go.kr:15130712/8",
+        "sourceUrl": "https://www.data.go.kr/data/15130712/fileData.do",
+        "date": "2026-06-15",
+        "coordinateSource": "거제시 공개 CSV 위도·경도",
+        "districtId": "4831059000",
+        "districtName": "상문동"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6279181,
+          34.86909729
+        ]
+      },
+      "properties": {
+        "name": "푸른숲 작은도서관",
+        "address": "경상남도 거제시 상동7길 30",
+        "category": "작은도서관",
+        "operationType": "사립",
+        "sourceId": "data.go.kr:15130712/9",
+        "sourceUrl": "https://www.data.go.kr/data/15130712/fileData.do",
+        "date": "2026-06-15",
+        "coordinateSource": "거제시 공개 CSV 위도·경도",
+        "districtId": "4831059000",
+        "districtName": "상문동"
+      }
+    }
+  ]
+}

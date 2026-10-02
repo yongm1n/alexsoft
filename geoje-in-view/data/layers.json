@@ -1,0 +1,58 @@
+[
+  {
+    "id": "geoje-bus-stops",
+    "title": "버스 정류소",
+    "category": "생활시설",
+    "file": "/data/geoje-bus-stops.geojson",
+    "kind": "point",
+    "count": 366,
+    "color": "#247b8b",
+    "sourceUrl": "https://www.openstreetmap.org/",
+    "provider": "OpenStreetMap / Overpass API",
+    "date": "2026-10-02",
+    "license": "© OpenStreetMap contributors · ODbL 1.0",
+    "note": "공식 시설 등록부가 아닌 OSM 지도 노드입니다. 미등록·폐업·폴리곤으로만 등록된 시설은 누락될 수 있어 전수 수량이나 접근성 평가로 해석할 수 없습니다. 거제시 18개 면동 다각형 안의 좌표만 포함했습니다."
+  },
+  {
+    "id": "geoje-health-facilities",
+    "title": "의료기관·의원·약국",
+    "category": "생활시설",
+    "file": "/data/geoje-health-facilities.geojson",
+    "kind": "point",
+    "count": 133,
+    "color": "#d1635c",
+    "sourceUrl": "https://www.openstreetmap.org/",
+    "provider": "OpenStreetMap / Overpass API",
+    "date": "2026-10-02",
+    "license": "© OpenStreetMap contributors · ODbL 1.0",
+    "note": "공식 시설 등록부가 아닌 OSM 지도 노드입니다. 미등록·폐업·폴리곤으로만 등록된 시설은 누락될 수 있어 전수 수량이나 접근성 평가로 해석할 수 없습니다. 거제시 18개 면동 다각형 안의 좌표만 포함했습니다."
+  },
+  {
+    "id": "geoje-small-libraries",
+    "title": "작은도서관",
+    "category": "생활시설",
+    "file": "/data/geoje-small-libraries.geojson",
+    "kind": "point",
+    "count": 22,
+    "color": "#8663b5",
+    "sourceUrl": "https://www.data.go.kr/data/15130712/fileData.do",
+    "provider": "경상남도 거제시",
+    "date": "2026-06-15",
+    "license": "공공데이터포털 · 이용허락범위 제한 없음 · 경상남도 거제시 출처 표시",
+    "note": "거제시 작은도서관 현황 원본 22개 중 면동 경계 안의 좌표입니다. 시립 공공도서관 전체 목록이 아닌 작은도서관 현황이며 기준일 이후 운영 변경은 반영하지 않습니다."
+  },
+  {
+    "id": "geoje-ferry-terminals",
+    "title": "여객·유람선 선착장",
+    "category": "생활시설",
+    "file": "/data/geoje-ferry-terminals.geojson",
+    "kind": "point",
+    "count": 15,
+    "color": "#397db8",
+    "sourceUrl": "https://www.openstreetmap.org/",
+    "provider": "OpenStreetMap / Overpass API",
+    "date": "2026-10-02",
+    "license": "© OpenStreetMap contributors · ODbL 1.0",
+    "note": "공식 시설 등록부가 아닌 OSM 지도 노드입니다. 미등록·폐업·폴리곤으로만 등록된 시설은 누락될 수 있어 전수 수량이나 접근성 평가로 해석할 수 없습니다. 거제시 18개 면동 다각형 안의 좌표만 포함했습니다. OSM ferry_terminal 태그만 사용해 유람선·여객선 구분과 운항 여부를 보증하지 않으며, 경계 밖 해상 부두 좌표는 제외했습니다."
+  }
+]
