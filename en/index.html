@@ -12,7 +12,7 @@
   <meta property="og:site_name" content="ALEXSOFT">
   <meta property="og:url" content="https://alexsoft.co.kr/en/">
   <meta property="og:title" content="ALEXSOFT — Systems Architecture for Regulated Industries">
-  <meta property="og:description" content="Architecture for places where failure is not an option — national tax infrastructure, healthcare information systems, marine engineering — and projects built in house: Cascade, Mokpyo, ALEXSOFT Bridge, Busan in View and Geoje in View.">
+  <meta property="og:description" content="Architecture for places where failure is not an option — national tax infrastructure, healthcare information systems, marine engineering — and projects built in house: Cascade, Mokpyo, ALEXSOFT Bridge, Busan &amp; Geoje in View.">
   <meta property="og:image" content="https://alexsoft.co.kr/assets/brand/alexsoft-architecture-og-v1.jpg">
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1536">
@@ -98,7 +98,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
-  <link rel="stylesheet" href="/assets/ink.css?v=20260910-i-4">
+  <link rel="stylesheet" href="/assets/ink.css?v=20261002-city-1">
   <noscript><style>[data-reveal]{opacity:1;transform:none}</style></noscript>
   <link rel="stylesheet" href="en.css?v=20260910-i-4">
 </head>
@@ -421,39 +421,27 @@
         </article>
 
         <article class="record">
-          <h3>Busan in View — the city through terrain, statistics and archive photographs</h3>
-          <figure class="shot hero">
-            <a href="/assets/work/busan-map.jpg" target="_blank" rel="noopener"><img src="/assets/work/busan-map.jpg" width="1440" height="1000" loading="lazy" decoding="async" alt="Busan in View: a 3D map showing the city's mountains, coastline and map controls"></a>
-            <figcaption>City map — terrain and local facilities in one view. The service is in Korean.</figcaption>
-          </figure>
-          <dl class="facts wide">
-            <div><dt>What</dt><dd>A web service for exploring statistics for Busan's 16 districts and counties and 651 archive photographs on the city's 3D terrain</dd></div>
-            <div><dt>Scope</dt><dd>ALEXSOFT's own non-profit project: information architecture, source material, maps and charts, interface design and development</dd></div>
-            <div><dt>Data rules</dt><dd>Every figure and photograph carries its source, reference date and usage terms. Two indicators are compared only when they share a reference date, and the 28 photographs with an unknown date are not given a guessed year</dd></div>
-            <div><dt>Build</dt><dd>React, MapLibre 3D map, Recharts. Static files with no server or database of its own; runs in desktop and mobile browsers. Korean-language service</dd></div>
-          </dl>
-          <div class="links" style="margin-top:16px">
-            <a href="/busan-in-view/" target="_blank" rel="noopener">Explore the service (Korean) <span aria-hidden="true">↗</span></a>
-            <a class="quiet" href="/work/#busan-in-view">Project detail (Korean) <span aria-hidden="true">→</span></a>
+          <h3>Busan &amp; Geoje in View — terrain, statistics and archive photographs</h3>
+          <p>Two non-profit projects built by ALEXSOFT, bringing public data and local records onto 3D maps. Both services are in Korean.</p>
+          <div class="gallery">
+            <figure class="shot">
+              <a href="/assets/work/busan-map.jpg" target="_blank" rel="noopener"><img src="/assets/work/busan-map.jpg" width="1440" height="1000" loading="lazy" decoding="async" alt="Busan in View: a 3D map of the city's mountains and coastline"></a>
+              <figcaption>Busan — statistics for 16 districts and counties, and 651 archive photographs.</figcaption>
+            </figure>
+            <figure class="shot">
+              <a href="/assets/work/geoje-map.jpg" target="_blank" rel="noopener"><img src="/assets/work/geoje-map.jpg" width="1440" height="1000" loading="lazy" decoding="async" alt="Geoje in View: a 3D map of Geoje Island and the surrounding islands"></a>
+              <figcaption>Geoje — statistics for 18 local districts, 763 archive photographs and 24 Landsat images from 1984–2025.</figcaption>
+            </figure>
           </div>
-        </article>
-
-        <article class="record">
-          <h3>Geoje in View — islands, people and time</h3>
-          <figure class="shot hero">
-            <a href="/assets/work/geoje-map.jpg" target="_blank" rel="noopener"><img src="/assets/work/geoje-map.jpg" width="1440" height="1000" loading="lazy" decoding="async" alt="Geoje in View: a 3D map showing Geoje Island, its mountains, coastline and surrounding islands"></a>
-            <figcaption>City map — the terrain of Geoje and its surrounding islands. The service is in Korean.</figcaption>
-          </figure>
           <dl class="facts wide">
-            <div><dt>What</dt><dd>Statistics for Geoje's 18 local districts, 763 archive photographs and 24 actual Landsat images covering six areas in 1984, 2000, 2015 and 2025</dd></div>
-            <div><dt>Scope</dt><dd>ALEXSOFT's own non-profit project, following Busan in View: source collection, maps and statistics, interface design and development</dd></div>
-            <div><dt>Data rules</dt><dd>Sources, reference dates and usage terms accompany the material. Income and long-term-care grades use the published city-level figures; suppressed small counts are shown as ranges. Unknown photograph dates and locations remain unknown</dd></div>
-            <div><dt>Build</dt><dd>React, MapLibre 3D map and Vite. Static files with no server or database of its own; runs in desktop and mobile browsers</dd></div>
+            <div><dt>Scope</dt><dd>Source collection, information architecture, maps and charts, interface design and development</dd></div>
+            <div><dt>Data rules</dt><dd>Sources, reference dates and usage terms accompany the material. Unknown dates and locations remain unknown; statistics retain their published geographic scope and disclosure limits</dd></div>
+            <div><dt>Build</dt><dd>React and MapLibre 3D maps. Static files with no server or database of their own; available in desktop and mobile browsers</dd></div>
           </dl>
           <div class="links" style="margin-top:16px">
-            <a href="/geoje-in-view/" target="_blank" rel="noopener">Explore the service (Korean) <span aria-hidden="true">↗</span></a>
-            <a class="quiet" href="/work/#geoje-in-view">Project detail (Korean) <span aria-hidden="true">→</span></a>
-            <a class="quiet" href="/geoje-in-view/about/">Sources and usage terms (Korean) <span aria-hidden="true">→</span></a>
+            <a href="/busan-in-view/" target="_blank" rel="noopener">Explore Busan (Korean) <span aria-hidden="true">↗</span></a>
+            <a href="/geoje-in-view/" target="_blank" rel="noopener">Explore Geoje (Korean) <span aria-hidden="true">↗</span></a>
+            <a class="quiet" href="/work/#cities-in-view">Project details and sources (Korean) <span aria-hidden="true">→</span></a>
           </div>
         </article>
       </div>

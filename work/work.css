@@ -6,15 +6,13 @@
 /* 히어로 제목의 잉크색 강조 (홈 .hero-copy h1 em과 같은 처리) */
 .hero-flat h1 em{font-style:normal;color:var(--cobalt)}
 
-/* 부산 한눈 — 실제 서비스 화면과 자료를 읽는 방식 */
-.busan-project{scroll-margin-top:64px}
-.busan-overview{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(280px,1fr);gap:clamp(24px,4vw,48px);align-items:start}
-.busan-summary .facts{margin:0}
-.busan-summary .links{margin-top:24px}
-.busan-project figcaption{font-family:var(--sans);letter-spacing:0;font-size:12px;line-height:1.7}
-.busan-detail{display:grid;grid-template-columns:minmax(280px,1fr) minmax(0,1.65fr);gap:clamp(24px,4vw,48px);align-items:center;margin-top:clamp(40px,6vw,72px);padding-top:clamp(32px,4vw,48px);border-top:1px solid var(--rule)}
-.busan-reading h3{font-size:20px;line-height:1.5}
-.busan-reading p{font-size:15px;line-height:1.85;color:var(--graphite);margin-top:12px}
-.busan-reading h3:not(:first-child){margin-top:32px}
-@media(max-width:860px){.busan-overview,.busan-detail{grid-template-columns:1fr}.busan-detail .shot{grid-row:1}.busan-summary .facts>div{grid-template-columns:64px 1fr}}
-.busan-project .nowrap{white-space:nowrap}
+/* 부산·거제 한눈 — 한 사례 안에 두 도시를 나란히 소개 */
+.cities-project,.city{scroll-margin-top:80px}
+.city-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(24px,4vw,48px)}
+.city{min-width:0;display:flex;flex-direction:column;gap:16px}
+.city h3{font-size:20px;line-height:1.5}
+.city p{font-size:15px;line-height:1.85;color:var(--graphite);margin:0}
+.city .links{margin-top:auto}
+.cities-project figcaption{font-family:var(--sans);letter-spacing:0;font-size:12px;line-height:1.7}
+.city-facts{margin-top:clamp(28px,4vw,44px)}
+@media(max-width:720px){.city-grid{grid-template-columns:1fr;gap:36px}}

@@ -71,9 +71,7 @@
       <video:live>no</video:live>
     </video:video>
     <image:image><image:loc>https://alexsoft.co.kr/assets/work/busan-map.jpg</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/busan-statistics.jpg</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/assets/work/geoje-map.jpg</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/geoje-care.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://alexsoft.co.kr/en/</loc>
