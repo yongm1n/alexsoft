@@ -127,6 +127,16 @@ section.block:last-of-type{border-bottom:0}
 .facts dd{margin:0}
 .facts dd small{display:block;color:var(--graphite);font-size:13px;margin-top:2px}
 .facts.wide>div{grid-template-columns:120px 1fr}
+.credential{display:grid;grid-template-columns:88px minmax(0,1fr);gap:20px;align-items:center;width:fit-content;max-width:100%}
+.credential img{display:block;width:88px;height:auto}
+.credential-name,.credential-verify{display:block}
+.credential-name{margin:2px 0 4px}
+.credential-verify{font-size:13px;color:var(--cobalt);text-decoration:underline;text-underline-offset:3px}
+@media (max-width:520px){
+  .facts.wide>.credential-fact{grid-template-columns:1fr;gap:10px}
+  .credential{grid-template-columns:72px minmax(0,1fr);gap:16px}
+  .credential img{width:72px}
+}
 
 /* --- 사례 2단(다이어그램 + 사실 표) -------------------------------------- */
 .case-grid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(280px,1fr);gap:clamp(24px,4vw,64px);align-items:start}

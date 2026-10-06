@@ -4,7 +4,8 @@
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://alexsoft.co.kr/</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-06</lastmod>
+    <image:image><image:loc>https://alexsoft.co.kr/assets/certifications/aws-certified-solutions-architect-professional.png</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/assets/brand/alexsoft-signature-hero.webp</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/assets/brand/capability-ai-workflow.webp</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/assets/brand/capability-product-engineering.webp</image:loc></image:image>
@@ -75,7 +76,8 @@
   </url>
   <url>
     <loc>https://alexsoft.co.kr/en/</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-06</lastmod>
+    <image:image><image:loc>https://alexsoft.co.kr/assets/certifications/aws-certified-solutions-architect-professional.png</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/assets/brand/alexsoft-signature-hero.webp</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/assets/grace-site.webp</image:loc></image:image>
     <image:image><image:loc>https://alexsoft.co.kr/assets/work/cascade-demo-poster.webp</image:loc></image:image>

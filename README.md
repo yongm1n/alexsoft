@@ -19,6 +19,7 @@ python3 -m http.server 8080
 
 ## 콘텐츠 근거
 
+- 대표 개인 자격: **AWS Certified Solutions Architect – Professional**. 홈 `#about`와 `/en/#en-founder`의 경력 표 마지막 행에 표시하며, [Credly 공개 배지](https://www.credly.com/badges/d0c993e5-ae64-4601-b926-ca54c0c3af7d/public_url)로 연결한다. 제공받은 공식 PNG를 `assets/certifications/aws-certified-solutions-architect-professional.png`에 원본 바이트 그대로 보관한다. 취득일·최근 취득 표현을 표시하지 않고, 회사 인증·AWS 파트너십·별도의 AWS 실적을 뜻하는 표현을 넣지 않는다. 구조화 데이터에서도 대표 `Person`의 `hasCredential`로만 연결한다.
 - `Cascade`(`/work/#cascade`): 공개 저장소 `github.com/alexsoft-hq/Cascade`의 README·CHANGELOG. 스크린샷은 저장소의 `docs/assets/screens/*.png`를 `assets/work/cascade-*.webp`로 변환한 것
 - `Mokpyo`(`/work/#mokpyo`, 구 Goalboard): 로컬 프로젝트 README(다섯 뷰·자동화·역할·배포)와 데모 워크스페이스(`prisma/seed-demo.ts`, 가상 팀·가상 목표). 스크린샷은 `assets/work/mokpyo-*.webp` — 로컬 데모를 1440×900(2x)·390px로 캡처
 - `ALEXSOFT Bridge`(`/work/#bridge`): 비공개 제품 저장소의 문서와 콘솔 화면(가상 데이터). 문구의 사실 여부는 제품 담당 세션이 확인. 스크린샷은 콘솔 캡처(1478×812)를 `assets/work/bridge-*.webp`로 변환한 것. 제품명에 FHIR를 넣지 않고, HL7·FHIR를 쓰는 페이지에는 HL7 상표 문구를 함께 둔다
