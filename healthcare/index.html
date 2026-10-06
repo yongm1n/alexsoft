@@ -2,13 +2,13 @@
 <html lang="ko">
 <head>
   <meta charset="utf-8">
+  <script src="/assets/ink.js?v=bilingual-1"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#FAF8F4">
   <meta name="description" content="의료법·인증·개인정보와 기존 EMR·병원 시스템의 제약 안에서 작동하는 의료정보 시스템 구조를 설계하고, 설계한 것은 직접 만듭니다.">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta name="author" content="알렉스소프트(ALEXSOFT)">
   <meta property="og:type" content="website">
-  <meta property="og:locale" content="ko_KR">
   <meta property="og:site_name" content="알렉스소프트(ALEXSOFT)">
   <meta property="og:url" content="https://alexsoft.co.kr/healthcare/">
   <meta property="og:title" content="의료정보 시스템 설계·연동 — 알렉스소프트(ALEXSOFT)">
@@ -22,117 +22,195 @@
   <meta name="twitter:title" content="의료정보 시스템 설계·연동 — 알렉스소프트(ALEXSOFT)">
   <meta name="twitter:description" content="의료법·인증·개인정보와 기존 시스템의 제약을 통과하는 구조를 설계합니다.">
   <meta name="twitter:image" content="https://alexsoft.co.kr/assets/brand/alexsoft-healthcare-og-v1.jpg">
-  <link rel="canonical" href="https://alexsoft.co.kr/healthcare/">
-  <link rel="alternate" hreflang="ko-KR" href="https://alexsoft.co.kr/healthcare/">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <title>의료정보 시스템 설계·연동 | 알렉스소프트(ALEXSOFT)</title>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://alexsoft.co.kr/#organization",
-        "name": "알렉스소프트",
-        "legalName": "알렉스소프트",
-        "alternateName": ["ALEXSOFT", "알렉스 소프트"],
-        "url": "https://alexsoft.co.kr/",
-        "email": "contact@alexsoft.co.kr",
-        "telephone": "+82-10-6548-0292",
-        "taxID": "212-64-01036",
-        "sameAs": [
-          "https://blog.naver.com/alex-soft",
-          "https://www.instagram.com/alexsoft.co.kr/",
-          "https://github.com/alexsoft-hq"
-        ]
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://alexsoft.co.kr/#organization",
+      "name": "알렉스소프트",
+      "legalName": "알렉스소프트",
+      "alternateName": [
+        "ALEXSOFT",
+        "알렉스 소프트"
+      ],
+      "url": "https://alexsoft.co.kr/",
+      "email": "contact@alexsoft.co.kr",
+      "telephone": "+82-10-6548-0292",
+      "taxID": "212-64-01036",
+      "sameAs": [
+        "https://blog.naver.com/alex-soft",
+        "https://www.instagram.com/alexsoft.co.kr/",
+        "https://github.com/alexsoft-hq"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://alexsoft.co.kr/#website",
+      "url": "https://alexsoft.co.kr/",
+      "name": "알렉스소프트",
+      "alternateName": [
+        "ALEXSOFT",
+        "알렉스 소프트",
+        "alexsoft.co.kr"
+      ],
+      "inLanguage": "ko",
+      "publisher": {
+        "@id": "https://alexsoft.co.kr/#organization"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://alexsoft.co.kr/healthcare/#service",
+      "name": "의료정보 시스템 설계·연동",
+      "serviceType": "EMR·병원 시스템 연동 및 의료정보 아키텍처",
+      "description": "기존 EMR과 병원 시스템 연동, HL7 FHIR, 인증과 개인정보 대응을 함께 설계하고 개발하는 서비스",
+      "provider": {
+        "@id": "https://alexsoft.co.kr/#organization"
       },
-      {
-        "@type": "WebSite",
-        "@id": "https://alexsoft.co.kr/#website",
-        "url": "https://alexsoft.co.kr/",
-        "name": "알렉스소프트",
-        "alternateName": ["ALEXSOFT", "알렉스 소프트", "alexsoft.co.kr"],
-        "inLanguage": "ko-KR",
-        "publisher": {"@id": "https://alexsoft.co.kr/#organization"}
+      "areaServed": {
+        "@type": "Country",
+        "name": "대한민국"
       },
-      {
-        "@type": "Service",
-        "@id": "https://alexsoft.co.kr/healthcare/#service",
-        "name": "의료정보 시스템 설계·연동",
-        "serviceType": "EMR·병원 시스템 연동 및 의료정보 아키텍처",
-        "description": "기존 EMR과 병원 시스템 연동, HL7 FHIR, 인증과 개인정보 대응을 함께 설계하고 개발하는 서비스",
-        "provider": {"@id": "https://alexsoft.co.kr/#organization"},
-        "areaServed": {"@type": "Country", "name": "대한민국"},
-        "audience": {"@type": "BusinessAudience", "audienceType": "의료 SaaS·디지털헬스 팀, 의료기관 IT 조직과 EMR 사업자"},
-        "offers": {
-          "@type": "Offer",
-          "url": "https://alexsoft.co.kr/healthcare/#inquiry",
-          "itemOffered": {"@type": "Service", "name": "의료정보 시스템 아키텍처"}
-        }
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "의료 SaaS·디지털헬스 팀, 의료기관 IT 조직과 EMR 사업자"
       },
-      {
-        "@type": "FAQPage",
-        "@id": "https://alexsoft.co.kr/healthcare/#faq",
-        "mainEntity": [
-          {"@type": "Question", "name": "어떤 EMR·병원 시스템 연동을 다루나요?", "acceptedAnswer": {"@type": "Answer", "text": "진료·예약·접수·검사·청구 등 필요한 업무 흐름과 기존 시스템이 제공하는 인터페이스를 먼저 확인합니다. 가능한 연동 범위와 데이터를 정한 뒤 API, 메시지와 운영 절차를 설계합니다."}},
-          {"@type": "Question", "name": "EMR 인증 대응도 함께 볼 수 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "인증 항목이 데이터 구조, 기능 경계와 운영 절차에 미치는 영향을 아키텍처 단계에서 함께 검토합니다. 인증 취득 자체를 보증하지 않으며, 적용 기준과 심사 범위는 착수 시 최신 자료로 확인합니다."}},
-          {"@type": "Question", "name": "특정 EMR 벤더에 맞춘 제안인가요?", "acceptedAnswer": {"@type": "Answer", "text": "아닙니다. 특정 벤더의 제품 판매를 전제로 하지 않습니다. 현재 사용 중인 시스템의 실제 인터페이스와 제약을 확인하고, 표준과 교체 가능성을 함께 고려해 벤더 중립적으로 설계합니다."}},
-          {"@type": "Question", "name": "EMR을 직접 만들어 주나요?", "acceptedAnswer": {"@type": "Answer", "text": "아닙니다. EMR 제품 전체를 새로 만드는 일은 맡지 않습니다. 기존 시스템과의 연동, 의료정보 아키텍처, 인증 대응 설계와 필요한 개발을 맡습니다."}},
-          {"@type": "Question", "name": "환자·의료기관 자료는 어떻게 다루나요?", "acceptedAnswer": {"@type": "Answer", "text": "판단에 필요한 최소 범위만 요청하고, 합의한 전달 수단과 보관 기간을 따릅니다. 초기 검토는 비식별 구조와 샘플 데이터로 진행하며 실제 개인정보가 필요하면 접근·처리·폐기 기준을 먼저 정합니다."}}
-        ]
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://alexsoft.co.kr/healthcare/#breadcrumb",
-        "itemListElement": [
-          {"@type": "ListItem", "position": 1, "name": "알렉스소프트", "item": "https://alexsoft.co.kr/"},
-          {"@type": "ListItem", "position": 2, "name": "의료정보 시스템", "item": "https://alexsoft.co.kr/healthcare/"}
-        ]
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://alexsoft.co.kr/healthcare/#webpage",
-        "url": "https://alexsoft.co.kr/healthcare/",
-        "name": "의료정보 시스템 설계·연동 | 알렉스소프트(ALEXSOFT)",
-        "description": "의료법·인증·개인정보와 기존 EMR·병원 시스템의 제약 안에서 작동하는 구조를 설계합니다.",
-        "inLanguage": "ko-KR",
-        "isPartOf": {"@id": "https://alexsoft.co.kr/#website"},
-        "breadcrumb": {"@id": "https://alexsoft.co.kr/healthcare/#breadcrumb"},
-        "mainEntity": {"@id": "https://alexsoft.co.kr/healthcare/#service"},
-        "primaryImageOfPage": {
-          "@type": "ImageObject",
-          "url": "https://alexsoft.co.kr/assets/brand/alexsoft-healthcare-og-v1.jpg",
-          "width": 1536,
-          "height": 804
+      "offers": {
+        "@type": "Offer",
+        "url": "https://alexsoft.co.kr/healthcare/#inquiry",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "의료정보 시스템 아키텍처"
         }
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://alexsoft.co.kr/healthcare/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "어떤 EMR·병원 시스템 연동을 다루나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "진료·예약·접수·검사·청구 등 필요한 업무 흐름과 기존 시스템이 제공하는 인터페이스를 먼저 확인합니다. 가능한 연동 범위와 데이터를 정한 뒤 API, 메시지와 운영 절차를 설계합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "EMR 인증 대응도 함께 볼 수 있나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "인증 항목이 데이터 구조, 기능 경계와 운영 절차에 미치는 영향을 아키텍처 단계에서 함께 검토합니다. 인증 취득 자체를 보증하지 않으며, 적용 기준과 심사 범위는 착수 시 최신 자료로 확인합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "특정 EMR 벤더에 맞춘 제안인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "아닙니다. 특정 벤더의 제품 판매를 전제로 하지 않습니다. 현재 사용 중인 시스템의 실제 인터페이스와 제약을 확인하고, 표준과 교체 가능성을 함께 고려해 벤더 중립적으로 설계합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "EMR을 직접 만들어 주나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "아닙니다. EMR 제품 전체를 새로 만드는 일은 맡지 않습니다. 기존 시스템과의 연동, 의료정보 아키텍처, 인증 대응 설계와 필요한 개발을 맡습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "환자·의료기관 자료는 어떻게 다루나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "판단에 필요한 최소 범위만 요청하고, 합의한 전달 수단과 보관 기간을 따릅니다. 초기 검토는 비식별 구조와 샘플 데이터로 진행하며 실제 개인정보가 필요하면 접근·처리·폐기 기준을 먼저 정합니다."
+          }
+        }
+      ],
+      "inLanguage": "ko"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://alexsoft.co.kr/healthcare/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "알렉스소프트",
+          "item": "https://alexsoft.co.kr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "의료정보 시스템",
+          "item": "https://alexsoft.co.kr/healthcare/"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://alexsoft.co.kr/healthcare/#webpage",
+      "url": "https://alexsoft.co.kr/healthcare/",
+      "name": "의료정보 시스템 설계·연동 | 알렉스소프트(ALEXSOFT)",
+      "description": "의료법·인증·개인정보와 기존 EMR·병원 시스템의 제약 안에서 작동하는 구조를 설계합니다.",
+      "inLanguage": "ko",
+      "isPartOf": {
+        "@id": "https://alexsoft.co.kr/#website"
+      },
+      "breadcrumb": {
+        "@id": "https://alexsoft.co.kr/healthcare/#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://alexsoft.co.kr/healthcare/#service"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://alexsoft.co.kr/assets/brand/alexsoft-healthcare-og-v1.jpg",
+        "width": 1536,
+        "height": 804
+      }
+    }
+  ]
+}
+</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
-  <link rel="stylesheet" href="/assets/ink.css?v=credential-2">
+  <link rel="stylesheet" href="/assets/ink.css?v=bilingual-1">
   <noscript><style>[data-reveal]{opacity:1;transform:none}</style></noscript>
   <link rel="stylesheet" href="/healthcare/healthcare.css?v=20260910-i-4">
+  <noscript><style>.ink .draw{stroke-dashoffset:0;animation:none}</style></noscript>
+  <link rel="canonical" href="https://alexsoft.co.kr/healthcare/">
+  <link rel="alternate" hreflang="ko" href="https://alexsoft.co.kr/healthcare/">
+  <link rel="alternate" hreflang="en" href="https://alexsoft.co.kr/en/healthcare/">
+  <link rel="alternate" hreflang="x-default" href="https://alexsoft.co.kr/en/healthcare/">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:locale:alternate" content="en_US">
 </head>
 <body>
   <header class="top">
     <a class="skip" href="#main">본문으로 건너뛰기</a>
     <div class="shell">
-      <a class="mark" href="/" aria-label="알렉스소프트 홈">
+      <a class="mark" href="/?lang=ko" aria-label="알렉스소프트 홈">
         <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#17191D"/><path fill="#FAF8F4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/><circle cx="32" cy="40" r="3.7" fill="#4B78FF"/></svg>
         ALEXSOFT
       </a>
-      <nav aria-label="주요 메뉴">
+      <nav class="main-nav" aria-label="주요 메뉴">
         <a href="/work/">프로젝트</a>
         <a href="/insights/">인사이트</a>
-        <a href="/#services">서비스</a>
-        <a href="/#about">회사소개</a>
-        <a class="cta" href="/#start">문의</a>
+        <a href="/?lang=ko#services">서비스</a>
+        <a href="/?lang=ko#about">회사소개</a>
+        <a class="cta" href="/?lang=ko#start">문의</a>
       </nav>
+      <div class="language-switch" role="group" aria-label="언어 선택"><a href="/healthcare/" data-language="ko" lang="ko" hreflang="ko" aria-current="true">한국어</a><a href="/en/healthcare/" data-language="en" lang="en" hreflang="en">English</a></div>
     </div>
   </header>
 
@@ -312,13 +390,12 @@
 
   <footer class="site">
     <div class="shell">
-      <a class="mark" href="/"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#FAF8F4"/><path fill="#17191D" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/><circle cx="32" cy="40" r="3.7" fill="#4B78FF"/></svg>ALEXSOFT</a>
-      <nav aria-label="바닥글 메뉴"><a href="/diagnosis/">아키텍처 설계·개발</a><a href="/e-invoicing/">e-invoicing이란</a><a href="/healthcare/">의료정보 시스템</a><a href="/brand-website/">브랜드 웹사이트</a><a href="/work/">사례</a><a href="/insights/">인사이트</a><a href="/en/" hreflang="en">English</a><a href="mailto:contact@alexsoft.co.kr">이메일</a><a href="tel:+821065480292">전화 010-6548-0292</a></nav>
+      <a class="mark" href="/?lang=ko"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#FAF8F4"/><path fill="#17191D" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/><circle cx="32" cy="40" r="3.7" fill="#4B78FF"/></svg>ALEXSOFT</a>
+      <nav aria-label="바닥글 메뉴"><a href="/diagnosis/">아키텍처 설계·개발</a><a href="/e-invoicing/">e-invoicing이란</a><a href="/healthcare/">의료정보 시스템</a><a href="/brand-website/">브랜드 웹사이트</a><a href="/work/">사례</a><a href="/insights/">인사이트</a><a href="mailto:contact@alexsoft.co.kr">이메일</a><a href="tel:+821065480292">전화 010-6548-0292</a></nav>
       <div class="channels"><span class="mono">CHANNELS</span><a href="https://blog.naver.com/alex-soft" target="_blank" rel="noopener">Naver Blog ↗</a><a href="https://www.instagram.com/alexsoft.co.kr" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://github.com/alexsoft-hq" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
       <p class="biz" data-nosnippet>상호 알렉스소프트(ALEXSOFT) · 대표 이용민 · 사업자등록번호 212-64-01036 · 사업장 부산광역시 수영구 광안해변로15번길 10 · © <span data-year>2026</span> ALEXSOFT</p>
     </div>
   </footer>
-  <script src="/assets/ink.js?v=20260910-i-4" defer></script>
   <script src="/healthcare/healthcare.js?v=20260921-f-1" defer></script>
 </body>
 </html>

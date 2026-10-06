@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script src="/assets/ink.js?v=bilingual-1"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Use Codex in the ChatGPT desktop app to create a small promotional website that works on computers and phones, publish and update it with a public GitHub repository and GitHub Pages, and learn the basics of search registration.">
+  <title>Build a promotional website in a day with ChatGPT and host it for free | ALEXSOFT</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <style>
+    :root { --paper:#f6f2e9; --ink:#203931; --coral:#cb633f; --olive:#7f8561; --line:#cfc8b8; --wash:#ebe5d8; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:ui-serif, "Iowan Old Style", "AppleMyungjo", "Noto Serif KR", "Malgun Myeongjo", serif; font-size:18px; line-height:1.85; word-break:keep-all; overflow-wrap:break-word; }
+    a { color:inherit; text-underline-offset:4px; text-decoration-color:color-mix(in srgb, var(--coral) 60%, transparent); }
+    a:hover { color:var(--coral); }
+    .masthead { max-width:1180px; margin:0 auto; padding:27px 36px 21px; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; align-items:baseline; font-family:ui-sans-serif, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif; font-size:12px; font-weight:700; letter-spacing:.13em; }
+    .masthead a { text-decoration:none; }
+    .masthead strong { color:var(--coral); letter-spacing:.16em; }
+    .masthead span { color:var(--olive); }
+    .shell { max-width:1180px; margin:0 auto; padding:0 36px 100px; }
+    .hero { padding:78px 0 46px; }
+    .eyebrow, .kicker { margin:0 0 18px; color:var(--coral); font-family:ui-sans-serif, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif; font-size:12px; font-weight:800; letter-spacing:.15em; text-transform:uppercase; }
+    h1 { max-width:900px; margin:0; font-size:clamp(32px, 4.5vw, 48px); line-height:1.18; letter-spacing:-.065em; font-weight:700; }
+    .dek { max-width:655px; margin:32px 0 0; font-size:clamp(18px, 2vw, 20px); line-height:1.65; letter-spacing:-.025em; }
+    .meta { margin:32px 0 0; color:var(--olive); font-family:ui-sans-serif, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif; font-size:13px; letter-spacing:.02em; }
+    .hero-image, .feature { margin:0; }
+    .hero-image img, .feature img { display:block; width:100%; height:auto; background:var(--wash); }
+    .hero-image { margin-top:48px; }
+    figcaption { padding:10px 0 0; color:#6d7565; font-family:ui-sans-serif, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif; font-size:12px; line-height:1.55; }
+    .article-layout { display:grid; grid-template-columns:180px minmax(0, 720px); gap:70px; justify-content:center; }
+    .contents { position:sticky; top:24px; align-self:start; padding-top:20px; font-family:ui-sans-serif, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif; font-size:12px; line-height:1.55; }
+    .contents p { margin:0 0 10px; color:var(--coral); font-weight:800; letter-spacing:.12em; }
+    .contents a { display:block; margin:0 0 8px; color:var(--olive); text-decoration:none; }
+    .contents a:hover { color:var(--coral); }
+    article { min-width:0; }
+    article > *:first-child { margin-top:0; }
+    article p { margin:0 0 1.42em; }
+    article h2 { margin:2.55em 0 .7em; padding-top:.25em; border-top:1px solid var(--line); font-size:clamp(24px, 3vw, 28px); line-height:1.33; letter-spacing:-.05em; }
+    article h3 { margin:2em 0 .55em; font-size:22px; line-height:1.45; letter-spacing:-.04em; }
+    article strong { color:var(--coral); font-weight:700; }
+    .lead { margin-bottom:2em; font-size:20px; line-height:1.76; letter-spacing:-.035em; }
+    .quote { margin:2.1em 0; padding:1.25em 1.25em 1.25em 1.45em; border-left:4px solid var(--coral); background:rgba(235,229,216,.72); font-size:19px; line-height:1.7; }
+    ul, ol { margin:0 0 1.7em; padding-left:1.35em; }
+    li { margin:.4em 0; padding-left:.15em; }
+    .feature { margin:3em 0; }
+    .note { margin:2.4em 0; padding:1.25em 1.35em; border:1px solid var(--olive); font-family:ui-sans-serif, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif; font-size:16px; line-height:1.75; }
+    .note strong { color:var(--ink); }
+    .note p:last-child { margin-bottom:0; }
+    details.note summary { cursor:pointer; }
+    details.note[open] summary { margin-bottom:.8em; }
+    .prompt { margin:2em 0 2.5em; border-top:2px solid var(--ink); border-bottom:1px solid var(--line); }
+    .prompt-head { padding:13px 0; display:flex; gap:16px; justify-content:space-between; align-items:center; font-family:ui-sans-serif, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif; font-size:13px; font-weight:700; }
+    .copy { flex:0 0 auto; padding:7px 10px; border:1px solid var(--ink); border-radius:0; color:var(--ink); background:transparent; font:inherit; cursor:pointer; }
+    .copy:hover, .copy:focus-visible { color:var(--paper); background:var(--ink); }
+    pre { margin:0; padding:24px 0 28px; overflow:auto; font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size:14px; line-height:1.75; white-space:pre-wrap; word-break:keep-all; }
+    code { font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size:.82em; color:#435a50; }
+    pre code { font-size:inherit; color:inherit; }
+    .steps { margin:2em 0 2.6em; padding:0; list-style:none; counter-reset:step; }
+    .steps li { position:relative; margin:0; padding:1.12em 0 1.12em 60px; border-top:1px solid var(--line); counter-increment:step; }
+    .steps li::before { content:counter(step, decimal-leading-zero); position:absolute; top:1.2em; left:0; color:var(--coral); font-family:ui-sans-serif, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif; font-size:13px; font-weight:800; letter-spacing:.08em; }
+    .steps li:last-child { border-bottom:1px solid var(--line); }
+    .tiny { color:#687269; font-size:16px; }
+    .sources { margin-top:4.2em; padding-top:26px; border-top:2px solid var(--ink); font-family:ui-sans-serif, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif; font-size:14px; line-height:1.75; }
+    .sources h2 { margin:0 0 .8em; padding:0; border:0; font-size:18px; letter-spacing:-.02em; }
+    .sources ul { margin-bottom:0; padding-left:1.2em; }
+    .source-date { margin:22px 0 0; color:var(--olive); font-size:12px; }
+    .footer { max-width:1180px; margin:0 auto; padding:22px 36px 36px; border-top:1px solid var(--line); color:var(--olive); font-family:ui-sans-serif, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif; font-size:12px; }
+    @media (max-width:820px) { .masthead,.shell,.footer { padding-left:22px; padding-right:22px; } .hero { padding-top:53px; } .article-layout { display:block; } .contents { position:static; margin:0 0 38px; padding:15px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); } .contents a { display:inline-block; margin:0 15px 6px 0; } body { font-size:17px; } .lead { font-size:19px; } }
+    @media (max-width:480px) { .masthead { padding-top:20px; padding-bottom:16px; } .masthead span { display:none; } .shell { padding-bottom:66px; } h1 { font-size:32px; } .hero-image { margin-top:34px; } article h2 { font-size:24px; } .quote { padding:1em; font-size:18px; } pre { font-size:12px; } }
+    @media print { @page { margin:16mm; } body { background:#fff; color:#111; font-size:11pt; } .masthead,.footer { max-width:none; padding:0 0 8pt; } .shell { max-width:none; padding:0; } .hero { padding:24pt 0; } .contents,.copy { display:none; } .article-layout { display:block; } h1 { font-size:34pt; } h2 { break-after:avoid; } p, li { orphans:3; widows:3; } figure, pre, .note { break-inside:avoid; } a { color:inherit; } .hero-image img, .feature img { max-height:140mm; object-fit:cover; } }
+  </style>
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="author" content="ALEXSOFT">
+  <meta property="og:type" content="article">
+  <meta property="article:author" content="https://alexsoft.co.kr/en/">
+  <meta property="og:site_name" content="ALEXSOFT">
+  <meta property="og:url" content="https://alexsoft.co.kr/en/insights/ai-business-website/">
+  <meta property="og:title" content="Build a promotional website in a day with ChatGPT and host it for free | ALEXSOFT">
+  <meta property="og:description" content="Use Codex in the ChatGPT desktop app to create a small promotional website that works on computers and phones, publish and update it with a public GitHub repository and GitHub Pages, and learn the basics of search registration.">
+  <meta property="article:published_time" content="2026-09-10">
+  <meta property="article:modified_time" content="2026-09-13">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Build a promotional website in a day with ChatGPT and host it for free | ALEXSOFT">
+  <meta name="twitter:description" content="Use Codex in the ChatGPT desktop app to create a small promotional website that works on computers and phones, publish and update it with a public GitHub repository and GitHub Pages, and learn the basics of search registration.">
+  <meta property="og:image" content="https://alexsoft.co.kr/insights/ai-business-website/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:image" content="https://alexsoft.co.kr/insights/ai-business-website/og.jpg">
+  <meta property="og:image:alt" content="Illustration of a small business owner viewing their business website on a laptop">
+  <meta name="twitter:image:alt" content="Illustration of a small business owner viewing their business website on a laptop">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://alexsoft.co.kr/en/insights/ai-business-website/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "ALEXSOFT",
+          "item": "https://alexsoft.co.kr/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Insights",
+          "item": "https://alexsoft.co.kr/en/insights/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Build a promotional website in a day with ChatGPT and host it for free",
+          "item": "https://alexsoft.co.kr/en/insights/ai-business-website/"
+        }
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://alexsoft.co.kr/en/insights/ai-business-website/#post",
+      "headline": "Build a promotional website in a day with ChatGPT and host it for free",
+      "description": "Use Codex in the ChatGPT desktop app to create a small promotional website that works on computers and phones, publish and update it with a public GitHub repository and GitHub Pages, and learn the basics of search registration.",
+      "url": "https://alexsoft.co.kr/en/insights/ai-business-website/",
+      "mainEntityOfPage": {
+        "@id": "https://alexsoft.co.kr/en/insights/ai-business-website/#webpage"
+      },
+      "isBasedOn": "https://blog.naver.com/alex-soft/224408547291",
+      "inLanguage": "en",
+      "datePublished": "2026-09-10",
+      "dateModified": "2026-09-13",
+      "image": "https://alexsoft.co.kr/insights/ai-business-website/images/website-owner.webp",
+      "author": {
+        "@type": "Organization",
+        "@id": "https://alexsoft.co.kr/#organization",
+        "name": "ALEXSOFT",
+        "url": "https://alexsoft.co.kr/en/"
+      },
+      "publisher": {
+        "@id": "https://alexsoft.co.kr/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://alexsoft.co.kr/en/insights/#webpage"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://alexsoft.co.kr/#organization",
+      "name": "ALEXSOFT",
+      "alternateName": [
+        "ALEXSOFT",
+        "ALEXSOFT"
+      ],
+      "url": "https://alexsoft.co.kr/en/"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://alexsoft.co.kr/en/insights/ai-business-website/#webpage",
+      "url": "https://alexsoft.co.kr/en/insights/ai-business-website/",
+      "name": "Build a promotional website in a day with ChatGPT and host it for free",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://alexsoft.co.kr/en/insights/#webpage"
+      },
+      "breadcrumb": {
+        "@id": "https://alexsoft.co.kr/en/insights/ai-business-website/#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://alexsoft.co.kr/en/insights/ai-business-website/#post"
+      }
+    }
+  ]
+}
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+  <style id="alexsoft-chrome">
+/* 알렉스소프트 사이트 헤더·푸터 — 글 본문 스타일과 섞이지 않도록 이 두 요소 안에만 적용 */
+header.top,footer.site{--paper:#FAF8F4;--ink:#17191D;--graphite:#5C6069;--cobalt:#2456E4;--rule:#D9D5CC;--rule-soft:#EAE7E0;--night:#0F1115;--sans:"IBM Plex Sans KR",-apple-system,"Apple SD Gothic Neo","Pretendard",sans-serif;--mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;--gutter:clamp(20px,4vw,48px);font-family:var(--sans);line-height:1.8;letter-spacing:normal;word-break:keep-all;-webkit-font-smoothing:antialiased}
+header.top .shell,footer.site .shell{max-width:1200px;margin:0 auto;padding:0 var(--gutter)}
+header.top a,footer.site a{color:inherit;text-decoration:none}
+header.top a:hover{color:inherit}
+header.top a:focus-visible,footer.site a:focus-visible{outline:2px solid var(--cobalt);outline-offset:3px}
+header.top .skip{position:absolute;left:-9999px}
+header.top .skip:focus{position:fixed;left:16px;top:12px;z-index:99;background:var(--ink);color:var(--paper);padding:10px 16px}
+header.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:saturate(1.2) blur(10px);border-bottom:1px solid var(--rule-soft);color:var(--ink);font-size:17px}
+header.top .shell{display:flex;align-items:center;justify-content:space-between;height:64px}
+header.top .mark,footer.site .mark{display:flex;align-items:center;gap:10px;font-size:14px;letter-spacing:.1em;font-weight:600}
+header.top .mark svg,footer.site .mark svg{width:26px;height:26px;display:block;flex:none}
+header.top nav{display:flex;gap:28px;font-size:14px;color:var(--graphite)}
+header.top nav a{white-space:nowrap}
+header.top nav a:hover{color:var(--ink)}
+header.top nav a.cta{color:var(--ink);border-bottom:1px solid var(--cobalt);padding-bottom:1px}
+header.top nav a[aria-current="page"]{color:var(--ink);border-bottom:1px solid var(--rule)}
+@media (max-width:720px){header.top nav{gap:14px;font-size:13px}header.top .mark{font-size:13px;letter-spacing:.08em}}
+@media (max-width:480px){header.top nav{gap:10px;font-size:12px}header.top .mark{gap:8px;font-size:12px;letter-spacing:.06em}}
+footer.site{background:var(--night);color:rgba(255,255,255,.72);padding:40px 0 34px;font-size:13px}
+footer.site .shell{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+footer.site p{margin:0}
+footer.site .mark{color:#fff}
+footer.site nav{display:flex;gap:18px;flex-wrap:wrap}
+footer.site nav a:hover,footer.site .channels a:hover{color:#fff}
+footer.site .channels{width:100%;display:flex;gap:18px;align-items:baseline;margin-top:6px;padding-top:14px;border-top:1px solid rgba(255,255,255,.12)}
+footer.site .mono{font-family:var(--mono);font-size:13px;letter-spacing:.01em;color:rgba(255,255,255,.35)}
+footer.site .channels a{color:rgba(255,255,255,.62)}
+footer.site .biz{width:100%;font-family:var(--mono);font-size:11px;line-height:1.9;color:rgba(255,255,255,.4)}
+@media print{header.top,footer.site{display:none}}
+/* Bilingual navigation: links remain available without JavaScript. */
+html{scroll-padding-top:90px}
+header.top .shell{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:24px;min-height:68px;height:auto;padding-top:8px;padding-bottom:8px}
+header.top .main-nav{justify-content:flex-end;gap:22px;min-width:0}
+header.top .language-switch{display:flex;gap:10px;font-size:12px;line-height:1.5;align-items:center;white-space:nowrap;border-left:1px solid var(--rule-soft,#EAE7E0);padding-left:18px}
+.language-switch a{display:inline-block;padding:8px 0;text-decoration:none}
+.language-switch a[aria-current="true"]{color:var(--ink,#17191D);font-weight:600;text-decoration:underline;text-underline-offset:5px}
+@media(max-width:900px){
+ header.top .shell{gap:0 16px;grid-template-columns:minmax(0,1fr) auto;padding-top:4px;padding-bottom:6px}
+ header.top .mark{min-height:42px}
+ header.top .language-switch{grid-column:2;grid-row:1;border:0;padding-left:0;gap:12px}
+ header.top .main-nav{grid-row:2;grid-column:1/-1;justify-content:space-between;gap:8px;font-size:13px;line-height:1.5}
+ header.top .main-nav a{padding:8px 0}
+ html{scroll-padding-top:108px}
+}
+@media(max-width:360px){header.top .main-nav{font-size:12px;gap:6px}header.top .language-switch{font-size:11px}header.top .mark{font-size:12px;gap:8px}}
+html[lang="en"] body{word-break:normal}
+html[lang="en"] .facts>div{grid-template-columns:90px minmax(0,1fr)}
+html[lang="en"] .facts.wide>div{grid-template-columns:120px minmax(0,1fr)}
+@media(max-width:520px){html[lang="en"] .facts.wide>.credential-fact{grid-template-columns:1fr}}
+</style>
+  <link rel="canonical" href="https://alexsoft.co.kr/en/insights/ai-business-website/">
+  <link rel="alternate" hreflang="ko" href="https://alexsoft.co.kr/insights/ai-business-website/">
+  <link rel="alternate" hreflang="en" href="https://alexsoft.co.kr/en/insights/ai-business-website/">
+  <link rel="alternate" hreflang="x-default" href="https://alexsoft.co.kr/en/insights/ai-business-website/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ko_KR">
+</head>
+<body>
+  <header class="top">
+    <a class="skip" href="#main">Skip to content</a>
+    <div class="shell">
+      <a class="mark" href="/en/" aria-label="ALEXSOFT home">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#17191D"/><path fill="#FAF8F4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/><circle cx="32" cy="40" r="3.7" fill="#4B78FF"/></svg>
+        ALEXSOFT
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/en/work/">Projects</a>
+        <a href="/en/insights/">Insights</a>
+        <a href="/en/#services">Services</a>
+        <a href="/en/#about">About</a>
+        <a class="cta" href="/en/#start">Contact</a>
+      </nav>
+      <div class="language-switch" role="group" aria-label="Language"><a href="/insights/ai-business-website/" data-language="ko" lang="ko" hreflang="ko">한국어</a><a href="/en/insights/ai-business-website/" data-language="en" lang="en" hreflang="en" aria-current="true">English</a></div>
+    </div>
+  </header>
+  <header class="masthead">
+    <a href="/en/insights/"><strong>ALEXSOFT</strong> / INSIGHTS 005</a>
+    <span>Using AI · 2026.09.10</span>
+  </header>
+
+  <main id="top" class="shell"><span id="main" tabindex="-1"></span>
+    <section class="hero" aria-labelledby="page-title">
+      <p class="eyebrow">A first website for a small business</p>
+      <h1 id="page-title">Build a promotional website<br>in a day with ChatGPT<br>and host it for free</h1>
+      <p class="dek">A guide to building your small business’s first website and running it at a default GitHub Pages address without a separate hosting fee.</p>
+      <p class="meta">By · <a href="/en/#about" rel="author">ALEXSOFT</a> · Observations from more than 25 years of building software<br>Published <time datetime="2026-09-10">2026-09-10</time> · Updated <time datetime="2026-09-13">2026-09-13</time></p>
+      <figure class="hero-image">
+        <img src="/insights/ai-business-website/images/website-owner.webp" alt="A small business owner viewing their business website on a laptop" data-source="../images/publish/website-owner.webp" width="1672" height="941" loading="eager" fetchpriority="high">
+        <figcaption>AI-generated illustration. It does not depict an actual business or person.</figcaption>
+      </figure>
+    </section>
+
+    <div class="article-layout">
+      <nav class="contents" aria-label="Article contents">
+        <p>In this article</p>
+        <a href="#boundary">What to do yourself</a>
+        <a href="#prepare">What to decide first</a>
+        <a href="#ask">How to ask AI</a>
+        <a href="#upload">Publish with GitHub Pages</a>
+        <a href="#domain">Connect a Viaweb domain</a>
+        <a href="#search">Help search and AI find you</a>
+        <a href="#ownership">What you should own</a>
+        <a href="/en/insights/ai-business-website/slides.html">Step-by-step slides ↗</a>
+      </nav>
+
+      <article>
+        <p class="lead">When I look at small business websites these days, I often wonder: does a site showing a business name, opening hours, services, a few photos, and contact details still have to be outsourced for hundreds of thousands, or sometimes millions, of Korean won?</p>
+
+        <p>An initial creation fee is one thing. But every time you want to change a sentence or a photo, you have to contact the supplier again and pay for the change. Meanwhile, the business owner does not know what to edit or where, even though it is their own website.</p>
+
+        <p>Coming from someone who has spent more than 25 years building software, this may sound as though I underestimate website development. In fact, I know very well how different a complex system is from a simple introduction page.</p>
+
+        <p>If there are no member accounts, no payments, and no stored customer information, the website is closer to a small sign on the internet than a business system. We have now reached a point where a business owner can try making that sign themselves with help from ChatGPT.</p>
+
+        <p>Once your business information and photos are ready, you can create the page through a few conversations with Codex in the ChatGPT desktop app, store the files in a GitHub account, and use Pages to get your first web address. A domain matching your business name can wait until you need it. A first-time user may get stuck once or twice, but publishing a first website within a day is quite achievable.</p>
+
+        <p>A small introductory website at the default address can run within GitHub Pages’ free allowance without a separate hosting fee.</p>
+
+        <h2 id="boundary">An introduction site and a business system are different things</h2>
+
+        <p>What I mean here is a small promotional website with a few pages: a site that explains what your company or shop does, what products and services it offers, where it is, when it opens, and how to get in touch. It can include links to contact you by phone or KakaoTalk.</p>
+
+        <p>This information does not change for each visitor. You only need to show prepared text and photos. HTML and CSS files are enough, with no separate server application or database.</p>
+
+        <p>But if the site accepts registrations, processes bookings and payments, or manages orders, inventory, and customer information, the situation changes. It becomes a business system. Someone must take responsibility for security, personal data protection, backups, and incident response.</p>
+
+        <p class="quote">AI does not take on that responsibility just because it writes the code.</p>
+
+        <p>The distinction is surprisingly simple: first decide <strong>whether the site only displays information or directly handles money and personal data</strong>.</p>
+
+        <p>GitHub Pages officially describes its purpose as static websites introducing individuals, organizations, and projects. This article uses a small page presenting basic business information as an example of that scope. With GitHub Free, the source repository must also be public, so include only files that may be published on the website.</p>
+
+        <p>GitHub Pages is not permitted as free hosting for running an online business, e-commerce, sites primarily facilitating commercial transactions, or SaaS. Operations primarily focused on completing sales or booking transactions are therefore outside this article’s scope. Check the <a href="https://docs.github.com/ko/pages/getting-started-with-github-pages/github-pages-limits">GitHub Pages limits</a> against your actual purpose.</p>
+
+        <div class="note" role="note">
+          <p><strong>Start with one screen introducing your business.</strong></p>
+          <p>Create the first page with your own information, then focus on opening the published address on both your computer and your phone.</p>
+        </div>
+
+        <h2 id="prepare">What the business owner needs to decide before asking ChatGPT</h2>
+
+        <p>Ask ChatGPT to “make a stylish website,” and it will produce something that looks stylish. The problem is that it may say nothing about your own business.</p>
+
+        <p>The hardest part of a website is often deciding what to say, rather than coding it. You know that far better than AI. Start by writing down just the following.</p>
+
+        <ul>
+          <li>Your business name and a one-sentence introduction</li>
+          <li>The three products or services you most want to show</li>
+          <li>Your address, opening hours, days closed, and contact details</li>
+          <li>Your preferred contact method: phone, email, or KakaoTalk</li>
+          <li>Your logo and a few photos you took yourself or have the right to use</li>
+          <li>The feeling you want, such as warm or trustworthy</li>
+          <li>(Optional) The address of your existing Instagram account or blog</li>
+        </ul>
+
+        <p>That is enough to begin. If you do not have a logo, display your business name as text. If photos are limited, start with two or three. Trying to make everything perfect before starting can keep a website from ever going live.</p>
+
+        <p>Be careful that AI does not invent plausible prices or services it does not know. There is no need to provide internal materials such as customer lists or contracts. Give it only information intended for the public website.</p>
+
+        <p>For this work, I recommend ChatGPT. You can create and revise background pictures and illustrations within the conversation, making it convenient to work on copy and images together.</p>
+
+        <p>The main tool is Codex, selected in the ChatGPT desktop app. Open <strong>the website folder on your own computer</strong> in the app, and it can create and edit copy, background illustrations, and HTML files there. Ordinary ChatGPT conversations on the web or mobile do not automatically read that folder. You can discuss wording in ChatGPT anywhere, but keeping actual file and preview work in the app’s Codex makes the distinction clearer.</p>
+
+        <p>Free accounts can also create images and attach files. If you create and revise many images and files, ChatGPT Plus offers more convenient higher usage limits. Pro is not essential for a small introductory website. Before paying, check the Go, Plus, and Pro pricing and included features shown in your own account.</p>
+
+        <p>Use photos you took yourself or have the right to use for your business, products, and actual work. AI images are better suited to a background near the top of the site or an illustration that sets a mood, where they do not stand in for facts.</p>
+
+        <figure class="feature">
+          <img src="/insights/ai-business-website/images/website-workflow.webp" alt="Four illustrated scenes showing business information, a conversation with AI, website files, and a browser page in sequence" data-source="../images/publish/website-workflow.webp" width="2172" height="724" loading="lazy" decoding="async">
+          <figcaption>AI-generated illustration. The sequence is simple, but the business owner must check the information at every stage.</figcaption>
+        </figure>
+
+        <h2 id="ask">This is enough to ask ChatGPT</h2>
+
+        <p>Replace the square-bracketed parts of the prompt below with your own business details. Asking to see the page’s order and wording before generating code reduces the chance of a wrong address or awkward advertising copy being turned into something that looks finished.</p>
+
+        <section class="prompt" aria-labelledby="prompt-title">
+          <div class="prompt-head">
+            <span id="prompt-title">A prompt to copy and get started</span>
+            <button class="copy" type="button" data-copy-target="prompt-text" data-status-target="copy-status">Copy prompt</button>
+          </div>
+          <pre id="prompt-text"><code>I run a [type of business].
+I want a website introducing my business that looks good on both computers and phones.
+
+Business name: [name]
+What we do: [one-sentence introduction]
+What I want to highlight: [products or services]
+Address and opening hours: [details]
+Contact method: [phone / email / KakaoTalk]
+Desired feeling: [warm / calm / trustworthy]
+Make the text and photos adjust naturally to the screen size.
+
+Do not invent any information.
+First show me the wording and the order of the content on the page.
+Wait until I have checked it.</code></pre>
+        </section>
+        <p id="copy-status" class="tiny" aria-live="polite"></p>
+
+        <p>If you do not like the result, you do not need technical language. “The first sentence sounds too much like an advertisement; make it more straightforward.” “Make the text larger so older customers can read it easily.” “Show actual work photos before the menu.” Speak as you would when requesting changes from a website supplier.</p>
+
+        <p>Change one or two things at a time rather than everything at once, checking the preview on your computer after each change.</p>
+
+        <p>Ask for the files only after confirming that the wording and order are right.</p>
+
+        <pre><code>Create the website files using the wording and images I have approved.
+Make it look good on both computers and phones.
+Open a preview on my computer.</code></pre>
+
+        <h3>Create the background illustration in the app</h3>
+
+        <p>Once you are happy with the first screen’s wording and order, you can use the ChatGPT desktop app to create a small background illustration for the top of the site.</p>
+
+        <pre><code>Create a warm background illustration for the top of a clothing repair shop website.
+Include sewing tools and no text.
+Place it at the top of the website and make it look good on both computers and phones.
+Show it in the preview on my computer.</code></pre>
+
+        <p>For further changes, ask something like, “Make it a little brighter.” Once you have chosen the image, ask Codex to use that file at the top of the site and reopen the browser preview. The principle remains the same: use your own photos for the actual business, products, and work.</p>
+
+        <p>You only need a separate ZIP backup of the latest project when handing the files to someone else. Once Codex is connected to GitHub, you do not need to repeatedly download, unpack, and re-upload ZIP files. Check your edits in the same website folder on your computer, then ask Codex to upload them to GitHub.</p>
+
+        <h2 id="upload">Publish on GitHub Pages to get a web address</h2>
+
+        <p>Your website is now in a project on your computer. The simplest layout places <code>index.html</code>, <code>images</code>, and any static files such as CSS directly in the folder. The exact structure may vary depending on how ChatGPT builds it, but the overall shape is similar. If you need screen-by-screen guidance, open the <a href="/en/insights/ai-business-website/slides.html">step-by-step slides</a> as a supplementary guide.</p>
+
+        <pre><code>my-web-site/
+├── index.html
+└── images/
+    ├── store.jpg
+    └── product.jpg</code></pre>
+
+        <p>Ask Codex in the ChatGPT desktop app to open a browser preview of this project. First check that photos appear, phone links work, and the address and opening hours are correct. This preview is still a page you are checking only on <strong>your own computer</strong>.</p>
+
+        <section class="note" aria-labelledby="first-release-title">
+          <p id="first-release-title"><strong>Follow this sequence once for the first publication.</strong></p>
+          <ol class="steps">
+            <li>Install the ChatGPT desktop app, sign in, select Codex, and open the <code>my-web-site</code> folder you created on your computer as a project.</li>
+            <li>Confirm the wording, then ask Codex to create the website files directly in that folder and open a preview on your computer.</li>
+            <li>Create a GitHub account using your own email address, verify your email, and check your exact GitHub username. If it is <code>myname</code>, the website address and repository name will be <code>myname.github.io</code>. Even if your username includes uppercase letters, use lowercase for the repository name, <code>yourusername.github.io</code>. If a repository with that name already exists, do not overwrite it without checking its contents.</li>
+            <li>On GitHub Free, create a <strong>Public</strong> repository using your actual <code>yourusername.github.io</code> name. From the first upload to GitHub, anyone can view the source files, so include only files intended for the public website. ChatGPT Pro and GitHub Pro are different products; this process does not require a paid GitHub account.</li>
+            <li>Copy the new repository’s HTTPS address, give it to Codex, and ask it to connect the website folder to that repository.</li>
+            <li>Before the first upload, ask Codex to check that Git and the GitHub connection are ready. If installation is needed, follow the official instructions for your operating system that Codex opens. Authenticate with GitHub through a browser sign-in.</li>
+            <li>Review the file list and local preview Codex shows you. Only after approving the first publication should you ask it to commit the initial content to <code>main</code> and upload it to GitHub. An empty repository needs this first commit before you can select the Pages publishing source.</li>
+            <li>In the repository, go to <strong>Settings → Pages</strong> and choose <strong>Source: Deploy from a branch</strong>, branch <code>main</code>, and folder <code>/(root)</code>, then select <strong>Save</strong>. If these values are already set, simply verify them. Deployment can take up to 10 minutes; check its status in Actions and refresh after a short wait. Once deployment finishes, use <strong>Visit site</strong> to open the actual <code>https://yourusername.github.io</code> address and check the text, photos, and contact links on both a computer and a phone.</li>
+          </ol>
+        </section>
+
+        <p>To check the setup before the first upload, you can ask:</p>
+
+        <pre><code>Check whether this computer has Git and the connection setup needed for the first upload to GitHub.
+If anything is missing, open the official installation guide for my operating system and tell me only the next step.
+Use browser sign-in for GitHub authentication. Do not ask me to put a password or personal access token in the chat.</code></pre>
+
+        <p>A short follow-up request can prepare the files for publication from the beginning.</p>
+
+        <pre><code>Using the wording and illustrations I approved, and the photos I took,
+prepare index.html, images, and other files directly inside my-web-site.
+Add any settings needed to open it directly on GitHub Pages.
+Make it look good on computers and phones,
+and open a preview on my computer.
+Do not upload it to GitHub yet.</code></pre>
+
+        <p>Both GitHub and GitHub Pages settings are managed in your own account. Signing in, making a repository public, and approving the first publication are not automatically done on your behalf. You need to look at the screen and make those choices yourself.</p>
+
+        <p><strong>At this point, your first website is complete.</strong> <code>https://yourusername.github.io</code> is your default address. Open it on both your computer and your phone, and check that text and photos appear correctly and contact links open properly. That address alone is enough to publish and share your site with anyone. You do not need to buy a separate domain. You can add it to business listings or social profiles that accept a website link, and choose a custom domain only when you need a shorter address matching your business name.</p>
+
+        <p>If photos do not appear, first check the capitalization of their file names. Your computer may treat <code>Images</code> and <code>images</code> similarly, but a web server treats them as different names. Using a path relative to the current file, such as <code>images/photo.jpg</code>, reduces breakage when you publish somewhere else.</p>
+
+        <h3>Updates get simpler after the first time</h3>
+
+        <p>Next time, open the same project in the ChatGPT desktop app and tell Codex in Korean what you want to change. Ordinary ChatGPT conversations on the web or mobile do not automatically pick up these files, so make the actual changes in the app with the project open.</p>
+
+        <section class="prompt" aria-labelledby="maintenance-title">
+          <div class="prompt-head">
+            <span id="maintenance-title">A prompt to preview changes first</span>
+            <button class="copy" type="button" data-copy-target="maintenance-text" data-status-target="maintenance-copy-status">Copy prompt</button>
+          </div>
+          <pre id="maintenance-text"><code>Starting next week, change the closing time to 7 p.m.
+Show me a preview first. Do not update the live website until I have checked it.</code></pre>
+        </section>
+        <p id="maintenance-copy-status" class="tiny" aria-live="polite"></p>
+
+        <p>Only after reviewing the preview and deciding it is correct should you say:</p>
+
+        <section class="prompt" aria-labelledby="release-title">
+          <div class="prompt-head">
+            <span id="release-title">A prompt to publish after checking</span>
+            <button class="copy" type="button" data-copy-target="release-text" data-status-target="release-copy-status">Copy prompt</button>
+          </div>
+          <pre id="release-text"><code>I have checked it. Update the live website and give me the completed address.</code></pre>
+        </section>
+        <p id="release-copy-status" class="tiny" aria-live="polite"></p>
+
+        <p>Once the permissions and connection are set up, Codex commits the approved files to <code>main</code>, and GitHub Pages deploys the change automatically. Check the edited page on your computer first. Completion means more than a commit reaching the repository. Open the actual <code>https://yourusername.github.io</code> address or your connected domain on both a computer and a phone, and check the new opening hours, text, photos, and contact links.</p>
+
+        <div class="note" role="note">
+          <p><strong>This is the scope of this article.</strong></p>
+          <p>Payments, registrations, personal data collection, and booking or order processing belong to a separate business system. Do not put passwords, API keys, customer information, or other private materials in the project or its public repository.</p>
+        </div>
+        <h2 id="domain">Connect a domain purchased from a registrar</h2>
+
+        <p>Everything from here is optional. The <code>https://yourusername.github.io</code> address already lets you publish and share your site, so a custom domain is not essential. When you want a shorter address that matches your business name, you can buy one from a registrar such as Viaweb or Gabia and connect it. Here, you are buying only the domain; the website is already on GitHub Pages. You can decide after confirming that the default address works on both computers and phones.</p>
+
+        <p>For one-year new registrations of <code>.co.kr</code> and <code>.kr</code> checked in September 2026, the <a href="https://www.viaweb.co.kr/domain/cost_domain.php">Viaweb public price list</a> was lower than the <a href="https://event.gabia.com/domain/famous/">Gabia public information</a>, so this guide uses Viaweb as its example. Viaweb lists KRW 11,400 per year excluding VAT and states that renewals cost the same. Before paying, check the total shown on the payment screen and the renewal terms again.</p>
+
+        <ol class="steps">
+          <li><a href="https://www.viaweb.co.kr/domain/regist_domain.php">On the domain search and registration</a> page, in the search field after <code>www.</code>, enter a name such as <code>my-shop</code>, choose <code>.co.kr</code>, and select <strong>Search</strong>.</li>
+          <li>If your chosen name is marked <strong>Available</strong>, select that row and click <strong>Apply</strong>. If a sign-in page appears, register or sign in, then continue the application.</li>
+          <li>Enter accurate registrant information and the registration period shown on the form. Pay only after checking the full domain name, period, final amount including VAT, and renewal terms.</li>
+          <li>After payment, check that the domain appears in your domain management page. Viaweb’s public terms state that a name is not reserved before payment and that registration is completed after the required application information and registration fee are received.</li>
+        </ol>
+
+        <p>The fields and button names on the post-registration forms and payment screens may vary by account type and date, so this article does not guess at them.</p>
+
+        <p>First, from your GitHub profile picture, go to <strong>Settings → Pages → Add a domain</strong> and add the base domain you purchased. Enter the actual TXT host and value shown by GitHub in Viaweb DNS, then complete <strong>Verify</strong>. Keep the TXT record so ownership verification remains valid. This is domain ownership verification, separate from the repository’s Settings.</p>
+
+        <p>Next, in your website repository, go to <strong>Settings → Pages → Custom domain</strong>, enter <code>www.example.com</code>, and select <strong>Save</strong>. If the domain uses Viaweb’s authoritative name servers, the publicly shown menu route is <strong>Domain → Additional services → Advanced name server management</strong>. If another provider manages your DNS, configure it there. Do not replace existing email MX and TXT records as a group.</p>
+
+        <p><code>www</code> is connected as shown below. Use your actual GitHub username in the value, without <code>https://</code> or a path after the hostname.</p>
+
+        <pre><code>Type: CNAME
+Host: www
+Value: yourusername.github.io</code></pre>
+
+        <p>DNS changes may take time to propagate. Check that DNS verification has completed in GitHub Pages, and enable <strong>Enforce HTTPS</strong> only once it becomes available. Check that <code>https://www.example.com</code> opens without warnings on both a computer and a phone. Saving Custom domain in the repository Settings may create a remote change on <code>main</code> that adds a <code>CNAME</code> file. The next time you ask Codex to edit the site, have it first pull the latest changes from GitHub, preserve <code>CNAME</code>, then make the edits and upload them to GitHub.</p>
+        <h2 id="search">Make the site easy for search and AI to read</h2>
+
+        <p>SEO means organizing your site so people can find your business in search results. You can think of GEO as helping generative AI understand and introduce accurate information about your business. Both start with your correct name, services, location, contact details, readable titles and descriptions, real photos, and frequently asked questions, rather than unfamiliar tricks.</p>
+
+        <p>Google’s guidance likewise treats useful, factual pages for people as the foundation of SEO and AI search. You do not have to create a special AI file or <code>llms.txt</code>. Appearing in search also does not guarantee a ranking or an AI mention.</p>
+
+        <section class="prompt" aria-labelledby="seo-title">
+          <div class="prompt-head">
+            <span id="seo-title">An SEO and GEO review prompt</span>
+            <button class="copy" type="button" data-copy-target="seo-text" data-status-target="seo-copy-status">Copy prompt</button>
+          </div>
+          <pre id="seo-text"><code>Review and improve SEO and GEO for my public website [https://actual-address].
+Use only the real page and facts I have supplied. Do not invent reviews, prices, experience, or promises.
+Check that text, photos, and contact buttons are easy to read on computers and phones.
+Make the business name, services, address, opening hours, contact methods, and real FAQ clear.
+Add any needed sitemap, robots, canonical, and Business structured data appropriate to the business type.
+Tell me if search crawling is blocked. Keep training-related settings such as GPTBot exactly as they are.
+First show a preview of the changes. Do not update the live website until I have checked it.
+Check the latest official guidance for Google Search Console and Naver Search Advisor, and guide me one step at a time.
+If I get stuck, look at an error screen with personal information hidden and tell me only the next step.</code></pre>
+        </section>
+        <p id="seo-copy-status" class="tiny" aria-live="polite"></p>
+
+        <p>If you intend to connect a domain, it is less confusing to settle the final address before registering with search engines. Without a custom domain, you can register the actual <code>https://yourusername.github.io</code> address as it is. If the address changes later, register a new property and sitemap for the new address.</p>
+
+        <ol class="steps">
+          <li><a href="https://search.google.com/search-console">Google Search Console</a>: choose <strong>Add property → URL prefix</strong> and enter the full actual <code>https://</code> address. Copy the HTML tag provided in the instructions.</li>
+          <li>Ask Codex, “Without changing this tag, place it in the root-level <code>index.html</code> file’s <code>head</code>.” After the preview, your approval, the commit to <code>main</code>, and the actual GitHub Pages deployment, click <strong>Verify</strong> in Search Console. Do not delete the verification tag.</li>
+          <li>Check that <code>sitemap.xml</code> opens at the live address and submit it under <strong>Sitemaps</strong>. You can submit your home page through <strong>URL inspection → Test live URL → Request indexing</strong>.</li>
+          <li>In Search Console, under <strong>Settings → Search generative AI</strong>, check that site links and content are included. If it is already set to Include, leave it there. This setting concerns generative features in Google Search; it does not govern every AI service or all training uses.</li>
+          <li><a href="https://searchadvisor.naver.com">Naver Search Advisor</a>: go to <strong>Webmaster tools → Register site</strong> and enter the same live address. Put its HTML tag in the <code>head</code>, deploy, and then verify ownership.</li>
+          <li><strong>Request → Submit sitemap</strong>: enter the same host’s <code>sitemap.xml</code> address, then use <strong>Request → Crawl web page</strong> to request the home page. Afterwards, check the address under <strong>Reports → URL inspection</strong>. Keep this verification tag after verification, too.</li>
+        </ol>
+        <h2 id="ownership">What to do yourself, and where to get help</h2>
+
+        <p>If the site involves bookings, payments, registrations, or personal data processing, or if search visibility and brand image strongly affect revenue, it is better to involve a professional. For some owners, a day spent with customers and on sales is worth more than a day spent building the site themselves.</p>
+
+        <p>I am not arguing against paying professionals. I am asking whether it is still necessary to depend on someone else every time you change your business introduction or contact details.</p>
+
+        <p>Your GitHub account and <code>yourusername.github.io</code> repository are both your own file storage and the place where your live website is configured. You should check for yourself what goes into the public repository and how Pages is configured.</p>
+
+        <figure class="feature">
+          <img src="/insights/ai-business-website/images/website-ownership.webp" alt="A business owner checking their website on a phone while managing their own domain and files" data-source="../images/publish/website-ownership.webp" width="1672" height="941" loading="lazy" decoding="async">
+          <figcaption>AI-generated illustration representing direct ownership of a website’s account and address.</figcaption>
+        </figure>
+
+        <p>Whether you build it yourself or hire someone, it is best to own the GitHub account and <code>yourusername.github.io</code> repository. GitHub holds the source files and change history, while GitHub Pages settings manage the live address. You need to know where the finished files are and what to edit. Your website should not disappear just because you change suppliers.</p>
+
+        <p>Your first website does not have to be impressive. If visitors can understand what the business is, whether it offers what they need, and how to get in touch, it is already doing its job. Improve what is missing gradually as you hear customers’ questions.</p>
+
+        <p>A small website used to be a project you had to entrust to someone with technical knowledge. Now, the person who knows the business best can create its first form with AI.</p>
+
+        <p class="quote">Being able to edit your own business’s story and publish it at an address you own is, to me, a bigger change than the reduction in production cost.</p>
+
+        <section class="sources" aria-labelledby="sources-title">
+          <h2 id="sources-title">Official references</h2>
+<ul>
+  <li><a href="https://learn.chatgpt.com/ko-KR/docs/app">ChatGPT desktop app: install, sign in, open a folder, and select Codex</a></li>
+  <li><a href="https://learn.chatgpt.com/docs/environments/local-environment">ChatGPT Codex local environments and Git work</a></li>
+  <li><a href="https://help.openai.com/ko-kr/articles/11084440-chatgpt%EC%9D%98-%EC%9D%B4%EB%AF%B8%EC%A7%80">Create and edit images in ChatGPT</a></li>
+  <li><a href="https://help.openai.com/ko-kr/articles/6950777-what-is-chatgpt-plus">About ChatGPT Plus</a></li>
+  <li><a href="https://help.openai.com/ko-kr/articles/9275245-chatgpt-%EB%AC%B4%EB%A3%8C-%EC%9A%94%EA%B8%88%EC%A0%9C-faq">About ChatGPT Free</a></li>
+  <li><a href="https://docs.github.com/ko/pages/getting-started-with-github-pages/what-is-github-pages">What is GitHub Pages?</a> (checked September 10, 2026)</li>
+  <li><a href="https://docs.github.com/ko/pages/getting-started-with-github-pages/creating-a-github-pages-site">Create a GitHub Pages site</a> (checked September 10, 2026)</li>
+  <li><a href="https://docs.github.com/ko/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site">Configure the GitHub Pages publishing source</a> (checked September 10, 2026)</li>
+  <li><a href="https://docs.github.com/ko/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages">Verify a custom domain for GitHub Pages</a> (checked September 10, 2026)</li>
+  <li><a href="https://docs.github.com/ko/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site">Manage a custom domain for GitHub Pages</a> (checked September 10, 2026)</li>
+  <li><a href="https://docs.github.com/ko/pages/getting-started-with-github-pages/securing-your-github-pages-site-with-https">Secure GitHub Pages with HTTPS</a> (checked September 10, 2026)</li>
+  <li><a href="https://docs.github.com/ko/pages/getting-started-with-github-pages/github-pages-limits">GitHub Pages limits</a> (checked September 10, 2026)</li>
+  <li><a href="https://www.viaweb.co.kr/domain/regist_domain.php">Viaweb domain search and registration</a></li>
+  <li><a href="https://www.viaweb.co.kr/domain/cost_domain.php">Viaweb domain pricing</a></li>
+  <li><a href="https://event.gabia.com/domain/famous/">Gabia public information for .co.kr and .kr</a></li>
+  <li><a href="https://www.viaweb.co.kr/member/info_page_domain.php">Viaweb domain registration terms</a></li>
+  <li><a href="https://tech.viaweb.co.kr/domain/2">Viaweb technical guide: advanced name server management</a></li>
+  <li><a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide?hl=ko">Google guidance on AI features and your website</a></li>
+  <li><a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=ko">Google SEO Starter Guide</a></li>
+  <li><a href="https://support.google.com/webmasters/answer/34592?hl=ko">Get started with Google Search Console</a></li>
+  <li><a href="https://support.google.com/webmasters/answer/9008080?hl=ko">Google Search Console: verify your site</a></li>
+  <li><a href="https://support.google.com/webmasters/answer/16908024?hl=ko">Google Search Console: generative AI search settings</a></li>
+  <li><a href="https://support.google.com/webmasters/answer/7451001?hl=ko">Google Search Console: submit a sitemap</a></li>
+  <li><a href="https://support.google.com/webmasters/answer/9012289?hl=ko">Google Search Console: URL inspection</a></li>
+  <li><a href="https://searchadvisor.naver.com/guide/faq-start-register">Naver Search Advisor: register a site</a></li>
+  <li><a href="https://searchadvisor.naver.com/guide/request-feed">Naver Search Advisor: submit a sitemap</a></li>
+  <li><a href="https://searchadvisor.naver.com/guide/request-crawl">Naver Search Advisor: request a web page crawl</a></li>
+  <li><a href="https://searchadvisor.naver.com/guide/url-inspection">Naver Search Advisor: URL inspection</a></li>
+</ul>
+          <p class="source-date">GitHub Pages references checked 2026.09.10 · Further reading</p>
+        </section>
+        <section class="sources" aria-labelledby="more-insights-title">
+          <h2 id="more-insights-title">Related reading</h2>
+          <p><a href="/en/insights/automation-without-new-system/">Does workflow automation always require new software?</a></p>
+          <p><a href="/en/insights/">All Insights</a> · <a href="https://blog.naver.com/alex-soft/224408547291" target="_blank" rel="noopener">Also read on Naver Blog (Korean) ↗</a></p>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">© ALEXSOFT INSIGHTS · A first website for a small business</footer>
+
+  <script>
+    (function () {
+      var buttons = document.querySelectorAll('.copy');
+      buttons.forEach(function (button) {
+        button.addEventListener('click', async function () {
+          var prompt = document.getElementById(button.dataset.copyTarget);
+          var status = document.getElementById(button.dataset.statusTarget);
+          if (!prompt || !status) return;
+          try {
+            await navigator.clipboard.writeText(prompt.textContent.trim());
+            status.textContent = 'Prompt copied.';
+          } catch (error) {
+            var range = document.createRange();
+            range.selectNodeContents(prompt);
+            var selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            status.textContent = 'Prompt selected. Press Cmd/Ctrl+C to copy.';
+          }
+        });
+      });
+    }());
+  </script>
+  <footer class="site">
+    <div class="shell">
+      <a class="mark" href="/en/"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#FAF8F4"/><path fill="#17191D" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/><circle cx="32" cy="40" r="3.7" fill="#4B78FF"/></svg>ALEXSOFT</a>
+      <nav aria-label="Footer navigation"><a href="/en/diagnosis/">Architecture design &amp; development</a><a href="/en/e-invoicing/">About e-invoicing</a><a href="/en/healthcare/">Healthcare information systems</a><a href="/en/brand-website/">Brand websites</a><a href="/en/work/">Projects</a><a href="/en/insights/">Insights</a><a href="mailto:contact@alexsoft.co.kr">Email</a><a href="tel:+821065480292">Call +82 10 6548 0292</a></nav>
+      <div class="channels"><span class="mono">CHANNELS</span><a href="https://blog.naver.com/alex-soft" target="_blank" rel="noopener">Naver Blog (Korean) ↗</a><a href="https://www.instagram.com/alexsoft.co.kr" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://github.com/alexsoft-hq" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+      <p class="biz" data-nosnippet>ALEXSOFT (알렉스소프트) · Representative: Yongmin Lee · Business registration: 212-64-01036 · 10, Gwanganhaebyeon-ro 15beon-gil, Suyeong-gu, Busan, South Korea · © <span data-year>2026</span> ALEXSOFT</p>
+    </div>
+  </footer>
+  </body>
+</html>

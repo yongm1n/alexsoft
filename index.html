@@ -2,6 +2,7 @@
 <html lang="ko">
 <head>
   <meta charset="utf-8">
+  <script src="/assets/ink.js?v=bilingual-1"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#f3efe6">
   <meta name="description" content="알렉스소프트(ALEXSOFT)는 국가 단위 e-invoice 시스템을 설계한 경험으로 규제 산업의 시스템을 설계하고 직접 만듭니다.">
@@ -10,7 +11,6 @@
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta name="author" content="알렉스소프트(ALEXSOFT)">
   <meta property="og:type" content="website">
-  <meta property="og:locale" content="ko_KR">
   <meta property="og:site_name" content="알렉스소프트(ALEXSOFT)">
   <meta property="og:url" content="https://alexsoft.co.kr/">
   <meta property="og:title" content="알렉스소프트 — 규제 산업 시스템 아키텍처 설계·개발">
@@ -24,188 +24,195 @@
   <meta name="twitter:title" content="알렉스소프트 — 규제 산업 시스템 아키텍처 설계·개발">
   <meta name="twitter:description" content="법제와 인증, 기존 시스템의 제약 안에서 실제로 작동하는 구조를 만듭니다.">
   <meta name="twitter:image" content="https://alexsoft.co.kr/assets/brand/alexsoft-home-og-v1.jpg">
-  <link rel="canonical" href="https://alexsoft.co.kr/">
-  <link rel="alternate" hreflang="ko-KR" href="https://alexsoft.co.kr/">
-  <link rel="alternate" hreflang="en" href="https://alexsoft.co.kr/en/">
-  <link rel="alternate" hreflang="x-default" href="https://alexsoft.co.kr/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="assets/brand/alexsoft-signature-hero.webp" as="image" type="image/webp">
   <title>알렉스소프트(ALEXSOFT) | 시스템 아키텍처 설계·개발</title>
   <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Organization",
-          "@id": "https://alexsoft.co.kr/#organization",
-          "name": "알렉스소프트",
-          "legalName": "알렉스소프트",
-          "alternateName": [
-            "ALEXSOFT",
-            "알렉스 소프트"
-          ],
-          "url": "https://alexsoft.co.kr/",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://alexsoft.co.kr/favicon.svg"
-          },
-          "image": "https://alexsoft.co.kr/assets/brand/alexsoft-home-og-v1.jpg",
-          "email": "contact@alexsoft.co.kr",
-          "telephone": "+82-10-6548-0292",
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "contactType": "customer service",
-            "telephone": "+82-10-6548-0292",
-            "email": "contact@alexsoft.co.kr",
-            "availableLanguage": ["Korean", "English"]
-          },
-          "sameAs": [
-            "https://blog.naver.com/alex-soft",
-            "https://www.instagram.com/alexsoft.co.kr/",
-            "https://github.com/alexsoft-hq"
-          ],
-          "taxID": "212-64-01036",
-          "founder": {
-            "@type": "Person",
-            "@id": "https://alexsoft.co.kr/#founder",
-            "name": "이용민",
-            "alternateName": "Yongmin Lee",
-            "jobTitle": "시스템 아키텍트",
-            "worksFor": {
-              "@id": "https://alexsoft.co.kr/#organization"
-            },
-            "hasCredential": {
-              "@type": "EducationalOccupationalCredential",
-              "name": "AWS Certified Solutions Architect – Professional",
-              "url": "https://www.credly.com/badges/d0c993e5-ae64-4601-b926-ca54c0c3af7d/public_url"
+      "@type": "Organization",
+      "@id": "https://alexsoft.co.kr/#organization",
+      "name": "알렉스소프트",
+      "legalName": "알렉스소프트",
+      "alternateName": [
+        "ALEXSOFT",
+        "알렉스 소프트"
+      ],
+      "url": "https://alexsoft.co.kr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://alexsoft.co.kr/favicon.svg"
+      },
+      "image": "https://alexsoft.co.kr/assets/brand/alexsoft-home-og-v1.jpg",
+      "email": "contact@alexsoft.co.kr",
+      "telephone": "+82-10-6548-0292",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "telephone": "+82-10-6548-0292",
+        "email": "contact@alexsoft.co.kr",
+        "availableLanguage": [
+          "Korean",
+          "English"
+        ]
+      },
+      "sameAs": [
+        "https://blog.naver.com/alex-soft",
+        "https://www.instagram.com/alexsoft.co.kr/",
+        "https://github.com/alexsoft-hq"
+      ],
+      "taxID": "212-64-01036",
+      "founder": {
+        "@type": "Person",
+        "@id": "https://alexsoft.co.kr/#founder",
+        "name": "이용민",
+        "alternateName": "Yongmin Lee",
+        "jobTitle": "시스템 아키텍트",
+        "worksFor": {
+          "@id": "https://alexsoft.co.kr/#organization"
+        },
+        "hasCredential": {
+          "@type": "EducationalOccupationalCredential",
+          "name": "AWS Certified Solutions Architect – Professional",
+          "url": "https://www.credly.com/badges/d0c993e5-ae64-4601-b926-ca54c0c3af7d/public_url"
+        }
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "광안해변로15번길 10",
+        "addressLocality": "수영구",
+        "addressRegion": "부산광역시",
+        "addressCountry": "KR"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "대한민국"
+      },
+      "knowsAbout": [
+        "시스템 아키텍처 설계",
+        "설계 기반 시스템 개발",
+        "기술 자문 및 기술 실사",
+        "전자세금계산서 및 e-invoice 표준",
+        "전자문서 교환체계 보안 설계",
+        "의료정보 시스템 및 EMR 연동",
+        "레거시 시스템 현대화",
+        "클라우드 아키텍처",
+        "ERP·API 시스템 연동",
+        "조선해양 엔지니어링 시스템",
+        "브랜드 웹사이트 개발",
+        "정적분석 기반 변경 영향 분석 (코드에서 DB 컬럼까지)",
+        "팀 목표·OKR 관리 도구 설계·개발",
+        "의료 데이터 표준 연계 도구 설계·개발 (KR Core)"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "시스템 아키텍처 설계·개발 및 기술 자문 서비스",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "url": "https://alexsoft.co.kr/diagnosis/",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "아키텍처 설계·개발"
             }
           },
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "광안해변로15번길 10",
-            "addressLocality": "수영구",
-            "addressRegion": "부산광역시",
-            "addressCountry": "KR"
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "시스템 연동 및 레거시 현대화"
+            }
           },
-          "areaServed": {
-            "@type": "Country",
-            "name": "대한민국"
+          {
+            "@type": "Offer",
+            "url": "https://alexsoft.co.kr/healthcare/",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "의료정보 시스템 설계 자문"
+            }
           },
-          "knowsAbout": [
-            "시스템 아키텍처 설계",
-            "설계 기반 시스템 개발",
-            "기술 자문 및 기술 실사",
-            "전자세금계산서 및 e-invoice 표준",
-            "전자문서 교환체계 보안 설계",
-            "의료정보 시스템 및 EMR 연동",
-            "레거시 시스템 현대화",
-            "클라우드 아키텍처",
-            "ERP·API 시스템 연동",
-            "조선해양 엔지니어링 시스템",
-            "브랜드 웹사이트 개발",
-            "정적분석 기반 변경 영향 분석 (코드에서 DB 컬럼까지)",
-            "팀 목표·OKR 관리 도구 설계·개발",
-            "의료 데이터 표준 연계 도구 설계·개발 (KR Core)"
-          ],
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "시스템 아키텍처 설계·개발 및 기술 자문 서비스",
-            "itemListElement": [
-              {
-                "@type": "Offer",
-                "url": "https://alexsoft.co.kr/diagnosis/",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "아키텍처 설계·개발"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "시스템 연동 및 레거시 현대화"
-                }
-              },
-              {
-                "@type": "Offer",
-                "url": "https://alexsoft.co.kr/healthcare/",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "의료정보 시스템 설계 자문"
-                }
-              },
-              {
-                "@type": "Offer",
-                "url": "https://alexsoft.co.kr/brand-website/",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "브랜드 웹사이트 및 디지털 경험"
-                }
-              }
-            ]
+          {
+            "@type": "Offer",
+            "url": "https://alexsoft.co.kr/brand-website/",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "브랜드 웹사이트 및 디지털 경험"
+            }
           }
-        },
-        {
-          "@type": "WebSite",
-          "@id": "https://alexsoft.co.kr/#website",
-          "url": "https://alexsoft.co.kr/",
-          "name": "알렉스소프트",
-          "alternateName": [
-            "ALEXSOFT",
-            "알렉스 소프트",
-            "alexsoft.co.kr"
-          ],
-          "inLanguage": "ko-KR",
-          "publisher": {
-            "@id": "https://alexsoft.co.kr/#organization"
-          }
-        },
-        {
-          "@type": "WebPage",
-          "@id": "https://alexsoft.co.kr/#webpage",
-          "url": "https://alexsoft.co.kr/",
-          "name": "알렉스소프트(ALEXSOFT) | 시스템 아키텍처 설계·개발",
-          "description": "알렉스소프트(ALEXSOFT)는 국가 단위 e-invoice 시스템을 설계한 경험으로 규제 산업의 시스템을 설계하고 직접 만듭니다.",
-          "inLanguage": "ko-KR",
-          "isPartOf": {
-            "@id": "https://alexsoft.co.kr/#website"
-          },
-          "about": {
-            "@id": "https://alexsoft.co.kr/#organization"
-          },
-          "primaryImageOfPage": {
-            "@type": "ImageObject",
-            "url": "https://alexsoft.co.kr/assets/brand/alexsoft-home-og-v1.jpg",
-            "width": 1200,
-            "height": 630
-          }
-        }
-      ]
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://alexsoft.co.kr/#website",
+      "url": "https://alexsoft.co.kr/",
+      "name": "알렉스소프트",
+      "alternateName": [
+        "ALEXSOFT",
+        "알렉스 소프트",
+        "alexsoft.co.kr"
+      ],
+      "inLanguage": "ko",
+      "publisher": {
+        "@id": "https://alexsoft.co.kr/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://alexsoft.co.kr/#webpage",
+      "url": "https://alexsoft.co.kr/",
+      "name": "알렉스소프트(ALEXSOFT) | 시스템 아키텍처 설계·개발",
+      "description": "알렉스소프트(ALEXSOFT)는 국가 단위 e-invoice 시스템을 설계한 경험으로 규제 산업의 시스템을 설계하고 직접 만듭니다.",
+      "inLanguage": "ko",
+      "isPartOf": {
+        "@id": "https://alexsoft.co.kr/#website"
+      },
+      "about": {
+        "@id": "https://alexsoft.co.kr/#organization"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://alexsoft.co.kr/assets/brand/alexsoft-home-og-v1.jpg",
+        "width": 1200,
+        "height": 630
+      }
     }
-    </script>
+  ]
+}
+</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
-  <link rel="stylesheet" href="/assets/ink.css?v=credential-2">
+  <link rel="stylesheet" href="/assets/ink.css?v=bilingual-1">
   <noscript><style>[data-reveal]{opacity:1;transform:none}</style></noscript>
+  <noscript><style>.ink .draw{stroke-dashoffset:0;animation:none}</style></noscript>
+  <link rel="canonical" href="https://alexsoft.co.kr/">
+  <link rel="alternate" hreflang="ko" href="https://alexsoft.co.kr/?lang=ko">
+  <link rel="alternate" hreflang="en" href="https://alexsoft.co.kr/en/">
+  <link rel="alternate" hreflang="x-default" href="https://alexsoft.co.kr/">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:locale:alternate" content="en_US">
 </head>
 <body>
   <header class="top">
     <a class="skip" href="#main">본문으로 건너뛰기</a>
     <div class="shell">
-      <a class="mark" href="/" aria-label="알렉스소프트 홈">
+      <a class="mark" href="/?lang=ko" aria-label="알렉스소프트 홈">
         <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#17191D"/><path fill="#FAF8F4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/><circle cx="32" cy="40" r="3.7" fill="#4B78FF"/></svg>
         ALEXSOFT
       </a>
-      <nav aria-label="주요 메뉴">
+      <nav class="main-nav" aria-label="주요 메뉴">
         <a href="/work/">프로젝트</a>
         <a href="/insights/">인사이트</a>
-        <a href="/#services">서비스</a>
-        <a href="/#about">회사소개</a>
-        <a class="cta" href="/#start">문의</a>
+        <a href="/?lang=ko#services">서비스</a>
+        <a href="/?lang=ko#about">회사소개</a>
+        <a class="cta" href="/?lang=ko#start">문의</a>
       </nav>
+      <div class="language-switch" role="group" aria-label="언어 선택"><a href="/?lang=ko" data-language="ko" lang="ko" hreflang="ko" aria-current="true">한국어</a><a href="/en/" data-language="en" lang="en" hreflang="en">English</a></div>
     </div>
   </header>
 
@@ -339,7 +346,7 @@
         <p class="scroll-hint">← 옆으로 밀어 전체 구조를 볼 수 있습니다 →</p>
         <dl class="facts wide" style="margin-top:clamp(24px,3vw,40px)">
             <div><dt>사업</dt><dd>필리핀 국세청(BIR) 전자송장 시스템 EIS<small>KOICA 무상원조 1차 구축 · 2018–2022</small></dd></div>
-            <div><dt>역할</dt><dd>개발 PL<small>개발 아키텍처 · e-invoice 문서 표준 · 문서와 교환체계의 보안 표준 설계, 개발 주도</small></dd></div>
+            <div><dt>역할</dt><dd>이용민 대표 · 개발 PL (2020–2022)<small>개발 아키텍처 · e-invoice 문서 표준 · 문서와 교환체계의 보안 표준 설계, 개발 주도</small></dd></div>
             <div><dt>지금</dt><dd>2022년 가동, 현재 운영 중<small>2025–2026년 2차 사후지원은 별도 수행사의 사업</small></dd></div>
           </dl>
         <p class="case-more"><a class="link" href="work/#bir-eis">사례 자세히 보기 <span>→</span></a></p>
@@ -353,7 +360,7 @@
             <div class="nib" aria-hidden="true"><svg viewBox="0 0 64 64"><path fill="#2456E4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/></svg><span>직접 만든 것</span></div>
             <h2 id="products-title">설계한 사람이 끝까지 만든다는 말의 증거입니다.</h2>
           </div>
-          <p>고객의 시스템을 설계하는 일과 별개로, 직접 기획한 제품과 서비스를 만들어 공개합니다. 코드에서 DB 컬럼까지의 영향 지도를 그리는 오픈소스 엔진, 팀의 목표를 다섯 가지 화면으로 보는 목표 관리 도구, EMR·LIS 데이터를 국내 표준으로 옮기는 연계 도구, 부산과 거제를 지형·통계·기록사진으로 보는 웹 서비스입니다. 화면과 구조를 사례 페이지에 그대로 실었습니다.</p>
+          <p>직접 기획하고 설계·개발한 제품과 서비스를 공개합니다. 코드에서 DB 컬럼까지의 영향 지도를 그리는 오픈소스 엔진, 팀의 목표를 다섯 가지 화면으로 보는 목표 관리 도구, EMR·LIS 데이터를 국내 표준으로 옮기는 연계 도구, 부산과 거제를 지형·통계·기록사진으로 보는 웹 서비스입니다. 화면과 구조를 사례 페이지에 그대로 실었습니다.</p>
         </div>
         <div class="entries">
           <article data-reveal>
@@ -406,7 +413,7 @@
             <div class="nib" aria-hidden="true"><svg viewBox="0 0 64 64"><path fill="#2456E4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/></svg><span>회사소개</span></div>
             <h2 id="about-title">25년 넘는 현장이 판단의 근거입니다.</h2>
           </div>
-          <p>알렉스소프트(ALEXSOFT) 대표 이용민은 필리핀 국세청 e-invoice 시스템 구축 사업(KOICA, 2018–2022)의 개발 PL로 문서 표준과 교환체계 보안 표준을 설계하고 개발을 이끌었으며, 그 시스템은 2022년 가동 이후 지금도 운영 중입니다. 이어 EMR 인증을 받은 의원급 EMR 중 최초의 클라우드 제품(2022–2026)을 개발 리더로 시작해 2023년부터 개발·기획설계를 총괄했습니다. 조선해양·공공·의료 현장의 시스템을 25년 이상 다뤄왔습니다.</p>
+          <p>알렉스소프트(ALEXSOFT) 대표 이용민은 필리핀 국세청 e-invoice 시스템 구축 사업(KOICA, 2018–2022)에 2020–2022년 개발 PL로 참여해 문서 표준과 교환체계 보안 표준을 설계하고 개발을 이끌었으며, 그 시스템은 2022년 가동 이후 지금도 운영 중입니다. 이어 EMR 인증을 받은 의원급 EMR 중 최초의 클라우드 제품(2022–2026)을 개발 리더로 시작해 2023년부터 개발·기획설계를 총괄했습니다. 조선해양·공공·의료 현장의 시스템을 25년 이상 다뤄왔습니다.</p>
         </div>
         <dl class="facts wide">
             <div><dt>NATIONAL E-INVOICE</dt><dd>필리핀 국세청 시스템 설계, 지금도 운영 중</dd></div>
@@ -455,12 +462,11 @@
 
   <footer class="site">
     <div class="shell">
-      <a class="mark" href="/"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#FAF8F4"/><path fill="#17191D" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/><circle cx="32" cy="40" r="3.7" fill="#4B78FF"/></svg>ALEXSOFT</a>
-      <nav aria-label="바닥글 메뉴"><a href="/diagnosis/">아키텍처 설계·개발</a><a href="/e-invoicing/">e-invoicing이란</a><a href="/healthcare/">의료정보 시스템</a><a href="/brand-website/">브랜드 웹사이트</a><a href="/work/">사례</a><a href="/insights/">인사이트</a><a href="/en/" hreflang="en">English</a><a href="mailto:contact@alexsoft.co.kr">이메일</a><a href="tel:+821065480292">전화 010-6548-0292</a></nav>
+      <a class="mark" href="/?lang=ko"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#FAF8F4"/><path fill="#17191D" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/><circle cx="32" cy="40" r="3.7" fill="#4B78FF"/></svg>ALEXSOFT</a>
+      <nav aria-label="바닥글 메뉴"><a href="/diagnosis/">아키텍처 설계·개발</a><a href="/e-invoicing/">e-invoicing이란</a><a href="/healthcare/">의료정보 시스템</a><a href="/brand-website/">브랜드 웹사이트</a><a href="/work/">사례</a><a href="/insights/">인사이트</a><a href="mailto:contact@alexsoft.co.kr">이메일</a><a href="tel:+821065480292">전화 010-6548-0292</a></nav>
       <div class="channels"><span class="mono">CHANNELS</span><a href="https://blog.naver.com/alex-soft" target="_blank" rel="noopener">Naver Blog ↗</a><a href="https://www.instagram.com/alexsoft.co.kr" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://github.com/alexsoft-hq" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
       <p class="biz" data-nosnippet>상호 알렉스소프트(ALEXSOFT) · 대표 이용민 · 사업자등록번호 212-64-01036 · 사업장 부산광역시 수영구 광안해변로15번길 10 · © <span data-year>2026</span> ALEXSOFT</p>
     </div>
   </footer>
-  <script src="/assets/ink.js?v=20260910-i-4" defer></script>
-</body>
+  </body>
 </html>

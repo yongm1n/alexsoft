@@ -2,7 +2,7 @@
    ALEXSOFT ink design system — 2026-09
    원칙: 종이 한 톤, 잉크 한 색, 선이 곧 다이어그램. 장식 번호·아이브로우 없음.
    서체: 제목/본문 IBM Plex Sans KR, 식별자 IBM Plex Mono (Google Fonts).
-   표준 헤더/푸터 마크업은 이 파일 맨 아래 주석 참조 — 7개 국문 페이지 byte-identical.
+   공통 헤더·푸터 원본: scripts/i18n/. 동기화: scripts/sync-locales.py.
    ========================================================================== */
 
 :root{
@@ -224,32 +224,24 @@ footer.site .biz{width:100%;font-family:var(--mono);font-size:11px;line-height:1
 @media (max-width:900px){.gallery.mixed{grid-template-columns:repeat(2,minmax(0,1fr))}.gallery .shot.phone{grid-column:1/-1;max-width:360px}}
 @media (max-width:640px){.gallery,.gallery.mixed{grid-template-columns:1fr}.gallery .shot.phone{max-width:none}.gallery .shot.phone img{aspect-ratio:auto}}
 
-/* ==========================================================================
-   표준 헤더(국문 페이지 byte-identical — 루트 절대경로, 그대로 복사):
-   <header class="top">
-     <a class="skip" href="#main">본문으로 건너뛰기</a>
-     <div class="shell">
-       <a class="mark" href="/" aria-label="알렉스소프트 홈">
-         <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#17191D"/><path fill="#FAF8F4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/><circle cx="32" cy="40" r="3.7" fill="#4B78FF"/></svg>
-         ALEXSOFT
-       </a>
-       <nav aria-label="주요 메뉴">
-         <a href="/work/">프로젝트</a>
-         <a href="/insights/">인사이트</a>
-         <a href="/#services">서비스</a>
-         <a href="/#about">회사소개</a>
-         <a class="cta" href="/#start">문의</a>
-       </nav>
-     </div>
-   </header>
-
-   표준 푸터(전 페이지 byte-identical):
-   <footer class="site">
-     <div class="shell">
-       <a class="mark" href="/"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#FAF8F4"/><path fill="#17191D" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/><circle cx="32" cy="40" r="3.7" fill="#4B78FF"/></svg>ALEXSOFT</a>
-       <nav aria-label="바닥글 메뉴"><a href="/diagnosis/">아키텍처 설계·구현</a><a href="/e-invoicing/">e-invoicing이란</a><a href="/healthcare/">의료정보 시스템</a><a href="/brand-website/">브랜드 웹사이트</a><a href="/work/">사례</a><a href="/insights/">인사이트</a><a href="/en/" hreflang="en">English</a><a href="mailto:contact@alexsoft.co.kr">이메일</a></nav>
-       <div class="channels"><span class="mono">CHANNELS</span><a href="https://blog.naver.com/alex-soft" target="_blank" rel="noopener">Naver Blog ↗</a><a href="https://www.instagram.com/alexsoft.co.kr" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div>
-       <p class="biz" data-nosnippet>상호 알렉스소프트(ALEXSOFT) · 대표 이용민 · 사업자등록번호 212-64-01036 · 사업장 부산광역시 수영구 광안해변로15번길 10 · © <span data-year>2026</span> ALEXSOFT</p>
-     </div>
-   </footer>
-   ========================================================================== */
+/* Header/footer templates: scripts/i18n/header.{ko,en}.html and footer.{ko,en}.html. */
+/* Bilingual navigation: links remain available without JavaScript. */
+html{scroll-padding-top:90px}
+header.top .shell{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:24px;min-height:68px;height:auto;padding-top:8px;padding-bottom:8px}
+header.top .main-nav{justify-content:flex-end;gap:22px;min-width:0}
+header.top .language-switch{display:flex;gap:10px;font-size:12px;line-height:1.5;align-items:center;white-space:nowrap;border-left:1px solid var(--rule-soft,#EAE7E0);padding-left:18px}
+.language-switch a{display:inline-block;padding:8px 0;text-decoration:none}
+.language-switch a[aria-current="true"]{color:var(--ink,#17191D);font-weight:600;text-decoration:underline;text-underline-offset:5px}
+@media(max-width:900px){
+ header.top .shell{gap:0 16px;grid-template-columns:minmax(0,1fr) auto;padding-top:4px;padding-bottom:6px}
+ header.top .mark{min-height:42px}
+ header.top .language-switch{grid-column:2;grid-row:1;border:0;padding-left:0;gap:12px}
+ header.top .main-nav{grid-row:2;grid-column:1/-1;justify-content:space-between;gap:8px;font-size:13px;line-height:1.5}
+ header.top .main-nav a{padding:8px 0}
+ html{scroll-padding-top:108px}
+}
+@media(max-width:360px){header.top .main-nav{font-size:12px;gap:6px}header.top .language-switch{font-size:11px}header.top .mark{font-size:12px;gap:8px}}
+html[lang="en"] body{word-break:normal}
+html[lang="en"] .facts>div{grid-template-columns:90px minmax(0,1fr)}
+html[lang="en"] .facts.wide>div{grid-template-columns:120px minmax(0,1fr)}
+@media(max-width:520px){html[lang="en"] .facts.wide>.credential-fact{grid-template-columns:1fr}}

@@ -1,67 +1,237 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://alexsoft.co.kr/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://alexsoft.co.kr/?lang=ko" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexsoft.co.kr/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexsoft.co.kr/" />
     <lastmod>2026-10-06</lastmod>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/certifications/aws-certified-solutions-architect-professional.png</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/brand/alexsoft-signature-hero.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/brand/capability-ai-workflow.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/brand/capability-product-engineering.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/brand/capability-system-integration.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/brand/capability-digital-experience.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/grace-site.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/cascade-graph-map.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/mokpyo-dashboard.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/bridge-console-coverage.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/busan-map.jpg</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/geoje-map.jpg</image:loc></image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/certifications/aws-certified-solutions-architect-professional.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/brand/alexsoft-signature-hero.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/brand/capability-ai-workflow.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/brand/capability-product-engineering.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/brand/capability-system-integration.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/brand/capability-digital-experience.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/grace-site.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/cascade-graph-map.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/mokpyo-dashboard.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/bridge-console-coverage.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/busan-map.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/geoje-map.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://alexsoft.co.kr/en/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://alexsoft.co.kr/?lang=ko" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexsoft.co.kr/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexsoft.co.kr/" />
+    <lastmod>2026-10-06</lastmod>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/certifications/aws-certified-solutions-architect-professional.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/brand/alexsoft-signature-hero.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/brand/capability-ai-workflow.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/brand/capability-product-engineering.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/brand/capability-system-integration.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/brand/capability-digital-experience.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/grace-site.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/cascade-graph-map.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/mokpyo-dashboard.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/bridge-console-coverage.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/busan-map.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/geoje-map.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://alexsoft.co.kr/diagnosis/</loc>
-    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://alexsoft.co.kr/diagnosis/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexsoft.co.kr/en/diagnosis/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexsoft.co.kr/en/diagnosis/" />
+    <lastmod>2026-10-06</lastmod>
+  </url>
+  <url>
+    <loc>https://alexsoft.co.kr/en/diagnosis/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://alexsoft.co.kr/diagnosis/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexsoft.co.kr/en/diagnosis/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexsoft.co.kr/en/diagnosis/" />
+    <lastmod>2026-10-06</lastmod>
   </url>
   <url>
     <loc>https://alexsoft.co.kr/e-invoicing/</loc>
-    <lastmod>2026-09-21</lastmod>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/brand/einvoicing-hero.webp</image:loc></image:image>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://alexsoft.co.kr/e-invoicing/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexsoft.co.kr/en/e-invoicing/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexsoft.co.kr/en/e-invoicing/" />
+    <lastmod>2026-10-06</lastmod>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/brand/einvoicing-hero.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://alexsoft.co.kr/en/e-invoicing/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://alexsoft.co.kr/e-invoicing/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexsoft.co.kr/en/e-invoicing/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexsoft.co.kr/en/e-invoicing/" />
+    <lastmod>2026-10-06</lastmod>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/brand/einvoicing-hero.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://alexsoft.co.kr/healthcare/</loc>
-    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://alexsoft.co.kr/healthcare/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexsoft.co.kr/en/healthcare/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexsoft.co.kr/en/healthcare/" />
+    <lastmod>2026-10-06</lastmod>
+  </url>
+  <url>
+    <loc>https://alexsoft.co.kr/en/healthcare/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://alexsoft.co.kr/healthcare/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexsoft.co.kr/en/healthcare/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexsoft.co.kr/en/healthcare/" />
+    <lastmod>2026-10-06</lastmod>
   </url>
   <url>
     <loc>https://alexsoft.co.kr/brand-website/</loc>
-    <lastmod>2026-09-21</lastmod>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/grace-site.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/grace-site-mobile.webp</image:loc></image:image>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://alexsoft.co.kr/brand-website/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexsoft.co.kr/en/brand-website/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexsoft.co.kr/en/brand-website/" />
+    <lastmod>2026-10-06</lastmod>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/grace-site.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/grace-site-mobile.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://alexsoft.co.kr/en/brand-website/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://alexsoft.co.kr/brand-website/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexsoft.co.kr/en/brand-website/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexsoft.co.kr/en/brand-website/" />
+    <lastmod>2026-10-06</lastmod>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/grace-site.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/grace-site-mobile.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://alexsoft.co.kr/work/</loc>
-    <lastmod>2026-10-02</lastmod>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/cascade-demo-poster.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/cascade-overview-ko.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/cascade-flow-from-screen-ko.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/cascade-impact-column.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/cascade-graph-map.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/cascade-coupling.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/cascade-erd.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/cascade-source-pane.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/cascade-transactions.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/cascade-explore-screen-card.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/mokpyo-cards.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/mokpyo-dashboard.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/mokpyo-timeline.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/mokpyo-table.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/mokpyo-board.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/mokpyo-goal-detail.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/mokpyo-members-treemap.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/mokpyo-automation-rule.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/mokpyo-notifications.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/mokpyo-mobile-cards.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/bridge-console-coverage.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/grace-site.webp</image:loc></image:image>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://alexsoft.co.kr/work/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexsoft.co.kr/en/work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexsoft.co.kr/en/work/" />
+    <lastmod>2026-10-06</lastmod>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/cascade-demo-poster.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/cascade-overview-ko.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/cascade-flow-from-screen-ko.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/cascade-impact-column.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/cascade-graph-map.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/cascade-coupling.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/cascade-erd.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/cascade-source-pane.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/cascade-transactions.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/cascade-explore-screen-card.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/mokpyo-cards.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/mokpyo-dashboard.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/mokpyo-timeline.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/mokpyo-table.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/mokpyo-board.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/mokpyo-goal-detail.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/mokpyo-members-treemap.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/mokpyo-automation-rule.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/mokpyo-notifications.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/mokpyo-mobile-cards.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/bridge-console-coverage.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/grace-site.webp</image:loc>
+    </image:image>
     <video:video>
       <video:thumbnail_loc>https://alexsoft.co.kr/assets/work/cascade-demo-poster.webp</video:thumbnail_loc>
       <video:title>Cascade 뷰어 데모</video:title>
@@ -71,87 +241,320 @@
       <video:family_friendly>yes</video:family_friendly>
       <video:live>no</video:live>
     </video:video>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/busan-map.jpg</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/geoje-map.jpg</image:loc></image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/busan-map.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/geoje-map.jpg</image:loc>
+    </image:image>
   </url>
   <url>
-    <loc>https://alexsoft.co.kr/en/</loc>
+    <loc>https://alexsoft.co.kr/en/work/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://alexsoft.co.kr/work/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexsoft.co.kr/en/work/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexsoft.co.kr/en/work/" />
     <lastmod>2026-10-06</lastmod>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/certifications/aws-certified-solutions-architect-professional.png</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/brand/alexsoft-signature-hero.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/grace-site.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/cascade-demo-poster.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/cascade-graph-map.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/cascade-impact-column.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/cascade-erd.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/cascade-coupling.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/mokpyo-cards.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/mokpyo-dashboard.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/mokpyo-timeline.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/mokpyo-goal-detail.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/mokpyo-members-treemap.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/bridge-console-coverage.webp</image:loc></image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/cascade-demo-poster.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/cascade-overview-ko.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/cascade-flow-from-screen-ko.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/cascade-impact-column.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/cascade-graph-map.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/cascade-coupling.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/cascade-erd.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/cascade-source-pane.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/cascade-transactions.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/cascade-explore-screen-card.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/mokpyo-cards.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/mokpyo-dashboard.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/mokpyo-timeline.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/mokpyo-table.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/mokpyo-board.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/mokpyo-goal-detail.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/mokpyo-members-treemap.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/mokpyo-automation-rule.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/mokpyo-notifications.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/mokpyo-mobile-cards.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/bridge-console-coverage.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/grace-site.webp</image:loc>
+    </image:image>
     <video:video>
       <video:thumbnail_loc>https://alexsoft.co.kr/assets/work/cascade-demo-poster.webp</video:thumbnail_loc>
       <video:title>Cascade viewer demo</video:title>
-      <video:description>A 22-second tour of the Cascade viewer: overview dials, the impact of one column down to the SQL behind a statement, the whole-project graph and an ERD.</video:description>
+      <video:description>A 22-second Cascade viewer demo, moving from the overview to the impact of the retail_price column, the actual SQL behind a statement, the whole-project graph and an ERD. Based on analysis of the open-source litemall and mall projects.</video:description>
       <video:content_loc>https://alexsoft.co.kr/assets/work/cascade-demo.mp4</video:content_loc>
       <video:duration>22</video:duration>
       <video:family_friendly>yes</video:family_friendly>
       <video:live>no</video:live>
     </video:video>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/busan-map.jpg</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/assets/work/geoje-map.jpg</image:loc></image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/busan-map.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/assets/work/geoje-map.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://alexsoft.co.kr/insights/</loc>
-    <lastmod>2026-09-21</lastmod>
-    <image:image><image:loc>https://alexsoft.co.kr/insights/cascade-change-impact/images/cascade-flow-from-screen-ko.png</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/insights/ai-business-website/cover.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/insights/when-spreadsheet-needs-system/images/image-01.png</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/insights/automation-without-new-system/images/image-01.png</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/insights/senior-developer-value/images/image-01.png</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/insights/ai-result-quality/images/image-01.png</image:loc></image:image>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://alexsoft.co.kr/insights/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexsoft.co.kr/en/insights/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexsoft.co.kr/en/insights/" />
+    <lastmod>2026-10-06</lastmod>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/insights/cascade-change-impact/images/cascade-flow-from-screen-ko.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/insights/ai-business-website/cover.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/insights/when-spreadsheet-needs-system/images/image-01.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/insights/automation-without-new-system/images/image-01.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/insights/senior-developer-value/images/image-01.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/insights/ai-result-quality/images/image-01.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://alexsoft.co.kr/en/insights/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://alexsoft.co.kr/insights/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexsoft.co.kr/en/insights/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexsoft.co.kr/en/insights/" />
+    <lastmod>2026-10-06</lastmod>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/insights/cascade-change-impact/images/cascade-flow-from-screen-ko.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/insights/ai-business-website/cover.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/insights/when-spreadsheet-needs-system/images/image-01.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/insights/automation-without-new-system/images/image-01.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/insights/senior-developer-value/images/image-01.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/insights/ai-result-quality/images/image-01.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://alexsoft.co.kr/insights/cascade-change-impact/</loc>
-    <lastmod>2026-09-15</lastmod>
-    <image:image><image:loc>https://alexsoft.co.kr/insights/cascade-change-impact/images/cascade-flow-from-screen-ko.png</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/insights/cascade-change-impact/images/cascade-compare-report-ko-light.png</image:loc></image:image>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://alexsoft.co.kr/insights/cascade-change-impact/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexsoft.co.kr/en/insights/cascade-change-impact/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexsoft.co.kr/en/insights/cascade-change-impact/" />
+    <lastmod>2026-10-06</lastmod>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/insights/cascade-change-impact/images/cascade-flow-from-screen-ko.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/insights/cascade-change-impact/images/cascade-compare-report-ko-light.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://alexsoft.co.kr/en/insights/cascade-change-impact/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://alexsoft.co.kr/insights/cascade-change-impact/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexsoft.co.kr/en/insights/cascade-change-impact/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexsoft.co.kr/en/insights/cascade-change-impact/" />
+    <lastmod>2026-10-06</lastmod>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/insights/cascade-change-impact/images/cascade-flow-from-screen-ko.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/insights/cascade-change-impact/images/cascade-compare-report-ko-light.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://alexsoft.co.kr/insights/ai-business-website/</loc>
-    <lastmod>2026-09-13</lastmod>
-    <image:image><image:loc>https://alexsoft.co.kr/insights/ai-business-website/images/website-owner.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/insights/ai-business-website/images/website-workflow.webp</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/insights/ai-business-website/images/website-ownership.webp</image:loc></image:image>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://alexsoft.co.kr/insights/ai-business-website/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexsoft.co.kr/en/insights/ai-business-website/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexsoft.co.kr/en/insights/ai-business-website/" />
+    <lastmod>2026-10-06</lastmod>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/insights/ai-business-website/images/website-owner.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/insights/ai-business-website/images/website-workflow.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/insights/ai-business-website/images/website-ownership.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://alexsoft.co.kr/en/insights/ai-business-website/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://alexsoft.co.kr/insights/ai-business-website/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexsoft.co.kr/en/insights/ai-business-website/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexsoft.co.kr/en/insights/ai-business-website/" />
+    <lastmod>2026-10-06</lastmod>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/insights/ai-business-website/images/website-owner.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/insights/ai-business-website/images/website-workflow.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/insights/ai-business-website/images/website-ownership.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://alexsoft.co.kr/insights/ai-business-website/slides.html</loc>
-    <lastmod>2026-09-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://alexsoft.co.kr/insights/ai-business-website/slides.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexsoft.co.kr/en/insights/ai-business-website/slides.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexsoft.co.kr/en/insights/ai-business-website/slides.html" />
+    <lastmod>2026-10-06</lastmod>
+  </url>
+  <url>
+    <loc>https://alexsoft.co.kr/en/insights/ai-business-website/slides.html</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://alexsoft.co.kr/insights/ai-business-website/slides.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexsoft.co.kr/en/insights/ai-business-website/slides.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexsoft.co.kr/en/insights/ai-business-website/slides.html" />
+    <lastmod>2026-10-06</lastmod>
   </url>
   <url>
     <loc>https://alexsoft.co.kr/insights/when-spreadsheet-needs-system/</loc>
-    <lastmod>2026-09-13</lastmod>
-    <image:image><image:loc>https://alexsoft.co.kr/insights/when-spreadsheet-needs-system/images/image-01.png</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/insights/when-spreadsheet-needs-system/images/image-02.png</image:loc></image:image>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://alexsoft.co.kr/insights/when-spreadsheet-needs-system/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexsoft.co.kr/en/insights/when-spreadsheet-needs-system/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexsoft.co.kr/en/insights/when-spreadsheet-needs-system/" />
+    <lastmod>2026-10-06</lastmod>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/insights/when-spreadsheet-needs-system/images/image-01.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/insights/when-spreadsheet-needs-system/images/image-02.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://alexsoft.co.kr/en/insights/when-spreadsheet-needs-system/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://alexsoft.co.kr/insights/when-spreadsheet-needs-system/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexsoft.co.kr/en/insights/when-spreadsheet-needs-system/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexsoft.co.kr/en/insights/when-spreadsheet-needs-system/" />
+    <lastmod>2026-10-06</lastmod>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/insights/when-spreadsheet-needs-system/images/image-01.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/insights/when-spreadsheet-needs-system/images/image-02.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://alexsoft.co.kr/insights/automation-without-new-system/</loc>
-    <lastmod>2026-09-13</lastmod>
-    <image:image><image:loc>https://alexsoft.co.kr/insights/automation-without-new-system/images/image-01.png</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/insights/automation-without-new-system/images/image-02.png</image:loc></image:image>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://alexsoft.co.kr/insights/automation-without-new-system/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexsoft.co.kr/en/insights/automation-without-new-system/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexsoft.co.kr/en/insights/automation-without-new-system/" />
+    <lastmod>2026-10-06</lastmod>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/insights/automation-without-new-system/images/image-01.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/insights/automation-without-new-system/images/image-02.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://alexsoft.co.kr/en/insights/automation-without-new-system/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://alexsoft.co.kr/insights/automation-without-new-system/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexsoft.co.kr/en/insights/automation-without-new-system/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexsoft.co.kr/en/insights/automation-without-new-system/" />
+    <lastmod>2026-10-06</lastmod>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/insights/automation-without-new-system/images/image-01.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/insights/automation-without-new-system/images/image-02.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://alexsoft.co.kr/insights/senior-developer-value/</loc>
-    <lastmod>2026-09-13</lastmod>
-    <image:image><image:loc>https://alexsoft.co.kr/insights/senior-developer-value/images/image-01.png</image:loc></image:image>
-    <image:image><image:loc>https://alexsoft.co.kr/insights/senior-developer-value/images/image-02.png</image:loc></image:image>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://alexsoft.co.kr/insights/senior-developer-value/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexsoft.co.kr/en/insights/senior-developer-value/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexsoft.co.kr/en/insights/senior-developer-value/" />
+    <lastmod>2026-10-06</lastmod>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/insights/senior-developer-value/images/image-01.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/insights/senior-developer-value/images/image-02.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://alexsoft.co.kr/en/insights/senior-developer-value/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://alexsoft.co.kr/insights/senior-developer-value/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexsoft.co.kr/en/insights/senior-developer-value/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexsoft.co.kr/en/insights/senior-developer-value/" />
+    <lastmod>2026-10-06</lastmod>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/insights/senior-developer-value/images/image-01.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/insights/senior-developer-value/images/image-02.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://alexsoft.co.kr/insights/ai-result-quality/</loc>
-    <lastmod>2026-09-13</lastmod>
-    <image:image><image:loc>https://alexsoft.co.kr/insights/ai-result-quality/images/image-01.png</image:loc></image:image>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://alexsoft.co.kr/insights/ai-result-quality/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexsoft.co.kr/en/insights/ai-result-quality/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexsoft.co.kr/en/insights/ai-result-quality/" />
+    <lastmod>2026-10-06</lastmod>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/insights/ai-result-quality/images/image-01.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://alexsoft.co.kr/en/insights/ai-result-quality/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://alexsoft.co.kr/insights/ai-result-quality/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alexsoft.co.kr/en/insights/ai-result-quality/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alexsoft.co.kr/en/insights/ai-result-quality/" />
+    <lastmod>2026-10-06</lastmod>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/insights/ai-result-quality/images/image-01.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://alexsoft.co.kr/busan-in-view/</loc>
@@ -164,7 +567,9 @@
   <url>
     <loc>https://alexsoft.co.kr/geoje-in-view/</loc>
     <lastmod>2026-10-02</lastmod>
-    <image:image><image:loc>https://alexsoft.co.kr/geoje-in-view/og-geoje.jpg</image:loc></image:image>
+    <image:image>
+      <image:loc>https://alexsoft.co.kr/geoje-in-view/og-geoje.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://alexsoft.co.kr/geoje-in-view/about/</loc>

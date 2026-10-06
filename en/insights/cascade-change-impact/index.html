@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script src="/assets/ink.js?v=bilingual-1"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#FAF8F4">
+  <meta name="description" content="Explore the impact of changes across database columns, SQL, APIs, and screens with ALEXSOFT’s open-source Cascade. A real comparison-report validation example and plans for analysis quality, coverage, and code review integration.">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="author" content="ALEXSOFT">
+  <meta property="og:type" content="article">
+  <meta property="article:author" content="https://alexsoft.co.kr/en/">
+  <meta property="og:site_name" content="ALEXSOFT">
+  <meta property="og:url" content="https://alexsoft.co.kr/en/insights/cascade-change-impact/">
+  <meta property="og:title" content="Cascade: tracing code changes from the database to the screen | ALEXSOFT">
+  <meta property="og:description" content="Explore the impact of changes across database columns, SQL, APIs, and screens with ALEXSOFT’s open-source Cascade. A real comparison-report validation example and plans for analysis quality, coverage, and code review integration.">
+  <meta property="og:image" content="https://alexsoft.co.kr/insights/cascade-change-impact/images/cascade-flow-from-screen-ko.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1440">
+  <meta property="og:image:height" content="900">
+  <meta property="og:image:alt" content="Cascade’s Flow view tracing an order screen in the public open-source litemall project through frontend functions, server APIs, services, and SQL mappers (interface in Korean)">
+  <meta property="article:published_time" content="2026-09-15">
+  <meta property="article:modified_time" content="2026-09-15">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cascade: tracing code changes from the database to the screen | ALEXSOFT">
+  <meta name="twitter:description" content="Explore the impact of changes across database columns, SQL, APIs, and screens with ALEXSOFT’s open-source Cascade. A real comparison-report validation example and plans for analysis quality, coverage, and code review integration.">
+  <meta name="twitter:image" content="https://alexsoft.co.kr/insights/cascade-change-impact/images/cascade-flow-from-screen-ko.png">
+  <meta name="twitter:image:alt" content="Cascade’s Flow view tracing an order screen in the public open-source litemall project through frontend functions, server APIs, services, and SQL mappers (interface in Korean)">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <title>Cascade: tracing code changes from the database to the screen | ALEXSOFT</title>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://alexsoft.co.kr/#organization",
+      "name": "ALEXSOFT",
+      "alternateName": [
+        "ALEXSOFT",
+        "ALEXSOFT"
+      ],
+      "url": "https://alexsoft.co.kr/en/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://alexsoft.co.kr/en/insights/cascade-change-impact/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "ALEXSOFT",
+          "item": "https://alexsoft.co.kr/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Insights",
+          "item": "https://alexsoft.co.kr/en/insights/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Cascade: tracing code changes from the database to the screen",
+          "item": "https://alexsoft.co.kr/en/insights/cascade-change-impact/"
+        }
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://alexsoft.co.kr/en/insights/cascade-change-impact/#post",
+      "headline": "Cascade: tracing code changes from the database to the screen",
+      "description": "Explore the impact of changes across database columns, SQL, APIs, and screens with ALEXSOFT’s open-source Cascade. A real comparison-report validation example and plans for analysis quality, coverage, and code review integration.",
+      "url": "https://alexsoft.co.kr/en/insights/cascade-change-impact/",
+      "mainEntityOfPage": {
+        "@id": "https://alexsoft.co.kr/en/insights/cascade-change-impact/#webpage"
+      },
+      "inLanguage": "en",
+      "datePublished": "2026-09-15",
+      "dateModified": "2026-09-15",
+      "image": "https://alexsoft.co.kr/insights/cascade-change-impact/images/cascade-flow-from-screen-ko.png",
+      "author": {
+        "@type": "Organization",
+        "@id": "https://alexsoft.co.kr/#organization",
+        "name": "ALEXSOFT",
+        "url": "https://alexsoft.co.kr/en/"
+      },
+      "publisher": {
+        "@id": "https://alexsoft.co.kr/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://alexsoft.co.kr/en/insights/#webpage"
+      },
+      "articleSection": "Software development"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://alexsoft.co.kr/en/insights/cascade-change-impact/#webpage",
+      "url": "https://alexsoft.co.kr/en/insights/cascade-change-impact/",
+      "name": "Cascade: tracing code changes from the database to the screen",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://alexsoft.co.kr/en/insights/#webpage"
+      },
+      "breadcrumb": {
+        "@id": "https://alexsoft.co.kr/en/insights/cascade-change-impact/#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://alexsoft.co.kr/en/insights/cascade-change-impact/#post"
+      }
+    }
+  ]
+}
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+  <link rel="stylesheet" href="/insights/article.css?v=20260912-3">
+  <noscript><style>[data-reveal]{opacity:1;transform:none}</style></noscript>
+  <style id="alexsoft-chrome">
+/* 알렉스소프트 사이트 헤더·푸터 — 글 본문 스타일과 섞이지 않도록 이 두 요소 안에만 적용 */
+header.top,footer.site{--paper:#FAF8F4;--ink:#17191D;--graphite:#5C6069;--cobalt:#2456E4;--rule:#D9D5CC;--rule-soft:#EAE7E0;--night:#0F1115;--sans:"IBM Plex Sans KR",-apple-system,"Apple SD Gothic Neo","Pretendard",sans-serif;--mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;--gutter:clamp(20px,4vw,48px);font-family:var(--sans);line-height:1.8;letter-spacing:normal;word-break:keep-all;-webkit-font-smoothing:antialiased}
+header.top .shell,footer.site .shell{max-width:1200px;margin:0 auto;padding:0 var(--gutter)}
+header.top a,footer.site a{color:inherit;text-decoration:none}
+header.top a:hover{color:inherit}
+header.top a:focus-visible,footer.site a:focus-visible{outline:2px solid var(--cobalt);outline-offset:3px}
+header.top .skip{position:absolute;left:-9999px}
+header.top .skip:focus{position:fixed;left:16px;top:12px;z-index:99;background:var(--ink);color:var(--paper);padding:10px 16px}
+header.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:saturate(1.2) blur(10px);border-bottom:1px solid var(--rule-soft);color:var(--ink);font-size:17px}
+header.top .shell{display:flex;align-items:center;justify-content:space-between;height:64px}
+header.top .mark,footer.site .mark{display:flex;align-items:center;gap:10px;font-size:14px;letter-spacing:.1em;font-weight:600}
+header.top .mark svg,footer.site .mark svg{width:26px;height:26px;display:block;flex:none}
+header.top nav{display:flex;gap:28px;font-size:14px;color:var(--graphite)}
+header.top nav a{white-space:nowrap}
+header.top nav a:hover{color:var(--ink)}
+header.top nav a.cta{color:var(--ink);border-bottom:1px solid var(--cobalt);padding-bottom:1px}
+header.top nav a[aria-current="page"]{color:var(--ink);border-bottom:1px solid var(--rule)}
+@media (max-width:720px){header.top nav{gap:14px;font-size:13px}header.top .mark{font-size:13px;letter-spacing:.08em}}
+@media (max-width:480px){header.top nav{gap:10px;font-size:12px}header.top .mark{gap:8px;font-size:12px;letter-spacing:.06em}}
+footer.site{background:var(--night);color:rgba(255,255,255,.72);padding:40px 0 34px;font-size:13px}
+footer.site .shell{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+footer.site p{margin:0}
+footer.site .mark{color:#fff}
+footer.site nav{display:flex;gap:18px;flex-wrap:wrap}
+footer.site nav a:hover,footer.site .channels a:hover{color:#fff}
+footer.site .channels{width:100%;display:flex;gap:18px;align-items:baseline;margin-top:6px;padding-top:14px;border-top:1px solid rgba(255,255,255,.12)}
+footer.site .mono{font-family:var(--mono);font-size:13px;letter-spacing:.01em;color:rgba(255,255,255,.35)}
+footer.site .channels a{color:rgba(255,255,255,.62)}
+footer.site .biz{width:100%;font-family:var(--mono);font-size:11px;line-height:1.9;color:rgba(255,255,255,.4)}
+@media print{header.top,footer.site{display:none}}
+/* Bilingual navigation: links remain available without JavaScript. */
+html{scroll-padding-top:90px}
+header.top .shell{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:24px;min-height:68px;height:auto;padding-top:8px;padding-bottom:8px}
+header.top .main-nav{justify-content:flex-end;gap:22px;min-width:0}
+header.top .language-switch{display:flex;gap:10px;font-size:12px;line-height:1.5;align-items:center;white-space:nowrap;border-left:1px solid var(--rule-soft,#EAE7E0);padding-left:18px}
+.language-switch a{display:inline-block;padding:8px 0;text-decoration:none}
+.language-switch a[aria-current="true"]{color:var(--ink,#17191D);font-weight:600;text-decoration:underline;text-underline-offset:5px}
+@media(max-width:900px){
+ header.top .shell{gap:0 16px;grid-template-columns:minmax(0,1fr) auto;padding-top:4px;padding-bottom:6px}
+ header.top .mark{min-height:42px}
+ header.top .language-switch{grid-column:2;grid-row:1;border:0;padding-left:0;gap:12px}
+ header.top .main-nav{grid-row:2;grid-column:1/-1;justify-content:space-between;gap:8px;font-size:13px;line-height:1.5}
+ header.top .main-nav a{padding:8px 0}
+ html{scroll-padding-top:108px}
+}
+@media(max-width:360px){header.top .main-nav{font-size:12px;gap:6px}header.top .language-switch{font-size:11px}header.top .mark{font-size:12px;gap:8px}}
+html[lang="en"] body{word-break:normal}
+html[lang="en"] .facts>div{grid-template-columns:90px minmax(0,1fr)}
+html[lang="en"] .facts.wide>div{grid-template-columns:120px minmax(0,1fr)}
+@media(max-width:520px){html[lang="en"] .facts.wide>.credential-fact{grid-template-columns:1fr}}
+</style>
+  <style>
+.insight-hero-image figcaption{padding:10px 0 0;color:#6d7565;font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;font-size:14px;line-height:1.55}
+.insight-image-links{margin-top:8px;font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;font-size:14px;line-height:1.6}
+.insight-hero-image>a,.insight-body figure>a{display:block;cursor:zoom-in}
+.insight-related h2{scroll-margin-top:96px}
+  </style>
+  <link rel="canonical" href="https://alexsoft.co.kr/en/insights/cascade-change-impact/">
+  <link rel="alternate" hreflang="ko" href="https://alexsoft.co.kr/insights/cascade-change-impact/">
+  <link rel="alternate" hreflang="en" href="https://alexsoft.co.kr/en/insights/cascade-change-impact/">
+  <link rel="alternate" hreflang="x-default" href="https://alexsoft.co.kr/en/insights/cascade-change-impact/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ko_KR">
+</head>
+<body>
+  <header class="top">
+    <a class="skip" href="#main">Skip to content</a>
+    <div class="shell">
+      <a class="mark" href="/en/" aria-label="ALEXSOFT home">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#17191D"/><path fill="#FAF8F4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/><circle cx="32" cy="40" r="3.7" fill="#4B78FF"/></svg>
+        ALEXSOFT
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/en/work/">Projects</a>
+        <a href="/en/insights/">Insights</a>
+        <a href="/en/#services">Services</a>
+        <a href="/en/#about">About</a>
+        <a class="cta" href="/en/#start">Contact</a>
+      </nav>
+      <div class="language-switch" role="group" aria-label="Language"><a href="/insights/cascade-change-impact/" data-language="ko" lang="ko" hreflang="ko">한국어</a><a href="/en/insights/cascade-change-impact/" data-language="en" lang="en" hreflang="en" aria-current="true">English</a></div>
+    </div>
+  </header>
+
+  <header class="insight-masthead">
+    <a href="/en/insights/"><strong>ALEXSOFT</strong> / INSIGHTS 006</a>
+    <span>Software development · 2026.09.15</span>
+  </header>
+
+  <main id="main" class="insight-shell">
+    <article aria-labelledby="article-title">
+      <section class="insight-hero" aria-labelledby="article-title">
+        <p class="insight-eyebrow">ALEXSOFT INSIGHTS</p>
+        <h1 id="article-title">Cascade: tracing code changes from the database to the screen</h1>
+        <p class="insight-dek">Review code changes by following relationships from database columns through SQL and server APIs to screens. Lessons from refining Cascade’s comparison report, and where the project goes next.</p>
+        <div class="insight-meta"><span>By · <a href="/en/#about" rel="author">ALEXSOFT</a> · Software development</span><span>Published <time datetime="2026-09-15">2026-09-15</time></span><span>Updated <time datetime="2026-09-15">2026-09-15</time></span></div>
+        <figure class="insight-hero-image">
+  <a href="/insights/cascade-change-impact/images/cascade-flow-from-screen-ko.png" target="_blank" rel="noopener" aria-label="Cascade’s Flow view tracing litemall’s order screen through frontend functions, server APIs, services, and SQL mappers — view at original size (new window; interface in Korean)"><img src="/insights/cascade-change-impact/images/cascade-flow-from-screen-ko.png" alt="Cascade’s Flow view tracing an order screen in the public open-source litemall project through frontend functions, server APIs, services, and SQL mappers (interface in Korean)" width="1440" height="900" loading="eager" fetchpriority="high" decoding="async"></a>
+  <figcaption><em>A litemall analysis screen published in the official repository. Follow the connected code from the order screen and read the evidence grade attached to each connection. Interface in Korean.</em></figcaption>
+  <div class="insight-image-links"><a href="https://github.com/alexsoft-hq/Cascade/blob/dba8425f4db62bd156ec23b04fa20674d0f0b1b7/docs/assets/screens/flow-from-screen-ko.png" target="_blank" rel="noopener">Source in the official repository ↗</a> · <a href="/insights/cascade-change-impact/images/cascade-flow-from-screen-ko.png" target="_blank" rel="noopener">View at original size ↗</a></div>
+</figure>
+      </section>
+
+      <div class="insight-layout">
+        <nav class="insight-contents" aria-label="Article contents">
+          <p>In this article</p>
+          <a href="#evidence-for-connections">Read the connection paths and their evidence together</a>
+          <a href="#change-review-report">Turn a change list into a report people can review</a>
+          <a href="#reviewing-the-report">Refine the comparison by checking it against the source records</a>
+          <a href="#future-directions">Where I want to take Cascade next</a>
+          <a href="#related-title">Related reading</a>
+        </nav>
+        <div class="insight-reading">
+          <div class="insight-body">
+<p>Suppose you increase the length of a database column that stores an order status. Finding the place to change in the table definition is not difficult. But once the change is made, another question remains.</p>
+<p>Where is the code that reads this value, and which screens need to be checked again?</p>
+<p>Searching for the column name can find the SQL that reads and writes it. Then you have to follow the server code that calls that SQL and find the screens that send requests to the server. Even if the connections are familiar to the developer who made the change, a reviewer needs to reopen the source to understand the same flow. A list of changed files does not reveal this scope very well.</p>
+<p>Cascade, the tool I am building, helps examine these connections. It collects relationships in the source so you can follow a database column through SQL and server code to the screen, or start at the screen and work back to the data. Along the way are APIs, the entry points through which screens ask the server to do work. It is being developed as an ALEXSOFT <a href="https://github.com/alexsoft-hq/Cascade">public open-source project</a>.</p>
+<h2 id="evidence-for-connections">Read the connection paths and their evidence together</h2>
+<p>Collect the elements of a program and the relationships between them, and you have a map. In Cascade, we call it a change-impact knowledge graph. The name may sound grand, but the questions are concrete: which SQL reads this column, and where are the functions and user screens that execute it?</p>
+<p>Currently, Cascade reads Java Spring and MyBatis-based servers, database table definitions, JavaScript and TypeScript web code, and screen routes in Vue and React. It is based on static analysis, which finds connections without running the source.</p>
+<p>Connections drawn with the same line can have different evidence behind them. A relationship directly confirmed in source, a possible execution target, and a relationship observed in an execution trace must be read differently. Cascade assigns an evidence grade to each connection.</p>
+<p>Reviewers can follow the path to a screen and see which code needs checking. The value is that they can continue reading the connections the developer found, in the same view.</p>
+<h2 id="change-review-report">Turn a change list into a report people can review</h2>
+<p>Recently, I refined the before-and-after comparison. Cascade could already compare analysis results from two points in time, but it needed to better capture content changes within elements whose names stayed the same: a column whose type changes, for example, or a server method (a processing function) that gains a transaction annotation. A transaction groups several data operations into one unit.</p>
+<p>In a small order example built for validation, I changed the database definition from <code>VARCHAR(16)</code> to <code>VARCHAR(64)</code>, added a transaction annotation to a server method, and renamed a screen. I also added one API and deleted another. This was a synthetic order example using Spring, MyBatis, and Vue.</p>
+<p>That comparison found three elements with changed attributes, three related APIs, and one screen. These numbers reflect the combined analysis of several changes introduced into the example.</p>
+<p>The report shows the old and new column types side by side. It also distinguishes content changes from moves in source file or line location alone. A reviewer can read the actual value changes first and inspect location moves separately.</p>
+<figure>
+  <a href="/insights/cascade-change-impact/images/cascade-compare-report-ko-light.png" target="_blank" rel="noopener" aria-label="Change report for a synthetic order example showing comparison references, analysis conditions, change summary, and related APIs — view at original size (new window; interface in Korean)"><img src="/insights/cascade-change-impact/images/cascade-compare-report-ko-light.png" alt="Change report for a synthetic order example showing comparison references, analysis conditions, change summary, and related APIs (interface in Korean)" width="1440" height="1050" loading="lazy" decoding="async"></a>
+  <figcaption><em>The Compare report for a synthetic order example containing several changes. Read the comparison references and analysis conditions, then continue from the change summary to related APIs. Interface in Korean.</em></figcaption>
+  <div class="insight-image-links"><a href="/insights/cascade-change-impact/images/cascade-compare-report-ko-light.png" target="_blank" rel="noopener">View at original size ↗</a></div>
+</figure>
+<p>The refined Compare view is organized to read as one report from top to bottom. It starts with the points in time being compared and whether both were analyzed under the same conditions. Next come the change summary, related APIs and screens, and the old and new values. Elements still present in the current build can be opened in Flow to follow their connections further.</p>
+<p>The report can also be saved as Markdown or printed. Comparison references, analysis conditions, and changes remain together so another person can continue the review using the same evidence.</p>
+<h2 id="reviewing-the-report">Refine the comparison by checking it against the source records</h2>
+<p>For this work, Codex and Claude divided the analysis engine and report UI work and cross-reviewed actual responses and screens. After the tests passed, we checked the report against the synthetic example’s original records item by item.</p>
+<p>The first report marked seven unchanged connection-evidence records as changed. The original records were identical; empty values filled into one side for querying had entered the comparison. We corrected it to compare the original records from both points on the same basis, then confirmed that the seven unnecessary changes disappeared from the same example.</p>
+<p>After the fix, we also checked that the command line, AI integration tool, and UI showed the same comparison result. The aim was to make the same changes readable wherever a review began.</p>
+<h2 id="future-directions">Where I want to take Cascade next</h2>
+<p>First, I want to improve analysis quality further. I plan to preserve code and relationships encountered in real projects as reproducible validation cases and strengthen the existing regression checks and measurements against public repositories. These cases help verify that changes to the analysis still recognize connections it could already read.</p>
+<p>I also want to expand coverage in the order real projects require. Building on the current Java, database, and web connections, this means reading more framework-specific structures and dynamically determined relationships. Cascade already reads HAR browser request records and OpenTelemetry records of server execution paths. I want to improve the comparison between those runtime records and static analysis so candidate paths found in source and paths observed at runtime can be read side by side.</p>
+<p>I would like Cascade to fit more naturally into developers’ everyday change reviews. Building on the existing command line tools, comparisons, and exports, I want to make reports easy to read during code review and automated checks, helping people choose where to look first and what to test.</p>
+<p>Another direction is enabling people and AI to read the same evidence. Cascade already has MCP, an interface through which AI agents request analysis results. I want agents to use the same connection paths and evidence grades developers see in the UI and explain why a particular area deserves review. Frequently encountered review tasks in real use will guide the development order.</p>
+<p>When reviewing code, sometimes you need to explain, “This is what we have checked.” I want to show both the changes examined and the connections followed during the review. I will keep developing Cascade as a tool for making that explanation possible.</p>
+          </div>
+          <aside class="insight-related" aria-labelledby="related-title">
+            <h2 id="related-title">Related reading</h2>
+            <ul>
+        <li><a href="https://alexsoft.co.kr/en/insights/ai-result-quality/">Why does the same AI produce such different results?</a> — How experience is used when assigning work to AI and reviewing its output.</li>
+        <li><a href="https://alexsoft.co.kr/en/insights/senior-developer-value/">Why are senior developers becoming more valuable in the AI era?</a> — The business context and judgment that code alone cannot reveal.</li>
+            </ul>
+            <div class="links"><a href="/en/insights/">All Insights <span aria-hidden="true">→</span></a></div>
+          </aside>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site">
+    <div class="shell">
+      <a class="mark" href="/en/"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#FAF8F4"/><path fill="#17191D" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/><circle cx="32" cy="40" r="3.7" fill="#4B78FF"/></svg>ALEXSOFT</a>
+      <nav aria-label="Footer navigation"><a href="/en/diagnosis/">Architecture design &amp; development</a><a href="/en/e-invoicing/">About e-invoicing</a><a href="/en/healthcare/">Healthcare information systems</a><a href="/en/brand-website/">Brand websites</a><a href="/en/work/">Projects</a><a href="/en/insights/">Insights</a><a href="mailto:contact@alexsoft.co.kr">Email</a><a href="tel:+821065480292">Call +82 10 6548 0292</a></nav>
+      <div class="channels"><span class="mono">CHANNELS</span><a href="https://blog.naver.com/alex-soft" target="_blank" rel="noopener">Naver Blog (Korean) ↗</a><a href="https://www.instagram.com/alexsoft.co.kr" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://github.com/alexsoft-hq" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+      <p class="biz" data-nosnippet>ALEXSOFT (알렉스소프트) · Representative: Yongmin Lee · Business registration: 212-64-01036 · 10, Gwanganhaebyeon-ro 15beon-gil, Suyeong-gu, Busan, South Korea · © <span data-year>2026</span> ALEXSOFT</p>
+    </div>
+  </footer>
+  </body>
+</html>

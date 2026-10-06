@@ -2,6 +2,7 @@
 <html lang="ko">
 <head>
   <meta charset="utf-8">
+  <script src="/assets/ink.js?v=bilingual-1"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#FAF8F4">
   <meta name="description" content="잘 쓰는 도구는 남기고 반복해서 옮기는 일부터 줄일 수 있습니다. 주간보고와 구글 스프레드시트 사례로 기존 도구를 연결하는 업무자동화 방법을 소개합니다.">
@@ -9,7 +10,6 @@
   <meta name="author" content="알렉스소프트(ALEXSOFT)">
   <meta property="og:type" content="article">
   <meta property="article:author" content="https://alexsoft.co.kr/">
-  <meta property="og:locale" content="ko_KR">
   <meta property="og:site_name" content="알렉스소프트(ALEXSOFT)">
   <meta property="og:url" content="https://alexsoft.co.kr/insights/automation-without-new-system/">
   <meta property="og:title" content="업무자동화, 꼭 새로운 프로그램을 개발해야 할까? | 알렉스소프트(ALEXSOFT)">
@@ -26,9 +26,6 @@
   <meta name="twitter:description" content="잘 쓰는 도구는 남기고 반복해서 옮기는 일부터 줄일 수 있습니다. 주간보고와 구글 스프레드시트 사례로 기존 도구를 연결하는 업무자동화 방법을 소개합니다.">
   <meta name="twitter:image" content="https://alexsoft.co.kr/insights/automation-without-new-system/images/image-01.png">
   <meta name="twitter:image:alt" content="업무자동화, 꼭 새로운 프로그램을 개발해야 할까?">
-  <link rel="canonical" href="https://alexsoft.co.kr/insights/automation-without-new-system/">
-  <link rel="alternate" hreflang="ko-KR" href="https://alexsoft.co.kr/insights/automation-without-new-system/">
-  <link rel="alternate" hreflang="x-default" href="https://alexsoft.co.kr/insights/automation-without-new-system/">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -80,7 +77,7 @@
       "mainEntityOfPage": {
         "@id": "https://alexsoft.co.kr/insights/automation-without-new-system/#webpage"
       },
-      "inLanguage": "ko-KR",
+      "inLanguage": "ko",
       "datePublished": "2026-08-08T22:46:25+09:00",
       "dateModified": "2026-09-13",
       "image": "https://alexsoft.co.kr/insights/automation-without-new-system/images/image-01.png",
@@ -103,7 +100,7 @@
       "@id": "https://alexsoft.co.kr/insights/automation-without-new-system/#webpage",
       "url": "https://alexsoft.co.kr/insights/automation-without-new-system/",
       "name": "업무자동화, 꼭 새로운 프로그램을 개발해야 할까?",
-      "inLanguage": "ko-KR",
+      "inLanguage": "ko",
       "isPartOf": {
         "@id": "https://alexsoft.co.kr/insights/#webpage"
       },
@@ -116,7 +113,7 @@
     }
   ]
 }
-  </script>
+</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -153,23 +150,50 @@ footer.site .mono{font-family:var(--mono);font-size:13px;letter-spacing:.01em;co
 footer.site .channels a{color:rgba(255,255,255,.62)}
 footer.site .biz{width:100%;font-family:var(--mono);font-size:11px;line-height:1.9;color:rgba(255,255,255,.4)}
 @media print{header.top,footer.site{display:none}}
+/* Bilingual navigation: links remain available without JavaScript. */
+html{scroll-padding-top:90px}
+header.top .shell{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:24px;min-height:68px;height:auto;padding-top:8px;padding-bottom:8px}
+header.top .main-nav{justify-content:flex-end;gap:22px;min-width:0}
+header.top .language-switch{display:flex;gap:10px;font-size:12px;line-height:1.5;align-items:center;white-space:nowrap;border-left:1px solid var(--rule-soft,#EAE7E0);padding-left:18px}
+.language-switch a{display:inline-block;padding:8px 0;text-decoration:none}
+.language-switch a[aria-current="true"]{color:var(--ink,#17191D);font-weight:600;text-decoration:underline;text-underline-offset:5px}
+@media(max-width:900px){
+ header.top .shell{gap:0 16px;grid-template-columns:minmax(0,1fr) auto;padding-top:4px;padding-bottom:6px}
+ header.top .mark{min-height:42px}
+ header.top .language-switch{grid-column:2;grid-row:1;border:0;padding-left:0;gap:12px}
+ header.top .main-nav{grid-row:2;grid-column:1/-1;justify-content:space-between;gap:8px;font-size:13px;line-height:1.5}
+ header.top .main-nav a{padding:8px 0}
+ html{scroll-padding-top:108px}
+}
+@media(max-width:360px){header.top .main-nav{font-size:12px;gap:6px}header.top .language-switch{font-size:11px}header.top .mark{font-size:12px;gap:8px}}
+html[lang="en"] body{word-break:normal}
+html[lang="en"] .facts>div{grid-template-columns:90px minmax(0,1fr)}
+html[lang="en"] .facts.wide>div{grid-template-columns:120px minmax(0,1fr)}
+@media(max-width:520px){html[lang="en"] .facts.wide>.credential-fact{grid-template-columns:1fr}}
 </style>
+  <link rel="canonical" href="https://alexsoft.co.kr/insights/automation-without-new-system/">
+  <link rel="alternate" hreflang="ko" href="https://alexsoft.co.kr/insights/automation-without-new-system/">
+  <link rel="alternate" hreflang="en" href="https://alexsoft.co.kr/en/insights/automation-without-new-system/">
+  <link rel="alternate" hreflang="x-default" href="https://alexsoft.co.kr/en/insights/automation-without-new-system/">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:locale:alternate" content="en_US">
 </head>
 <body>
   <header class="top">
     <a class="skip" href="#main">본문으로 건너뛰기</a>
     <div class="shell">
-      <a class="mark" href="/" aria-label="알렉스소프트 홈">
+      <a class="mark" href="/?lang=ko" aria-label="알렉스소프트 홈">
         <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#17191D"/><path fill="#FAF8F4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/><circle cx="32" cy="40" r="3.7" fill="#4B78FF"/></svg>
         ALEXSOFT
       </a>
-      <nav aria-label="주요 메뉴">
+      <nav class="main-nav" aria-label="주요 메뉴">
         <a href="/work/">프로젝트</a>
         <a href="/insights/">인사이트</a>
-        <a href="/#services">서비스</a>
-        <a href="/#about">회사소개</a>
-        <a class="cta" href="/#start">문의</a>
+        <a href="/?lang=ko#services">서비스</a>
+        <a href="/?lang=ko#about">회사소개</a>
+        <a class="cta" href="/?lang=ko#start">문의</a>
       </nav>
+      <div class="language-switch" role="group" aria-label="언어 선택"><a href="/insights/automation-without-new-system/" data-language="ko" lang="ko" hreflang="ko" aria-current="true">한국어</a><a href="/en/insights/automation-without-new-system/" data-language="en" lang="en" hreflang="en">English</a></div>
     </div>
   </header>
 
@@ -184,7 +208,7 @@ footer.site .biz{width:100%;font-family:var(--mono);font-size:11px;line-height:1
         <p class="insight-eyebrow">ALEXSOFT INSIGHTS</p>
         <h1 id="article-title">업무자동화, 꼭 새로운 프로그램을 개발해야 할까?</h1>
         <p class="insight-dek">잘 쓰는 도구는 남기고 반복해서 옮기는 일부터 줄일 수 있습니다. 주간보고와 구글 스프레드시트 사례로 기존 도구를 연결하는 업무자동화 방법을 소개합니다.</p>
-        <div class="insight-meta"><span>글 · <a href="/#about" rel="author">알렉스소프트(ALEXSOFT)</a> · 업무자동화</span><span>게시 <time datetime="2026-08-08T22:46:25+09:00">2026-08-08</time></span><span>수정 <time datetime="2026-09-13">2026-09-13</time></span><a href="https://blog.naver.com/alex-soft/224372420444" target="_blank" rel="noopener">네이버 블로그 원문 ↗</a></div>
+        <div class="insight-meta"><span>글 · <a href="/?lang=ko#about" rel="author">알렉스소프트(ALEXSOFT)</a> · 업무자동화</span><span>게시 <time datetime="2026-08-08T22:46:25+09:00">2026-08-08</time></span><span>수정 <time datetime="2026-09-13">2026-09-13</time></span><a href="https://blog.naver.com/alex-soft/224372420444" target="_blank" rel="noopener">네이버 블로그 원문 ↗</a></div>
         <figure class="insight-hero-image">
   <img src="images/image-01.png" alt="업무자동화, 꼭 새로운 프로그램을 개발해야 할까?" width="966" height="544" loading="eager" fetchpriority="high">
 </figure>
@@ -258,12 +282,11 @@ footer.site .biz{width:100%;font-family:var(--mono);font-size:11px;line-height:1
 
   <footer class="site">
     <div class="shell">
-      <a class="mark" href="/"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#FAF8F4"/><path fill="#17191D" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/><circle cx="32" cy="40" r="3.7" fill="#4B78FF"/></svg>ALEXSOFT</a>
-      <nav aria-label="바닥글 메뉴"><a href="/diagnosis/">아키텍처 설계·개발</a><a href="/e-invoicing/">e-invoicing이란</a><a href="/healthcare/">의료정보 시스템</a><a href="/brand-website/">브랜드 웹사이트</a><a href="/work/">사례</a><a href="/insights/">인사이트</a><a href="/en/" hreflang="en">English</a><a href="mailto:contact@alexsoft.co.kr">이메일</a><a href="tel:+821065480292">전화 010-6548-0292</a></nav>
+      <a class="mark" href="/?lang=ko"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#FAF8F4"/><path fill="#17191D" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/><circle cx="32" cy="40" r="3.7" fill="#4B78FF"/></svg>ALEXSOFT</a>
+      <nav aria-label="바닥글 메뉴"><a href="/diagnosis/">아키텍처 설계·개발</a><a href="/e-invoicing/">e-invoicing이란</a><a href="/healthcare/">의료정보 시스템</a><a href="/brand-website/">브랜드 웹사이트</a><a href="/work/">사례</a><a href="/insights/">인사이트</a><a href="mailto:contact@alexsoft.co.kr">이메일</a><a href="tel:+821065480292">전화 010-6548-0292</a></nav>
       <div class="channels"><span class="mono">CHANNELS</span><a href="https://blog.naver.com/alex-soft" target="_blank" rel="noopener">Naver Blog ↗</a><a href="https://www.instagram.com/alexsoft.co.kr" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://github.com/alexsoft-hq" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
       <p class="biz" data-nosnippet>상호 알렉스소프트(ALEXSOFT) · 대표 이용민 · 사업자등록번호 212-64-01036 · 사업장 부산광역시 수영구 광안해변로15번길 10 · © <span data-year>2026</span> ALEXSOFT</p>
     </div>
   </footer>
-  <script src="/assets/ink.js?v=20260910-i-4" defer></script>
-</body>
+  </body>
 </html>

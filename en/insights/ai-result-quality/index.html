@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script src="/assets/ink.js?v=bilingual-1"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#FAF8F4">
+  <meta name="description" content="Even with the same AI, results depend on the knowledge and experience of the person explaining the work and checking the output. Reflections from software development on the difference instructions and feedback make.">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="author" content="ALEXSOFT">
+  <meta property="og:type" content="article">
+  <meta property="article:author" content="https://alexsoft.co.kr/en/">
+  <meta property="og:site_name" content="ALEXSOFT">
+  <meta property="og:url" content="https://alexsoft.co.kr/en/insights/ai-result-quality/">
+  <meta property="og:title" content="Why does the same AI produce such different results? | ALEXSOFT">
+  <meta property="og:description" content="Even with the same AI, results depend on the knowledge and experience of the person explaining the work and checking the output. Reflections from software development on the difference instructions and feedback make.">
+  <meta property="og:image" content="https://alexsoft.co.kr/insights/ai-result-quality/images/image-01.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="966">
+  <meta property="og:image:height" content="644">
+  <meta property="og:image:alt" content="Why does the same AI produce such different results?">
+  <meta property="article:published_time" content="2026-08-05T11:42:02+09:00">
+  <meta property="article:modified_time" content="2026-09-13">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Why does the same AI produce such different results? | ALEXSOFT">
+  <meta name="twitter:description" content="Even with the same AI, results depend on the knowledge and experience of the person explaining the work and checking the output. Reflections from software development on the difference instructions and feedback make.">
+  <meta name="twitter:image" content="https://alexsoft.co.kr/insights/ai-result-quality/images/image-01.png">
+  <meta name="twitter:image:alt" content="Why does the same AI produce such different results?">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <title>Why does the same AI produce such different results? | ALEXSOFT</title>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://alexsoft.co.kr/#organization",
+      "name": "ALEXSOFT",
+      "alternateName": [
+        "ALEXSOFT",
+        "ALEXSOFT"
+      ],
+      "url": "https://alexsoft.co.kr/en/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://alexsoft.co.kr/en/insights/ai-result-quality/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "ALEXSOFT",
+          "item": "https://alexsoft.co.kr/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Insights",
+          "item": "https://alexsoft.co.kr/en/insights/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Why does the same AI produce such different results?",
+          "item": "https://alexsoft.co.kr/en/insights/ai-result-quality/"
+        }
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://alexsoft.co.kr/en/insights/ai-result-quality/#post",
+      "headline": "Why does the same AI produce such different results?",
+      "description": "Even with the same AI, results depend on the knowledge and experience of the person explaining the work and checking the output. Reflections from software development on the difference instructions and feedback make.",
+      "url": "https://alexsoft.co.kr/en/insights/ai-result-quality/",
+      "mainEntityOfPage": {
+        "@id": "https://alexsoft.co.kr/en/insights/ai-result-quality/#webpage"
+      },
+      "inLanguage": "en",
+      "datePublished": "2026-08-05T11:42:02+09:00",
+      "dateModified": "2026-09-13",
+      "image": "https://alexsoft.co.kr/insights/ai-result-quality/images/image-01.png",
+      "author": {
+        "@type": "Organization",
+        "@id": "https://alexsoft.co.kr/#organization",
+        "name": "ALEXSOFT",
+        "url": "https://alexsoft.co.kr/en/"
+      },
+      "publisher": {
+        "@id": "https://alexsoft.co.kr/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://alexsoft.co.kr/en/insights/#webpage"
+      },
+      "isBasedOn": "https://blog.naver.com/alex-soft/224368713062"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://alexsoft.co.kr/en/insights/ai-result-quality/#webpage",
+      "url": "https://alexsoft.co.kr/en/insights/ai-result-quality/",
+      "name": "Why does the same AI produce such different results?",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://alexsoft.co.kr/en/insights/#webpage"
+      },
+      "breadcrumb": {
+        "@id": "https://alexsoft.co.kr/en/insights/ai-result-quality/#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://alexsoft.co.kr/en/insights/ai-result-quality/#post"
+      }
+    }
+  ]
+}
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+  <link rel="stylesheet" href="/insights/article.css?v=20260912-3">
+  <noscript><style>[data-reveal]{opacity:1;transform:none}</style></noscript>
+  <style id="alexsoft-chrome">
+/* 알렉스소프트 사이트 헤더·푸터 — 글 본문 스타일과 섞이지 않도록 이 두 요소 안에만 적용 */
+header.top,footer.site{--paper:#FAF8F4;--ink:#17191D;--graphite:#5C6069;--cobalt:#2456E4;--rule:#D9D5CC;--rule-soft:#EAE7E0;--night:#0F1115;--sans:"IBM Plex Sans KR",-apple-system,"Apple SD Gothic Neo","Pretendard",sans-serif;--mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;--gutter:clamp(20px,4vw,48px);font-family:var(--sans);line-height:1.8;letter-spacing:normal;word-break:keep-all;-webkit-font-smoothing:antialiased}
+header.top .shell,footer.site .shell{max-width:1200px;margin:0 auto;padding:0 var(--gutter)}
+header.top a,footer.site a{color:inherit;text-decoration:none}
+header.top a:hover{color:inherit}
+header.top a:focus-visible,footer.site a:focus-visible{outline:2px solid var(--cobalt);outline-offset:3px}
+header.top .skip{position:absolute;left:-9999px}
+header.top .skip:focus{position:fixed;left:16px;top:12px;z-index:99;background:var(--ink);color:var(--paper);padding:10px 16px}
+header.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:saturate(1.2) blur(10px);border-bottom:1px solid var(--rule-soft);color:var(--ink);font-size:17px}
+header.top .shell{display:flex;align-items:center;justify-content:space-between;height:64px}
+header.top .mark,footer.site .mark{display:flex;align-items:center;gap:10px;font-size:14px;letter-spacing:.1em;font-weight:600}
+header.top .mark svg,footer.site .mark svg{width:26px;height:26px;display:block;flex:none}
+header.top nav{display:flex;gap:28px;font-size:14px;color:var(--graphite)}
+header.top nav a{white-space:nowrap}
+header.top nav a:hover{color:var(--ink)}
+header.top nav a.cta{color:var(--ink);border-bottom:1px solid var(--cobalt);padding-bottom:1px}
+header.top nav a[aria-current="page"]{color:var(--ink);border-bottom:1px solid var(--rule)}
+@media (max-width:720px){header.top nav{gap:14px;font-size:13px}header.top .mark{font-size:13px;letter-spacing:.08em}}
+@media (max-width:480px){header.top nav{gap:10px;font-size:12px}header.top .mark{gap:8px;font-size:12px;letter-spacing:.06em}}
+footer.site{background:var(--night);color:rgba(255,255,255,.72);padding:40px 0 34px;font-size:13px}
+footer.site .shell{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+footer.site p{margin:0}
+footer.site .mark{color:#fff}
+footer.site nav{display:flex;gap:18px;flex-wrap:wrap}
+footer.site nav a:hover,footer.site .channels a:hover{color:#fff}
+footer.site .channels{width:100%;display:flex;gap:18px;align-items:baseline;margin-top:6px;padding-top:14px;border-top:1px solid rgba(255,255,255,.12)}
+footer.site .mono{font-family:var(--mono);font-size:13px;letter-spacing:.01em;color:rgba(255,255,255,.35)}
+footer.site .channels a{color:rgba(255,255,255,.62)}
+footer.site .biz{width:100%;font-family:var(--mono);font-size:11px;line-height:1.9;color:rgba(255,255,255,.4)}
+@media print{header.top,footer.site{display:none}}
+/* Bilingual navigation: links remain available without JavaScript. */
+html{scroll-padding-top:90px}
+header.top .shell{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:24px;min-height:68px;height:auto;padding-top:8px;padding-bottom:8px}
+header.top .main-nav{justify-content:flex-end;gap:22px;min-width:0}
+header.top .language-switch{display:flex;gap:10px;font-size:12px;line-height:1.5;align-items:center;white-space:nowrap;border-left:1px solid var(--rule-soft,#EAE7E0);padding-left:18px}
+.language-switch a{display:inline-block;padding:8px 0;text-decoration:none}
+.language-switch a[aria-current="true"]{color:var(--ink,#17191D);font-weight:600;text-decoration:underline;text-underline-offset:5px}
+@media(max-width:900px){
+ header.top .shell{gap:0 16px;grid-template-columns:minmax(0,1fr) auto;padding-top:4px;padding-bottom:6px}
+ header.top .mark{min-height:42px}
+ header.top .language-switch{grid-column:2;grid-row:1;border:0;padding-left:0;gap:12px}
+ header.top .main-nav{grid-row:2;grid-column:1/-1;justify-content:space-between;gap:8px;font-size:13px;line-height:1.5}
+ header.top .main-nav a{padding:8px 0}
+ html{scroll-padding-top:108px}
+}
+@media(max-width:360px){header.top .main-nav{font-size:12px;gap:6px}header.top .language-switch{font-size:11px}header.top .mark{font-size:12px;gap:8px}}
+html[lang="en"] body{word-break:normal}
+html[lang="en"] .facts>div{grid-template-columns:90px minmax(0,1fr)}
+html[lang="en"] .facts.wide>div{grid-template-columns:120px minmax(0,1fr)}
+@media(max-width:520px){html[lang="en"] .facts.wide>.credential-fact{grid-template-columns:1fr}}
+</style>
+  <link rel="canonical" href="https://alexsoft.co.kr/en/insights/ai-result-quality/">
+  <link rel="alternate" hreflang="ko" href="https://alexsoft.co.kr/insights/ai-result-quality/">
+  <link rel="alternate" hreflang="en" href="https://alexsoft.co.kr/en/insights/ai-result-quality/">
+  <link rel="alternate" hreflang="x-default" href="https://alexsoft.co.kr/en/insights/ai-result-quality/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ko_KR">
+</head>
+<body>
+  <header class="top">
+    <a class="skip" href="#main">Skip to content</a>
+    <div class="shell">
+      <a class="mark" href="/en/" aria-label="ALEXSOFT home">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#17191D"/><path fill="#FAF8F4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/><circle cx="32" cy="40" r="3.7" fill="#4B78FF"/></svg>
+        ALEXSOFT
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/en/work/">Projects</a>
+        <a href="/en/insights/">Insights</a>
+        <a href="/en/#services">Services</a>
+        <a href="/en/#about">About</a>
+        <a class="cta" href="/en/#start">Contact</a>
+      </nav>
+      <div class="language-switch" role="group" aria-label="Language"><a href="/insights/ai-result-quality/" data-language="ko" lang="ko" hreflang="ko">한국어</a><a href="/en/insights/ai-result-quality/" data-language="en" lang="en" hreflang="en" aria-current="true">English</a></div>
+    </div>
+  </header>
+
+  <header class="insight-masthead">
+    <a href="/en/insights/"><strong>ALEXSOFT</strong> / INSIGHTS 001</a>
+    <span>AI &amp; development · 2026.08.05</span>
+  </header>
+
+  <main id="main" class="insight-shell">
+    <article aria-labelledby="article-title">
+      <section class="insight-hero" aria-labelledby="article-title">
+        <p class="insight-eyebrow">ALEXSOFT INSIGHTS</p>
+        <h1 id="article-title">Why does the same AI produce such different results?</h1>
+        <p class="insight-dek">Even with the same AI, results depend on the knowledge and experience of the person explaining the work and checking the output. Reflections from software development on the difference instructions and feedback make.</p>
+        <div class="insight-meta"><span>By · <a href="/en/#about" rel="author">ALEXSOFT</a> · AI &amp; development</span><span>Published <time datetime="2026-08-05T11:42:02+09:00">2026-08-05</time></span><span>Updated <time datetime="2026-09-13">2026-09-13</time></span><a href="https://blog.naver.com/alex-soft/224368713062" target="_blank" rel="noopener">Original on Naver Blog (Korean) ↗</a></div>
+        <figure class="insight-hero-image">
+  <img src="/insights/ai-result-quality/images/image-01.png" alt="Why does the same AI produce such different results?" width="966" height="644" loading="eager" fetchpriority="high">
+</figure>
+      </section>
+
+      <div class="insight-layout">
+        <nav class="insight-contents" aria-label="Article contents">
+          <p>In this article</p>
+        <a href="#how-work-is-directed">How you assign the work changes the result.</a>
+        <a href="#knowledge-enables-direction">You need to understand the work to direct it well.</a>
+        <a href="#people-set-direction">AI can supply depth, but people must choose the direction.</a>
+        <a href="#ai-is-not-the-point">What matters most is not AI itself.</a>
+        </nav>
+        <div class="insight-reading">
+          <div class="insight-body">
+<p class="lead">Many people now use generative AI such as Claude, ChatGPT, and Gemini at work.</p>
+<p>The change is particularly noticeable in software development.</p>
+<p>Work that once meant writing code ourselves now often means explaining it to AI, then reviewing and revising the code it produces.</p>
+<p>Recently, I have also been using AI in almost every area of my work, from development to planning and project management.</p>
+<p>One question keeps coming back to me.</p>
+<p><strong>“Why do people produce such different levels of work with exactly the same AI?”</strong></p>
+<p>At first, I thought it was simply the difference between people who could write good prompts and those who could not.</p>
+<p>(There is some truth to that, of course.)</p>
+<p>But the longer I have used AI, the less adequate that explanation has seemed.</p>
+<p>What I feel these days is that assigning work to AI is surprisingly similar to assigning work to a colleague.</p>
+<h2 id="how-work-is-directed"><strong>How you assign the work changes the result.</strong></h2>
+<p>Anyone who has worked in an organization will recognize this.</p>
+<p>Simply telling someone, “Please make something like this,”</p>
+<p>and explaining why it is needed, who will use it, how it connects to the work before and after it,</p>
+<p>and which parts matter most lead to very different outcomes.</p>
+<p>In fact, I think <strong>feedback makes an even bigger difference</strong> than the initial instructions.</p>
+<p>Saying, “Something feels off. Please do it again,”</p>
+<p>is very different from saying, “This structure may become a constraint as the business grows. We should separate this responsibility and change the data structure along with it.”</p>
+<p>These are fundamentally different kinds of feedback.</p>
+<p>The same applies to AI.</p>
+<p>Give it a vague request, and it will produce something that looks quite plausible on the surface.</p>
+<p>The key is being able to judge whether that output is actually good.</p>
+<p>AI does not always make a wrong answer look strange.</p>
+<p>The more difficult problem is that <strong>it can make a wrong answer look convincing</strong>.</p>
+<h2 id="knowledge-enables-direction"><strong>You need to understand the work to direct it well.</strong></h2>
+<p>The more I use AI, the more often I find myself thinking this:</p>
+<p>To give AI good instructions, I need to understand the work myself.</p>
+<p>And to give useful feedback on what it produces, I need even more knowledge and experience.</p>
+<p>Software development is a good example.</p>
+<p>Ask AI to design a system, and it will propose an architecture, design a database, and even write the code.</p>
+<p>Again, it looks quite convincing at first.</p>
+<p>But an experienced person notices other things.</p>
+<p>It may work now but run into trouble as the data grows.</p>
+<p>The real business process may not work that way.</p>
+<p>The structure may cause problems when it connects to other systems.</p>
+<p>Or important exceptions may be missing.</p>
+<p>Ultimately, <strong>someone has to be able to recognize that there is a problem.</strong></p>
+<p>That judgment does not come simply from knowing a lot of facts.</p>
+<p>It grows through building things,</p>
+<p>experiencing failures,</p>
+<p>seeing problems arise in production,</p>
+<p>maintaining systems with poor designs,</p>
+<p>and dealing with requirements that keep changing.</p>
+<p>(After all, knowledge truly becomes our own when we experience it firsthand.)</p>
+<p>Looking back, I often wonder why I made some of the decisions I did.</p>
+<p>But those experiences helped me make different choices the next time.</p>
+<p>They are also what I draw on when I give AI feedback.</p>
+<h2 id="people-set-direction"><strong>AI can supply depth, but people must choose the direction.</strong></h2>
+<p>Another thing I notice as I use AI more is that we have less and less need to keep every technical detail in our heads.</p>
+<p>When we do not know something, we can ask AI.</p>
+<p>We can research technical documentation, get an explanation of an unfamiliar field, or even try writing working code.</p>
+<p>We can explore an area much faster than before, when learning it might have meant spending weeks with a thick textbook.</p>
+<p>That does not mean human knowledge has become less important.</p>
+<p>If anything, the opposite is true:</p>
+<p><strong>The knowledge and experience to judge where to look, what matters, and which direction to take are becoming more important.</strong></p>
+<p>AI can supply a considerable amount of depth when we need it.</p>
+<p>But deciding what deserves that depth is still our responsibility.</p>
+<p>Perhaps this change is also increasing the value of connecting multiple fields, alongside detailed knowledge of a single specialty.</p>
+<p>I will write more about that separately.</p>
+<h2 id="ai-is-not-the-point"><strong>What matters most is not AI itself.</strong></h2>
+<p>No matter how capable AI becomes,</p>
+<p>people still need to decide what to build,</p>
+<p>why it should be built,</p>
+<p>which direction it should take,</p>
+<p>and whether the result is actually good.</p>
+<p>That human role remains important.</p>
+<p>In the past, the ability to make things ourselves carried more weight. That balance is now shifting.</p>
+<p>Understanding the problem,</p>
+<p>structuring it,</p>
+<p>setting a direction,</p>
+<p>giving AI precise instructions,</p>
+<p>and validating the result:</p>
+<p>these abilities are becoming increasingly important.</p>
+<p>That is why I see AI as a very powerful tool rather than a replacement for people.</p>
+<p>Just as with any tool, the result can be completely different depending on who uses it.</p>
+<p>This is how we use AI at ALEXSOFT, too.</p>
+<p>We draw on our experience in software development, business analysis, and business planning to use AI for faster, better results, rather than handing everything over to it.</p>
+<p>On this blog, I will continue sharing what I have learned and felt through actual work: thoughts on AI and software development, ways to turn business processes into systems, and the differences between good systems and poor ones.</p>
+          </div>
+    <aside class="insight-related" aria-labelledby="related-title">
+      <h2 id="related-title">Related reading</h2>
+      <a class="related-title" href="/en/insights/senior-developer-value/">Why are senior developers becoming more valuable in the AI era?</a>
+      <div class="links"><a href="/en/insights/">All Insights <span aria-hidden="true">→</span></a></div>
+    </aside>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site">
+    <div class="shell">
+      <a class="mark" href="/en/"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#FAF8F4"/><path fill="#17191D" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/><circle cx="32" cy="40" r="3.7" fill="#4B78FF"/></svg>ALEXSOFT</a>
+      <nav aria-label="Footer navigation"><a href="/en/diagnosis/">Architecture design &amp; development</a><a href="/en/e-invoicing/">About e-invoicing</a><a href="/en/healthcare/">Healthcare information systems</a><a href="/en/brand-website/">Brand websites</a><a href="/en/work/">Projects</a><a href="/en/insights/">Insights</a><a href="mailto:contact@alexsoft.co.kr">Email</a><a href="tel:+821065480292">Call +82 10 6548 0292</a></nav>
+      <div class="channels"><span class="mono">CHANNELS</span><a href="https://blog.naver.com/alex-soft" target="_blank" rel="noopener">Naver Blog (Korean) ↗</a><a href="https://www.instagram.com/alexsoft.co.kr" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://github.com/alexsoft-hq" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+      <p class="biz" data-nosnippet>ALEXSOFT (알렉스소프트) · Representative: Yongmin Lee · Business registration: 212-64-01036 · 10, Gwanganhaebyeon-ro 15beon-gil, Suyeong-gu, Busan, South Korea · © <span data-year>2026</span> ALEXSOFT</p>
+    </div>
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script src="/assets/ink.js?v=bilingual-1"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#FAF8F4">
+  <meta name="description" content="Assess the architecture before you build. ALEXSOFT takes you from an architecture assessment through design, technical due diligence, development and monthly advisory support.">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="author" content="ALEXSOFT">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ALEXSOFT">
+  <meta property="og:url" content="https://alexsoft.co.kr/en/diagnosis/">
+  <meta property="og:title" content="Architecture Design &amp; Development — ALEXSOFT">
+  <meta property="og:description" content="Drawing on experience designing a national e-invoice system, we assess the architecture and build it through to completion.">
+  <meta property="og:image" content="https://alexsoft.co.kr/assets/brand/alexsoft-architecture-og-v1.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1536">
+  <meta property="og:image:height" content="804">
+  <meta property="og:image:alt" content="ALEXSOFT systems architecture advisory">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Architecture Design &amp; Development — ALEXSOFT">
+  <meta name="twitter:description" content="Drawing on experience designing a national e-invoice system, we assess the architecture and build it through to completion.">
+  <meta name="twitter:image" content="https://alexsoft.co.kr/assets/brand/alexsoft-architecture-og-v1.jpg">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <title>Architecture Design &amp; Development | ALEXSOFT</title>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://alexsoft.co.kr/#organization",
+      "name": "ALEXSOFT",
+      "legalName": "알렉스소프트",
+      "alternateName": [
+        "ALEXSOFT",
+        "알렉스 소프트"
+      ],
+      "url": "https://alexsoft.co.kr/en/",
+      "email": "contact@alexsoft.co.kr",
+      "telephone": "+82-10-6548-0292",
+      "sameAs": [
+        "https://blog.naver.com/alex-soft",
+        "https://www.instagram.com/alexsoft.co.kr/",
+        "https://github.com/alexsoft-hq"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "10, Gwanganhaebyeon-ro 15beon-gil",
+        "addressLocality": "Suyeong-gu",
+        "addressRegion": "Busan",
+        "addressCountry": "KR"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://alexsoft.co.kr/en/#website",
+      "url": "https://alexsoft.co.kr/en/",
+      "name": "ALEXSOFT",
+      "alternateName": [
+        "ALEXSOFT",
+        "알렉스 소프트",
+        "alexsoft.co.kr"
+      ],
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://alexsoft.co.kr/#organization"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://alexsoft.co.kr/en/diagnosis/#service",
+      "name": "Architecture Design & Development",
+      "serviceType": "Systems architecture design, development and technical advisory",
+      "description": "Assessing and designing architectures that work within regulatory, certification and existing-system constraints, then directly developing the systems designed",
+      "provider": {
+        "@id": "https://alexsoft.co.kr/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "South Korea"
+      },
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Businesses and organizations designing or integrating systems subject to regulation, certification or core enterprise-system constraints"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Design and development stages",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "20-minute fit check",
+            "url": "https://alexsoft.co.kr/en/diagnosis/#inquiry",
+            "description": "A free conversation to assess whether the work is a good fit. No analysis documents or designs are provided."
+          },
+          {
+            "@type": "Offer",
+            "name": "Architecture assessment session",
+            "url": "https://alexsoft.co.kr/en/diagnosis/#options",
+            "description": "A prepaid session lasting half a day to one day, producing a map of current architectural risks, three to five decision points and recommended next steps. The fee is credited in full against a subsequent contract."
+          },
+          {
+            "@type": "Offer",
+            "name": "Architecture design & technical due diligence",
+            "url": "https://alexsoft.co.kr/en/diagnosis/#options",
+            "description": "Two to six weeks covering regulatory requirements in design, legacy modernization roadmaps, vendor and solution selection, technical oversight, and technical due diligence for investment or M&A. A 50% payment is due at the start."
+          },
+          {
+            "@type": "Offer",
+            "name": "Development from the design",
+            "url": "https://alexsoft.co.kr/en/diagnosis/#options",
+            "description": "We directly develop the systems we design. Payments follow milestones, with no more than two development projects running at once."
+          },
+          {
+            "@type": "Offer",
+            "name": "Monthly advisory retainer",
+            "url": "https://alexsoft.co.kr/en/diagnosis/#options",
+            "description": "A monthly prepaid engagement with an architect available for an agreed number of days. Suitable for mid-sized businesses and startups with a gap in CTO coverage."
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://alexsoft.co.kr/en/diagnosis/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What happens during the 20-minute fit check?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We hear about the problem you want to solve, the constraints, your existing systems and your team, then assess whether the work is a good fit. We give our assessment verbally; no analysis documents or designs are provided."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does an assessment session differ from design work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The assessment session takes half a day to one day to identify risks in the current architecture and decisions that need to be made. Design takes two to six weeks to define the target architecture and document it so that a development team can start work directly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens to the assessment fee if we continue?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The assessment fee is paid in advance. If you proceed to a design engagement or monthly advisory retainer, it is credited in full against the contract amount. You are also welcome to stop after the assessment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why are prices not listed on the website?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The effort can vary greatly with system size, constraints and the scope of involvement, even for work with the same name. We narrow the scope during the 20-minute fit check, then quote for that scope."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What kinds of systems are a good fit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Systems whose design is directly shaped by regulation or certification, and systems that must integrate with core enterprise systems. This includes public-sector and healthcare systems with predefined requirements, or projects that need a new architecture alongside existing systems."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you also handle development?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We directly build the systems we design. To maintain quality, we limit concurrent development projects to two."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the monthly advisory retainer work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We agree on a fixed number of days each month and participate as your ongoing architect for that time. Design reviews, technical decisions and development-team questions are covered within those days, with payment made monthly in advance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you handle company materials?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We request only what is necessary for the assessment and follow agreed transfer methods and retention periods. If sensitive materials are involved, we agree on confidentiality arrangements before starting."
+          }
+        }
+      ],
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://alexsoft.co.kr/en/diagnosis/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "ALEXSOFT",
+          "item": "https://alexsoft.co.kr/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Architecture Design & Development",
+          "item": "https://alexsoft.co.kr/en/diagnosis/"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://alexsoft.co.kr/en/diagnosis/#webpage",
+      "url": "https://alexsoft.co.kr/en/diagnosis/",
+      "name": "Architecture Design & Development | ALEXSOFT",
+      "description": "Assess the architecture before you build. ALEXSOFT takes you from an architecture assessment through design, technical due diligence, development and monthly advisory support.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://alexsoft.co.kr/en/#website"
+      },
+      "breadcrumb": {
+        "@id": "https://alexsoft.co.kr/en/diagnosis/#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://alexsoft.co.kr/en/diagnosis/#service"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://alexsoft.co.kr/assets/brand/alexsoft-architecture-og-v1.jpg",
+        "width": 1536,
+        "height": 804
+      }
+    }
+  ]
+}
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+  <link rel="stylesheet" href="/assets/ink.css?v=bilingual-1">
+  <noscript><style>[data-reveal]{opacity:1;transform:none}</style></noscript>
+  <link rel="stylesheet" href="/diagnosis/diagnosis.css?v=20260910-i-4">
+  <noscript><style>.ink .draw{stroke-dashoffset:0;animation:none}</style></noscript>
+  <link rel="canonical" href="https://alexsoft.co.kr/en/diagnosis/">
+  <link rel="alternate" hreflang="ko" href="https://alexsoft.co.kr/diagnosis/">
+  <link rel="alternate" hreflang="en" href="https://alexsoft.co.kr/en/diagnosis/">
+  <link rel="alternate" hreflang="x-default" href="https://alexsoft.co.kr/en/diagnosis/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ko_KR">
+</head>
+<body>
+  <header class="top">
+    <a class="skip" href="#main">Skip to content</a>
+    <div class="shell">
+      <a class="mark" href="/en/" aria-label="ALEXSOFT home">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#17191D"/><path fill="#FAF8F4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/><circle cx="32" cy="40" r="3.7" fill="#4B78FF"/></svg>
+        ALEXSOFT
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/en/work/">Projects</a>
+        <a href="/en/insights/">Insights</a>
+        <a href="/en/#services">Services</a>
+        <a href="/en/#about">About</a>
+        <a class="cta" href="/en/#start">Contact</a>
+      </nav>
+      <div class="language-switch" role="group" aria-label="Language"><a href="/diagnosis/" data-language="ko" lang="ko" hreflang="ko">한국어</a><a href="/en/diagnosis/" data-language="en" lang="en" hreflang="en" aria-current="true">English</a></div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero-flat" aria-labelledby="diagnosis-title">
+      <div class="shell">
+        <h1 id="diagnosis-title">Before building, assess the <em>architecture</em> first.</h1>
+        <p class="hero-lede">We first assess whether an architecture will work within regulatory, certification and existing-system constraints. Then we design it and directly build the system we designed.</p>
+        <div class="links">
+          <a class="solid" href="#inquiry" data-inquiry-type="아키텍처 자문">20-minute fit check <span>→</span></a>
+          <a class="quiet" href="#options">Explore the stages <span>→</span></a>
+        </div>
+        <dl class="facts" style="margin-top:clamp(28px,4vw,44px);max-width:620px" aria-label="Architecture advisory terms">
+          <div><dt>Start</dt><dd>Free 20-minute fit check</dd></div>
+          <div><dt>Assessment</dt><dd>Half a day–1 day</dd></div>
+          <div><dt>Payment</dt><dd>Assessment fee credited against a contract</dd></div>
+        </dl>
+        <p class="mono" style="margin-top:18px">Verbal assessments are free. Documented analysis and design are paid work.</p>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="situations-title">
+      <div class="shell">
+        <div class="head">
+          <div>
+            <div class="nib" aria-hidden="true"><svg viewBox="0 0 64 64"><path fill="#2456E4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"></path></svg><span>When this helps</span></div>
+            <h2 id="situations-title">Some decisions call for an architecture review first.</h2>
+          </div>
+          <p>We focus on decisions that are hard to reverse, across industries and tools. If any of the following applies, there is a reason to examine the architecture before moving into design.</p>
+        </div>
+        <div class="steps cols-2">
+          <div data-reveal=""><h3>Regulatory or certification requirements directly shape the design.</h3><p>Adding these requirements later can mean redesigning the architecture. We treat them as constraints from the start.</p></div>
+          <div data-reveal=""><h3>The system must connect to existing core systems, EMRs or ERPs.</h3><p>We define the data and responsibility boundaries at integration points before design begins.</p></div>
+          <div data-reveal=""><h3>You need to decide whether to build, buy or integrate.</h3><p>We compare all three options against the same criteria and document the reasoning behind the choice.</p></div>
+          <div data-reveal=""><h3>You have a development team, but no one owns the architecture.</h3><p>We fill that architectural decision-making role for as long as it is needed.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="options" aria-labelledby="options-title">
+      <div class="shell">
+        <div class="head">
+          <div>
+            <div class="nib" aria-hidden="true"><svg viewBox="0 0 64 64"><path fill="#2456E4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"></path></svg><span>Engagement stages</span></div>
+            <h2 id="options-title">Go as deep as the work requires, one stage at a time.</h2>
+          </div>
+          <p>You do not need to commit to everything at once. Start with a 20-minute call, then move through assessment, design, development and ongoing advice. You can stop at any stage.</p>
+        </div>
+
+        <dl class="facts wide" data-reveal="">
+          <div><dt>START HERE</dt><dd>20-minute fit check<small>A conversation to assess whether the work is a good fit. It is free; no analysis documents or designs are provided.</small></dd></div>
+        </dl>
+        <div class="links" style="margin-top:14px">
+          <a class="solid" href="#inquiry" data-inquiry-type="아키텍처 자문">Request a fit check <span>→</span></a>
+        </div>
+
+        <div class="steps cols-3">
+          <div data-reveal="">
+            <span class="mono">Half a day–1 day · Prepaid</span>
+            <h3>Architecture assessment session</h3>
+            <p>We identify architectural risks and decision points within a day. The assessment fee is credited in full against a subsequent contract.</p>
+            <ul>
+              <li>A map of current architectural risks</li>
+              <li>Three to five decision points</li>
+              <li>Recommended next steps</li>
+            </ul>
+            <p class="case-more"><a class="link" href="#inquiry" data-inquiry-type="진단 세션">Ask about an assessment <span>→</span></a></p>
+          </div>
+          <div data-reveal="">
+            <span class="mono">2–6 weeks · 50% upfront</span>
+            <h3>Architecture design &amp; technical due diligence</h3>
+            <p>We document the architecture to a level that lets a development team start work directly.</p>
+            <ul>
+              <li>Regulatory design and legacy modernization roadmaps</li>
+              <li>Vendor and solution selection, and technical oversight</li>
+              <li>Technical due diligence for investment and M&amp;A</li>
+            </ul>
+            <p class="case-more"><a class="link" href="#inquiry" data-inquiry-type="설계·기술 실사">Ask about design or due diligence <span>→</span></a></p>
+          </div>
+          <div data-reveal="">
+            <span class="mono">Schedule by scope · Milestone payments</span>
+            <h3>Development from the design</h3>
+            <p>The person who designs it also builds it.</p>
+            <ul>
+              <li>Delivery as a working system, with no loss between design and development</li>
+              <li>Direct development of integrations, back-office tools, internal systems and MVPs</li>
+            </ul>
+            <p class="case-more"><a class="link" href="#inquiry" data-inquiry-type="설계·구현">Discuss development <span>→</span></a></p>
+          </div>
+        </div>
+
+        <dl class="facts wide" style="margin-top:clamp(30px,4vw,48px)" data-reveal="">
+          <div><dt>ONGOING</dt><dd>Monthly advisory retainer<small>An ongoing architect for an agreed number of days each month. Design reviews, technical decisions and development-team questions are handled within that time, with payment monthly in advance.</small></dd></div>
+        </dl>
+        <div class="links" style="margin-top:14px">
+          <a class="quiet" href="#inquiry" data-inquiry-type="월 자문">Discuss monthly advice <span>→</span></a>
+        </div>
+
+        <p class="mono" style="margin-top:26px">Verbal assessments are free. Documented analysis and design are paid work. We quote after confirming the scope, and limit concurrent development projects to two.</p>
+      </div>
+    </section>
+
+    <section class="block" id="deliverables" aria-labelledby="deliverables-title">
+      <div class="shell">
+        <div class="head">
+          <div>
+            <div class="nib" aria-hidden="true"><svg viewBox="0 0 64 64"><path fill="#2456E4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"></path></svg><span>Assessment deliverables</span></div>
+            <h2 id="deliverables-title">A record of the constraints and the decisions to make first.</h2>
+          </div>
+          <p>The purpose is to support decisions. These six deliverables identify what will be hard to reverse in the current architecture and the order in which decisions should be made.</p>
+        </div>
+        <div class="steps cols-3">
+          <div data-reveal=""><span class="mono">MAP</span><h3>Current architecture map</h3><p>A single view of systems, data, integration points and responsibility boundaries.</p></div>
+          <div data-reveal=""><span class="mono">CONSTRAINT</span><h3>Constraint register</h3><p>Regulatory, certification, existing-system and data constraints translated into design requirements.</p></div>
+          <div data-reveal=""><span class="mono">RISK</span><h3>Risks and decision points</h3><p>A clear distinction between decisions that are hard to reverse and decisions that must be made now.</p></div>
+          <div data-reveal=""><span class="mono">OPTIONS</span><h3>Build, buy and integrate comparison</h3><p>A comparison of the three options by constraints and expected lifespan as well as cost.</p></div>
+          <div data-reveal=""><span class="mono">TARGET</span><h3>Recommended architecture</h3><p>A target architecture that addresses the constraints, with the reasoning behind it.</p></div>
+          <div data-reveal=""><span class="mono">SCOPE</span><h3>Phased delivery scope</h3><p>The work divided into stages that define what to build first and how much to include.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="process" aria-labelledby="process-title">
+      <div class="shell">
+        <div class="head">
+          <div>
+            <div class="nib" aria-hidden="true"><svg viewBox="0 0 64 64"><path fill="#2456E4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"></path></svg><span>How we work</span></div>
+            <h2 id="process-title">The same person sees it through, from assessment to delivery.</h2>
+          </div>
+          <p>We start with a 20-minute call. If the work is not a fit, we stop there. If it is, we continue only with the stages you need.</p>
+        </div>
+
+        <div class="ink" data-ink="">
+          <svg role="img" aria-label="A flow from a 20-minute fit check through assessment, design and technical due diligence to development, with monthly advisory support branching off after development" viewBox="0 0 1200 230">
+            <path class="l draw" d="M40 120 H1040"></path>
+            <circle class="nf" cx="40" cy="120" r="4"></circle>
+            <circle class="n" cx="170" cy="120" r="10"></circle>
+            <rect class="n" x="440" y="110" width="20" height="20"></rect>
+            <circle class="n" cx="720" cy="120" r="10"></circle>
+            <circle class="nf" cx="1000" cy="120" r="9"></circle>
+            <path class="l d" d="M460 120 C 520 60, 660 60, 710 112"></path>
+            <text class="s" x="585" y="62" text-anchor="middle">Design comes before development</text>
+            <path class="l d draw late" d="M1000 120 C 1050 120, 1060 190, 1120 190 H1160"></path>
+            <circle class="n" cx="1160" cy="190" r="7"></circle>
+            <text class="t" x="1090" y="222" text-anchor="middle">Monthly advice</text>
+            <text class="m" x="170" y="88" text-anchor="middle">20 minutes · Free</text>
+            <text class="t" x="170" y="160" text-anchor="middle">Fit check</text>
+            <text class="m" x="450" y="88" text-anchor="middle">Half a day–1 day · Prepaid</text>
+            <text class="t" x="450" y="160" text-anchor="middle">Architecture assessment session</text>
+            <text class="m" x="720" y="88" text-anchor="middle">2–6 weeks · 50% upfront</text>
+            <text class="t" x="720" y="160" text-anchor="middle">Design &amp; due diligence</text>
+            <text class="m" x="1000" y="88" text-anchor="middle">Milestones · Max. 2 projects</text>
+            <text class="t" x="1000" y="160" text-anchor="middle">Development from the design</text>
+          </svg>
+        </div>
+        <p class="scroll-hint">← Scroll sideways to see the full process →</p>
+
+        <dl class="facts wide" style="margin-top:clamp(30px,4vw,48px)">
+          <div><dt>BEFORE START</dt><dd>20-minute fit check<small>We hear about the problem and its constraints, then assess whether the work is a good fit. No documents are produced.</small></dd></div>
+          <div><dt>ASSESS</dt><dd>Architecture assessment session<small>Over half a day to one day, we review the current architecture and document risks and decision points.</small></dd></div>
+          <div><dt>DESIGN</dt><dd>Design &amp; due diligence<small>We define the target architecture or examine the technical state of a system and organization to provide a basis for decisions.</small></dd></div>
+          <div><dt>BUILD</dt><dd>Development from the design<small>We directly develop the system we designed and put it into use.</small></dd></div>
+          <div><dt>ONGOING</dt><dd>Monthly advice<small>An architect works with you for an agreed number of days each month, supporting subsequent design reviews and technical decisions.</small></dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="trust-title">
+      <div class="shell">
+        <div class="head">
+          <div>
+            <div class="nib" aria-hidden="true"><svg viewBox="0 0 64 64"><path fill="#2456E4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"></path></svg><span>Why ALEXSOFT</span></div>
+            <h2 id="trust-title">Experience designing and building a national system.</h2>
+          </div>
+          <p>ALEXSOFT founder Yongmin Lee participated as development PL from 2020 to 2022 in the Philippine Bureau of Internal Revenue e-invoice system project (KOICA, 2018–2022). He designed the development architecture, document standards and document-exchange security standards, and led development. The system went live in 2022 and remains in operation. He then joined the healthcare business of a major Korean ERP company, working from 2022 to 2026 on the first cloud product among EMR-certified clinic-level EMRs. He started as development lead in 2022 and led development, planning and design from 2023 through 2026.</p>
+        </div>
+        <dl class="facts wide">
+          <div data-reveal=""><dt>2018–22</dt><dd>Philippine BIR e-invoice system<small>Development PL, 2020–2022 · Live since 2022 and still operating</small></dd></div>
+          <div data-reveal=""><dt>CLOUD EMR</dt><dd>The first cloud product among EMR-certified clinic-level EMRs<small>From development lead to leading development, planning and design</small></dd></div>
+          <div data-reveal=""><dt>AWS</dt><dd>Solutions Architect Professional<small>Cloud architecture design credential</small></dd></div>
+          <div data-reveal=""><dt>25+</dt><dd>Tax infrastructure · Healthcare · Shipbuilding and marine core systems<small>Systems where both accuracy and availability matter</small></dd></div>
+        </dl>
+        <div class="links" style="margin-top:26px">
+          <a class="quiet" href="/en/work/#bir-eis">Read the Philippine BIR EIS case study <span>→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="faq" aria-labelledby="faq-title">
+      <div class="shell">
+        <div class="head">
+          <div>
+            <div class="nib" aria-hidden="true"><svg viewBox="0 0 64 64"><path fill="#2456E4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"></path></svg><span>Frequently asked questions</span></div>
+            <h2 id="faq-title">Before we begin.</h2>
+          </div>
+        </div>
+        <div class="qa">
+          <details open="">
+            <summary>What happens during the 20-minute fit check?<span aria-hidden="true">+</span></summary>
+            <p>We hear about the problem you want to solve, the constraints, your existing systems and your team, then assess whether the work is a good fit. We give our assessment verbally; no analysis documents or designs are provided.</p>
+          </details>
+          <details>
+            <summary>How does an assessment session differ from design work?<span aria-hidden="true">+</span></summary>
+            <p>The assessment session takes half a day to one day to identify risks in the current architecture and decisions that need to be made. Design takes two to six weeks to define the target architecture and document it so that a development team can start work directly.</p>
+          </details>
+          <details>
+            <summary>What happens to the assessment fee if we continue?<span aria-hidden="true">+</span></summary>
+            <p>The assessment fee is paid in advance. If you proceed to a design engagement or monthly advisory retainer, it is credited in full against the contract amount. You are also welcome to stop after the assessment.</p>
+          </details>
+          <details>
+            <summary>Why are prices not listed on the website?<span aria-hidden="true">+</span></summary>
+            <p>The effort can vary greatly with system size, constraints and the scope of involvement, even for work with the same name. We narrow the scope during the 20-minute fit check, then quote for that scope.</p>
+          </details>
+          <details>
+            <summary>What kinds of systems are a good fit?<span aria-hidden="true">+</span></summary>
+            <p>Systems whose design is directly shaped by regulation or certification, and systems that must integrate with core enterprise systems. This includes public-sector and healthcare systems with predefined requirements, or projects that need a new architecture alongside existing systems.</p>
+          </details>
+          <details>
+            <summary>Can you also handle development?<span aria-hidden="true">+</span></summary>
+            <p>Yes. We directly build the systems we design. To maintain quality, we limit concurrent development projects to two.</p>
+          </details>
+          <details>
+            <summary>How does the monthly advisory retainer work?<span aria-hidden="true">+</span></summary>
+            <p>We agree on a fixed number of days each month and participate as your ongoing architect for that time. Design reviews, technical decisions and development-team questions are covered within those days, with payment made monthly in advance.</p>
+          </details>
+          <details>
+            <summary>How do you handle company materials?<span aria-hidden="true">+</span></summary>
+            <p>We request only what is necessary for the assessment and follow agreed transfer methods and retention periods. If sensitive materials are involved, we agree on confidentiality arrangements before starting.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="inquiry" aria-labelledby="inquiry-title">
+      <div class="shell">
+        <div class="head">
+          <div>
+            <div class="nib" aria-hidden="true"><svg viewBox="0 0 64 64"><path fill="#2456E4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"></path></svg><span>Fit check</span></div>
+            <h2 id="inquiry-title">Let us first check whether the work is a good fit.</h2>
+          </div>
+          <div>
+            <p class="head-note">Tell us about the system you are considering and its constraints. After reviewing your message, we will arrange a 20-minute fit check.</p>
+            <div class="links" style="margin-top:6px"><a href="tel:+821065480292">Call +82-10-6548-0292 <span>→</span></a><a class="quiet" href="mailto:contact@alexsoft.co.kr">contact@alexsoft.co.kr <span>→</span></a></div>
+          </div>
+        </div>
+        <form class="form" action="https://docs.google.com/forms/d/e/1FAIpQLSe3Y0R4OwMIEWCu8aX6Z8y9aF-iMvkKao9TI9S7A7cdhCYvow/formResponse" method="post" target="google-form-response" accept-charset="UTF-8" data-inquiry-form="">
+          <div class="visually-hidden" aria-hidden="true">
+            <label>Website
+              <input type="text" name="website" tabindex="-1" autocomplete="off" data-form-honeypot="">
+            </label>
+          </div>
+          <label><span>Company or organization</span>
+            <input type="text" name="entry.1998693368" autocomplete="organization" placeholder="e.g. ALEXSOFT">
+          </label>
+          <label><span>Contact name <em>Required</em></span>
+            <input type="text" name="entry.2061346803" autocomplete="name" required="" placeholder="Enter your name">
+          </label>
+          <label><span>Email <em>Required</em></span>
+            <input type="email" name="entry.2008957627" autocomplete="email" required="" placeholder="reply@example.com">
+          </label>
+          <label><span>Stage of interest</span>
+            <select name="entry.354814586" data-service-select="">
+              <option value="아키텍처 자문">Architecture advice · 20-minute fit check</option>
+              <option value="진단 세션">Architecture assessment session</option>
+              <option value="설계·기술 실사">Architecture design &amp; technical due diligence</option>
+              <option value="설계·구현">Development from the design</option>
+              <option value="월 자문">Monthly advisory retainer</option>
+              <option value="잘 모르겠음">Not sure yet</option>
+            </select>
+          </label>
+          <label><span>The system you are considering and your concerns <em>Required</em></span>
+            <textarea name="entry.1400718553" required="" rows="6" placeholder="A polished brief is not needed. Tell us about the system's purpose, regulatory or certification requirements, existing systems and your team."></textarea>
+          </label>
+          <label><span>Existing systems and tools</span>
+            <input type="text" name="entry.536924147" placeholder="e.g. In-house ERP, EMR, groupware">
+          </label>
+          <label><span>Preferred timing</span>
+            <select name="entry.1009207624">
+              <option value="미정">Not yet decided</option>
+              <option value="1개월 이내">Within 1 month</option>
+              <option value="1~3개월">1–3 months</option>
+              <option value="3개월 이후">After 3 months</option>
+            </select>
+          </label>
+          <button type="submit"><span>Request a fit check</span></button>
+          <p class="form-note" data-form-status="" aria-live="polite">Your information is sent to ALEXSOFT's Google Forms so we can review your inquiry.</p>
+        </form>
+        <iframe class="visually-hidden" name="google-form-response" title="Inquiry submission result" data-google-form-target=""></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="shell">
+      <a class="mark" href="/en/"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#FAF8F4"/><path fill="#17191D" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/><circle cx="32" cy="40" r="3.7" fill="#4B78FF"/></svg>ALEXSOFT</a>
+      <nav aria-label="Footer navigation"><a href="/en/diagnosis/">Architecture design &amp; development</a><a href="/en/e-invoicing/">About e-invoicing</a><a href="/en/healthcare/">Healthcare information systems</a><a href="/en/brand-website/">Brand websites</a><a href="/en/work/">Projects</a><a href="/en/insights/">Insights</a><a href="mailto:contact@alexsoft.co.kr">Email</a><a href="tel:+821065480292">Call +82 10 6548 0292</a></nav>
+      <div class="channels"><span class="mono">CHANNELS</span><a href="https://blog.naver.com/alex-soft" target="_blank" rel="noopener">Naver Blog (Korean) ↗</a><a href="https://www.instagram.com/alexsoft.co.kr" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://github.com/alexsoft-hq" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+      <p class="biz" data-nosnippet>ALEXSOFT (알렉스소프트) · Representative: Yongmin Lee · Business registration: 212-64-01036 · 10, Gwanganhaebyeon-ro 15beon-gil, Suyeong-gu, Busan, South Korea · © <span data-year>2026</span> ALEXSOFT</p>
+    </div>
+  </footer>
+  <script src="/en/diagnosis/diagnosis.js?v=20260921-f-1" defer></script>
+</body>
+</html>

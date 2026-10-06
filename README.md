@@ -1,14 +1,16 @@
 # ALEXSOFT — Software Artist Studio
 
-`alexsoft.co.kr`용 GitHub Pages 정적 브랜드 사이트입니다. 별도 빌드 과정이나 런타임 의존성 없이 `index.html`, `styles.css`, `app.js`만으로 동작합니다.
+`alexsoft.co.kr`용 GitHub Pages 정적 브랜드 사이트입니다. 각 페이지의 HTML과 공용 `assets/ink.css`·`assets/ink.js`로 동작하며 별도 빌드 과정은 없습니다.
+
+한국어와 영어는 같은 내용을 담은 정적 페이지 쌍으로 관리합니다. 언어 선택 규칙, 전체 번역 갱신, 공통 영역·사이트맵 동기화, 원본 변경 감지와 Chrome 검증은 [다국어 유지관리](docs/localization.md)를 따릅니다. 로컬 검토와 공개 배포는 구분하며, 커밋·푸시는 요청받았을 때 진행합니다.
 
 ## 로컬 확인
 
 ```bash
-python3 -m http.server 8080
+python3 -m http.server 8074 --bind 127.0.0.1
 ```
 
-브라우저에서 `http://localhost:8080`을 엽니다. `file://`로 직접 열어도 대부분 동작하지만, 배포와 같은 조건은 HTTP 서버에서 확인하는 편이 안전합니다.
+브라우저에서 `http://127.0.0.1:8074`을 엽니다. `file://`로 직접 열어도 대부분 동작하지만, 배포와 같은 조건은 HTTP 서버에서 확인하는 편이 안전합니다.
 
 ## GitHub Pages 배포
 
@@ -19,11 +21,11 @@ python3 -m http.server 8080
 
 ## 콘텐츠 근거
 
-- 대표 개인 자격: **AWS Certified Solutions Architect – Professional**. 홈 `#about`와 `/en/#en-founder`의 경력 표 마지막 행에 표시하며, [Credly 공개 배지](https://www.credly.com/badges/d0c993e5-ae64-4601-b926-ca54c0c3af7d/public_url)로 연결한다. 제공받은 공식 PNG를 `assets/certifications/aws-certified-solutions-architect-professional.png`에 원본 바이트 그대로 보관한다. 취득일·최근 취득 표현을 표시하지 않고, 회사 인증·AWS 파트너십·별도의 AWS 실적을 뜻하는 표현을 넣지 않는다. 구조화 데이터에서도 대표 `Person`의 `hasCredential`로만 연결한다.
+- 대표 개인 자격: **AWS Certified Solutions Architect – Professional**. 홈 `#about`와 `/en/#about`의 경력 표 마지막 행에 표시하며, [Credly 공개 배지](https://www.credly.com/badges/d0c993e5-ae64-4601-b926-ca54c0c3af7d/public_url)로 연결한다. 제공받은 공식 PNG를 `assets/certifications/aws-certified-solutions-architect-professional.png`에 원본 바이트 그대로 보관한다. 취득일·최근 취득 표현을 표시하지 않고, 회사 인증·AWS 파트너십·별도의 AWS 실적을 뜻하는 표현을 넣지 않는다. 구조화 데이터에서도 대표 `Person`의 `hasCredential`로만 연결한다.
 - `Cascade`(`/work/#cascade`): 공개 저장소 `github.com/alexsoft-hq/Cascade`의 README·CHANGELOG. 스크린샷은 저장소의 `docs/assets/screens/*.png`를 `assets/work/cascade-*.webp`로 변환한 것
 - `Mokpyo`(`/work/#mokpyo`, 구 Goalboard): 로컬 프로젝트 README(다섯 뷰·자동화·역할·배포)와 데모 워크스페이스(`prisma/seed-demo.ts`, 가상 팀·가상 목표). 스크린샷은 `assets/work/mokpyo-*.webp` — 로컬 데모를 1440×900(2x)·390px로 캡처
 - `ALEXSOFT Bridge`(`/work/#bridge`): 비공개 제품 저장소의 문서와 콘솔 화면(가상 데이터). 문구의 사실 여부는 제품 담당 세션이 확인. 스크린샷은 콘솔 캡처(1478×812)를 `assets/work/bridge-*.webp`로 변환한 것. 제품명에 FHIR를 넣지 않고, HL7·FHIR를 쓰는 페이지에는 HL7 상표 문구를 함께 둔다
-- `부산·거제 한눈`(`/work/#cities-in-view`): 부산과 거제의 지형, 흩어진 공공 통계와 사진을 한곳에 모아 살펴볼 수 있도록 만든 비영리 토이 프로젝트를 소개한다. 부산(`/busan-in-view/`)은 16개 구·군 통계·기록사진 651장, 거제(`/geoje-in-view/`)는 18개 면·동 통계·기록사진 763장·실제 Landsat 위성사진 24장과 근로소득·상권·장기요양 자료를 다룬다. 자료별 출처·기준 시점·이용조건을 표시하며 확인되지 않은 값은 추정하지 않는다. 홈 `#products`·`/work/#cities-in-view`·`/en/#en-products`에서 한 항목으로 묶고, 각 서비스와 출처 안내 페이지는 별도로 연결한다. 기존 `/work/#busan-in-view`·`/work/#geoje-in-view`는 묶음 안의 해당 도시로 연결한다. 화면은 실제 서비스 캡처 `assets/work/busan-map.jpg`·`assets/work/geoje-map.jpg`(1440×1000).
+- `부산·거제 한눈`(`/work/#cities-in-view`): 부산과 거제의 지형, 흩어진 공공 통계와 사진을 한곳에 모아 살펴볼 수 있도록 만든 비영리 토이 프로젝트를 소개한다. 부산(`/busan-in-view/`)은 16개 구·군 통계·기록사진 651장, 거제(`/geoje-in-view/`)는 18개 면·동 통계·기록사진 763장·실제 Landsat 위성사진 24장과 근로소득·상권·장기요양 자료를 다룬다. 자료별 출처·기준 시점·이용조건을 표시하며 확인되지 않은 값은 추정하지 않는다. 홈 `#products`·`/work/#cities-in-view`·`/en/#products`에서 한 항목으로 묶고, 각 서비스와 출처 안내 페이지는 별도로 연결한다. 기존 `/work/#busan-in-view`·`/work/#geoje-in-view`는 묶음 안의 해당 도시로 연결한다. 화면은 실제 서비스 캡처 `assets/work/busan-map.jpg`·`assets/work/geoje-map.jpg`(1440×1000).
 - `/busan-in-view/about/`: JavaScript 없이 읽을 수 있는 서비스 소개·자료 출처·이용 기준. 부산 원본의 `public/about/index.html`을 Pages 빌드에 포함한 산출물이며, 수정할 때는 부산 원본과 함께 맞춘다. 앱과 안내 페이지의 정식 주소·구조화 데이터, 루트 `sitemap.xml`·`llms.txt`도 동기화한다.
 - `/geoje-in-view/about/`: JavaScript 없이 읽을 수 있는 자료 출처·이용 기준. 거제 원본 저장소의 `npm run build:pages` 정적 산출물을 `/geoje-in-view/`에 반영한다. 수정 시 원본과 산출물을 함께 맞추고 정식 주소·구조화 데이터·`sitemap.xml`·`llms.txt`를 동기화한다. 수집용 원자료·비공개 검증 파일은 공개 사이트에 복사하지 않는다.
 - `The Grace`: 실제 공개 사이트 및 프로젝트 README의 시네마틱 스크롤/에디션 전환 구조

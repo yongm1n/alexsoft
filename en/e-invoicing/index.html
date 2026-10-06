@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script src="/assets/ink.js?v=bilingual-1"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#FAF8F4">
+  <meta name="description" content="An introduction to e-invoicing, its relationship to Korean electronic tax invoices and VAN tax-authority reporting, and the document standards and exchange architecture founder Yongmin Lee designed as development PL in 2020–2022 for the Philippine BIR project (2018–2022).">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="author" content="ALEXSOFT">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ALEXSOFT">
+  <meta property="og:url" content="https://alexsoft.co.kr/en/e-invoicing/">
+  <meta property="og:title" content="What Is e-Invoicing? — ALEXSOFT">
+  <meta property="og:description" content="How e-invoicing is structured, and experience designing a national e-invoice system.">
+  <meta property="og:image" content="https://alexsoft.co.kr/assets/brand/alexsoft-einvoicing-og-v1.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1536">
+  <meta property="og:image:height" content="804">
+  <meta property="og:image:alt" content="ALEXSOFT e-invoicing document standards and exchange architecture">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="What Is e-Invoicing? — ALEXSOFT">
+  <meta name="twitter:description" content="How e-invoicing is structured, and experience designing a national e-invoice system.">
+  <meta name="twitter:image" content="https://alexsoft.co.kr/assets/brand/alexsoft-einvoicing-og-v1.jpg">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <title>What Is e-Invoicing? | ALEXSOFT</title>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://alexsoft.co.kr/#organization",
+      "name": "ALEXSOFT",
+      "legalName": "알렉스소프트",
+      "alternateName": [
+        "ALEXSOFT",
+        "알렉스 소프트"
+      ],
+      "url": "https://alexsoft.co.kr/en/",
+      "email": "contact@alexsoft.co.kr",
+      "telephone": "+82-10-6548-0292",
+      "taxID": "212-64-01036",
+      "sameAs": [
+        "https://blog.naver.com/alex-soft",
+        "https://www.instagram.com/alexsoft.co.kr/",
+        "https://github.com/alexsoft-hq"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://alexsoft.co.kr/en/#website",
+      "url": "https://alexsoft.co.kr/en/",
+      "name": "ALEXSOFT",
+      "alternateName": [
+        "ALEXSOFT",
+        "알렉스 소프트",
+        "alexsoft.co.kr"
+      ],
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://alexsoft.co.kr/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://alexsoft.co.kr/en/e-invoicing/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does e-invoicing differ from Korean electronic tax invoices?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In Korea, issuing and transmitting tax invoices and sending sales data to the National Tax Service through VANs have generally been treated as separate flows. In several countries, e-invoicing brings these together in one electronic document exchange and reporting framework."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does the Philippine BIR EIS experience contribute?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is experience designing document standards for many businesses, exchange security and operational handover together at national scale. Founder Yongmin Lee participated as development PL in 2020–2022 during the initial 2018–2022 project. This is separate from the 2025–2026 second-phase follow-up support carried out by another provider."
+          }
+        }
+      ],
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://alexsoft.co.kr/en/e-invoicing/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "ALEXSOFT",
+          "item": "https://alexsoft.co.kr/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About e-invoicing",
+          "item": "https://alexsoft.co.kr/en/e-invoicing/"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://alexsoft.co.kr/en/e-invoicing/#webpage",
+      "url": "https://alexsoft.co.kr/en/e-invoicing/",
+      "name": "What Is e-Invoicing? | ALEXSOFT",
+      "description": "How e-invoicing is structured, and experience designing a national e-invoice system.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://alexsoft.co.kr/en/#website"
+      },
+      "breadcrumb": {
+        "@id": "https://alexsoft.co.kr/en/e-invoicing/#breadcrumb"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://alexsoft.co.kr/assets/brand/alexsoft-einvoicing-og-v1.jpg",
+        "width": 1536,
+        "height": 804
+      }
+    }
+  ]
+}
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+  <link rel="stylesheet" href="/assets/ink.css?v=bilingual-1">
+  <noscript><style>[data-reveal]{opacity:1;transform:none}</style></noscript>
+  <link rel="stylesheet" href="/e-invoicing/e-invoicing.css?v=20260910-i-4">
+  <noscript><style>.ink .draw{stroke-dashoffset:0;animation:none}</style></noscript>
+  <link rel="canonical" href="https://alexsoft.co.kr/en/e-invoicing/">
+  <link rel="alternate" hreflang="ko" href="https://alexsoft.co.kr/e-invoicing/">
+  <link rel="alternate" hreflang="en" href="https://alexsoft.co.kr/en/e-invoicing/">
+  <link rel="alternate" hreflang="x-default" href="https://alexsoft.co.kr/en/e-invoicing/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ko_KR">
+</head>
+<body>
+  <header class="top">
+    <a class="skip" href="#main">Skip to content</a>
+    <div class="shell">
+      <a class="mark" href="/en/" aria-label="ALEXSOFT home">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#17191D"/><path fill="#FAF8F4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/><circle cx="32" cy="40" r="3.7" fill="#4B78FF"/></svg>
+        ALEXSOFT
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="/en/work/">Projects</a>
+        <a href="/en/insights/">Insights</a>
+        <a href="/en/#services">Services</a>
+        <a href="/en/#about">About</a>
+        <a class="cta" href="/en/#start">Contact</a>
+      </nav>
+      <div class="language-switch" role="group" aria-label="Language"><a href="/e-invoicing/" data-language="ko" lang="ko" hreflang="ko">한국어</a><a href="/en/e-invoicing/" data-language="en" lang="en" hreflang="en" aria-current="true">English</a></div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero-flat" aria-labelledby="e-invoicing-title">
+      <div class="shell">
+        <h1 id="e-invoicing-title">e-Invoicing brings invoice issuance and sales reporting into <em>one framework</em>.</h1>
+        <p class="hero-lede">In Korea, electronic tax-invoice issuance and tax-authority reporting through VANs are separate flows. In several countries, they operate within one electronic document exchange and reporting framework. This page explains that structure and what ALEXSOFT founder Yongmin Lee addressed while designing it at national scale.</p>
+        <div class="links">
+          <a class="solid" href="#case">See the architecture <span>→</span></a>
+          <a class="quiet" href="/en/diagnosis/">Discuss architecture <span>→</span></a>
+        </div>
+        <div class="plate-row">
+          <figure class="plate">
+            <img src="/assets/brand/einvoicing-hero.webp" width="1536" height="1024" alt="A transition from paper invoices to structured electronic-document schemas and secure transmission flows" fetchpriority="high">
+            <figcaption>STANDARD · EXCHANGE · REPORTING</figcaption>
+          </figure>
+          <dl class="facts wide" aria-label="e-Invoicing components">
+            <div><dt>DOCUMENT</dt><dd>Document schemas and validation rules</dd></div>
+            <div><dt>EXCHANGE</dt><dd>ERP, transmission-provider and tax-authority integration</dd></div>
+            <div><dt>OPERATIONS</dt><dd>Errors, retransmission and audit trails</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="primer" aria-labelledby="primer-title">
+      <div class="shell">
+        <div class="head">
+          <div>
+            <div class="nib" aria-hidden="true"><svg viewBox="0 0 64 64"><path fill="#2456E4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"></path></svg><span>e-Invoicing through a Korean lens</span></div>
+            <h2 id="primer-title">What Korea calls electronic tax invoicing is known internationally as <em>e-invoicing</em>.</h2>
+          </div>
+          <p>In Korea, electronic tax-invoice issuance and transmission and VAN-based sales-data reporting to the National Tax Service have generally been treated as separate tasks. In several countries, e-invoicing handles document exchange and sales reporting within one set of specifications and transmission architecture.</p>
+        </div>
+        <div class="steps cols-3">
+          <div data-reveal=""><span class="mono">INVOICE</span><h3>Electronic tax invoices</h3><p>Parties to a transaction issue structured tax invoices and transmit them to recipients and tax authorities.</p></div>
+          <div data-reveal=""><span class="mono">SALES DATA</span><h3>VAN tax-authority reporting</h3><p>Payment and sales data are collected and reported in the structure required by the National Tax Service.</p></div>
+          <div data-reveal=""><span class="mono">E-INVOICING</span><h3>Document exchange and reporting</h3><p>One system standardizes invoice, transaction and payment data for validation, transmission, reporting and tracing.</p></div>
+        </div>
+        <blockquote class="quote" style="margin-top:clamp(30px,4vw,48px)">
+          <p>This is why the Philippine system is officially called the <em>Electronic Invoicing and Sales Reporting System</em>. It handles both the exchange of electronic invoices and the sales-data reporting required by the tax authority.</p>
+          <cite>WHY “ELECTRONIC INVOICING AND SALES REPORTING SYSTEM”</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="block" id="case" aria-labelledby="case-title">
+      <div class="shell">
+        <div class="head">
+          <div>
+            <div class="nib" aria-hidden="true"><svg viewBox="0 0 64 64"><path fill="#2456E4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"></path></svg><span>National system experience</span></div>
+            <h2 id="case-title">From document standards to government handover.</h2>
+          </div>
+          <p>ALEXSOFT founder Yongmin Lee participated as development PL from 2020 to 2022 in the Philippine Bureau of Internal Revenue e-invoice system project (KOICA, 2018–2022). He designed the development architecture, e-invoice document standards and document-exchange security standards, and led development. The system went live in 2022 and remains in operation.</p>
+        </div>
+        <div class="ink" data-ink="">
+          <svg role="img" aria-label="Business-system data is transformed into standard documents, digitally signed and transmitted to the tax authority for receipt and validation, with results returned to the business" viewBox="0 0 1200 300">
+            <path class="l draw" d="M40 130 H150 M330 130 H400 M580 130 H650 M830 130 H900 M1080 130 H1160"></path>
+            <circle class="nf" cx="40" cy="130" r="4"></circle>
+            <rect class="bx" x="150" y="92" width="180" height="76" rx="2"></rect>
+            <text class="t" x="240" y="124" text-anchor="middle">Business systems</text>
+            <text class="s" x="240" y="148" text-anchor="middle">ERP · POS · Accounting</text>
+            <rect class="bx" x="400" y="92" width="180" height="76" rx="2"></rect>
+            <text class="t" x="490" y="124" text-anchor="middle">Standard documents</text>
+            <text class="s" x="490" y="148" text-anchor="middle">e-Invoice schema</text>
+            <rect class="bx" x="650" y="92" width="180" height="76" rx="2"></rect>
+            <text class="t" x="740" y="124" text-anchor="middle">Sign &amp; transmit</text>
+            <text class="s" x="740" y="148" text-anchor="middle">Signatures · Secure channel</text>
+            <rect class="bx" x="900" y="92" width="180" height="76" rx="2"></rect>
+            <text class="t" x="990" y="124" text-anchor="middle">Receive &amp; validate</text>
+            <text class="s" x="990" y="148" text-anchor="middle">Tax authority</text>
+            <circle class="n" cx="1160" cy="130" r="9"></circle>
+            <text class="s" x="1160" y="180" text-anchor="middle">Query · Audit</text>
+            <text class="m" x="365" y="118" text-anchor="middle">Transform</text>
+            <text class="m" x="615" y="118" text-anchor="middle">Validate</text>
+            <text class="m" x="865" y="118" text-anchor="middle">TLS</text>
+            <path class="l d draw late" d="M990 168 V236 H240 V168"></path>
+            <text class="s" x="615" y="262" text-anchor="middle">Results and error codes return to business systems for retransmission and audit trails</text>
+            <path class="l d" d="M400 60 H1080"></path>
+            <text class="m" x="740" y="48" text-anchor="middle">Design scope — Document standards · Exchange security · Development architecture</text>
+          </svg>
+        </div>
+        <p class="scroll-hint">← Scroll sideways to see the full architecture →</p>
+
+        <div class="steps cols-3" style="margin-top:clamp(30px,4vw,48px)">
+          <div data-reveal=""><h3>Document specifications for many participants</h3><p>The documents must carry the same meaning across businesses and systems, beyond the internal format of any one organization.</p></div>
+          <div data-reveal=""><h3>Exchange security and traceability</h3><p>Authentication, integrity, transmission status and audit history must remain connected throughout the operational flow.</p></div>
+          <div data-reveal=""><h3>Operational handover after delivery</h3><p>We design for the organization that will take over the standards and code, as well as incident response and change management.</p></div>
+        </div>
+
+        <div class="ledger">
+          <p class="mono">Distinguishing the projects</p>
+          <dl class="facts wide">
+            <div><dt>Initial build</dt><dd>2018–2022<small>Founder Yongmin Lee participated as development PL in 2020–2022</small></dd></div>
+            <div><dt>Second-phase support</dt><dd>2025–2026<small>Carried out by a separate provider; not part of ALEXSOFT's track record</small></dd></div>
+          </dl>
+          <p class="case-more"><a class="link" href="/en/work/#bir-eis">Read the full BIR EIS case study <span>→</span></a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="faq" aria-labelledby="faq-title">
+      <div class="shell">
+        <div class="head">
+          <div>
+            <div class="nib" aria-hidden="true"><svg viewBox="0 0 64 64"><path fill="#2456E4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"></path></svg><span>Frequently asked questions</span></div>
+            <h2 id="faq-title">Two common questions.</h2>
+          </div>
+        </div>
+        <div class="qa">
+          <details open=""><summary>How does e-invoicing differ from Korean electronic tax invoices?<span aria-hidden="true">+</span></summary><p>In Korea, issuing and transmitting tax invoices and sending sales data to the National Tax Service through VANs have generally been treated as separate flows. In several countries, e-invoicing brings these together in one electronic document exchange and reporting framework.</p></details>
+          <details><summary>What does the Philippine BIR EIS experience contribute?<span aria-hidden="true">+</span></summary><p>It is experience designing document standards for many businesses, exchange security and operational handover together at national scale. Founder Yongmin Lee participated as development PL in 2020–2022 during the initial 2018–2022 project. This is separate from the 2025–2026 second-phase follow-up support carried out by another provider.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="next" aria-labelledby="next-title">
+      <div class="shell">
+        <div class="head">
+          <div>
+            <div class="nib" aria-hidden="true"><svg viewBox="0 0 64 64"><path fill="#2456E4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"></path></svg><span>Where this experience applies</span></div>
+            <h2 id="next-title">We apply this experience to architectural decisions. We do not offer country-specific compliance packages.</h2>
+          </div>
+          <p>This experience informs the design of systems where many businesses must exchange documents with consistent meaning, and where regulation and audit requirements directly shape the architecture. We can discuss your needs in an architecture design and development consultation.</p>
+        </div>
+        <div class="links">
+          <a class="solid" href="/en/diagnosis/">Discuss architecture design and development <span>→</span></a>
+          <a class="quiet" href="/en/work/#bir-eis">More about BIR EIS <span>→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="shell">
+      <a class="mark" href="/en/"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#FAF8F4"/><path fill="#17191D" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"/><circle cx="32" cy="40" r="3.7" fill="#4B78FF"/></svg>ALEXSOFT</a>
+      <nav aria-label="Footer navigation"><a href="/en/diagnosis/">Architecture design &amp; development</a><a href="/en/e-invoicing/">About e-invoicing</a><a href="/en/healthcare/">Healthcare information systems</a><a href="/en/brand-website/">Brand websites</a><a href="/en/work/">Projects</a><a href="/en/insights/">Insights</a><a href="mailto:contact@alexsoft.co.kr">Email</a><a href="tel:+821065480292">Call +82 10 6548 0292</a></nav>
+      <div class="channels"><span class="mono">CHANNELS</span><a href="https://blog.naver.com/alex-soft" target="_blank" rel="noopener">Naver Blog (Korean) ↗</a><a href="https://www.instagram.com/alexsoft.co.kr" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://github.com/alexsoft-hq" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+      <p class="biz" data-nosnippet>ALEXSOFT (알렉스소프트) · Representative: Yongmin Lee · Business registration: 212-64-01036 · 10, Gwanganhaebyeon-ro 15beon-gil, Suyeong-gu, Busan, South Korea · © <span data-year>2026</span> ALEXSOFT</p>
+    </div>
+  </footer>
+  </body>
+</html>
