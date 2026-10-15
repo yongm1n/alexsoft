@@ -5,27 +5,27 @@
   <script src="/assets/ink.js?v=bilingual-1"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#FAF8F4">
-  <meta name="description" content="Explore the Philippine BIR e-invoice system, certified cloud EMR and brand website work, alongside Cascade, Mokpyo, ALEXSOFT Bridge and Busan &amp; Geoje in View.">
+  <meta name="description" content="Explore e-invoice and cloud EMR projects, open-source Cascade and Mokpyo, and healthcare data integration with Bridge. View screens, source code and consulting options.">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta name="author" content="ALEXSOFT">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="ALEXSOFT">
   <meta property="og:url" content="https://alexsoft.co.kr/en/work/">
-  <meta property="og:title" content="e-invoice &amp; EMR Architecture, Development and Products — ALEXSOFT">
-  <meta property="og:description" content="Projects carried from architecture into development: national e-invoicing, certified cloud EMR and a brand website. See actual screens of Cascade, the open-source analysis engine; Mokpyo, the team goal tool; ALEXSOFT Bridge, the healthcare interoperability tool; and Busan &amp; Geoje in View.">
+  <meta property="og:title" content="e-invoice, EMR and Open-Source Projects | ALEXSOFT">
+  <meta property="og:description" content="Explore e-invoice and cloud EMR projects, open-source Cascade and Mokpyo, and healthcare data integration with Bridge. View screens, source code and consulting options.">
   <meta property="og:image" content="https://alexsoft.co.kr/assets/brand/alexsoft-architecture-og-v1.jpg">
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1536">
   <meta property="og:image:height" content="804">
   <meta property="og:image:alt" content="ALEXSOFT systems architecture and development projects">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="e-invoice &amp; EMR Architecture, Development and Products — ALEXSOFT">
-  <meta name="twitter:description" content="Projects that turn constraints into architecture and working systems, with actual screens of Cascade, Mokpyo, ALEXSOFT Bridge and Busan &amp; Geoje in View.">
+  <meta name="twitter:title" content="e-invoice, EMR and Open-Source Projects | ALEXSOFT">
+  <meta name="twitter:description" content="Explore e-invoice and cloud EMR projects, open-source Cascade and Mokpyo, and healthcare data integration with Bridge. View screens, source code and consulting options.">
   <meta name="twitter:image" content="https://alexsoft.co.kr/assets/brand/alexsoft-architecture-og-v1.jpg">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <title>e-invoice &amp; EMR Architecture, Development and Products | ALEXSOFT</title>
+  <title>e-invoice, EMR and Open-Source Projects | ALEXSOFT</title>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -142,18 +142,27 @@
           "@type": "ListItem",
           "position": 4,
           "item": {
-            "@type": "SoftwareApplication",
+            "@type": [
+              "SoftwareApplication",
+              "SoftwareSourceCode"
+            ],
             "name": "Mokpyo",
             "applicationCategory": "BusinessApplication",
             "operatingSystem": "Web",
             "image": "https://alexsoft.co.kr/assets/work/mokpyo-cards.webp",
             "screenshot": "https://alexsoft.co.kr/assets/work/mokpyo-dashboard.webp",
-            "keywords": "OKR, goal management, team goals, automation",
-            "description": "A team goal and OKR tool with card, table, board, timeline and dashboard views, plus automation rules",
+            "keywords": "OKR, goal management, team goals, open source, self-hosted, MIT, automation, MCP",
+            "description": "An MIT-licensed, self-hosted goal and OKR tool your team uses in a browser. Five views, sub-goal progress rollups, automation and optional AI and MCP connections.",
             "url": "https://alexsoft.co.kr/en/work/#mokpyo",
+            "sameAs": "https://github.com/alexsoft-hq/Mokpyo",
+            "downloadUrl": "https://github.com/alexsoft-hq/Mokpyo/archive/refs/heads/main.zip",
+            "license": "https://github.com/alexsoft-hq/Mokpyo/blob/main/LICENSE",
+            "isAccessibleForFree": true,
             "author": {
               "@id": "https://alexsoft.co.kr/#organization"
-            }
+            },
+            "@id": "https://alexsoft.co.kr/work/#mokpyo",
+            "codeRepository": "https://github.com/alexsoft-hq/Mokpyo"
           }
         },
         {
@@ -233,11 +242,11 @@
       ]
     },
     {
-      "@type": "WebPage",
+      "@type": "CollectionPage",
       "@id": "https://alexsoft.co.kr/en/work/#webpage",
       "url": "https://alexsoft.co.kr/en/work/",
-      "name": "e-invoice & EMR Architecture, Development and Products | ALEXSOFT",
-      "description": "Architecture and development work in national e-invoicing, certified cloud EMR and brand websites, with actual screens of Cascade, Mokpyo, ALEXSOFT Bridge and Busan & Geoje in View",
+      "name": "e-invoice, EMR and Open-Source Projects | ALEXSOFT",
+      "description": "Explore e-invoice and cloud EMR projects, open-source Cascade and Mokpyo, and healthcare data integration with Bridge. View screens, source code and consulting options.",
       "inLanguage": "en",
       "isPartOf": {
         "@id": "https://alexsoft.co.kr/en/#website"
@@ -256,7 +265,8 @@
         "url": "https://alexsoft.co.kr/assets/brand/alexsoft-architecture-og-v1.jpg",
         "width": 1536,
         "height": 804
-      }
+      },
+      "dateModified": "2026-10-15"
     }
   ]
 }
@@ -508,10 +518,15 @@
       <div class="shell">
         <div class="head">
           <div>
-            <div class="nib" aria-hidden="true"><svg viewbox="0 0 64 64"><path fill="#2456E4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"></path></svg><span>OWN PRODUCT · TEAM GOALS</span></div>
-            <h2 id="mokpyo-title">Mokpyo — a team goal tool with five views of the same goals</h2>
+            <div class="nib" aria-hidden="true"><svg viewbox="0 0 64 64"><path fill="#2456E4" fill-rule="evenodd" d="M32 7 59 56H5L32 7Zm0 19L22.5 42l6.6 4.8V56h5.8v-9.2l6.6-4.8L32 26Z"></path></svg><span>OPEN SOURCE · TEAM GOALS</span></div>
+            <h2 id="mokpyo-title">Mokpyo — open source for shared team goals and progress</h2>
           </div>
-          <p>For teams of 10–100, Mokpyo presents goals and OKRs as cards, tables, boards, timelines and dashboards over one dataset. Sub-goal progress rolls up automatically. Rules triggered by approaching deadlines or status changes can send notifications, assign owners or update status. ALEXSOFT founder Yongmin Lee has designed and developed the product since November 2025. The screens below show a demo workspace with fictional teams and goals.</p>
+          <p>See goals, owners and sub-goal progress together as cards, tables, boards, timelines and dashboards. Install Mokpyo on one team server and share the same browser address. The screens below show an earlier demo workspace with fictional teams and goals; the current interface may differ.</p>
+        </div>
+
+        <div class="links" style="margin-bottom:clamp(24px,3vw,40px)">
+          <a href="https://github.com/alexsoft-hq/Mokpyo" target="_blank" rel="noopener">View source on GitHub <span>↗</span></a>
+          <a class="quiet" href="https://github.com/alexsoft-hq/Mokpyo#quick-start-with-docker" target="_blank" rel="noopener">Installation guide <span>↗</span></a>
         </div>
 
         <figure class="shot hero">
@@ -520,12 +535,10 @@
         </figure>
 
         <dl class="facts wide" style="margin-top:clamp(24px,3vw,40px)">
-          <div><dt>Type</dt><dd>Team goal and OKR management SaaS<small>Workspace → Project hierarchy → Goal → Sub-goal · Owner, administrator and member permissions · Email invitations</small></dd></div>
+          <div><dt>Type</dt><dd>Self-hosted, open-source team goals and OKRs<small>Workspace → Project hierarchy → Goal → Sub-goal · Owner, administrator and member permissions · Join through invitation links</small></dd></div>
           <div><dt>Five views</dt><dd>Card · Table · Board · Timeline · Dashboard<small>Per-owner status · Change history · Saved filters · Custom fields for your team</small></dd></div>
           <div><dt>Automation</dt><dd>Sub-goal progress rolls up to parent goals · Automation rules (6 triggers × 6 actions) · Mention and deadline notifications<small>Quarterly cycles · Check-ins · Comments and @mentions · Attachments · Audit log</small></dd></div>
-          <div><dt>Technology</dt><dd>React · TypeScript / Express · Prisma · PostgreSQL<small>Google sign-in · Attachments on server disk or S3 · Data isolated by organization</small></dd></div>
-          <div><dt>Distribution</dt><dd>A set of containers, or an offline installation bundle for air-gapped servers</dd></div>
-          <div><dt>Status</dt><dd>A product built and used in house</dd></div>
+          <div><dt>AI and MCP</dt><dd>Shared AI reports or a connection to your existing AI tool<small>For shared reports, an administrator configures the AI provider, model and API key. Your own AI tool can read goals and records through MCP and write reports without an LLM API key on the Mokpyo server.</small></dd></div>
         </dl>
 
         <div class="gallery">
@@ -570,13 +583,13 @@
         </div>
 
         <div class="steps cols-3" style="margin-top:clamp(28px,4vw,48px)">
-          <div data-reveal=""><span class="mono">WHY</span><h3>Goals in spreadsheets, progress in chat, deadlines in people’s heads</h3><p>Scattered goals are brought together, leaving the team to choose how to view them. All five views share the same data, so a change in one appears in the others.</p></div>
+          <div data-reveal=""><span class="mono">WHY</span><h3>Plenty of tasks, but shared goals were harder to see</h3><p>In a team of around 40 people, Jira and spreadsheets tracked the work. It was still hard to see the week’s shared focus, how tasks connected to goals, and how those goals were progressing. Mokpyo was built and used to address that need.</p></div>
           <div data-reveal=""><span class="mono">HOW</span><h3>The structure came before the screens</h3><p>Data isolation by organization, permissions and invitations, a record of who changed what and when, and automation that executes rules: the foundations of a team tool were designed before the interface was built on top.</p></div>
-          <div data-reveal=""><span class="mono">SO WHAT</span><h3>Data structures, permissions and history determine the quality of a work tool</h3><p>Your internal systems and back office can be designed and built in the same order. The screens come last.</p></div>
+          <div data-reveal=""><span class="mono">SO WHAT</span><h3>Install and adapt it for your team</h3><p>You can install and modify the public source yourself. For deployment, integration or custom features suited to your organization, ALEXSOFT offers separately scoped paid consulting and development.</p></div>
         </div>
 
         <div class="links" style="margin-top:clamp(28px,4vw,44px)">
-          <a href="/en/diagnosis/#inquiry">Discuss internal systems and back-office design <span>→</span></a>
+          <a href="/en/diagnosis/#inquiry">Discuss Mokpyo deployment, integration or custom development <span>→</span></a>
           <a class="quiet" href="/en/diagnosis/">See how we work <span>→</span></a>
         </div>
       </div>
