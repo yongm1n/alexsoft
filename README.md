@@ -72,6 +72,8 @@ python3 -m http.server 8074 --bind 127.0.0.1
 
 `robots.txt`는 Googlebot·Bingbot·OAI-SearchBot·PerplexityBot을 포함한 검색 크롤러에 Insights 수집을 허용한다. 봇별 중복 규칙을 추가하거나 학습용 봇 정책을 임의로 바꾸지 않는다. `llms.txt`는 보조 안내이며 Google 검색·AI 검색 노출의 필수 파일이 아니다. 수집 허용·정상 HTTP 응답·구조화 데이터 유효성과 실제 색인·AI 인용 성과는 구분한다.
 
+이전 `/learn/ai-business-website/slides.html` 주소는 현재 `/insights/ai-business-website/slides.html`로 즉시 이동한다. GitHub Pages의 정적 호스팅에 맞춰 0초 meta refresh와 목적지 canonical을 사용하며, 이전 주소는 사이트맵에 넣지 않는다.
+
 배포 후 Search Console에서 `/sitemap.xml` 처리 상태, 각 글의 URL 검사(색인 가능 여부·Google이 선택한 canonical), 검색 및 생성형 AI 실적을 확인한다. Bing Webmaster Tools에서도 사이트맵과 URL 검사를 확인한다. 계정에서 직접 확인하지 않은 색인·실적은 완료로 기록하지 않는다.
 
 검토 근거(2026-09-13): [Google AI 검색 지침](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide), [Article 구조화 데이터](https://developers.google.com/search/docs/appearance/structured-data/article), [이미지 SEO](https://developers.google.com/search/docs/appearance/google-images), [OpenAI 검색 크롤러](https://developers.openai.com/api/docs/bots).
