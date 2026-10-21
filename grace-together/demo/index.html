@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#31594b" />
+    <meta
+      name="description"
+      content="그레이스 건강동행 — 가족과 센터를 잇는 서비스 체험. 모든 계정과 자료는 가상 샘플입니다."
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; media-src 'self' blob:; connect-src 'self'; object-src 'self' blob:; frame-src 'self' blob:; base-uri 'self'; form-action 'none'"
+    />
+    <title>그레이스 건강동행 · 서비스 체험</title>
+    <link rel="icon" href="./assets/flowers.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./ui.css" />
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">본문으로 바로가기</a>
+    <div class="demo-banner">
+      <span class="demo-label">서비스 체험</span
+      ><span
+        >모든 인물·자료는 샘플입니다. 변경사항은 이 브라우저에만
+        저장됩니다.</span
+      ><button type="button" data-action="tools">체험 안내</button>
+    </div>
+    <div id="app">
+      <main class="loading-state" aria-live="polite">
+        그레이스 건강동행을 준비하고 있어요.
+      </main>
+    </div>
+    <div id="overlay"></div>
+    <div
+      id="toasts"
+      class="toast-stack"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+    ></div>
+    <noscript
+      ><div class="notice warning">
+        서비스 체험에는 JavaScript가 필요합니다. 브라우저 설정에서 JavaScript를
+        허용한 뒤 다시 열어주세요.
+      </div></noscript
+    >
+  </body>
+</html>
