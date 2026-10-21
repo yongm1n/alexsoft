@@ -965,7 +965,7 @@ function spaceModal(id) {
           (s) => s.name,
           (s) => s.accountId,
           (s) =>
-            s.permissions.view && s.permissions.post
+            s.status === "active" && s.permissions.view && s.permissions.post
               ? "게시 가능"
               : "게시 불가",
         )}
