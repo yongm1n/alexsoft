@@ -4,6 +4,7 @@ import { btn } from "./components.js";
 
 let overlayReturn = null;
 let confirmHandler = null;
+let cancelHandler = null;
 
 function closeOverlay(restore = true) {
   const host = $("#overlay");
@@ -14,9 +15,18 @@ function closeOverlay(restore = true) {
   $(".demo-banner").inert = false;
   if (restore && overlayReturn?.isConnected) overlayReturn.focus();
   confirmHandler = null;
+  cancelHandler = null;
+}
+
+function dismissOverlay() {
+  const cancel = cancelHandler;
+  closeOverlay();
+  cancel?.();
 }
 
 function openModal(title, body, footer = "", wide = false) {
+  confirmHandler = null;
+  cancelHandler = null;
   if (!$("#overlay").childElementCount) overlayReturn = document.activeElement;
   $("#overlay").innerHTML = /* HTML */ `<div
     class="modal-backdrop"
@@ -42,7 +52,16 @@ function openModal(title, body, footer = "", wide = false) {
   queueMicrotask(() => $("#overlay button, #overlay input")?.focus());
 }
 
-function confirm(title, body, actionLabel, callback, danger = false) {
+function confirm(
+  title,
+  body,
+  actionLabel,
+  callback,
+  danger = false,
+  restoreOnCancel = false,
+) {
+  const previous = restoreOnCancel ? [...$("#overlay").childNodes] : [];
+  const previousFocus = document.activeElement;
   openModal(
     title,
     body,
@@ -50,6 +69,15 @@ function confirm(title, body, actionLabel, callback, danger = false) {
       btn(actionLabel, "confirm-run", danger ? "danger" : "primary"),
   );
   confirmHandler = callback;
+  cancelHandler = previous.length
+    ? () => {
+        $("#overlay").replaceChildren(...previous);
+        document.body.classList.add("overlay-open");
+        $("#app").inert = true;
+        $(".demo-banner").inert = true;
+        if (previousFocus?.isConnected) previousFocus.focus();
+      }
+    : null;
 }
 
 function openDrawer(markup) {
@@ -81,7 +109,7 @@ function trapOverlayKeys(event) {
   if (!$("#overlay").childElementCount) return;
   if (event.key === "Escape") {
     event.preventDefault();
-    closeOverlay();
+    dismissOverlay();
     return;
   }
   if (event.key !== "Tab") return;
@@ -103,6 +131,7 @@ function trapOverlayKeys(event) {
 
 export {
   closeOverlay,
+  dismissOverlay,
   openModal,
   confirm,
   openDrawer,

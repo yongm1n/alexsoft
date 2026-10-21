@@ -3738,3 +3738,767 @@ td .button {
     scroll-behavior: auto !important;
   }
 }
+
+/* Repeated visits prioritize family news and focused staff work. */
+.main > section.hero.family-welcome {
+  display: block;
+  position: relative;
+  min-height: 0;
+  margin: 0;
+  padding: 22px 24px;
+  border-radius: 18px;
+  background: #eaf0e3;
+}
+.family-welcome-copy {
+  position: relative;
+  z-index: 1;
+  max-width: calc(100% - 135px);
+}
+.family-welcome .person-cell {
+  gap: 13px;
+  min-width: 0;
+}
+.family-welcome .person-cell > div {
+  min-width: 0;
+}
+.family-welcome h1 {
+  font-size: 25px;
+  margin: 2px 0 3px;
+  line-height: 1.45;
+}
+.family-welcome p {
+  margin: 0;
+  max-width: none;
+  color: #52654b;
+  font-size: 14px;
+}
+.family-welcome .family-account {
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+.family-welcome-art {
+  position: absolute;
+  width: 150px;
+  height: 116px;
+  object-fit: contain;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.main > .family-pinned,
+.main > .family-recent {
+  margin-top: 24px;
+}
+.family-pinned .section-heading,
+.family-recent .section-heading {
+  margin: 0 0 13px;
+}
+.family-pinned .section-heading h2,
+.family-recent .section-heading h2 {
+  font-size: 21px;
+}
+.family-pinned .pin-card {
+  padding: 16px 20px;
+  gap: 14px;
+  border-radius: 13px;
+}
+.family-pinned .pin-card h3 {
+  font-size: 18px;
+  margin: 3px 0 4px;
+}
+.family-pinned .pin-card p {
+  font-size: 15px;
+  line-height: 1.55;
+  -webkit-line-clamp: 2;
+}
+.family-pinned .pin-card small {
+  font-size: 13px;
+  margin-top: 6px;
+}
+.family-pinned .post-meta {
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+.family-recent .post-card-body > p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+.family-recent .post-meta,
+.family-recent .post-author {
+  font-size: 13px;
+}
+.family-recent .post-title {
+  font-size: 19px;
+}
+.resident-search-controls,
+.admin-search-controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+.resident-search-controls .search-field,
+.admin-search-controls .search-field {
+  max-width: 440px;
+}
+.resident-search-controls .filter-count,
+.admin-search-controls .filter-count {
+  margin: 0;
+  font-size: 14px;
+}
+.main > .staff-residents {
+  margin-top: 20px;
+}
+.staff-residents .resident-card.card {
+  padding: 20px;
+}
+.staff-residents .person-cell > div {
+  min-width: 0;
+  flex: 1;
+}
+.staff-residents .person-cell h2 {
+  font-size: 19px;
+  margin: 0 0 3px;
+}
+.staff-residents .person-cell small {
+  font-size: 14px;
+}
+.staff-residents .resident-card .person-cell > .pill {
+  margin: 0;
+}
+.resident-facts {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.resident-facts strong {
+  color: var(--ink);
+  font-weight: 550;
+  margin-left: 4px;
+}
+.staff-residents .form-actions {
+  margin-top: 16px;
+  padding-top: 15px;
+}
+.staff-residents .form-actions .button {
+  font-size: 14px;
+}
+.draft-resume {
+  align-items: center;
+}
+.compose-columns {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-areas: "metadata media" "story media";
+  align-items: start;
+}
+.compose-metadata {
+  grid-area: metadata;
+}
+.compose-media {
+  grid-area: media;
+}
+.compose-story {
+  grid-area: story;
+}
+.compose-target-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 14px;
+}
+.compose-metadata > .field {
+  margin: 18px 0 0 !important;
+}
+.compose-metadata .draft-status {
+  font-size: 13px;
+  margin: 12px 0 0;
+}
+.compose-media .section-heading {
+  margin: 0 0 15px;
+}
+.compose-media .section-heading h2 {
+  font-size: 20px;
+}
+.compose-media .upload-zone {
+  padding: 18px;
+  text-align: left;
+  background: #f8faf4;
+}
+.compose-media .upload-zone p {
+  font-size: 14px;
+  margin: 0;
+}
+.compose-media .sample-picker {
+  justify-content: flex-start;
+  margin-top: 14px;
+  gap: 8px;
+}
+.compose-media .sample-picker .button {
+  min-height: 44px;
+  font-size: 14px;
+}
+.compose-media .attachment-guidance {
+  font-size: 13px;
+  line-height: 1.65;
+  margin: 12px 0 0;
+}
+.compose-media .notice {
+  font-size: 13px;
+  margin-bottom: 0;
+}
+.compose-media .attachment-empty {
+  padding: 15px;
+  font-size: 13px;
+}
+.compose-story .field > span > small {
+  font-size: 13px;
+  font-weight: 400;
+  margin-left: 4px;
+}
+.compose-story .field textarea {
+  min-height: 116px;
+}
+.compose-story .check-row {
+  margin-top: 18px;
+}
+.focus-workflow .mobile-nav {
+  display: none;
+}
+.focus-workflow .page-heading .eyebrow {
+  display: none;
+}
+.focus-workflow .page-heading {
+  margin-bottom: 20px;
+}
+.focus-workflow .compose-form .sticky-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  bottom: 0;
+  padding: 12px 18px;
+  border-radius: 12px;
+}
+.focus-workflow .sticky-actions .form-actions {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.focus-workflow .compose-form .sticky-actions .button {
+  min-height: 44px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.assignment-list {
+  position: relative;
+  max-height: 260px;
+  overflow: auto;
+  overscroll-behavior: contain;
+  padding: 4px 8px 4px 2px;
+  border-top: 1px solid var(--line);
+}
+.assignment-list .check-row {
+  padding: 9px 2px;
+  border-bottom: 1px solid #e8ede2;
+  align-items: flex-start;
+}
+.assignment-list .check-row:last-child {
+  border-bottom: 0;
+}
+.assignment-list .check-row span,
+.assignment-list .check-row strong {
+  font-size: 14px;
+}
+.assignment-list .check-row small {
+  display: block;
+  font-size: 13px;
+  margin-top: 2px;
+  color: var(--muted);
+}
+.assignment-count {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0 0 8px;
+}
+.toast.error {
+  background: #8e4839;
+  border-color: #b27460;
+  color: white;
+}
+.toast.info {
+  background: #edf3ee;
+  border-color: #b7c9b8;
+  color: #315542;
+}
+
+@media (max-width: 800px) {
+  .focus-workflow .main {
+    padding-bottom: calc(88px + env(safe-area-inset-bottom));
+  }
+  .compose-columns {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "metadata" "media" "story";
+  }
+}
+@media (max-width: 600px) {
+  .main > section.hero.family-welcome {
+    padding: 16px 18px;
+    border-radius: 15px;
+  }
+  .family-welcome-copy {
+    max-width: calc(100% - 64px);
+  }
+  .family-welcome .resident-avatar {
+    display: none;
+  }
+  .family-welcome h1 {
+    font-size: 21px;
+    margin: 3px 0;
+  }
+  .family-welcome p {
+    font-size: 13px;
+  }
+  .family-welcome .family-account {
+    font-size: 13px;
+  }
+  .family-welcome-art {
+    width: 92px;
+    height: 98px;
+    right: -3px;
+  }
+  .main > .family-pinned,
+  .main > .family-recent {
+    margin-top: 21px;
+  }
+  .family-pinned .section-heading,
+  .family-recent .section-heading {
+    margin-bottom: 11px;
+  }
+  .family-pinned .section-heading h2,
+  .family-recent .section-heading h2 {
+    font-size: 19px;
+  }
+  .family-pinned .section-heading > .small {
+    font-size: 12px;
+  }
+  .family-pinned .pin-card {
+    padding: 13px 14px;
+    gap: 10px;
+  }
+  .family-pinned .pin-card h3 {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .family-pinned .pin-card p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .family-pinned .pin-card .pin-icon {
+    flex-basis: 26px;
+    min-width: 26px;
+    width: 26px;
+    height: 26px;
+  }
+  .family-pinned .pin-card small,
+  .family-pinned .post-meta {
+    font-size: 13px;
+  }
+  .family-pinned .pin-card small {
+    margin-top: 4px;
+  }
+  .family-pinned .pin-card + .pin-card {
+    margin-top: 9px;
+  }
+  .family-recent .grid.three {
+    gap: 12px;
+  }
+  .family-recent .grid.three .post-card,
+  .family-recent .grid.three .post-card:last-child:nth-child(odd) {
+    display: grid;
+    grid-template-columns: 102px minmax(0, 1fr);
+    border-radius: 13px;
+  }
+  .family-recent .post-card .post-art,
+  .family-recent .grid.three .post-card:last-child:nth-child(odd) .post-art {
+    height: 100%;
+    min-height: 148px;
+    aspect-ratio: auto;
+  }
+  .family-recent .post-art > img {
+    object-fit: cover;
+  }
+  .family-recent .post-card-body {
+    padding: 15px 14px;
+  }
+  .family-recent .post-meta {
+    font-size: 13px;
+    gap: 5px;
+    margin-bottom: 5px;
+  }
+  .family-recent .post-title {
+    font-size: 17px;
+    margin-bottom: 6px;
+    line-height: 1.5;
+  }
+  .family-recent .post-card-body > p {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+  .family-recent .post-author {
+    font-size: 13px;
+    padding-top: 9px;
+    margin-top: 10px;
+  }
+  .family-recent .art-label {
+    display: none;
+  }
+  .family-recent .play-badge {
+    width: 39px;
+    height: 39px;
+  }
+  .family-recent .play-badge svg {
+    width: 17px;
+    height: 17px;
+  }
+  .resident-search-controls,
+  .admin-search-controls {
+    gap: 9px;
+    margin-bottom: 14px;
+  }
+  .resident-search-controls .search-field,
+  .admin-search-controls .search-field {
+    flex-basis: 100%;
+  }
+  .resident-search-controls .filter-count,
+  .admin-search-controls .filter-count {
+    font-size: 13px;
+  }
+  .staff-residents .resident-card.card {
+    padding: 17px;
+  }
+  .staff-residents .person-cell {
+    gap: 10px;
+  }
+  .staff-residents .person-cell > div {
+    min-width: 0;
+  }
+  .staff-residents .person-cell h2 {
+    font-size: 18px;
+  }
+  .staff-residents .person-cell small {
+    font-size: 13px;
+  }
+  .staff-residents .resident-card .person-cell > .pill {
+    margin: 0;
+    font-size: 11px;
+  }
+  .staff-residents .resident-card .resident-avatar {
+    width: 38px;
+    height: 38px;
+    font-size: 14px;
+  }
+  .staff-residents .form-actions {
+    margin-top: 13px;
+    padding-top: 13px;
+  }
+  .staff-residents .form-actions .button {
+    font-size: 14px;
+  }
+  .resident-facts {
+    margin-top: 12px;
+    gap: 7px 12px;
+    font-size: 13px;
+  }
+  .draft-resume {
+    flex-wrap: wrap;
+  }
+  .draft-resume > span {
+    flex: 1;
+  }
+  .draft-resume > .button {
+    margin-left: 28px;
+  }
+  .focus-workflow .main {
+    padding-top: 19px;
+  }
+  .focus-workflow .page-heading {
+    margin-bottom: 15px;
+  }
+  .focus-workflow .page-heading h1 {
+    font-size: 23px;
+  }
+  .focus-workflow .page-heading p {
+    font-size: 13px;
+  }
+  .focus-workflow .stepper {
+    margin-bottom: 18px;
+  }
+  .focus-workflow .step {
+    padding-bottom: 9px;
+  }
+  .focus-workflow .compose-columns {
+    gap: 15px;
+  }
+  .focus-workflow .compose-columns > .card {
+    padding: 18px;
+  }
+  .compose-target-row {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    gap: 11px;
+  }
+  .compose-target-row .field > span {
+    font-size: 13px;
+  }
+  .compose-target-row .field select {
+    font-size: 14px;
+    padding: 10px 9px;
+    min-height: 45px;
+  }
+  .compose-metadata > .field {
+    margin-top: 14px !important;
+  }
+  .compose-metadata .draft-status {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+  .compose-media .section-heading {
+    margin-bottom: 12px;
+  }
+  .compose-media .section-heading h2 {
+    font-size: 18px;
+  }
+  .compose-media .upload-zone {
+    padding: 14px;
+  }
+  .compose-media .sample-picker {
+    margin-top: 12px;
+    gap: 7px;
+  }
+  .compose-media .sample-picker .button {
+    font-size: 13px;
+    padding: 9px 11px;
+  }
+  .compose-media .attachment-list {
+    margin-top: 13px;
+  }
+  .compose-media .notice {
+    font-size: 13px;
+    padding: 12px;
+  }
+  .compose-story .field textarea {
+    min-height: 108px;
+  }
+  .focus-workflow .compose-form .sticky-actions {
+    padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+    border-radius: 12px 12px 0 0;
+    margin: 0 -4px;
+  }
+  .focus-workflow .compose-form .sticky-actions .form-actions {
+    flex: 1;
+    gap: 9px;
+  }
+  .focus-workflow .compose-form .sticky-actions .button {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+  .assignment-list {
+    max-height: 250px;
+  }
+  .staff-table-wrap,
+  .table-wrap:has(.staff-table) {
+    border: 0;
+    overflow: visible;
+    background: transparent;
+  }
+  .staff-table,
+  .staff-table tbody {
+    display: block;
+    min-width: 0;
+    width: 100%;
+  }
+  .staff-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+  }
+  .staff-table tr {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    position: relative;
+    border: 1px solid var(--line);
+    border-radius: 13px;
+    background: white;
+    padding: 17px;
+    margin-bottom: 13px;
+  }
+  .staff-table td {
+    display: block;
+    padding: 8px 0 0;
+    border: 0;
+    min-width: 0;
+    grid-column: 1 / -1;
+    overflow-wrap: anywhere;
+    font-size: 14px;
+  }
+  .staff-table td:first-child {
+    grid-column: 1;
+    padding-top: 0;
+    padding-right: 8px;
+  }
+  .staff-table td:last-child {
+    grid-column: 2;
+    grid-row: 1;
+    padding-top: 0;
+    align-self: start;
+  }
+  .staff-table td:not(:first-child):not(:last-child)::before {
+    content: attr(data-label);
+    display: block;
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 3px;
+  }
+  .staff-table .person-cell {
+    min-width: 0;
+    gap: 8px;
+  }
+  .staff-table .person-cell > span:last-child {
+    min-width: 0;
+  }
+  .staff-table .person-cell .resident-avatar {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+  .staff-table .person-cell strong {
+    font-size: 15px;
+  }
+  .staff-table .person-cell small {
+    font-size: 13px;
+  }
+  .staff-table td .button {
+    font-size: 13px;
+    min-height: 44px;
+    padding: 10px 12px;
+  }
+  .login-layout .login-story {
+    padding-top: 19px;
+    padding-bottom: 18px;
+  }
+  .login-story .login-story-copy > .eyebrow {
+    display: none;
+  }
+  .login-story .login-story-copy h1 {
+    font-size: 26px;
+    margin: 20px 0 8px;
+  }
+  .login-story .login-story-copy > p:not(.eyebrow) {
+    font-size: 13px;
+  }
+  .login-story > .login-illustration {
+    position: absolute;
+    right: 4px;
+    bottom: 10px;
+    width: 108px !important;
+    max-width: 31% !important;
+    height: 100px !important;
+    margin: 0 !important;
+  }
+  .login-story .login-story-copy {
+    max-width: calc(100% - 55px);
+  }
+  .login-panel {
+    padding-top: 24px;
+  }
+}
+@media (max-width: 359px) {
+  .family-welcome h1 {
+    font-size: 19px;
+  }
+  .family-welcome .family-account {
+    font-size: 13px;
+  }
+  .family-welcome-copy {
+    max-width: calc(100% - 54px);
+  }
+  .family-welcome-art {
+    width: 75px;
+    right: -4px;
+  }
+  .family-pinned .section-heading > .small {
+    font-size: 11px;
+  }
+  .family-pinned .pin-card {
+    padding: 12px;
+    gap: 8px;
+  }
+  .family-recent .grid.three .post-card,
+  .family-recent .grid.three .post-card:last-child:nth-child(odd) {
+    grid-template-columns: 87px minmax(0, 1fr);
+  }
+  .family-recent .post-card-body {
+    padding: 13px 12px;
+  }
+  .family-recent .post-title {
+    font-size: 16px;
+  }
+  .compose-target-row {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 8px;
+  }
+  .focus-workflow .compose-form .sticky-actions .button {
+    font-size: 13px;
+    padding: 10px 9px;
+  }
+  .staff-table tr {
+    padding: 14px;
+  }
+  .staff-table .person-cell .resident-avatar {
+    display: none;
+  }
+  .login-story .login-story-copy h1 {
+    font-size: 24px;
+  }
+  .login-story > .login-illustration {
+    width: 87px !important;
+    max-width: 29% !important;
+    height: 84px !important;
+    right: 0;
+  }
+}
+/* Keep the selected recipient fully visible while title and type remain close. */
+.compose-metadata > .field {
+  margin: 0 !important;
+}
+.compose-metadata .compose-target-row {
+  margin-top: 14px;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.2fr);
+}
+.focus-workflow .workflow-back {
+  margin-bottom: 10px;
+  min-height: 36px;
+  font-size: 13px;
+}
+@media (max-width: 359px) {
+  .compose-target-row .field select {
+    font-size: 13px;
+    padding-inline: 8px;
+  }
+}
+.compose-recipient-account {
+  overflow-wrap: anywhere;
+  line-height: 1.5;
+}
+.focus-workflow .workflow-back {
+  min-height: 44px;
+}
+.compose-metadata .compose-recipient-account{
+  font-size: 13px;
+}

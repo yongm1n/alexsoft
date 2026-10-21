@@ -27,6 +27,7 @@ import {
 } from "./ui/drafts.js";
 import {
   closeOverlay,
+  dismissOverlay,
   openModal,
   confirm,
   openDrawer,
@@ -46,7 +47,8 @@ let epoch = 0,
   currentRole = "family",
   filter = "all",
   query = "",
-  busy = false;
+  busy = false,
+  publishing = false;
 
 function currentRoute() {
   try {
@@ -66,15 +68,95 @@ const homeRoute = () =>
     : session()?.role === "staff"
       ? "/residents"
       : "/home";
-const toast = (text) => {
+const toast = (text, tone = "success") => {
   clearTimeout(toastTimer);
   $("#toasts").innerHTML =
-    `<div class="toast">${icon("check", 18)}${esc(text)}</div>`;
+    `<div class="toast ${tone}" role="${tone === "error" ? "alert" : "status"}">${icon(tone === "success" ? "check" : "info", 18)}${esc(text)}</div>`;
   toastTimer = setTimeout(() => $("#toasts").replaceChildren(), 4500);
 };
 function navigate(route) {
   if (currentRoute() === route) render();
   else location.hash = route;
+}
+
+// Filtering changes visibility only: a hidden checked assignment remains selected.
+const listFilters = new Map();
+function filterList(container, restore = false) {
+  const search = $("[data-list-search]", container);
+  const status = $("[data-list-status]", container);
+  const key = `${session()?.accountId}:${container.dataset.listScope}`;
+  const previous = listFilters.get(key);
+  if (restore && previous) {
+    if (search) search.value = previous.query;
+    if (status) status.value = previous.status;
+  }
+  const state = { query: search?.value || "", status: status?.value || "all" };
+  listFilters.set(key, state);
+  const needle = state.query.trim().toLocaleLowerCase();
+  const rows = [...container.querySelectorAll("[data-list-row]")];
+  let visible = 0;
+  for (const row of rows) {
+    row.hidden = !(
+      row.dataset.search.toLocaleLowerCase().includes(needle) &&
+      (state.status === "all" || row.dataset.status === state.status)
+    );
+    if (!row.hidden) visible++;
+  }
+  const count = $("[data-list-count]", container);
+  if (count) count.textContent = `${visible}명 표시 · 전체 ${rows.length}명`;
+  const emptyState = $("[data-list-empty]", container);
+  if (emptyState) emptyState.hidden = visible > 0;
+}
+function restoreListFilters() {
+  document
+    .querySelectorAll("[data-list-scope]")
+    .forEach((container) => filterList(container, true));
+}
+function assignmentPicker(
+  title,
+  name,
+  items,
+  selected,
+  label,
+  identity,
+  detail = () => "",
+) {
+  const ordered = [...items].sort(
+    (a, b) => Number(selected.includes(b.id)) - Number(selected.includes(a.id)),
+  );
+  return `<fieldset class="fieldset" data-assignment-picker><legend>${esc(title)}</legend>
+    <label class="field"><span>${esc(title)} 검색</span><input type="search" data-assignment-search placeholder="이름 또는 계정 ID" autocomplete="off"></label>
+    <p class="assignment-count" data-assignment-count aria-live="polite">${selected.length}명 선택 · 전체 ${items.length}명</p>
+    <div class="assignment-list">${ordered
+      .map(
+        (
+          item,
+        ) => `<label class="check-row" data-assignment-row data-search="${esc(label(item) + " " + identity(item))}">
+      <input name="${name}" type="checkbox" value="${esc(item.id)}" ${selected.includes(item.id) ? "checked" : ""}>
+      <span>${esc(label(item))}<small><span>${esc(identity(item))}</span> · ${item.status === "active" ? "이용 중" : "이용 중단"}${detail(item) ? " · " + esc(detail(item)) : ""}</small></span>
+    </label>`,
+      )
+      .join(
+        "",
+      )}</div><p class="small muted" data-assignment-empty hidden>일치하는 대상이 없어요. 이름이나 계정 ID를 다시 확인해주세요.</p>
+    <p class="small muted">선택한 대상을 먼저 표시해요. 검색해도 기존 선택은 유지됩니다.</p></fieldset>`;
+}
+function filterAssignments(picker) {
+  const needle = $("[data-assignment-search]", picker)
+    .value.trim()
+    .toLocaleLowerCase();
+  const rows = [...picker.querySelectorAll("[data-assignment-row]")];
+  let visible = 0;
+  for (const row of rows) {
+    row.hidden = !row.dataset.search.toLocaleLowerCase().includes(needle);
+    if (!row.hidden) visible++;
+  }
+  const selected = picker.querySelectorAll(
+    'input[type="checkbox"]:checked',
+  ).length;
+  $("[data-assignment-count]", picker).textContent =
+    `${selected}명 선택 · ${visible}명 표시 / 전체 ${rows.length}명`;
+  $("[data-assignment-empty]", picker).hidden = visible > 0;
 }
 
 function navItems(role) {
@@ -104,10 +186,11 @@ function shell() {
       ([i, t, p]) =>
         /* HTML */ `<a
           href="#${p}"
-          class="nav-link ${route === p ||
-          (p === "/feed" && route.startsWith("/post/"))
-            ? "active"
-            : ""}"
+          class="nav-link ${
+            route === p || (p === "/feed" && route.startsWith("/post/"))
+              ? "active"
+              : ""
+          }"
           ${route === p ? 'aria-current="page"' : ""}
           >${icon(i)}<span>${t}</span></a
         >`,
@@ -188,6 +271,10 @@ function errorView(err) {
 async function render() {
   const ticket = ++epoch,
     route = currentRoute();
+  document.body.classList.toggle(
+    "focus-workflow",
+    !!session() && /^\/(compose|review)(\/|$)/.test(route),
+  );
   closeOverlay(false);
   if (route === "/login" || !session()) {
     await renderLogin(ticket);
@@ -196,6 +283,7 @@ async function render() {
   $("#app").innerHTML = shell();
   try {
     await request("GET", "/session");
+    if (ticket !== epoch) return;
     let html;
     if (route === "/" || route === "/login") {
       navigate(homeRoute());
@@ -223,6 +311,7 @@ async function render() {
       );
     if (ticket !== epoch) return;
     $("#main").innerHTML = html;
+    restoreListFilters();
     const storage = api.getStorageStatus?.();
     if (storage && !storage.persistent)
       $("#main").insertAdjacentHTML(
@@ -349,9 +438,9 @@ function renderAccounts() {
                   a.role === "staff" ? a.name + " 선생님" : a.label || a.name,
                 )}</strong
               ><small
-                >${esc(a.id)}${a.status && a.status !== "active"
-                  ? " · 이용 중단"
-                  : ""}</small
+                >${esc(a.id)}${
+                  a.status && a.status !== "active" ? " · 이용 중단" : ""
+                }</small
               ></span
             >${icon("arrow", 18)}
           </button>`,
@@ -360,6 +449,7 @@ function renderAccounts() {
 }
 
 async function familyHome() {
+  const ticket = epoch;
   const residents = await request("GET", "/residents");
   const r = residents[0];
   if (!r)
@@ -371,6 +461,7 @@ async function familyHome() {
     request("GET", `/residents/${r.id}/posts`),
     request("GET", "/blog"),
   ]);
+  if (ticket !== epoch) return "";
   view = { ...view, resident: r, posts, blog };
   const pinned = posts
     .filter((p) => p.pinned)
@@ -382,6 +473,7 @@ async function familyHome() {
   return renderFamilyHome({ resident: r, pinned, recent, blog });
 }
 async function feed(residentId) {
+  const ticket = epoch;
   const residents = await request("GET", "/residents"),
     r = residents.find((r) => r.id === residentId) || residents[0];
   if (!r)
@@ -390,6 +482,7 @@ async function feed(residentId) {
       "관리자에게 담당 배정을 요청해주세요.",
     );
   const posts = await request("GET", `/residents/${r.id}/posts`);
+  if (ticket !== epoch) return "";
   view = { ...view, resident: r, posts };
   return renderFeed({
     resident: r,
@@ -417,8 +510,10 @@ function feedResults() {
   return renderFeedResults(posts, query);
 }
 async function postDetail(id) {
+  const ticket = epoch;
   const p = await request("GET", `/posts/${id}`);
   const r = await request("GET", `/residents/${p.residentId}`);
+  if (ticket !== epoch) return "";
   view = { ...view, post: p, resident: r };
   return renderPostDetail({
     post: p,
@@ -429,11 +524,13 @@ async function postDetail(id) {
   });
 }
 async function staffHome() {
+  const ticket = epoch;
   const residents = await request("GET", "/residents");
   const d = await request("GET", "/drafts/current").catch((err) => {
     if (err.status === 403) return null;
     throw err;
   });
+  if (ticket !== epoch) return "";
   view = { ...view, residents };
   return renderStaffHome({ residents, savedDraft: d, canPost: can("post") });
 }
@@ -452,6 +549,7 @@ function draftFields() {
 }
 
 async function compose(residentId) {
+  const ticket = epoch;
   if (!can("post"))
     throw Object.assign(new Error("담당 직원만 소식을 작성할 수 있습니다."), {
       status: 403,
@@ -462,8 +560,10 @@ async function compose(residentId) {
       "담당 어르신이 없어요",
       "관리자에게 담당 배정을 요청해주세요.",
     );
+  if (ticket !== epoch) return "";
   if (!draft) {
     const saved = await request("GET", "/drafts/current");
+    if (ticket !== epoch) return "";
     draft =
       saved && (!residentId || saved.residentId === residentId)
         ? { ...saved, idempotencyKey: crypto.randomUUID() }
@@ -478,6 +578,7 @@ async function compose(residentId) {
       new Error("작성 대상의 담당 배정이나 이용 상태가 변경되었습니다."),
       { status: 403 },
     );
+  if (ticket !== epoch) return "";
   view = { ...view, residents };
   return renderCompose({ residents, draft });
 }
@@ -497,31 +598,39 @@ function review() {
 }
 
 async function adminHome() {
+  const ticket = epoch;
   const [o, jobs] = await Promise.all([
     request("GET", "/admin/overview"),
     request("GET", "/admin/deletions"),
   ]);
+  if (ticket !== epoch) return "";
   view = { ...view, jobs };
   return renderAdminHome({ overview: o, jobs });
 }
 async function adminStaff() {
+  const ticket = epoch;
   const [staff, residents] = await Promise.all([
     request("GET", "/admin/staff"),
     request("GET", "/admin/residents"),
   ]);
+  if (ticket !== epoch) return "";
   view = { ...view, staff, residents };
   return renderAdminStaff({ staff, residents });
 }
 async function adminSpaces() {
+  const ticket = epoch;
   const [residents, staff] = await Promise.all([
     request("GET", "/admin/residents"),
     request("GET", "/admin/staff"),
   ]);
+  if (ticket !== epoch) return "";
   view = { ...view, residents, staff };
   return renderAdminSpaces({ residents, staff });
 }
 async function adminBlog() {
+  const ticket = epoch;
   const blog = await request("GET", "/admin/blog");
+  if (ticket !== epoch) return "";
   view = { ...view, blog };
   return renderAdminBlog(blog);
 }
@@ -637,9 +746,11 @@ function toolsDrawer() {
               ${apiLog()}
             </div>
           </section>
-          ${session()
-            ? `<section>${btn(icon("logout", 17) + " 체험 계정 로그아웃", "logout")}</section>`
-            : ""}
+          ${
+            session()
+              ? `<section>${btn(icon("logout", 17) + " 체험 계정 로그아웃", "logout")}</section>`
+              : ""
+          }
           <section class="reset-section">
             <h3>처음 상태로 돌아가기</h3>
             <p class="small muted">
@@ -672,9 +783,9 @@ function apiLog() {
             <span class="api-method">${esc(l.method)}</span
             ><code>${esc(l.path)}</code
             ><span
-              class="${l.status >= 400 || l.status === 0
-                ? "api-error"
-                : "api-success"}"
+              class="${
+                l.status >= 400 || l.status === 0 ? "api-error" : "api-success"
+              }"
               >${l.status || "연결 실패"}</span
             ><small>${l.duration}ms</small>
           </div>`,
@@ -697,10 +808,19 @@ api.onChange?.(() => {
   if ($("#api-log")) $("#api-log").innerHTML = apiLog();
 });
 async function showMedia(id) {
-  const a = await request("GET", `/attachments/${id}`);
+  const ticket = epoch;
+  const route = currentRoute();
+  const accountId = session()?.accountId;
   const related =
-      view.post?.attachments.filter((x) => x.type === "image") || [],
-    index = related.findIndex((x) => x.id === id);
+    view.post?.attachments.filter((x) => x.type === "image") || [];
+  const a = await request("GET", `/attachments/${id}`);
+  if (
+    ticket !== epoch ||
+    route !== currentRoute() ||
+    accountId !== session()?.accountId
+  )
+    return;
+  const index = related.findIndex((x) => x.id === id);
   const content =
     a.type === "image"
       ? /* HTML */ `<div class="media-stage">
@@ -755,49 +875,33 @@ function staffModal(id) {
         "직원 이름",
         "name",
         s.name,
-        'required maxlength="30" placeholder="가상 이름"',
+        'required maxlength="40" placeholder="가상 이름"',
       )}${field(
         "개인 계정 ID",
         "accountId",
         s.accountId,
-        `${id ? "readonly" : ""} required minlength="3" maxlength="40" pattern="[a-zA-Z0-9](?:[a-zA-Z0-9_]|-)+" placeholder="sample-staff03"`,
-      )}${id
-        ? /* HTML */ `<label class="field"
-            ><span>이용 상태</span
-            ><select name="status">
-              <option value="active" ${s.status === "active" ? "selected" : ""}>
-                이용 중
-              </option>
-              <option
-                value="suspended"
-                ${s.status === "suspended" ? "selected" : ""}
-              >
-                이용 중단
-              </option>
-            </select></label
-          >`
-        : ""}
-      <fieldset class="fieldset">
-        <legend>담당 어르신</legend>
-        ${view.residents
-          .filter((r) => r.status === "active")
-          .map(
-            (r) =>
-              /* HTML */ `<label class="check-row"
-                ><input
-                  name="residentIds"
-                  type="checkbox"
-                  value="${r.id}"
-                  ${s.residentIds.includes(r.id) ? "checked" : ""}
-                /><span
-                  >${esc(r.name)} 어르신<small
-                    >${esc(r.familyAccountId)}</small
-                  ></span
-                ></label
-              >`,
-          )
-          .join("")}
-      </fieldset>
+        `${id ? "readonly" : ""} required minlength="3" maxlength="50" pattern="[a-zA-Z0-9_\\-]{3,50}" placeholder="sample-staff03"`,
+      )}${
+        id
+          ? /* HTML */ `<label class="field"
+              ><span>이용 상태</span
+              ><select name="status">
+                <option
+                  value="active"
+                  ${s.status === "active" ? "selected" : ""}
+                >
+                  이용 중
+                </option>
+                <option
+                  value="suspended"
+                  ${s.status === "suspended" ? "selected" : ""}
+                >
+                  이용 중단
+                </option>
+              </select></label
+            >`
+          : ""
+      }
       <fieldset class="fieldset">
         <legend>사용 가능한 기능</legend>
         ${[
@@ -811,6 +915,18 @@ function staffModal(id) {
           )
           .join("")}
       </fieldset>
+      ${assignmentPicker(
+        "담당 어르신",
+        "residentIds",
+        view.residents.filter((r) =>
+          id
+            ? !["deleted", "deletion_pending"].includes(r.status)
+            : r.status === "active",
+        ),
+        s.residentIds,
+        (r) => r.name + " 어르신",
+        (r) => r.familyAccountId,
+      )}
       ${notice(
         "배정·기능·이용 상태가 변경되면 이 직원의 기존 세션은 다시 로그인해야 합니다.",
       )}
@@ -834,57 +950,54 @@ function spaceModal(id) {
           "어르신 이름",
           "name",
           r.name,
-          'required maxlength="30" placeholder="가상 이름"',
+          'required maxlength="40" placeholder="가상 이름"',
         )}${field(
           "가족 공용 계정 ID",
           "familyAccountId",
           r.familyAccountId,
-          `${id ? "readonly" : ""} required minlength="3" maxlength="40" pattern="[a-zA-Z0-9](?:[a-zA-Z0-9_]|-)+" placeholder="sample-family05"`,
+          `${id ? "readonly" : ""} required minlength="3" maxlength="50" pattern="[a-zA-Z0-9_\\-]{3,50}" placeholder="sample-family05"`,
         )}
-        <fieldset class="fieldset">
-          <legend>담당 직원</legend>
-          ${view.staff
-            .filter((s) => s.status === "active")
-            .map(
-              (s) =>
-                /* HTML */ `<label class="check-row"
-                  ><input
-                    name="staffIds"
-                    type="checkbox"
-                    value="${esc(s.id)}"
-                    ${r.staffIds.includes(s.id) ? "checked" : ""}
-                  /><span>${esc(s.name)}</span></label
-                >`,
-            )
-            .join("")}
-        </fieldset>
+        ${assignmentPicker(
+          "담당 직원",
+          "staffIds",
+          view.staff,
+          r.staffIds,
+          (s) => s.name,
+          (s) => s.accountId,
+          (s) =>
+            s.permissions.view && s.permissions.post
+              ? "게시 가능"
+              : "게시 불가",
+        )}
         ${notice(
           "한 어르신의 가족들은 이 공용 계정을 함께 사용합니다. 가족별 가입·초대는 필요하지 않아요.",
         )}
         <div class="form-error" role="alert"></div>
       </form>
-      ${id
-        ? /* HTML */ `<hr />
-            <div class="space-management">
-              <h3>계정 복구와 공간 삭제</h3>
-              <p class="small muted">
-                공용 계정 재발급은 모든 가족의 기존 세션을 종료합니다.
-              </p>
-              <div class="form-actions">
-                ${btn(
-                  "공용 계정 재발급",
-                  "reset-password",
-                  "secondary",
-                  `data-id="${r.id}"`,
-                )}${btn(
-                  "공간 삭제 요청",
-                  "delete-space",
-                  "danger",
-                  `data-id="${r.id}"`,
-                )}
-              </div>
-            </div>`
-        : ""}`,
+      ${
+        id
+          ? /* HTML */ `<hr />
+              <div class="space-management">
+                <h3>계정 복구와 공간 삭제</h3>
+                <p class="small muted">
+                  공용 계정 재발급은 모든 가족의 기존 세션을 종료합니다.
+                </p>
+                <div class="form-actions">
+                  ${btn(
+                    "공용 계정 재발급",
+                    "reset-password",
+                    "secondary",
+                    `data-id="${r.id}"`,
+                  )}${btn(
+                    "공간 삭제 요청",
+                    "delete-space",
+                    "danger",
+                    `data-id="${r.id}"`,
+                  )}
+                </div>
+              </div>`
+          : ""
+      }`,
     btn("닫기", "close-modal") +
       '<button class="button primary" type="submit" form="space-form">공간 저장</button>',
   );
@@ -934,7 +1047,7 @@ async function addSample(sample, index) {
       attachment.status = "failed";
       attachment.error = err.message;
     }
-    toast(err.message);
+    toast(err.message, "error");
   } finally {
     if (draft === originalDraft) {
       redraw();
@@ -958,7 +1071,10 @@ async function withButton(button, fn) {
   try {
     await fn();
   } catch (err) {
-    toast(err.message || "요청을 처리하지 못했어요. 다시 시도해주세요.");
+    toast(
+      err.message || "요청을 처리하지 못했어요. 다시 시도해주세요.",
+      "error",
+    );
   } finally {
     preserveReturnFocus(originalFocus);
     if (button) {
@@ -970,6 +1086,15 @@ async function withButton(button, fn) {
 }
 // UI-only actions stay responsive; request actions share duplicate-submit protection.
 const immediateActions = {
+  "reset-list": (button) => {
+    const list = button.closest("[data-list-scope]");
+    const search = $("[data-list-search]", list);
+    const status = $("[data-list-status]", list);
+    if (search) search.value = "";
+    if (status) status.value = "all";
+    filterList(list);
+    search?.focus();
+  },
   backdrop: dismissBackdrop,
   "close-modal": dismissModal,
   tools: showDemoTools,
@@ -1011,6 +1136,13 @@ const requestActions = {
 
 async function onAction(button, event) {
   const action = button.dataset.action;
+  if (publishing) {
+    toast(
+      "가족 공간에 소식을 전하고 있어요. 결과를 확인한 뒤 이동해주세요.",
+      "info",
+    );
+    return;
+  }
   const immediate = immediateActions[action];
   if (immediate) {
     await immediate(button, event);
@@ -1022,12 +1154,12 @@ async function onAction(button, event) {
 }
 
 async function dismissBackdrop(button, event) {
-  if (event.target === button) closeOverlay();
+  if (event.target === button) dismissOverlay();
   return;
 }
 
 async function dismissModal() {
-  closeOverlay();
+  dismissOverlay();
   return;
 }
 
@@ -1259,10 +1391,18 @@ async function saveDraft() {
     throw new Error(
       "준비되지 않은 첨부를 재시도하거나 제거한 뒤 임시저장해주세요.",
     );
-  await request("PUT", "/drafts/current", draft);
-  dirty = false;
-  $("#draft-status").textContent =
-    "임시저장 완료 · 다음에 이어서 작성할 수 있어요.";
+  const saving = draft;
+  const snapshot = JSON.stringify(saving);
+  const accountId = session()?.accountId;
+  await request("PUT", "/drafts/current", JSON.parse(snapshot));
+  if (draft !== saving || session()?.accountId !== accountId) return;
+  // Editing can continue while a save is pending. Only clear the saved revision.
+  if (JSON.stringify(draft) === snapshot) {
+    dirty = false;
+    const status = $("#draft-status");
+    if (status)
+      status.textContent = "임시저장 완료 · 다음에 이어서 작성할 수 있어요.";
+  }
   toast("임시저장했어요.");
   return;
 }
@@ -1327,9 +1467,11 @@ async function toggleSpace(button) {
         <strong>${esc(r.name)} 어르신 · ${esc(r.familyAccountId)}</strong>
       </p>
       <p>
-        ${suspend
-          ? "가족과 담당 직원의 새 요청이 차단됩니다. 자료는 삭제되지 않아요."
-          : "자료는 그대로 유지됩니다. 가족과 직원은 다시 로그인해주세요."}
+        ${
+          suspend
+            ? "가족과 담당 직원의 새 요청이 차단됩니다. 자료는 삭제되지 않아요."
+            : "자료는 그대로 유지됩니다. 가족과 직원은 다시 로그인해주세요."
+        }
       </p>`,
     suspend ? "이용 중단" : "다시 이용",
     async () => {
@@ -1352,7 +1494,7 @@ async function resetFamilyAccount(button) {
   const r = view.residents.find((r) => r.id === id);
   confirm(
     "가족 공용 계정을 재발급할까요?",
-    `<p>${esc(r.name)} 어르신의 가족 모두가 사용하는 계정입니다. 모든 기존 가족 세션을 종료하며, 가족들에게 다시 안내해야 해요.</p>`,
+    `<p><strong>${esc(r.name)} 어르신 · ${esc(r.familyAccountId)}</strong></p><p>가족 모두가 사용하는 계정입니다. 모든 기존 가족 세션을 종료하며, 가족들에게 다시 안내해야 해요.</p>`,
     "재발급 체험",
     async () => {
       const c = await request("POST", `/admin/residents/${id}/reset-password`);
@@ -1381,8 +1523,8 @@ async function requestSpaceDeletion(button) {
   openModal(
     "공간 삭제 요청",
     /* HTML */ `<p>
-        <strong>${esc(r.name)} 어르신</strong>의 가족·직원 접근을 차단하고 삭제
-        진행 상태로 전환합니다.
+        <strong>${esc(r.name)} 어르신 · ${esc(r.familyAccountId)}</strong>의
+        가족·직원 접근을 차단하고 삭제 진행 상태로 전환합니다.
       </p>
       ${notice(
         "실제 저장소와 백업 파기는 구현하지 않았습니다. 데모에서는 샘플 삭제 단계만 확인합니다.",
@@ -1422,6 +1564,7 @@ async function refreshBlog(button) {
     action === "fail-blog"
       ? "갱신 실패: 마지막 성공 자료를 유지해요."
       : "새 샘플 글을 불러왔어요.",
+    action === "fail-blog" ? "error" : "success",
   );
   render();
   return;
@@ -1438,34 +1581,42 @@ const formHandlers = {
 async function publishDraft(data) {
   const err = validateDraft(draft);
   if (err) throw new Error(err);
+  const publishingDraft = draft;
+  const accountId = session()?.accountId;
   const body = {
-    ...draft,
+    ...structuredClone(publishingDraft),
     confirmedTarget: data.has("confirmedTarget"),
     confirmedSharing: data.has("confirmedSharing"),
     confirmedContent: data.has("confirmedContent"),
   };
-  const result = await request(
-    draft.editId ? "PATCH" : "POST",
-    draft.editId
-      ? `/posts/${draft.editId}`
-      : `/residents/${draft.residentId}/posts`,
-    body,
-  );
-  // A successful publish is not reported as failed if draft cleanup loses connection.
-  const cleanup = await request("DELETE", "/drafts/current").then(
-    () => true,
-    () => false,
-  );
-  draft = null;
-  dirty = false;
-  filter = "all";
-  query = "";
-  navigate(`/post/${result.id}`);
-  toast(
-    cleanup
-      ? "가족 공간에 소식을 전했어요."
-      : "소식은 게시됐어요. 저장된 초안 정리는 다시 확인해주세요.",
-  );
+  publishing = true;
+  try {
+    const result = await request(
+      publishingDraft.editId ? "PATCH" : "POST",
+      publishingDraft.editId
+        ? `/posts/${publishingDraft.editId}`
+        : `/residents/${publishingDraft.residentId}/posts`,
+      body,
+    );
+    if (draft !== publishingDraft || session()?.accountId !== accountId) return;
+    // A successful publish is not reported as failed if draft cleanup loses connection.
+    const cleanup = await request("DELETE", "/drafts/current").then(
+      () => true,
+      () => false,
+    );
+    draft = null;
+    dirty = false;
+    filter = "all";
+    query = "";
+    navigate(`/post/${result.id}`);
+    toast(
+      cleanup
+        ? "가족 공간에 소식을 전했어요."
+        : "소식은 게시됐어요. 저장된 초안 정리는 다시 확인해주세요.",
+    );
+  } finally {
+    publishing = false;
+  }
 }
 
 async function saveStaff(data) {
@@ -1506,59 +1657,71 @@ async function saveStaff(data) {
     const nextStaff = view.staff.map((staff) =>
       staff.id === s.id ? { ...staff, ...body } : staff,
     );
-    const newlyUncovered = getNewlyUncoveredPostingResidents(
-      view.residents,
-      view.staff,
-      nextStaff,
-    );
-    if (newlyUncovered.length) {
-      confirm(
-        "소식을 게시할 담당 직원이 없어져요",
-        notice(
-          "아래 가족 공간에 소식을 게시할 직원이 남지 않습니다. 다른 직원을 배정하거나, 이 변경을 그대로 저장할 수 있어요.",
-          "warning",
-        ) +
-          "<ul>" +
-          newlyUncovered
-            .map(
-              (resident) =>
-                "<li>" +
-                esc(resident.name) +
-                " 어르신 · " +
-                esc(resident.familyAccountId) +
-                "</li>",
-            )
-            .join("") +
-          "</ul>",
-        "변경사항 저장",
-        persist,
-      );
-      return;
-    }
+    if (confirmPublisherChange(nextStaff, persist)) return;
   }
   await persist();
 }
 
+function confirmPublisherChange(nextStaff, persist) {
+  const uncovered = getNewlyUncoveredPostingResidents(
+    view.residents,
+    view.staff,
+    nextStaff,
+  );
+  if (!uncovered.length) return false;
+  confirm(
+    "소식을 게시할 담당 직원이 없어져요",
+    notice(
+      "아래 가족 공간에 소식을 게시할 직원이 남지 않습니다. 취소하여 다른 직원을 배정하거나, 이 변경을 그대로 저장할 수 있어요.",
+      "warning",
+    ) +
+      "<ul>" +
+      uncovered
+        .map(
+          (r) => `<li>${esc(r.name)} 어르신 · ${esc(r.familyAccountId)}</li>`,
+        )
+        .join("") +
+      "</ul>",
+    "변경사항 저장",
+    persist,
+    false,
+    true,
+  );
+  return true;
+}
+
 async function saveSpace(data) {
-  const r = view.editingResident,
-    body = {
-      name: String(data.get("name")).trim(),
-      familyAccountId: String(data.get("familyAccountId")).trim(),
-      staffIds: data.getAll("staffIds"),
-    };
+  const r = view.editingResident;
+  const body = {
+    name: String(data.get("name")).trim(),
+    familyAccountId: String(data.get("familyAccountId")).trim(),
+    staffIds: data.getAll("staffIds"),
+  };
   if (r.id) body.version = r.version;
-  await request(
-    r.id ? "PATCH" : "POST",
-    r.id ? `/admin/residents/${r.id}` : "/admin/residents",
-    body,
-  );
-  closeOverlay();
-  render();
-  toast(
-    r.id
-      ? "공간 정보를 저장했어요."
-      : "새 가족 공간을 만들었어요. 역할 선택에서 체험할 수 있어요.",
-  );
+  const persist = async () => {
+    await request(
+      r.id ? "PATCH" : "POST",
+      r.id ? `/admin/residents/${r.id}` : "/admin/residents",
+      body,
+    );
+    closeOverlay();
+    await render();
+    toast(
+      r.id
+        ? "공간 정보를 저장했어요."
+        : "새 가족 공간을 만들었어요. 역할 선택에서 체험할 수 있어요.",
+    );
+  };
+  if (r.id) {
+    const nextStaff = view.staff.map((staff) => ({
+      ...staff,
+      residentIds: body.staffIds.includes(staff.id)
+        ? [...new Set([...staff.residentIds, r.id])]
+        : staff.residentIds.filter((id) => id !== r.id),
+    }));
+    if (confirmPublisherChange(nextStaff, persist)) return;
+  }
+  await persist();
 }
 
 async function deleteSpace(data) {
@@ -1592,18 +1755,21 @@ async function submitForm(form, event) {
     submit.disabled = true;
     submit.setAttribute("aria-busy", "true");
   }
+  const submitLabel = submit?.innerHTML;
+  if (submit && type === "publish") submit.textContent = "가족에게 전하는 중…";
   try {
     await formHandlers[type]?.(data);
   } catch (err) {
     if (errors) {
       errors.textContent = err.message;
       errors.scrollIntoView({ block: "nearest" });
-    } else toast(err.message);
+    } else toast(err.message, "error");
   } finally {
     delete form.dataset.busy;
-    if (submit?.isConnected) {
+    if (submit) {
       submit.disabled = false;
       submit.removeAttribute("aria-busy");
+      if (type === "publish") submit.innerHTML = submitLabel;
     }
   }
 }
@@ -1614,12 +1780,20 @@ document.addEventListener("click", (event) => {
     !(action.dataset.action === "backdrop" && event.target !== action)
   ) {
     event.preventDefault();
-    onAction(action, event).catch((err) => toast(err.message));
+    onAction(action, event).catch((err) => toast(err.message, "error"));
     return;
   }
   const anchor = event.target.closest('a[href^="#/"]');
   if (!anchor) return;
   const next = anchor.getAttribute("href").slice(1);
+  if (publishing) {
+    event.preventDefault();
+    toast(
+      "가족 공간에 소식을 전하고 있어요. 결과를 확인한 뒤 이동해주세요.",
+      "info",
+    );
+    return;
+  }
   if (
     dirty &&
     draft &&
@@ -1646,6 +1820,10 @@ document.addEventListener("submit", (event) => {
   if (form) submitForm(form, event);
 });
 document.addEventListener("input", (event) => {
+  const list = event.target.closest("[data-list-scope]");
+  if (list && event.target.matches("[data-list-search]")) filterList(list);
+  const picker = event.target.closest("[data-assignment-picker]");
+  if (picker) filterAssignments(picker);
   if (event.target.id === "post-search") {
     query = event.target.value;
     $("#feed-results").innerHTML = feedResults();
@@ -1658,6 +1836,10 @@ document.addEventListener("input", (event) => {
 });
 document.addEventListener("change", (event) => {
   const el = event.target;
+  const list = el.closest("[data-list-scope]");
+  if (list && el.matches("[data-list-status]")) filterList(list);
+  const picker = el.closest("[data-assignment-picker]");
+  if (picker) filterAssignments(picker);
   if (
     el.id === "demo-offline" ||
     el.id === "demo-failnext" ||
@@ -1693,16 +1875,22 @@ document.addEventListener("change", (event) => {
 });
 document.addEventListener("keydown", trapOverlayKeys);
 window.addEventListener("hashchange", () => {
+  if (publishing && currentRoute() !== "/review") {
+    history.replaceState(null, "", "#/review");
+    toast("게시 결과를 확인한 뒤 이동해주세요.", "info");
+    return;
+  }
   window.scrollTo({ top: 0 });
   render();
 });
 window.addEventListener("beforeunload", (event) => {
-  if (dirty) {
+  if (dirty || publishing) {
     event.preventDefault();
     event.returnValue = "";
   }
 });
 window.addEventListener("storage", (event) => {
-  if (event.key?.startsWith("grace-together.demo.") && !dirty) render();
+  if (event.key?.startsWith("grace-together.demo.") && !dirty && !publishing)
+    render();
 });
 render();

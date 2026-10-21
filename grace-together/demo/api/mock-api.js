@@ -114,11 +114,16 @@ export function createMockApi({ storage, delay = 180 } = {}) {
       fallback("저장된 데모 자료를 읽지 못해 메모리 저장으로 전환했습니다.");
     }
   }
-  function persist() {
+  function persist({ database = true, authentication = true } = {}) {
     if (!store) return;
     try {
-      store.setItem(DB_KEY, JSON.stringify(db));
-      store.setItem(SESSION_KEY, JSON.stringify(session));
+      for (const [key, value] of [
+        ...(database ? [[DB_KEY, db]] : []),
+        ...(authentication ? [[SESSION_KEY, session]] : []),
+      ]) {
+        const serialized = JSON.stringify(value);
+        if (store.getItem(key) !== serialized) store.setItem(key, serialized);
+      }
     } catch {
       fallback(
         "브라우저 저장 공간을 사용할 수 없어 메모리에 저장합니다. 새로고침하면 변경이 사라질 수 있습니다.",
@@ -144,7 +149,7 @@ export function createMockApi({ storage, delay = 180 } = {}) {
       (resident && resident.status !== "active")
     ) {
       session = null;
-      persist();
+      persist({ database: false });
       throw error(
         401,
         "SESSION_REVOKED",
@@ -906,8 +911,17 @@ export function createMockApi({ storage, delay = 180 } = {}) {
       const beforeSession = clone(session);
       try {
         const result = dispatch(method, path, clone(body));
-        db.revision++;
-        persist();
+        // Reads must not trigger storage events that make another tab read again.
+        // Compare state so idempotent mutation retries also remain quiet.
+        const databaseChanged = JSON.stringify(db) !== JSON.stringify(before);
+        const sessionChanged =
+          JSON.stringify(session) !== JSON.stringify(beforeSession);
+        if (databaseChanged) db.revision++;
+        if (databaseChanged || sessionChanged)
+          persist({
+            database: databaseChanged,
+            authentication: sessionChanged,
+          });
         return clone(result);
       } catch (e) {
         db = before;

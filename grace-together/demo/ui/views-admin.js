@@ -74,14 +74,16 @@ function renderAdminHome({ overview: o, jobs }) {
                           : "접근 차단 · 처리 대기",
                         j.status === "demo_completed" ? "green" : "amber",
                       )}</span
-                    >${j.status !== "demo_completed"
-                      ? btn(
-                          "샘플 처리 완료",
-                          "complete-deletion",
-                          "secondary",
-                          `data-id="${esc(j.id)}"`,
-                        )
-                      : ""}
+                    >${
+                      j.status !== "demo_completed"
+                        ? btn(
+                            "샘플 처리 완료",
+                            "complete-deletion",
+                            "secondary",
+                            `data-id="${esc(j.id)}"`,
+                          )
+                        : ""
+                    }
                   </div>`,
               )
               .join("")
@@ -101,15 +103,26 @@ function renderAdminHome({ overview: o, jobs }) {
     </p>`;
 }
 
+function listControls(kind) {
+  return `<div class="admin-search-controls">
+    <label class="field"><span>${kind} 검색</span><input type="search" data-list-search placeholder="이름 또는 계정 ID" autocomplete="off"></label>
+    <label class="field"><span>이용 상태</span><select data-list-status><option value="all">전체 상태</option><option value="active">이용 중</option><option value="suspended">이용 중단</option>${kind === "어르신" ? '<option value="deletion_pending">삭제 처리 중</option><option value="deleted">삭제 완료</option>' : ""}</select></label>
+    <button type="button" class="button ghost" data-action="reset-list">검색 초기화</button>
+  </div><p class="small muted" data-list-count aria-live="polite"></p>`;
+}
+const listEmpty =
+  '<div class="empty-state" data-list-empty hidden><h2>검색 결과가 없어요</h2><p>이름·계정 ID 또는 이용 상태를 바꿔보세요.</p><button type="button" class="button secondary" data-action="reset-list">전체 보기</button></div>';
+
 function renderAdminStaff({ staff, residents }) {
   return `${heading(
     "직원·담당 배정",
     "직원마다 개인 계정과 필요한 기능을 부여합니다.",
     btn(icon("plus", 18) + " 직원 등록", "new-staff", "primary"),
   )}
-    <section class="card">
+    <section class="card" data-list-scope="admin-staff">
+      ${listControls("직원")}
       <div class="table-wrap">
-        <table>
+        <table class="staff-table">
           <thead>
             <tr>
               <th scope="col">직원 / 계정</th>
@@ -123,8 +136,12 @@ function renderAdminStaff({ staff, residents }) {
             ${staff
               .map(
                 (s) =>
-                  /* HTML */ `<tr>
-                    <td>
+                  /* HTML */ `<tr
+                    data-list-row
+                    data-search="${esc(s.name + " " + s.accountId)}"
+                    data-status="${esc(s.status)}"
+                  >
+                    <td data-label="직원 / 계정">
                       <div class="person-cell">
                         <span class="resident-avatar"
                           >${esc(s.name.slice(0, 1))}</span
@@ -134,41 +151,45 @@ function renderAdminStaff({ staff, residents }) {
                         >
                       </div>
                     </td>
-                    <td>
-                      ${s.residentIds
-                        .map((id) =>
-                          esc(residents.find((r) => r.id === id)?.name || id),
-                        )
-                        .join(" · ") || '<span class="muted">미배정</span>'}
-                    </td>
-                    <td>
-                      <div class="permission-pills">
-                        ${Object.entries(s.permissions)
-                          .filter(([, v]) => v)
-                          .map(([k]) =>
-                            pill(
-                              {
-                                view: "열람",
-                                post: "게시·수정",
-                                delete: "철회",
-                              }[k] || k,
-                            ),
+                    <td data-label="담당 어르신">
+                      ${
+                        s.residentIds
+                          .map((id) =>
+                            esc(residents.find((r) => r.id === id)?.name || id),
                           )
-                          .join("") || "없음"}
+                          .join(" · ") || '<span class="muted">미배정</span>'
+                      }
+                    </td>
+                    <td data-label="허용 기능">
+                      <div class="permission-pills">
+                        ${
+                          Object.entries(s.permissions)
+                            .filter(([, v]) => v)
+                            .map(([k]) =>
+                              pill(
+                                {
+                                  view: "열람",
+                                  post: "게시·수정",
+                                  delete: "철회",
+                                }[k] || k,
+                              ),
+                            )
+                            .join("") || "없음"
+                        }
                       </div>
                     </td>
-                    <td>
+                    <td data-label="상태">
                       ${pill(
                         stateName[s.status],
                         s.status === "active" ? "green" : "amber",
                       )}
                     </td>
-                    <td>
+                    <td data-label="관리">
                       ${btn(
                         "관리",
                         "edit-staff",
                         "secondary",
-                        `data-id="${esc(s.id)}" aria-label="${esc(s.name)} 관리"`,
+                        `data-id="${esc(s.id)}" aria-label="${esc(s.name)} · ${esc(s.accountId)} 관리"`,
                       )}
                     </td>
                   </tr>`,
@@ -177,6 +198,7 @@ function renderAdminStaff({ staff, residents }) {
           </tbody>
         </table>
       </div>
+      ${listEmpty}
     </section>
     ${notice(
       "담당 배정 해제나 이용 중지는 해당 직원의 다음 API 요청부터 적용됩니다. 다른 역할로 바꿔 변경된 접근 범위를 확인해보세요.",
@@ -189,11 +211,18 @@ function renderAdminSpaces({ residents, staff }) {
     "한 어르신의 가족이 함께 쓰는 비공개 공간입니다.",
     btn(icon("plus", 18) + " 공간 만들기", "new-space", "primary"),
   )}
+    <section data-list-scope="admin-spaces">
+    ${listControls("어르신")}
     <div class="grid two">
       ${residents
         .map(
           (r) =>
-            /* HTML */ `<article class="card space-card">
+            /* HTML */ `<article
+              class="card space-card"
+              data-list-row
+              data-search="${esc(r.name + " " + r.familyAccountId)}"
+              data-status="${esc(r.status)}"
+            >
               <div class="person-cell">
                 ${avatar(r, true)}
                 <div>
@@ -209,11 +238,13 @@ function renderAdminSpaces({ residents, staff }) {
                 <div>
                   <dt>담당 직원</dt>
                   <dd>
-                    ${(r.staffIds || [])
-                      .map((id) =>
-                        esc(staff.find((s) => s.id === id)?.name || id),
-                      )
-                      .join(" · ") || "미배정"}
+                    ${
+                      (r.staffIds || [])
+                        .map((id) =>
+                          esc(staff.find((s) => s.id === id)?.name || id),
+                        )
+                        .join(" · ") || "미배정"
+                    }
                   </dd>
                 </div>
                 <div>
@@ -221,25 +252,29 @@ function renderAdminSpaces({ residents, staff }) {
                   <dd>${esc(stateName[r.status] || r.status)}</dd>
                 </div>
               </dl>
-              ${!["deleted", "deletion_pending"].includes(r.status)
-                ? /* HTML */ `<div class="form-actions">
-                    ${btn(
-                      "공간 관리",
-                      "edit-space",
-                      "secondary",
-                      `data-id="${esc(r.id)}"`,
-                    )}${btn(
-                      r.status === "active" ? "이용 중단" : "다시 이용",
-                      "toggle-space",
-                      r.status === "active" ? "ghost" : "primary",
-                      `data-id="${esc(r.id)}"`,
-                    )}
-                  </div>`
-                : `<p class="small muted">${r.status === "deleted" ? "샘플 삭제 완료" : "가족·직원 접근이 차단되었습니다."}</p>`}
+              ${
+                !["deleted", "deletion_pending"].includes(r.status)
+                  ? /* HTML */ `<div class="form-actions">
+                      ${btn(
+                        "공간 관리",
+                        "edit-space",
+                        "secondary",
+                        `data-id="${esc(r.id)}"`,
+                      )}${btn(
+                        r.status === "active" ? "이용 중단" : "다시 이용",
+                        "toggle-space",
+                        r.status === "active" ? "ghost" : "primary",
+                        `data-id="${esc(r.id)}"`,
+                      )}
+                    </div>`
+                  : `<p class="small muted">${r.status === "deleted" ? "샘플 삭제 완료" : "가족·직원 접근이 차단되었습니다."}</p>`
+              }
             </article>`,
         )
         .join("")}
     </div>
+    ${listEmpty}
+    </section>
     <p class="small muted">
       공간 중단은 삭제와 다릅니다. 다시 이용할 때 기존 자료는 유지되며 계정은
       재로그인합니다.
@@ -295,11 +330,13 @@ function renderAdminBlog(blog) {
             (p) =>
               /* HTML */ `<article class="blog-preview">
                 <img
-                  src="./assets/${p.art === "flowers"
-                    ? "flowers"
-                    : p.art === "garden"
-                      ? "garden"
-                      : "autumn"}.svg"
+                  src="./assets/${
+                    p.art === "flowers"
+                      ? "flowers"
+                      : p.art === "garden"
+                        ? "garden"
+                        : "autumn"
+                  }.svg"
                   alt="샘플 블로그 이미지"
                 />
                 <h3>${esc(p.title)}</h3>
