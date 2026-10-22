@@ -59,7 +59,8 @@ export function createHttpApi({
             { status, code: data?.error?.code || data?.code || "HTTP_ERROR" },
           );
         if (path === "/auth/login" || path === "/session") session = data;
-        if (path === "/auth/logout") session = null;
+        if (path === "/auth/logout" || path === "/auth/password-reset/complete")
+          session = null;
         return data;
       } catch (e) {
         if (e.status === 401) session = null;

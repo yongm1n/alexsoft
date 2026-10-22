@@ -1,5 +1,6 @@
 import { POST_LIMITS } from "../domain/content-policy.js";
 import { getUncoveredPostingResidents } from "../domain/staff-coverage.js";
+import { createPasswordRecovery } from "./password-recovery.js";
 import {
   createSeed,
   DB_KEY,
@@ -67,7 +68,11 @@ function blogUrl(value) {
 }
 
 /** In-browser workflow simulator, not a secure backend. No real credentials or network calls. */
-export function createMockApi({ storage, delay = 180 } = {}) {
+export function createMockApi({
+  storage,
+  delay = 180,
+  recoveryNow = Date.now,
+} = {}) {
   let store = storage;
   let storageStatus = {
     persistent: Boolean(store),
@@ -78,6 +83,28 @@ export function createMockApi({ storage, delay = 180 } = {}) {
   let config = { offline: false, failNext: false, latency: delay };
   const listeners = new Set();
   let log = [];
+  // Recovery state stays outside db: failed guesses must survive db rollback,
+  // while reload/reset intentionally discards all simulated delivery proofs.
+  const recovery = createPasswordRecovery({
+    now: recoveryNow,
+    getAccount(accountId) {
+      const account = db.accounts.find((a) => a.id === accountId);
+      if (!account || account.status !== "active") return null;
+      if (account.residentId) {
+        const resident = db.residents.find((r) => r.id === account.residentId);
+        if (
+          resident?.status !== "active" ||
+          resident.familyAccountId !== account.id
+        )
+          return null;
+      }
+      return account;
+    },
+    onComplete(accountId) {
+      revoke(accountId);
+      session = null;
+    },
+  });
   function fallback(reason) {
     store = null;
     storageStatus = { persistent: false, reason };
@@ -344,6 +371,13 @@ export function createMockApi({ storage, delay = 180 } = {}) {
   }
   const NOT_HANDLED = Symbol("not-handled");
   function handleSession(method, path, body) {
+    if (method === "POST") {
+      if (path === "/auth/password-reset/request")
+        return recovery.request(body);
+      if (path === "/auth/password-reset/verify") return recovery.verify(body);
+      if (path === "/auth/password-reset/complete")
+        return recovery.complete(body);
+    }
     if (method === "GET" && path === "/demo/accounts")
       return db.accounts
         .filter((a) => a.id !== "family-r3" && a.status !== "deleted")
@@ -915,7 +949,8 @@ export function createMockApi({ storage, delay = 180 } = {}) {
         // Compare state so idempotent mutation retries also remain quiet.
         const databaseChanged = JSON.stringify(db) !== JSON.stringify(before);
         const sessionChanged =
-          JSON.stringify(session) !== JSON.stringify(beforeSession);
+          JSON.stringify(session) !== JSON.stringify(beforeSession) ||
+          (method === "POST" && path === "/auth/password-reset/complete");
         if (databaseChanged) db.revision++;
         if (databaseChanged || sessionChanged)
           persist({
@@ -954,6 +989,11 @@ export function createMockApi({ storage, delay = 180 } = {}) {
       return operation;
     },
     getSession: () => sessionView(session),
+    // Explicit simulator escape hatch, absent from the HTTP adapter.
+    getDemoRecoveryDelivery(requestId) {
+      load();
+      return recovery.getDemoDelivery(requestId);
+    },
     getLog: () => clone(log),
     getStorageStatus: () => ({ ...storageStatus }),
     configure(options = {}) {
@@ -966,6 +1006,7 @@ export function createMockApi({ storage, delay = 180 } = {}) {
     },
     reset() {
       generation++;
+      recovery.reset();
       db = createSeed();
       session = null;
       log = [];

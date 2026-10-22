@@ -18,6 +18,10 @@ import {
 } from "./ui/views-family.js";
 import { $, esc, roleName } from "./ui/format.js";
 import { icon } from "./ui/icons.js";
+import {
+  mountPasswordRecovery,
+  clearPasswordRecoveryCooldown,
+} from "./ui/password-recovery.js";
 import { btn, link, pill, field, notice, empty } from "./ui/components.js";
 import {
   sampleNames,
@@ -207,6 +211,7 @@ function shell() {
       <div class="sidebar-footer">
         <span class="status-dot"></span> 그레이스 주간보호센터
         <p>소소한 하루를,<br />가족과 함께.</p>
+        <a href="#/password-reset">비밀번호 재설정</a>
         <a href="../" target="_blank" rel="noopener"
           >기획·설계서 보기 ${icon("arrow", 14)}</a
         >${btn(icon("logout", 16) + " 로그아웃", "logout", "ghost")}
@@ -250,15 +255,16 @@ function shell() {
 }
 function errorView(err) {
   const denied = [401, 403, 410].includes(err.status);
+  const signedOut = err.status === 401;
   return /* HTML */ `<div class="error-state">
     ${icon(denied ? "lock" : "refresh", 36)}
     <p class="eyebrow">${denied ? "접근 상태 확인" : "잠시 연결이 어려워요"}</p>
     <h1>
-      ${denied ? "이 공간을 이용할 수 없어요" : "소식을 불러오지 못했어요"}
+      ${signedOut ? "다시 로그인해주세요" : denied ? "이 공간을 이용할 수 없어요" : "소식을 불러오지 못했어요"}
     </h1>
     <p>${esc(err.message || "잠시 후 다시 시도해주세요.")}</p>
     <div class="form-actions">
-      ${btn("다시 확인", "reload", "primary")}${btn(
+      ${signedOut ? link("로그인 화면으로", "/login", "primary") : btn("다시 확인", "reload", "primary")}${btn(
         "체험 계정 바꾸기",
         "switch-role",
       )}${btn("데모 도구", "tools", "ghost")}
@@ -268,7 +274,10 @@ function errorView(err) {
     >
   </div>`;
 }
+let disposeRecovery = null;
 async function render() {
+  disposeRecovery?.();
+  disposeRecovery = null;
   const ticket = ++epoch,
     route = currentRoute();
   document.body.classList.toggle(
@@ -276,6 +285,18 @@ async function render() {
     !!session() && /^\/(compose|review)(\/|$)/.test(route),
   );
   closeOverlay(false);
+  if (route === "/password-reset") {
+    disposeRecovery = mountPasswordRecovery({
+      host: $("#app"),
+      api,
+      isCurrent: () => ticket === epoch && currentRoute() === "/password-reset",
+      onComplete: () => {
+        draft = null;
+        dirty = false;
+      },
+    });
+    return;
+  }
   if (route === "/login" || !session()) {
     await renderLogin(ticket);
     return;
@@ -388,6 +409,7 @@ async function renderLogin(ticket) {
           >
         </div>
         <div class="login-links">
+          <a href="#/password-reset">비밀번호를 잊으셨나요?</a>
           <a href="../" target="_blank" rel="noopener"
             >기획·설계서 보기 ${icon("arrow", 14)}</a
           >${btn("체험 안내", "tools", "ghost")}
@@ -1295,6 +1317,7 @@ async function resetDemo() {
     "초기화하기",
     () => {
       api.reset();
+      clearPasswordRecoveryCooldown(api);
       Object.assign(demoConfig, {
         offline: false,
         failNext: false,
@@ -1321,8 +1344,10 @@ async function login(button) {
   if (busy) return;
   busy = true;
   try {
-    ++epoch;
+    const ticket = ++epoch;
+    const route = currentRoute();
     await request("POST", "/auth/login", { accountId: id });
+    if (ticket !== epoch || currentRoute() !== route) return;
     draft = null;
     dirty = false;
     filter = "all";
@@ -1890,6 +1915,10 @@ window.addEventListener("beforeunload", (event) => {
   }
 });
 window.addEventListener("storage", (event) => {
+  // Recovery is a disposable journey, not a live content list. Other tabs must
+  // not discard its proof or in-progress password; the API rechecks account
+  // status and authVersion at verification and completion.
+  if (currentRoute() === "/password-reset") return;
   if (event.key?.startsWith("grace-together.demo.") && !dirty && !publishing)
     render();
 });
