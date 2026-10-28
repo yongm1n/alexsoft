@@ -66,8 +66,9 @@ def sync(path, lang):
     s = s.replace('</head>', f'  <meta property="og:locale" content="{locale}">\n  <meta property="og:locale:alternate" content="{alt_locale}">\n</head>')
     s = re.sub(r'(<meta property="og:url" content=")[^"]+', lambda m: m[1] + page_url, s)
     s = re.sub(r'<script\s+src="/assets/ink.js[^\"]*"[^>]*></script>\s*', '', s)
+    s = re.sub(r'<script\s+src="/assets/analytics.js[^\"]*"[^>]*></script>\s*', '', s)
     # Run before body parsing so general-home selection does not flash the wrong language.
-    s = s.replace('<meta charset="utf-8">', '<meta charset="utf-8">\n  <script src="/assets/ink.js?v=' + VERSION + '"></script>', 1)
+    s = s.replace('<meta charset="utf-8">', '<meta charset="utf-8">\n  <script src="/assets/ink.js?v=' + VERSION + '"></script>\n  <script src="/assets/analytics.js?v=1" defer></script>', 1)
     s = re.sub(r'/assets/ink.css(?:\?v=[^\"]+)?', '/assets/ink.css?v=' + VERSION, s)
     s = re.sub(r'(<script type="application/ld\+json">)(.*?)(</script>)',
                lambda m: m[1] + '\n' + json.dumps(structured_language(json.loads(m[2]), lang), ensure_ascii=False, indent=2) + '\n' + m[3], s, flags=re.S)
