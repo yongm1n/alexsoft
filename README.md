@@ -20,10 +20,12 @@ python3 -m http.server 8074 --bind 127.0.0.1
 
 ## GitHub Pages 배포
 
-1. 이 디렉터리를 GitHub 저장소의 기본 브랜치에 푸시합니다.
-2. Repository Settings → Pages에서 `Deploy from a branch`와 루트(`/`)를 선택합니다.
-3. 루트의 `CNAME`이 `alexsoft.co.kr`을 유지하는지 확인합니다.
-4. DNS에서 GitHub Pages용 A/AAAA/CNAME 레코드를 연결한 뒤 Enforce HTTPS를 켭니다.
+1. 변경 전에 `python3 -m unittest discover -s tests -p 'test_public_content.py'`와 `python3 scripts/check-public-content.py`로 공개 콘텐츠 경계를 검사합니다. 이 검사는 비공개 설계서·검토용 데모의 경로, 참조, 기존 파일의 동일한 사본을 거부합니다. 검사 예외를 늘려 자료를 다시 게시하지 않습니다.
+2. 검증한 변경을 기본 브랜치 `main`에 푸시합니다. `.github/workflows/pages.yml`은 콘텐츠 경계와 한·영 정합성 검사가 모두 성공한 경우에만 정적 파일을 Pages에 배포합니다. PR에서는 검사만 실행합니다.
+3. Repository Settings → Pages의 Source는 `GitHub Actions`를 유지합니다. 브랜치 직접 배포로 되돌리면 배포 전 검사가 우회됩니다.
+4. 루트 `CNAME`의 `alexsoft.co.kr`, 기존 DNS와 Enforce HTTPS를 유지합니다. 배포 성공 후 실제 공개 URL의 응답도 확인합니다.
+
+비공개 프로젝트 설계 자료와 검토용 데모는 해당 프로젝트 폴더에서만 관리하며, 이 저장소의 공개 파일이나 로컬 백업으로 복제하지 않습니다. 삭제 커밋은 과거 Git 원문을 지우지 않으므로 과거 이력·배포 산출물의 잔존 여부는 따로 확인합니다.
 
 ## 콘텐츠 근거
 

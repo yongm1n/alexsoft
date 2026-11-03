@@ -1,0 +1,61 @@
+name: Validate and deploy public site
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  PYTHONDONTWRITEBYTECODE: '1'
+
+concurrency:
+  group: pages-${{ github.event_name == 'pull_request' && github.ref || 'production' }}
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - name: Test publication boundary
+        run: python3 -m unittest discover -s tests -p 'test_public_content.py'
+      - name: Reject private content
+        run: python3 scripts/check-public-content.py
+      - name: Validate bilingual pages and sitemap
+        run: |
+          python3 scripts/check-locales.py
+          python3 scripts/sync-sitemap.py --check
+          node --test tests/locale.test.cjs
+      - name: Package only committed files
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        run: |
+          mkdir "$RUNNER_TEMP/public-site"
+          git archive HEAD | tar -x -C "$RUNNER_TEMP/public-site"
+      - name: Upload static site
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ${{ runner.temp }}/public-site
+          retention-days: 1
+
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: validate
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy verified artifact
+        id: deployment
+        uses: actions/deploy-pages@v4

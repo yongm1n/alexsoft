@@ -3,3 +3,7 @@
 
 # Local private business notes
 .private/
+
+# Private project design and review prototypes must stay outside this repository.
+/grace-together/
+**/__pycache__/
