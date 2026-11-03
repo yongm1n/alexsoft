@@ -40,8 +40,8 @@ class PublicContentBoundaryTests(unittest.TestCase):
             with self.subTest(path=path):
                 self.assertEqual([], guard.violations(path, data))
 
-    def test_fingerprints_cover_all_removed_files(self):
-        self.assertEqual(28, len(guard.PRIVATE_HASHES))
+    def test_fingerprints_cover_known_current_and_historical_files(self):
+        self.assertEqual(49, len(guard.PRIVATE_HASHES))
         self.assertTrue(all(len(value) == 64 for value in guard.PRIVATE_HASHES))
 
     def test_broken_symlink_blocks_publication(self):
